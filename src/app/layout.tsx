@@ -1,0 +1,59 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { ChatWidget } from "@/components/chat/ChatWidget";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { localBusinessSchema } from "@/lib/schema";
+import { siteUrl } from "@/lib/site";
+import { company } from "@/data/company";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Sonnenschutz Gütersloh – Rollläden, Raffstores & Markisen | Westerwalbesloh",
+    template: "%s | Westerwalbesloh GmbH Rollladenbau",
+  },
+  description:
+    "Westerwalbesloh GmbH Rollladenbau: Ihr Fachbetrieb für Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschutz in Gütersloh und OWL. Seit 1959 familiengeführt, Somfy-Experte, 4,9★ bei Google.",
+  keywords: [
+    "Sonnenschutz Gütersloh",
+    "Rollladenbau Gütersloh",
+    "Raffstore Gütersloh",
+    "Markisen Gütersloh",
+    "Insektenschutz Gütersloh",
+    "Somfy Experte Gütersloh",
+  ],
+  authors: [{ name: company.legalName }],
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="de">
+      <body className="flex min-h-screen flex-col antialiased">
+        <noscript>
+          <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
+        <JsonLd data={localBusinessSchema()} />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand-accent focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+        >
+          Zum Inhalt springen
+        </a>
+        <Header />
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+        <ChatWidget />
+      </body>
+    </html>
+  );
+}

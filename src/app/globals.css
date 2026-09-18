@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter/wght.css";
+
+/*
+ * Platzhalter-Markenfarben & Schriftart.
+ * Der Live-Abruf der Originalseite war in dieser Umgebung technisch nicht möglich
+ * (Netzwerk-Policy blockiert externe Domains). Diese Tokens sind bewusst zentral an
+ * einer Stelle gesammelt, damit sie nach Erhalt der echten Werte (Screenshots/Style-
+ * guide) in wenigen Minuten 1:1 ausgetauscht werden können. Siehe README.md.
+ */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-brand-ink: #17242c;
+  --color-brand-ink-soft: #4a5a63;
+
+  --color-brand-primary: #1c3a4e;
+  --color-brand-primary-dark: #12252f;
+  --color-brand-primary-soft: #2e5169;
+
+  --color-brand-accent: #b8551e;
+  --color-brand-accent-dark: #96450f;
+  --color-brand-accent-soft: #e8a268;
+
+  --color-brand-sand: #faf5ee;
+  --color-brand-surface: #ffffff;
+  --color-brand-border: #e7dfd1;
+
+  --color-brand-success: #2f7d5a;
+  --color-brand-error: #c0392b;
+
+  --container-content: 76rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-brand-sand);
+    color: var(--color-brand-ink);
+    font-feature-settings: "ss01" on, "cv11" on;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-accent-soft);
+    color: var(--color-brand-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-accent);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}

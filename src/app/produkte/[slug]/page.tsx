@@ -1,0 +1,127 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { PageHero } from "@/components/layout/PageHero";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { FeatureList } from "@/components/shared/FeatureList";
+import { FaqList } from "@/components/shared/FaqList";
+import { CtaBanner } from "@/components/home/CtaBanner";
+import { ProductIcon } from "@/components/icons/ProductIcons";
+import { IconPhone } from "@/components/icons/UiIcons";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
+import { buildMetadata } from "@/lib/metadata";
+import { getProductBySlug, products } from "@/data/products";
+import { company } from "@/data/company";
+
+export function generateStaticParams() {
+  return products.map((product) => ({ slug: product.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) return {};
+
+  return buildMetadata({
+    title: product.metaTitle.replace(" | Westerwalbesloh", ""),
+    description: product.metaDescription,
+    path: `/produkte/${product.slug}`,
+  });
+}
+
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+  if (!product) notFound();
+
+  const contactHref = `/kontakt?produkt=${encodeURIComponent(product.formLabel)}`;
+  const otherProducts = products.filter((item) => item.slug !== product.slug).slice(0, 3);
+
+  return (
+    <>
+      <JsonLd data={productSchema(product)} />
+      <JsonLd data={faqSchema(product.faq)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Startseite", path: "/" },
+          { name: "Produkte", path: "/produkte" },
+          { name: product.name, path: `/produkte/${product.slug}` },
+        ])}
+      />
+
+      <PageHero eyebrow="Produkte" title={product.name} description={product.heroText}>
+        <div className="flex flex-wrap gap-4">
+          <Button href={contactHref} size="lg">
+            Kostenloses Angebot anfordern
+          </Button>
+          <a
+            href={company.phoneHref}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white"
+          >
+            <IconPhone className="h-4 w-4 text-brand-accent-soft" />
+            {company.phoneDisplay}
+          </a>
+        </div>
+      </PageHero>
+
+      <Section background="surface">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <Reveal>
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-sand text-brand-accent">
+              <ProductIcon icon={product.icon} className="h-7 w-7" />
+            </span>
+            <p className="mt-6 text-lg leading-relaxed text-brand-ink-soft">{product.intro}</p>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {product.applications.map((application) => (
+                <Badge key={application}>{application}</Badge>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={100} className="rounded-3xl border border-brand-border bg-brand-sand p-8">
+            <h2 className="text-lg font-bold text-brand-ink">Das zeichnet {product.name} aus</h2>
+            <div className="mt-5">
+              <FeatureList items={product.features} />
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section background="sand">
+        <SectionHeading eyebrow="Häufige Fragen" title={`Fragen zu ${product.name}`} />
+        <div className="mt-10 max-w-3xl">
+          <FaqList items={product.faq} />
+        </div>
+      </Section>
+
+      <Section background="surface">
+        <SectionHeading eyebrow="Weitere Produkte" title="Das könnte Sie ebenfalls interessieren" />
+        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          {otherProducts.map((item) => (
+            <Link
+              key={item.slug}
+              href={`/produkte/${item.slug}`}
+              className="group rounded-3xl border border-brand-border p-6 transition-colors hover:border-brand-primary hover:bg-brand-sand"
+            >
+              <ProductIcon icon={item.icon} className="h-6 w-6 text-brand-accent" />
+              <h3 className="mt-4 text-base font-bold text-brand-ink">{item.name}</h3>
+              <p className="mt-2 text-sm text-brand-ink-soft">{item.shortDescription}</p>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <CtaBanner />
+    </>
+  );
+}
