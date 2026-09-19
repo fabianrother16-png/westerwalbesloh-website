@@ -1,16 +1,33 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SlatPattern } from "@/components/ui/SlatPattern";
 import { IconStar } from "@/components/icons/UiIcons";
 import { company } from "@/data/company";
+import { localImage } from "@/lib/media";
 
 export function Hero() {
   const yearsExperience = new Date().getFullYear() - company.founded;
+  const heroImage = localImage("produkte/markisen/hero.jpg");
 
   return (
     <section className="relative overflow-hidden bg-brand-primary text-white">
-      <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+      {heroImage ? (
+        <>
+          <Image
+            src={heroImage}
+            alt="Von Westerwalbesloh montierte Markise auf einer Terrasse in Gütersloh"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/80 to-brand-primary-dark/50" />
+        </>
+      ) : (
+        <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+      )}
       <div className="relative mx-auto max-w-(--container-content) px-5 py-24 sm:px-8 sm:py-32">
         <Reveal>
           <Badge tone="dark">

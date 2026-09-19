@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -10,6 +11,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { company, history } from "@/data/company";
 import { team } from "@/data/team";
+import { localImage } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
   title: "Über uns – Familienbetrieb seit 1959",
@@ -19,6 +21,9 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function UeberUnsPage() {
+  const teamPhoto = localImage("team/team-gruppe.jpg");
+  const vanPhoto = localImage("projekte/firmenwagen.jpg");
+
   return (
     <>
       <JsonLd
@@ -31,6 +36,8 @@ export default function UeberUnsPage() {
         eyebrow="Über uns"
         title="Familiengeführt seit 1959"
         description="Drei Generationen, ein Handwerk: Wir stehen für ehrliche Beratung, saubere Montage und Sonnenschutzlösungen, die zu Gütersloh passen."
+        image={teamPhoto}
+        imageAlt="Das Westerwalbesloh-Team bei der Montage vor Ort"
       />
 
       <Section background="surface">
@@ -62,6 +69,25 @@ export default function UeberUnsPage() {
           ))}
         </div>
       </Section>
+
+      {vanPhoto && (
+        <Section background="surface">
+          <Reveal className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl sm:aspect-[3/1]">
+            <Image
+              src={vanPhoto}
+              alt="Firmenwagen von Westerwalbesloh GmbH Rollladenbau unterwegs in Gütersloh"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6 sm:p-8">
+              <p className="text-sm font-semibold text-white sm:text-base">
+                Unterwegs für Sie in Gütersloh und ganz OWL – mit eigenem Team, eigenem Fuhrpark.
+              </p>
+            </div>
+          </Reveal>
+        </Section>
+      )}
 
       <Section background="surface">
         <SectionHeading eyebrow="Unser Team" title="Die Menschen hinter Westerwalbesloh" />

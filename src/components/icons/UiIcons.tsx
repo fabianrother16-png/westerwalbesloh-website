@@ -30,7 +30,7 @@ export function IconClock(props: IconProps) {
 
 export function IconStar(props: IconProps) {
   return (
-    <BaseIcon {...props} strokeLinejoin="round">
+    <BaseIcon {...props} strokeLinejoin="round" fill="currentColor">
       <path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" />
     </BaseIcon>
   );

@@ -12,36 +12,64 @@ modernes Design und neue KI-Features (Chat-Berater, Sonnenschutz-Finder, GEO-Opt
 - **Resend** für den Versand des Kontaktformulars
 - `next/og` für dynamisch generiertes Favicon/OG-Bild (kein externes Bild nötig)
 
-## Wichtiger Hinweis zu Design-Assets (bitte vor Go-Live lesen)
+## Marken-Assets
 
-Diese Seite wurde in einer Sandbox-Umgebung ohne Internetzugriff zur ursprünglichen Domain
-gebaut (die Netzwerk-Policy dieser Umgebung blockierte externe Domains). Das heißt konkret:
+**Farben, Logo und Fotos sind jetzt echt**, nicht mehr platzhalterhaft:
 
-- **Farben, Schriftart und Logo sind bewusst gewählte Platzhalter**, keine 1:1-Kopie des
-  Originals. Alle Farbwerte liegen zentral in `src/app/globals.css` im `@theme`-Block
-  (`--color-brand-*`) – zum Austauschen genügt es, dort die Hex-Werte zu ändern, der Rest
-  der Seite zieht sich die Farben automatisch darüber. Die Schriftart (Inter) lässt sich in
-  derselben Datei sowie in `package.json`/`globals.css` (Import von `@fontsource-variable/...`)
-  austauschen.
-- Das Logo (`src/components/brand/Logo.tsx`) ist ein selbst gestaltetes, stilisiertes
-  "W" als SVG (kein Foto) – ebenfalls leicht ersetzbar, z. B. durch ein echtes Logo-Bild in
-  `/public/images/logo.svg`.
-- **Es gibt keine Fotos von Personen, dem Team oder Projekten**, da keine echten Bilddateien
-  verfügbar waren. Team-Mitglieder werden mit einem gestalteten Initialen-Platzhalter
-  (`src/components/media/PlaceholderPhoto.tsx`) dargestellt statt mit Stockfotos fremder
-  Personen. Sobald echte Fotos vorliegen: Dateien nach `/public/images/team/...` legen und
-  `PlaceholderPhoto` an den jeweiligen Stellen (aktuell in `src/app/ueber-uns/page.tsx`) durch
-  `next/image` ersetzen.
-- **Impressum & Datenschutzerklärung** (`src/app/impressum`, `src/app/datenschutz`) wurden aus
-  denselben Gründen neu erstellt (nicht wortgetreu vom Original übernommen) und bilden zusätzlich
-  die *tatsächliche* Datenverarbeitung dieser neuen Seite ab (KI-Chat, Resend, Vercel-Hosting) –
-  das wäre mit dem alten Text ohnehin nicht abgedeckt gewesen. **Bitte vor Veröffentlichung von
+- **Logo**: `public/images/brand/logo.png` (vollständiges Logo) und `logo-emblem.png`
+  (freigestellte "W"-Bildmarke ohne Schriftzug, für Header/Footer/Favicon/OG-Bild) sind die
+  Originaldateien. `src/components/brand/Logo.tsx` rendert sie per `next/image`.
+- **Farben**: Per Pixel-Analyse aus dem echten Logo extrahiert – Blau `#376fb2`, Grau `#9d9d9c`.
+  Alle Werte liegen zentral in `src/app/globals.css` im `@theme`-Block (`--color-brand-*`);
+  `--color-brand-accent` ist der exakte Logo-Blauton (für CTAs), `--color-brand-primary` eine
+  vertiefte Variante davon für große Flächen wie Header/Footer, damit Buttons darauf erkennbar
+  bleiben. Zum Anpassen genügt es, dort die Hex-Werte zu ändern.
+- **Fotos**: Reale Team-/Projektfotos (aus Instagram-Uploads) sind bereits auf mehreren Seiten
+  im Einsatz (Startseite, Raffstore, Markisen, Über uns, Beratung/Reparatur/Wartung/Objektbau).
+  Wo noch kein Foto vorliegt (z. B. Rollladen, Insektenschutz, innenliegender Sonnenschutz,
+  Sonnenschirme, Steuerungen), greift automatisch ein gestaltetes Icon/Muster als Platzhalter –
+  siehe nächster Abschnitt, wie das durch ein echtes Foto ersetzt wird.
+- Die Schriftart (Inter, self-hosted) ist weiterhin ein bewusst gewählter Platzhalter, da keine
+  Angabe zur Original-Schriftart vorlag.
+- **Impressum & Datenschutzerklärung** (`src/app/impressum`, `src/app/datenschutz`) wurden neu
+  erstellt (kein Live-Zugriff auf die Originaltexte möglich) und bilden zusätzlich die
+  *tatsächliche* Datenverarbeitung dieser neuen Seite ab (KI-Chat, Resend, Vercel-Hosting) – das
+  wäre mit dem alten Text ohnehin nicht abgedeckt gewesen. **Bitte vor Veröffentlichung von
   einem Anwalt/einer Anwältin prüfen lassen**, insbesondere die Umsatzsteuer-ID ergänzen, falls
   vorhanden.
 
 Alle Texte (Firmenbeschreibung, Produkte, Leistungen, Team, Testimonials etc.) stammen aus dem
 im Auftrag mitgelieferten Fallback-Content und sind vollständig, echte Inhalte – keine
 Platzhalter/Lorem Ipsum.
+
+## Bilder & Videos ergänzen (kein Code nötig)
+
+Seiten prüfen zur Build-Zeit selbst, ob unter einem festen Dateinamen in `public/images/`
+bereits ein Foto liegt (`src/lib/media.ts`, Funktion `localImage()`). Liegt die Datei vor, wird
+sie automatisch als Hero-/Detailbild angezeigt; liegt sie nicht vor, greift der bestehende
+Icon-Platzhalter. Zum Ergänzen reicht es, die Datei **mit exakt diesem Namen** z. B. direkt über
+die GitHub-Weboberfläche hochzuladen (Repo → zum Ordner navigieren → "Add file" → "Upload
+files") und danach neu zu deployen (bei Vercel automatisch bei jedem Push) – es muss kein Code
+angepasst werden.
+
+| Zweck | Erwarteter Pfad |
+|---|---|
+| Produktseite Hero | `public/images/produkte/<slug>/hero.jpg` |
+| Produktseite Zusatzbild | `public/images/produkte/<slug>/detail.jpg` |
+| Leistungsseite Hero | `public/images/leistungen/<slug>/hero.jpg` |
+| Team-Gruppenfoto (Über-uns-Hero) | `public/images/team/team-gruppe.jpg` |
+| Firmenwagen-Banner (Über uns) | `public/images/projekte/firmenwagen.jpg` |
+| Home-Hero-Hintergrund | aktuell `public/images/produkte/markisen/hero.jpg` (siehe `src/components/home/Hero.tsx`) |
+
+`<slug>` ist der jeweilige URL-Slug, z. B. `raffstore`, `rollladen`, `markisen`,
+`insektentschutz`, `sonnenschutz` (innenliegender Sonnenschutz), `sonnenschirme`,
+`steuerung-antriebe` bzw. bei Leistungen `beratung-aufmass-montage`,
+`reparatur-modernisierung`, `wartung`, `objektbau-projekte`. Empfohlenes Format: JPG/WebP,
+mindestens 1600px breit, Querformat (die Bilder werden per `object-cover` zugeschnitten).
+
+**Videos** (z. B. von Instagram/TikTok) sind noch nicht eingebunden. Sobald Dateien vorliegen,
+gerne hier im Chat hochladen oder als Datei ins Repo legen (z. B. `public/videos/...`) – dann
+wird an passender Stelle (Hero-Hintergrund, eigene Galerie) ein `<video>`-Element ergänzt.
 
 ## Lokale Entwicklung
 

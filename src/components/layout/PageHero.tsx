@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SlatPattern } from "@/components/ui/SlatPattern";
@@ -7,15 +8,34 @@ export function PageHero({
   title,
   description,
   children,
+  image,
+  imageAlt,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   children?: ReactNode;
+  /** Öffentlicher Bildpfad (z. B. aus localImage()) - wenn vorhanden, ersetzt das Foto das Lamellen-Muster. */
+  image?: string | null;
+  imageAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-brand-primary text-white">
-      <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+      {image ? (
+        <>
+          <Image
+            src={image}
+            alt={imageAlt ?? ""}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/70 to-brand-primary-dark/40" />
+        </>
+      ) : (
+        <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+      )}
       <div className="relative mx-auto max-w-(--container-content) px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
           {eyebrow && (

@@ -16,6 +16,7 @@ import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { getServiceBySlug, services } from "@/data/services";
 import { company } from "@/data/company";
+import { localImage } from "@/lib/media";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -43,6 +44,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const otherServices = services.filter((item) => item.slug !== service.slug);
+  const heroImage = localImage(`leistungen/${service.slug}/hero.jpg`);
 
   return (
     <>
@@ -56,7 +58,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         ])}
       />
 
-      <PageHero eyebrow="Leistungen" title={service.name} description={service.heroText}>
+      <PageHero
+        eyebrow="Leistungen"
+        title={service.name}
+        description={service.heroText}
+        image={heroImage}
+        imageAlt={`${service.name} von Westerwalbesloh in Gütersloh`}
+      >
         <div className="flex flex-wrap gap-4">
           <Button href="/kontakt" size="lg">
             Kostenloses Angebot anfordern

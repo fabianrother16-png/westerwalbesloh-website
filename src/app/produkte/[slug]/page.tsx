@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
@@ -17,6 +18,7 @@ import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { getProductBySlug, products } from "@/data/products";
 import { company } from "@/data/company";
+import { localImage } from "@/lib/media";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -45,6 +47,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   const contactHref = `/kontakt?produkt=${encodeURIComponent(product.formLabel)}`;
   const otherProducts = products.filter((item) => item.slug !== product.slug).slice(0, 3);
+  const heroImage = localImage(`produkte/${product.slug}/hero.jpg`);
+  const detailImage = localImage(`produkte/${product.slug}/detail.jpg`);
 
   return (
     <>
@@ -58,7 +62,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         ])}
       />
 
-      <PageHero eyebrow="Produkte" title={product.name} description={product.heroText}>
+      <PageHero
+        eyebrow="Produkte"
+        title={product.name}
+        description={product.heroText}
+        image={heroImage}
+        imageAlt={`${product.name} von Westerwalbesloh in Gütersloh`}
+      >
         <div className="flex flex-wrap gap-4">
           <Button href={contactHref} size="lg">
             Kostenloses Angebot anfordern
@@ -86,6 +96,18 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 <Badge key={application}>{application}</Badge>
               ))}
             </div>
+
+            {detailImage && (
+              <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-3xl">
+                <Image
+                  src={detailImage}
+                  alt={`${product.name}-Montage durch das Westerwalbesloh-Team`}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            )}
           </Reveal>
 
           <Reveal delay={100} className="rounded-3xl border border-brand-border bg-brand-sand p-8">
