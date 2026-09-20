@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { FeatureList } from "@/components/shared/FeatureList";
 import { FaqList } from "@/components/shared/FaqList";
+import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ServiceIcon } from "@/components/icons/ProductIcons";
 import { IconPhone } from "@/components/icons/UiIcons";
@@ -45,6 +46,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const otherServices = services.filter((item) => item.slug !== service.slug);
   const heroImage = localImage(`leistungen/${service.slug}/hero.jpg`);
+  const detailImage = localImage(`leistungen/${service.slug}/detail.jpg`);
 
   return (
     <>
@@ -91,6 +93,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 „{service.quote}“
               </blockquote>
             )}
+
+            {detailImage && (
+              <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-3xl">
+                <Image
+                  src={detailImage}
+                  alt={`${service.name} durch das Westerwalbesloh-Team in Gütersloh`}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            )}
           </Reveal>
 
           <Reveal delay={100} className="rounded-3xl border border-brand-border bg-brand-sand p-8">
@@ -113,15 +127,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <SectionHeading eyebrow="Weitere Leistungen" title="Auch das könnte relevant sein" />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {otherServices.map((item) => (
-            <Link
+            <RelatedCard
               key={item.slug}
               href={`/leistungen/${item.slug}`}
-              className="group rounded-3xl border border-brand-border p-6 transition-colors hover:border-brand-primary hover:bg-brand-sand"
-            >
-              <ServiceIcon icon={item.icon} className="h-6 w-6 text-brand-primary" />
-              <h3 className="mt-4 text-base font-bold text-brand-ink">{item.name}</h3>
-              <p className="mt-2 text-sm text-brand-ink-soft">{item.shortDescription}</p>
-            </Link>
+              name={item.name}
+              description={item.shortDescription}
+              image={localImage(`leistungen/${item.slug}/hero.jpg`)}
+              icon={(props) => <ServiceIcon icon={item.icon} {...props} />}
+            />
           ))}
         </div>
       </Section>

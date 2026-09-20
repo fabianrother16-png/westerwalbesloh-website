@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -10,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FeatureList } from "@/components/shared/FeatureList";
 import { FaqList } from "@/components/shared/FaqList";
+import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ProductIcon } from "@/components/icons/ProductIcons";
 import { IconPhone } from "@/components/icons/UiIcons";
@@ -130,15 +130,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <SectionHeading eyebrow="Weitere Produkte" title="Das könnte Sie ebenfalls interessieren" />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {otherProducts.map((item) => (
-            <Link
+            <RelatedCard
               key={item.slug}
               href={`/produkte/${item.slug}`}
-              className="group rounded-3xl border border-brand-border p-6 transition-colors hover:border-brand-primary hover:bg-brand-sand"
-            >
-              <ProductIcon icon={item.icon} className="h-6 w-6 text-brand-accent" />
-              <h3 className="mt-4 text-base font-bold text-brand-ink">{item.name}</h3>
-              <p className="mt-2 text-sm text-brand-ink-soft">{item.shortDescription}</p>
-            </Link>
+              name={item.name}
+              description={item.shortDescription}
+              image={localImage(`produkte/${item.slug}/hero.jpg`)}
+              icon={(props) => <ProductIcon icon={item.icon} {...props} />}
+            />
           ))}
         </div>
       </Section>

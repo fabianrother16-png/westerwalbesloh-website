@@ -5,6 +5,7 @@ import { FinderSection } from "@/components/home/FinderSection";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Partners } from "@/components/home/Partners";
+import { InsightsGallery } from "@/components/home/InsightsGallery";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FinderSection />
       <ProcessSteps />
       <WhyUs />
+      <InsightsGallery />
       <Testimonials />
       <CtaBanner />
     </>

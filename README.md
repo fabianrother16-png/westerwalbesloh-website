@@ -52,20 +52,27 @@ die GitHub-Weboberfläche hochzuladen (Repo → zum Ordner navigieren → "Add f
 files") und danach neu zu deployen (bei Vercel automatisch bei jedem Push) – es muss kein Code
 angepasst werden.
 
-| Zweck | Erwarteter Pfad |
-|---|---|
-| Produktseite Hero | `public/images/produkte/<slug>/hero.jpg` |
-| Produktseite Zusatzbild | `public/images/produkte/<slug>/detail.jpg` |
-| Leistungsseite Hero | `public/images/leistungen/<slug>/hero.jpg` |
-| Team-Gruppenfoto (Über-uns-Hero) | `public/images/team/team-gruppe.jpg` |
-| Firmenwagen-Banner (Über uns) | `public/images/projekte/firmenwagen.jpg` |
-| Home-Hero-Hintergrund | aktuell `public/images/produkte/markisen/hero.jpg` (siehe `src/components/home/Hero.tsx`) |
+| Zweck | Erwarteter Pfad | Status |
+|---|---|---|
+| Produktseite Hero | `public/images/produkte/<slug>/hero.jpg` | ✅ Raffstore, Rollladen, Markisen · offen: Insektenschutz, Innenliegender Sonnenschutz, Sonnenschirme, Steuerungen |
+| Produktseite Zusatzbild | `public/images/produkte/<slug>/detail.jpg` | ✅ Raffstore, Markisen |
+| Leistungsseite Hero | `public/images/leistungen/<slug>/hero.jpg` | ✅ alle 4 |
+| Leistungsseite Zusatzbild | `public/images/leistungen/<slug>/detail.jpg` | ✅ Objektbau |
+| Team-Gruppenfoto (Über-uns-Hero) | `public/images/team/team-gruppe.jpg` | ✅ |
+| Firmenwagen-Banner (Über uns) | `public/images/projekte/firmenwagen.jpg` | ✅ |
+| Home-Hero-Hintergrund | aktuell `public/images/produkte/markisen/hero.jpg` (siehe `src/components/home/Hero.tsx`) | ✅ |
+| Einblicke-Galerie (Karussell, Startseite) | Liste in `src/components/home/InsightsGallery.tsx` | ✅ 5 Fotos |
 
 `<slug>` ist der jeweilige URL-Slug, z. B. `raffstore`, `rollladen`, `markisen`,
 `insektentschutz`, `sonnenschutz` (innenliegender Sonnenschutz), `sonnenschirme`,
 `steuerung-antriebe` bzw. bei Leistungen `beratung-aufmass-montage`,
-`reparatur-modernisierung`, `wartung`, `objektbau-projekte`. Empfohlenes Format: JPG/WebP,
-mindestens 1600px breit, Querformat (die Bilder werden per `object-cover` zugeschnitten).
+`reparatur-modernisierung`, `wartung`, `objektbau-projekte`. Fehlt eine Datei, zeigt die Seite
+automatisch eine gestaltete Alternative (großer Produktname + Icon auf Markenfarben-Verlauf)
+statt eines Icons oder Platzhalterbilds. Empfohlenes Format: JPG/WebP, mindestens 1600px breit,
+Querformat (die Bilder werden per `object-cover` zugeschnitten).
+
+Für die Einblicke-Galerie: neue Einträge (Pfad relativ zu `public/images/`, Alt-Text, Bildunterschrift)
+einfach in das `candidates`-Array in `src/components/home/InsightsGallery.tsx` ergänzen.
 
 **Videos** (z. B. von Instagram/TikTok) sind noch nicht eingebunden. Sobald Dateien vorliegen,
 gerne hier im Chat hochladen oder als Datei ins Repo legen (z. B. `public/videos/...`) – dann

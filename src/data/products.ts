@@ -39,6 +39,11 @@ export const products: Product[] = [
         answer:
           "Ja. Wir statten Raffstoreanlagen auf Wunsch mit Elektromotoren sowie Funk- oder App-Steuerung von Somfy oder WAREMA aus – inklusive Sonnenautomatik.",
       },
+      {
+        question: "Wo kann ich in Gütersloh einen Raffstore kaufen?",
+        answer:
+          "Bei uns – allerdings nicht von der Stange: Da jede Fassade unterschiedlich ist, beginnt der Kauf eines Raffstores bei uns immer mit einem kostenlosen Vor-Ort-Termin, exaktem Aufmaß und einer auf Ihr Haus zugeschnittenen Beratung. So bekommen Sie eine Anlage, die wirklich passt, statt einer Lösung von der Stange.",
+      },
     ],
     icon: "raffstore",
     metaTitle: "Raffstore Gütersloh – Sonnen- & Hitzeschutz | Westerwalbesloh",
@@ -274,7 +279,7 @@ export const products: Product[] = [
     heroText:
       "Ein Tastendruck genügt: moderne Antriebs- und Steuerungstechnik für Ihren Sonnenschutz.",
     intro:
-      "Ob einfacher Wandschalter, Funkfernbedienung, App-Steuerung oder vollständige Smart-Home-Integration – als Somfy-Experte und WAREMA-Partner statten wir Rollläden, Raffstores, Markisen und mehr mit zuverlässiger Antriebstechnik aus. Zeit- und Sonnenautomatik sorgen dafür, dass sich Ihre Anlagen auch automatisch steuern, wenn Sie nicht zu Hause sind.",
+      "Elektrischer Sonnenschutz ist heute der Standard: Ob einfacher Wandschalter, Funkfernbedienung, App-Steuerung oder vollständige Smart-Home-Integration – als Somfy-Fachbetrieb und WAREMA-Partner statten wir Rollläden, Raffstores, Markisen und mehr mit zuverlässiger Antriebstechnik aus. Zeit- und Sonnenautomatik sorgen dafür, dass sich Ihre Anlagen auch automatisch steuern, wenn Sie nicht zu Hause sind.",
     features: [
       "Wandschalter für die einfache, klassische Bedienung",
       "Funkfernbedienungen für mehrere Anlagen zentral steuerbar",

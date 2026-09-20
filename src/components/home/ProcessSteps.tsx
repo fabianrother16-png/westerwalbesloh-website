@@ -11,11 +11,15 @@ export function ProcessSteps() {
         title="In fünf Schritten zu Ihrer neuen Anlage"
         align="center"
       />
-      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="relative mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div
+          aria-hidden="true"
+          className="absolute top-11 right-[10%] left-[10%] hidden h-px bg-brand-border lg:block"
+        />
         {company.process.map((item, index) => (
           <Reveal key={item.step} delay={index * 80}>
             <div className="relative h-full rounded-3xl border border-brand-border bg-white p-6">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-white">
+              <span className="relative flex h-11 w-11 items-center justify-center rounded-full bg-brand-primary text-base font-bold text-white ring-4 ring-brand-sand">
                 {item.step}
               </span>
               <h3 className="mt-4 text-base font-bold text-brand-ink">{item.title}</h3>
