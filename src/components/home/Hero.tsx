@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SlatPattern } from "@/components/ui/SlatPattern";
 import { IconStar } from "@/components/icons/UiIcons";
+import { CountUp } from "@/components/ui/CountUp";
 import { company } from "@/data/company";
 import { localImage } from "@/lib/media";
 
@@ -59,11 +60,15 @@ export function Hero() {
         <Reveal delay={320}>
           <dl className="mt-16 grid grid-cols-2 gap-8 border-t border-white/15 pt-10 sm:grid-cols-4">
             <div>
-              <dt className="text-3xl font-bold">{yearsExperience}+</dt>
+              <dt className="text-3xl font-bold">
+                <CountUp end={yearsExperience} suffix="+" />
+              </dt>
               <dd className="mt-1 text-sm text-white/60">Jahre Erfahrung</dd>
             </div>
             <div>
-              <dt className="text-3xl font-bold">{company.reviews.rating}★</dt>
+              <dt className="text-3xl font-bold">
+                <CountUp end={company.reviews.rating} decimals={1} suffix="★" />
+              </dt>
               <dd className="mt-1 text-sm text-white/60">Google-Bewertung</dd>
             </div>
             <div>

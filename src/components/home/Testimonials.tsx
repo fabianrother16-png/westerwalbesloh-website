@@ -1,18 +1,29 @@
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { IconStar } from "@/components/icons/UiIcons";
+import { IconArrowRight, IconStar } from "@/components/icons/UiIcons";
 import { testimonials } from "@/data/testimonials";
 import { company } from "@/data/company";
 
 export function Testimonials() {
   return (
     <Section background="sand">
-      <SectionHeading
-        eyebrow="Kundenstimmen"
-        title={`${company.reviews.label} auf Google`}
-        description="Ein Auszug echter Bewertungen unserer Kundinnen und Kunden."
-      />
+      <div className="flex flex-wrap items-end justify-between gap-6">
+        <SectionHeading
+          eyebrow="Kundenstimmen"
+          title={`${company.reviews.label} auf Google`}
+          description="Ein Auszug echter Bewertungen unserer Kundinnen und Kunden."
+        />
+        <a
+          href={company.social.googleProfile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:text-brand-accent"
+        >
+          Alle Bewertungen bei Google ansehen
+          <IconArrowRight className="h-4 w-4" />
+        </a>
+      </div>
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.author} delay={index * 60}>

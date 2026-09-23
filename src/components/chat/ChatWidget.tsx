@@ -77,7 +77,7 @@ export function ChatWidget() {
     <>
       <button
         onClick={() => setOpen((value) => !value)}
-        className="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 rounded-full bg-brand-accent px-5 py-4 text-sm font-semibold text-white shadow-xl shadow-brand-accent/30 transition-transform hover:scale-105 sm:bottom-7 sm:right-7"
+        className="fixed bottom-21 right-5 z-50 flex items-center gap-2.5 rounded-full bg-brand-accent px-5 py-4 text-sm font-semibold text-white shadow-xl shadow-brand-accent/30 transition-transform hover:scale-105 sm:bottom-7 sm:right-7"
         aria-expanded={open}
         aria-label="Sonnenschutz-Berater öffnen"
       >

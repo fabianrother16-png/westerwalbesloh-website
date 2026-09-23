@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
@@ -36,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className="flex min-h-screen flex-col antialiased">
+      <body className="flex min-h-screen flex-col pb-16 antialiased sm:pb-0">
         <noscript>
           <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
         </noscript>
@@ -53,6 +54,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <ChatWidget />
+        <MobileStickyBar />
       </body>
     </html>
   );

@@ -23,6 +23,10 @@ export function Partners() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-xs text-brand-ink-soft/70">
+            Seit den 1980er-Jahren im Einsatz auch bei namhaften Unternehmen wie Miele, Claas
+            und Bertelsmann.
+          </p>
         </Reveal>
       </Container>
     </div>
