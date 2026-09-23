@@ -2,12 +2,17 @@
 
 import { useSyncExternalStore } from "react";
 
-export type ConsentState = {
+export type ConsentChoices = {
+  /** Google Analytics and Microsoft Clarity. */
+  statistics: boolean;
+  /** Instagram reels and the Google Maps embed. */
   externalMedia: boolean;
-  decidedAt: string;
 };
 
-const STORAGE_KEY = "ww-consent-v1";
+export type ConsentState = ConsentChoices & { decidedAt: string };
+
+// v2 added the statistics category, so choices stored under v1 are asked again.
+const STORAGE_KEY = "ww-consent-v2";
 const CHANGE_EVENT = "ww-consent-change";
 export const OPEN_SETTINGS_EVENT = "ww-consent-open";
 
@@ -25,16 +30,20 @@ function parse(raw: string | null): ConsentState | null {
   if (!raw) return null;
   try {
     const value = JSON.parse(raw) as Partial<ConsentState>;
-    return typeof value.externalMedia === "boolean"
-      ? { externalMedia: value.externalMedia, decidedAt: String(value.decidedAt ?? "") }
+    return typeof value.statistics === "boolean" && typeof value.externalMedia === "boolean"
+      ? {
+          statistics: value.statistics,
+          externalMedia: value.externalMedia,
+          decidedAt: String(value.decidedAt ?? ""),
+        }
       : null;
   } catch {
     return null;
   }
 }
 
-export function saveConsent(externalMedia: boolean) {
-  const state: ConsentState = { externalMedia, decidedAt: new Date().toISOString() };
+export function saveConsent(choices: ConsentChoices) {
+  const state: ConsentState = { ...choices, decidedAt: new Date().toISOString() };
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch {

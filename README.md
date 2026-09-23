@@ -72,12 +72,21 @@ Bis zu drei Projektfotos erscheinen als Raster mit Kontakt-Kachel, ab vier als K
 **Videos** (z. B. von Instagram/TikTok) sind noch nicht als Dateien eingebunden; Instagram-Reels
 werden über die offizielle Einbettung geladen (siehe unten).
 
-## Cookie-Banner & externe Inhalte
+## Cookie-Banner, Statistik & externe Inhalte
 
-Instagram-Reels (Startseite) und die Google-Maps-Karte (Kontakt) werden erst nach Einwilligung
-geladen (`src/components/consent/CookieBanner.tsx`, Logik in `src/lib/consent.ts`). Die Auswahl
-liegt nur im Local Storage des Besuchers; über „Cookie-Einstellungen“ im Footer lässt sie sich
-jederzeit ändern. Neue externe Dienste (z. B. Analytics, YouTube) müssen ebenfalls hinter
+Das Cookie-Banner (`src/components/consent/CookieBanner.tsx`, Logik in `src/lib/consent.ts`)
+fragt zwei Kategorien ab:
+
+- **Statistik** – Google Analytics 4 (`G-7DVDHX6NLD`) und Microsoft Clarity (`utosndrm9n`), also
+  dieselbe Property bzw. dasselbe Projekt wie auf der bisherigen Seite, damit die Auswertungen
+  nahtlos weiterlaufen. Beide werden erst nach Einwilligung geladen
+  (`src/components/consent/Analytics.tsx`), Werbefunktionen sind per Consent Mode deaktiviert.
+  Bei einem Widerruf werden die Cookies gelöscht und die Seite ohne Tracking neu geladen.
+  Im Entwicklungsmodus (`npm run dev`) wird grundsätzlich nichts geladen.
+- **Externe Medien** – Instagram-Reels (Startseite) und die Google-Maps-Karte (Kontakt).
+
+Die Auswahl liegt nur im Local Storage des Besuchers; über „Cookie-Einstellungen“ im Footer lässt
+sie sich jederzeit ändern. Neue externe Dienste (z. B. YouTube) müssen ebenfalls hinter
 `useConsent()` liegen und in der Datenschutzerklärung ergänzt werden.
 
 ## Weiterleitungen alter URLs
@@ -106,6 +115,8 @@ npm run dev
 | `CONTACT_FROM_EMAIL` | ja | Absenderadresse, z. B. `Westerwalbesloh Website <formular@ihre-domain.de>`. Die Domain muss bei Resend verifiziert sein. |
 | `CONTACT_TO_EMAIL` | nein | Empfänger der Anfragen. Standard: `westerwalbesloh_gmbh@t-online.de`. |
 | `NEXT_PUBLIC_SITE_URL` | nein | Basis-URL für Sitemap/JSON-LD/OG-Tags. Standard: `https://sonnenschutz-westerwalbesloh.de`. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | nein | Google-Analytics-ID. Standard: `G-7DVDHX6NLD` (bisherige Property). `off` schaltet Google Analytics ab, z. B. für Vorschau-Deployments. |
+| `NEXT_PUBLIC_CLARITY_PROJECT_ID` | nein | Microsoft-Clarity-Projekt. Standard: `utosndrm9n` (bisheriges Projekt). `off` schaltet Clarity ab. |
 
 Ohne `ANTHROPIC_API_KEY` bzw. `RESEND_API_KEY`/`CONTACT_FROM_EMAIL` antworten die jeweiligen
 API-Routen (`/api/chat`, `/api/contact`) mit einem klaren Fehler (HTTP 503) statt so zu tun,

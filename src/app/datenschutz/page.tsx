@@ -1,4 +1,4 @@
-// Describes the data processing of this website (Vercel, Resend, Anthropic chat, consent-gated Instagram/Maps); have changes reviewed by a lawyer.
+// Describes the data processing of this website (Vercel, Resend, Anthropic chat, consent-gated statistics and Instagram/Maps); have changes reviewed by a lawyer.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -100,17 +100,75 @@ export default function DatenschutzPage() {
 
           <LegalSection title="7. Cookie- und Einwilligungs-Banner">
             <p>
-              Beim ersten Besuch fragen wir Sie in einem Banner, ob wir externe Medien (Instagram,
-              Google Maps) laden dürfen. Ihre Auswahl speichern wir ausschließlich lokal in Ihrem
-              Browser (Local Storage), damit das Banner nicht bei jedem Seitenaufruf erneut
-              erscheint. Diese Speicherung ist technisch erforderlich (§ 25 Abs. 2 TDDDG) und
-              wird nicht an uns oder Dritte übertragen. Weitere Cookies oder Tracking- und
-              Analyse-Tools setzen wir nicht ein. Ihre Einwilligung können Sie jederzeit über den
-              Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen.
+              Beim ersten Besuch fragen wir Sie in einem Banner, ob wir Statistik-Dienste (Google
+              Analytics, Microsoft Clarity) nutzen und externe Medien (Instagram, Google Maps)
+              laden dürfen. Ihre Auswahl speichern wir ausschließlich lokal in Ihrem Browser
+              (Local Storage), damit das Banner nicht bei jedem Seitenaufruf erneut erscheint.
+              Diese Speicherung ist technisch erforderlich (§ 25 Abs. 2 TDDDG) und wird nicht an
+              uns oder Dritte übertragen. Ohne Ihre Einwilligung laden wir keine Statistik-Dienste
+              und setzen keine Cookies zu Analysezwecken. Ihre Einwilligung können Sie jederzeit
+              über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen; bei einem
+              Widerruf löschen wir die Cookies von Google Analytics und Microsoft Clarity in Ihrem
+              Browser.
             </p>
           </LegalSection>
 
-          <LegalSection title="8. Google Maps (Anfahrtskarte)">
+          <LegalSection title="8. Google Analytics">
+            <p>
+              Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen Webanalysedienst der
+              Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google“).
+              Google Analytics zeigt uns, wie Besucher unsere Website nutzen, z. B. welche Seiten
+              aufgerufen werden, wie lange Besuche dauern, welche Geräte und Browser verwendet
+              werden und aus welcher Region die Besucher ungefähr kommen. Dazu setzt Google die
+              Cookies „_ga“ und „_ga_&lt;ID&gt;“, die Ihren Browser wiedererkennen und bis zu zwei
+              Jahre gespeichert werden. IP-Adressen werden von Google Analytics 4 nach Angaben von
+              Google nicht protokolliert oder gespeichert.
+            </p>
+            <p>
+              Werbe- und Personalisierungsfunktionen haben wir über den sogenannten Consent Mode
+              deaktiviert; es werden keine Daten zu Werbezwecken an Google übermittelt. Die
+              erhobenen Daten können an Server der Google LLC in den USA übertragen werden. Google
+              LLC ist nach dem EU-US Data Privacy Framework zertifiziert, für das die
+              EU-Kommission ein angemessenes Datenschutzniveau festgestellt hat
+              (https://www.dataprivacyframework.gov/participant/5780). Wir haben mit Google einen
+              Vertrag zur Auftragsverarbeitung geschlossen.
+            </p>
+            <p>
+              Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1
+              TDDDG), die Sie jederzeit über die „Cookie-Einstellungen“ im Seitenfuß widerrufen
+              können. Weitere Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden
+              Sie unter https://support.google.com/analytics/answer/6004245?hl=de.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="9. Microsoft Clarity">
+            <p>
+              Mit Ihrer Einwilligung nutzen wir Microsoft Clarity, einen Analysedienst der
+              Microsoft Ireland Operations Limited, One Microsoft Place, South County Business
+              Park, Leopardstown, Dublin 18, Irland. Clarity erfasst, wie Besucher mit unserer
+              Website interagieren (z. B. Mausbewegungen, Klicks und Scrollverhalten), und stellt
+              dies als Heatmaps und Sitzungsaufzeichnungen dar. So erkennen wir, wo die Bedienung
+              der Seite verbessert werden kann. Eingaben in Formularfelder werden von Clarity
+              grundsätzlich maskiert und nicht übertragen.
+            </p>
+            <p>
+              Clarity setzt die Cookies „_clck“ und „_clsk“, um Seitenaufrufe einer Sitzung und
+              wiederkehrende Besuche einer pseudonymen Kennung zuzuordnen; über Microsoft-Domains
+              können zusätzlich Cookies von Microsoft gesetzt werden (z. B. „MUID“). Die Daten
+              werden auf Servern von Microsoft (Microsoft Azure) in den USA gespeichert. Microsoft
+              ist nach dem EU-US Data Privacy Framework zertifiziert
+              (https://www.dataprivacyframework.gov/participant/6474). Wir haben mit Microsoft
+              einen Vertrag zur Auftragsverarbeitung geschlossen.
+            </p>
+            <p>
+              Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1
+              TDDDG), die Sie jederzeit über die „Cookie-Einstellungen“ im Seitenfuß widerrufen
+              können. Weitere Informationen finden Sie in der Datenschutzerklärung von Microsoft
+              unter https://privacy.microsoft.com/de-de/privacystatement.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="10. Google Maps (Anfahrtskarte)">
             <p>
               Auf unserer Kontaktseite bieten wir die Möglichkeit, eine Anfahrtskarte von Google
               Maps zu laden. Die Karte wird nur geladen, wenn Sie externe Medien im
@@ -122,7 +180,7 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="9. Eingebettete Instagram-Beiträge">
+          <LegalSection title="11. Eingebettete Instagram-Beiträge">
             <p>
               Auf unserer Startseite zeigen wir ausgewählte Beiträge (Reels) von unserem
               Instagram-Profil. Anbieter ist die Meta Platforms Ireland Limited, Merrion Road,
@@ -137,7 +195,7 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="10. Social-Media-Verlinkungen">
+          <LegalSection title="12. Social-Media-Verlinkungen">
             <p>
               Darüber hinaus verlinken wir auf unsere Profile bei Instagram und Facebook sowie
               unser Google-Unternehmensprofil. Bei diesen reinen Verlinkungen werden beim bloßen
@@ -147,7 +205,7 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="11. SSL-/TLS-Verschlüsselung">
+          <LegalSection title="13. SSL-/TLS-Verschlüsselung">
             <p>
               Diese Seite nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung zur
               Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als
@@ -156,7 +214,7 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="12. Änderung dieser Datenschutzerklärung">
+          <LegalSection title="14. Änderung dieser Datenschutzerklärung">
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den
               aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen
