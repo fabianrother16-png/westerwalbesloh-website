@@ -6,6 +6,7 @@ import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { WhyUs } from "@/components/home/WhyUs";
 import { Partners } from "@/components/home/Partners";
 import { InsightsGallery } from "@/components/home/InsightsGallery";
+import { InstagramReels } from "@/components/home/InstagramReels";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CtaBanner } from "@/components/home/CtaBanner";
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <ProcessSteps />
       <WhyUs />
       <InsightsGallery />
+      <InstagramReels />
       <Testimonials />
       <CtaBanner />
     </>
