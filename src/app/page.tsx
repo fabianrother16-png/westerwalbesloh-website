@@ -4,6 +4,7 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FinderSection } from "@/components/home/FinderSection";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { WhyUs } from "@/components/home/WhyUs";
+import { Comparison } from "@/components/home/Comparison";
 import { Partners } from "@/components/home/Partners";
 import { InsightsGallery } from "@/components/home/InsightsGallery";
 import { InstagramReels } from "@/components/home/InstagramReels";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <FinderSection />
       <ProcessSteps />
       <WhyUs />
+      <Comparison />
       <InsightsGallery />
       <InstagramReels />
       <Testimonials />
