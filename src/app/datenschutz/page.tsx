@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
-import { LegalSection } from "@/components/legal/LegalSection";
+import { ExternalLink, LegalSection } from "@/components/legal/LegalSection";
 import { buildMetadata } from "@/lib/metadata";
 import { company } from "@/data/company";
 
@@ -130,14 +130,14 @@ export default function DatenschutzPage() {
               erhobenen Daten können an Server der Google LLC in den USA übertragen werden. Google
               LLC ist nach dem EU-US Data Privacy Framework zertifiziert, für das die
               EU-Kommission ein angemessenes Datenschutzniveau festgestellt hat
-              (https://www.dataprivacyframework.gov/participant/5780). Wir haben mit Google einen
+              (<ExternalLink href="https://www.dataprivacyframework.gov/participant/5780" />). Wir haben mit Google einen
               Vertrag zur Auftragsverarbeitung geschlossen.
             </p>
             <p>
               Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1
               TDDDG), die Sie jederzeit über die „Cookie-Einstellungen“ im Seitenfuß widerrufen
               können. Weitere Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden
-              Sie unter https://support.google.com/analytics/answer/6004245?hl=de.
+              Sie unter <ExternalLink href="https://support.google.com/analytics/answer/6004245?hl=de" />.
             </p>
           </LegalSection>
 
@@ -157,14 +157,14 @@ export default function DatenschutzPage() {
               können zusätzlich Cookies von Microsoft gesetzt werden (z. B. „MUID“). Die Daten
               werden auf Servern von Microsoft (Microsoft Azure) in den USA gespeichert. Microsoft
               ist nach dem EU-US Data Privacy Framework zertifiziert
-              (https://www.dataprivacyframework.gov/participant/6474). Wir haben mit Microsoft
+              (<ExternalLink href="https://www.dataprivacyframework.gov/participant/6474" />). Wir haben mit Microsoft
               einen Vertrag zur Auftragsverarbeitung geschlossen.
             </p>
             <p>
               Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1
               TDDDG), die Sie jederzeit über die „Cookie-Einstellungen“ im Seitenfuß widerrufen
               können. Weitere Informationen finden Sie in der Datenschutzerklärung von Microsoft
-              unter https://privacy.microsoft.com/de-de/privacystatement.
+              unter <ExternalLink href="https://privacy.microsoft.com/de-de/privacystatement" />.
             </p>
           </LegalSection>
 

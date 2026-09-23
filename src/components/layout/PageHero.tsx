@@ -32,7 +32,8 @@ export function PageHero({
             src={image}
             alt={imageAlt ?? ""}
             fill
-            priority
+            loading="eager"
+            fetchPriority="high"
             sizes="100vw"
             className={`hero-zoom object-cover ${imagePosition}`}
           />

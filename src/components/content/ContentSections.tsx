@@ -17,7 +17,7 @@ type GridLayout = {
 
 const standardAspect = () => "aspect-[4/3]";
 
-function layoutFor(count: number): GridLayout {
+export function layoutFor(count: number): GridLayout {
   switch (count) {
     case 1:
       return { grid: "", span: () => "", aspect: () => "aspect-[16/9]" };

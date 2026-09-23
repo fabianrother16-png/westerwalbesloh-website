@@ -15,17 +15,17 @@ export function WhyUs() {
             title="Warum Westerwalbesloh?"
             description="Seit über 60 Jahren sind wir Ihr zuverlässiger Partner im Raum Gütersloh & OWL: ehrliches Handwerk, erstklassige Markenqualität und ein Service, der dort weitermacht, wo andere aufhören."
           />
-          <dl className="mt-10 grid gap-7 sm:grid-cols-2">
+          <ul className="mt-10 grid gap-7 sm:grid-cols-2">
             {company.usps.map((usp) => (
-              <div key={usp.title} className="flex gap-4">
+              <li key={usp.title} className="flex gap-4">
                 <IconCheck className="mt-1 h-5 w-5 shrink-0 text-brand-accent" />
                 <div>
-                  <dt className="text-base font-bold text-brand-ink">{usp.title}</dt>
-                  <dd className="mt-1 text-sm leading-relaxed text-brand-ink-soft">{usp.text}</dd>
+                  <h3 className="text-base font-bold text-brand-ink">{usp.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-brand-ink-soft">{usp.text}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </dl>
+          </ul>
         </Reveal>
 
         <Reveal delay={120} className="order-1 lg:order-2">

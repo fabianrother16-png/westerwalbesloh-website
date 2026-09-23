@@ -9,7 +9,7 @@ import { MapEmbed } from "@/components/contact/MapEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
-import { IconClock, IconMail, IconMapPin, IconPhone } from "@/components/icons/UiIcons";
+import { IconClock, IconCompass, IconMail, IconMapPin, IconPhone } from "@/components/icons/UiIcons";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = buildMetadata({
@@ -18,6 +18,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Fragen zum Sonnenschutz? Kontaktieren Sie uns für eine individuelle Beratung in Gütersloh & OWL. Wir planen Ihr Projekt maßgeschneidert. Jetzt anfragen!",
   path: "/kontakt",
+  image: "/images/kontakt/terrasse.jpg",
 });
 
 const contactSteps = [
@@ -78,6 +79,10 @@ export default function KontaktPage() {
                 <p className="flex items-start gap-3 text-brand-ink-soft">
                   <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-brand-accent" />
                   {company.hoursNote}
+                </p>
+                <p className="flex items-start gap-3 text-brand-ink-soft">
+                  <IconCompass className="mt-0.5 h-5 w-5 shrink-0 text-brand-accent" />
+                  Einsatzgebiet: ganz Kreis Gütersloh, Bielefeld und Ostwestfalen-Lippe
                 </p>
               </div>
             </div>

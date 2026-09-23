@@ -16,7 +16,9 @@ export function buildMetadata({
   image?: string;
 }): Metadata {
   const url = `${siteUrl}${path}`;
-  const images = image ? [{ url: image }] : undefined;
+  // Setting openGraph on a page replaces the inherited preview image, so pages without a photo
+  // fall back to the generated brand image explicitly.
+  const images = image ? [{ url: image }] : [{ url: "/opengraph-image", width: 1200, height: 630 }];
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -32,10 +34,10 @@ export function buildMetadata({
       images,
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title,
       description,
-      images: image ? [image] : undefined,
+      images: images.map((entry) => entry.url),
     },
   };
 }

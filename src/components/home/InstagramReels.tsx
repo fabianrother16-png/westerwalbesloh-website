@@ -6,6 +6,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { SlatPattern } from "@/components/ui/SlatPattern";
 import { company } from "@/data/company";
 import { openConsentSettings, useConsent } from "@/lib/consent";
 
@@ -99,11 +100,16 @@ export function InstagramReels() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${cardClass} transition-colors hover:border-brand-primary`}
+                  className="group relative flex aspect-[9/16] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand-primary-soft to-brand-primary-dark p-6 text-center text-white"
                 >
-                  <span className="text-sm font-semibold text-brand-primary">
-                    Reel auf Instagram ansehen
+                  <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+                  <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/40 transition-transform duration-300 group-hover:scale-110">
+                    <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-current" aria-hidden="true">
+                      <path d="M8 5.5v13l11-6.5z" />
+                    </svg>
                   </span>
+                  <span className="relative mt-5 text-base font-semibold">Reel auf Instagram ansehen</span>
+                  <span className="relative mt-1 text-sm text-white/80">@westerwalbesloh_gmbh</span>
                 </a>
               )}
             </div>

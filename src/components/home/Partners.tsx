@@ -10,7 +10,7 @@ export function Partners() {
     <div className="border-y border-brand-border bg-white py-14">
       <Container>
         <Reveal>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink-soft/70">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink-soft">
             Zertifizierter Fachbetrieb mit starken Partnern
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-5">
@@ -21,6 +21,7 @@ export function Partners() {
                 alt={certificate.name}
                 width={certificate.width}
                 height={certificate.height}
+                sizes="128px"
                 className="h-20 w-auto"
               />
             ))}
@@ -39,6 +40,7 @@ export function Partners() {
                     alt={copy === 0 ? `${partner.name} – Fachpartner von Westerwalbesloh` : ""}
                     width={partner.width}
                     height={partner.height}
+                    sizes="144px"
                     className="h-14 w-36 object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
                   />
                 </li>
@@ -49,7 +51,7 @@ export function Partners() {
       </div>
 
       <Container>
-        <p className="mt-10 text-center text-xs text-brand-ink-soft/70">
+        <p className="mt-10 text-center text-xs text-brand-ink-soft">
           Seit den 1980er-Jahren im Einsatz auch bei namhaften Unternehmen wie Miele, Claas und
           Bertelsmann.
         </p>

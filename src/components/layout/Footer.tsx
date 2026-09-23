@@ -48,6 +48,7 @@ export function Footer() {
                   alt={certificate.name}
                   width={certificate.width}
                   height={certificate.height}
+                  sizes="96px"
                   className="h-14 w-auto rounded-md"
                 />
               ))}
@@ -55,7 +56,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
               Produkte
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm">
@@ -70,7 +71,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
               Leistungen
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm">
@@ -85,7 +86,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
               Unternehmen
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm">
@@ -106,7 +107,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={company.social.facebookSearch}
+                  href={company.social.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
@@ -128,7 +129,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {company.legalName}. Alle Rechte vorbehalten.
           </p>

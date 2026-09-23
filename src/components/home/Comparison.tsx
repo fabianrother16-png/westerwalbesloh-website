@@ -37,7 +37,7 @@ export function Comparison() {
       <Reveal className="mt-12 overflow-hidden rounded-3xl border border-brand-border">
         <div className="grid sm:grid-cols-2">
           <div className="bg-brand-primary p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/70">
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/80">
               Westerwalbesloh
             </p>
             <ul className="mt-5 space-y-4">
@@ -50,7 +50,7 @@ export function Comparison() {
             </ul>
           </div>
           <div className="bg-white p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-ink-soft/70">
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand-ink-soft">
               Baumarkt &amp; Online-Bestellung
             </p>
             <ul className="mt-5 space-y-4">

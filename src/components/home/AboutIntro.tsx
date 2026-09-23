@@ -21,7 +21,7 @@ export function AboutIntro() {
           </div>
           <div className="absolute -bottom-6 left-6 rounded-2xl bg-brand-accent px-6 py-4 text-white shadow-xl shadow-brand-accent/30 sm:left-auto sm:-right-6">
             <p className="text-3xl font-bold leading-none">{company.founded}</p>
-            <p className="mt-1 text-sm text-white/85">gegründet in Gütersloh</p>
+            <p className="mt-1 text-sm text-white">gegründet in Gütersloh</p>
           </div>
         </Reveal>
         <Reveal delay={120}>

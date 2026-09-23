@@ -29,7 +29,21 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: company.legalName }],
   robots: { index: true, follow: true },
-  alternates: { canonical: siteUrl },
+  alternates: { canonical: `${siteUrl}/` },
+  openGraph: {
+    title: "Sonnenschutz Gütersloh: Maßarbeit & Montage | Westerwalbesloh",
+    description:
+      "Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschirme vom Familienbetrieb seit 1959 – Beratung, Aufmaß und Montage in Gütersloh und ganz OWL.",
+    url: `${siteUrl}/`,
+    siteName: company.legalName,
+    locale: "de_DE",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
+  // Token from Google Search Console ("HTML-Tag" method), only needed if the domain isn't verified via DNS.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({

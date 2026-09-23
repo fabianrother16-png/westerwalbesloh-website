@@ -168,7 +168,7 @@ export function ChatWidget() {
               <IconSend className="h-4 w-4" />
             </button>
           </form>
-          <p className="px-4 pb-3 text-[0.7rem] text-brand-ink-soft/70">
+          <p className="px-4 pb-3 text-[0.7rem] text-brand-ink-soft">
             KI-gestützte Auskunft ohne Gewähr – für verbindliche Angebote nutzen Sie bitte das{" "}
             <Link href="/kontakt" className="underline">
               Kontaktformular

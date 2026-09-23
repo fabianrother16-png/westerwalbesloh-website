@@ -15,7 +15,8 @@ export function Logo({
       alt="Westerwalbesloh – Das Schöne am Bau!"
       width={583}
       height={596}
-      priority={priority}
+      loading={priority ? "eager" : undefined}
+      sizes="96px"
       className={`${className} shrink-0 object-contain`}
     />
   );

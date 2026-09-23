@@ -10,11 +10,15 @@ import { Comparison } from "@/components/home/Comparison";
 import { InsightsGallery } from "@/components/home/InsightsGallery";
 import { InstagramReels } from "@/components/home/InstagramReels";
 import { Testimonials } from "@/components/home/Testimonials";
+import { ServiceArea } from "@/components/home/ServiceArea";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { websiteSchema } from "@/lib/schema";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={websiteSchema()} />
       <Hero />
       <Partners />
       <AboutIntro />
@@ -27,6 +31,7 @@ export default function HomePage() {
       <InsightsGallery />
       <InstagramReels />
       <Testimonials />
+      <ServiceArea />
       <CtaBanner />
     </>
   );

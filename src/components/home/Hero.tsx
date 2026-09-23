@@ -15,7 +15,8 @@ export function Hero() {
         src="/images/home/hero.jpg"
         alt="Modernes Wohnhaus mit Raffstoren und offener Terrasse im Abendlicht"
         fill
-        priority
+        loading="eager"
+        fetchPriority="high"
         sizes="100vw"
         className="hero-zoom object-cover"
       />
@@ -57,21 +58,21 @@ export function Hero() {
               <dt className="text-3xl font-bold">
                 <CountUp end={yearsExperience} suffix="+" />
               </dt>
-              <dd className="mt-1 text-sm text-white/70">Jahre Erfahrung</dd>
+              <dd className="mt-1 text-sm text-white/80">Jahre Erfahrung</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">
                 <CountUp end={company.reviews.rating} decimals={1} suffix="★" />
               </dt>
-              <dd className="mt-1 text-sm text-white/70">Google-Bewertung</dd>
+              <dd className="mt-1 text-sm text-white/80">Google-Bewertung</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">3.</dt>
-              <dd className="mt-1 text-sm text-white/70">Generation</dd>
+              <dd className="mt-1 text-sm text-white/80">Generation</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">Somfy</dt>
-              <dd className="mt-1 text-sm text-white/70">Expert-Fachbetrieb</dd>
+              <dd className="mt-1 text-sm text-white/80">Expert-Fachbetrieb</dd>
             </div>
           </dl>
         </Reveal>

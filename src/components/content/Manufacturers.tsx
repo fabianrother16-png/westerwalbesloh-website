@@ -28,6 +28,7 @@ export function Manufacturers({
                     alt={`${manufacturer.name} Logo`}
                     width={manufacturer.logo.width}
                     height={manufacturer.logo.height}
+                    sizes="(min-width: 640px) 320px, 45vw"
                     className="max-h-16 w-auto object-contain"
                   />
                 )}
@@ -47,6 +48,7 @@ export function Manufacturers({
                       alt={`${manufacturer.name} Logo`}
                       width={manufacturer.logo.width}
                       height={manufacturer.logo.height}
+                      sizes="176px"
                       className="max-h-16 w-auto max-w-[60%] object-contain sm:max-h-20 sm:max-w-full"
                     />
                   </div>

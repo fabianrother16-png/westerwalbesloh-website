@@ -11,8 +11,28 @@ export const company = {
   cityDistrict: "Gütersloh-Innenstadt",
   region: "Nordrhein-Westfalen",
   areaServed: "Gütersloh und Ostwestfalen-Lippe (OWL)",
+  /** Towns named in the service-area section and in the structured data (Kreis Gütersloh and Bielefeld). */
+  serviceArea: [
+    "Gütersloh",
+    "Rheda-Wiedenbrück",
+    "Verl",
+    "Harsewinkel",
+    "Herzebrock-Clarholz",
+    "Rietberg",
+    "Schloß Holte-Stukenbrock",
+    "Steinhagen",
+    "Halle (Westf.)",
+    "Werther (Westf.)",
+    "Borgholzhausen",
+    "Versmold",
+    "Langenberg",
+    "Bielefeld",
+  ],
+  // Building coordinates of Elsässer Straße 12 (OpenStreetMap).
+  geo: { latitude: 51.91444, longitude: 8.39304 },
   country: "DE",
   phoneDisplay: "05241 20514",
+  phoneInternational: "+49 5241 20514",
   phoneHref: "tel:+49524120514",
   email: "westerwalbesloh_gmbh@t-online.de",
   hoursNote:
@@ -34,8 +54,7 @@ export const company = {
   },
   social: {
     instagram: "https://www.instagram.com/westerwalbesloh_gmbh/",
-    facebookSearch:
-      "https://www.facebook.com/search/top?q=Westerwalbesloh%20GmbH%20Rollladenbau",
+    facebook: "https://www.facebook.com/p/Westerwalbesloh-GmbH-Rollladen-Markisenbau-61564133090858/",
     googleProfile:
       "https://www.google.com/maps/search/?api=1&query=Westerwalbesloh+GmbH+Rollladenbau+Els%C3%A4sser+Stra%C3%9Fe+12+33332+G%C3%BCtersloh",
   },

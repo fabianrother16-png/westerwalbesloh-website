@@ -219,7 +219,7 @@ export function ContactForm() {
       <Button type="submit" size="lg" className="mt-6 w-full sm:w-auto" disabled={status === "loading"}>
         {status === "loading" ? "Wird gesendet…" : "Anfrage absenden"}
       </Button>
-      <p className="mt-3 text-xs text-brand-ink-soft/70">* Pflichtfelder</p>
+      <p className="mt-3 text-xs text-brand-ink-soft">* Pflichtfelder</p>
     </form>
   );
 }

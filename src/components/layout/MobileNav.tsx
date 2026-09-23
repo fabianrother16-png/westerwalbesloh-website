@@ -85,7 +85,7 @@ export function MobileNav({
                 Über uns
               </Link>
 
-              <p className="mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-brand-ink-soft/70">
+              <p className="mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-brand-ink-soft">
                 Produkte
               </p>
               <Link
@@ -106,7 +106,7 @@ export function MobileNav({
                 </Link>
               ))}
 
-              <p className="mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-brand-ink-soft/70">
+              <p className="mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-brand-ink-soft">
                 Leistungen
               </p>
               <Link

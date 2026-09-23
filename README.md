@@ -89,6 +89,32 @@ Die Auswahl liegt nur im Local Storage des Besuchers; über „Cookie-Einstellun
 sie sich jederzeit ändern. Neue externe Dienste (z. B. YouTube) müssen ebenfalls hinter
 `useConsent()` liegen und in der Datenschutzerklärung ergänzt werden.
 
+## SEO & Auffindbarkeit bei Google
+
+- **Metadaten**: Jede Seite hat eigenen Titel, Beschreibung, Canonical-URL und Vorschaubild für
+  Social Media (`src/lib/metadata.ts`). Die SEO-Titel der Live-Seite wurden übernommen, damit
+  bestehende Rankings erhalten bleiben.
+- **Strukturierte Daten** (`src/lib/schema.ts`): Firmeneintrag als `HomeAndConstructionBusiness`
+  mit Koordinaten, Einsatzgebiet (alle Orte im Kreis Gütersloh und Bielefeld), Instagram- und
+  Facebook-Profil; `WebSite` für den Seitennamen in den Suchergebnissen; je Produkt und Leistung
+  ein `Service` mit allen Ausführungen; dazu FAQ und Breadcrumbs.
+- **Sitemap** (`/sitemap.xml`, inkl. 70+ Bildern für die Google-Bildersuche) und `robots.txt`.
+- **Lokale Inhalte**: Abschnitt „Einsatzgebiet“ auf der Startseite mit allen Orten
+  (`company.serviceArea` in `src/data/company.ts`).
+- **Leistung**: Lighthouse (Mobil) 97 Performance, 100 Barrierefreiheit, 100 Best Practices,
+  100 SEO; Desktop durchgehend 100.
+
+### Nach dem Livegang (einmalig)
+
+1. **Google Search Console**: Domain-Property für `sonnenschutz-westerwalbesloh.de` per DNS
+   bestätigen (alternativ den Code der Methode „HTML-Tag“ als `GOOGLE_SITE_VERIFICATION`
+   eintragen), dann die Sitemap `https://sonnenschutz-westerwalbesloh.de/sitemap.xml` einreichen.
+2. **Google-Unternehmensprofil**: Website-Link, Kategorien, Einzugsgebiet und Fotos prüfen,
+   regelmäßig Beiträge veröffentlichen und Kunden um Bewertungen bitten – das ist für die
+   Platzierung in Google Maps der wichtigste Faktor.
+3. **Einheitliche Firmendaten**: Name, Adresse und Telefonnummer in Branchenverzeichnissen
+   (z. B. Das Örtliche, Gelbe Seiten, Handwerkskammer) genau so schreiben wie auf der Website.
+
 ## Weiterleitungen alter URLs
 
 Google hat noch URLs der Website vor Framer indexiert (z. B. `/produkt/insektenschutz-plissee/`,
@@ -117,6 +143,7 @@ npm run dev
 | `NEXT_PUBLIC_SITE_URL` | nein | Basis-URL für Sitemap/JSON-LD/OG-Tags. Standard: `https://sonnenschutz-westerwalbesloh.de`. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | nein | Google-Analytics-ID. Standard: `G-7DVDHX6NLD` (bisherige Property). `off` schaltet Google Analytics ab, z. B. für Vorschau-Deployments. |
 | `NEXT_PUBLIC_CLARITY_PROJECT_ID` | nein | Microsoft-Clarity-Projekt. Standard: `utosndrm9n` (bisheriges Projekt). `off` schaltet Clarity ab. |
+| `GOOGLE_SITE_VERIFICATION` | nein | Bestätigungscode der Google Search Console (Methode „HTML-Tag“). Nicht nötig bei Bestätigung per DNS. |
 
 Ohne `ANTHROPIC_API_KEY` bzw. `RESEND_API_KEY`/`CONTACT_FROM_EMAIL` antworten die jeweiligen
 API-Routen (`/api/chat`, `/api/contact`) mit einem klaren Fehler (HTTP 503) statt so zu tun,
