@@ -30,7 +30,7 @@ export default function ProdukteOverviewPage() {
         title="Unsere Produkte"
         description="Von Markisen und Sonnenschirmen über maßgefertigten Insektenschutz bis zu intelligenten Steuerungen: Qualitätsprodukte namhafter Hersteller, individuell geplant und fachgerecht montiert."
         image="/images/produkte/overview-cta.jpg"
-        imageAlt="Moderne Küche mit Raffstoren und Blick ins Grüne"
+        imageAlt="Modernes Wohnhaus mit Lamellen-Pergola in der Abenddämmerung"
       >
         <Button href="/kontakt" size="lg">
           Kostenlose Beratung anfragen

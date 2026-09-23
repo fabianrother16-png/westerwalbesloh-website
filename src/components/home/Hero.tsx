@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative flex min-h-[calc(100svh-4.5rem)] items-end overflow-hidden bg-brand-primary text-white sm:min-h-[calc(100svh-5.5rem)]">
       <Image
         src="/images/home/hero.jpg"
-        alt="Modernes Wohnhaus mit Raffstoren und offener Terrasse im Abendlicht"
+        alt="Moderne Terrasse mit großer Markise und senkrechter Seitenbeschattung"
         fill
         loading="eager"
         fetchPriority="high"

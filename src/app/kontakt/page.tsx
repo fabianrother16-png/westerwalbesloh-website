@@ -42,7 +42,7 @@ export default function KontaktPage() {
         title="Wir sind gerne für Sie da"
         description="Ob Beratung, Reparatur, Modernisierung oder eine Frage zu einem bestehenden Projekt – rufen Sie uns an oder schreiben Sie uns. Wir melden uns zuverlässig bei Ihnen zurück."
         image="/images/kontakt/terrasse.jpg"
-        imageAlt="Terrasse eines Wohnhauses mit Raffstoren"
+        imageAlt="Überdachte Terrasse mit Loungemöbeln und Blick auf den Pool"
       />
       <Section background="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr]">

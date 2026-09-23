@@ -17,8 +17,8 @@ export const products: Product[] = [
       "Raffstore verbinden moderne Optik mit effektivem Sonnen- und Hitzeschutz. Durch flexibel verstellbare Lamellen lässt sich das Tageslicht nach Bedarf lenken – hell, blendfrei oder komplett geschützt.",
       "Sie eignen sich besonders für große Fensterflächen, moderne Wohnarchitektur und alle, die Wert auf Komfort, Funktion und Energieeffizienz legen. Wir planen, liefern und montieren Ihre Raffstoreanlage in Gütersloh und ganz OWL – mit eigenem Montageteam.",
     ],
-    heroImage: img("raffstore", "hero.jpg", "Wohnraum mit bodentiefen Fenstern und außenliegenden Raffstoren"),
-    cardImage: img("raffstore", "card.jpg", "Einfamilienhaus mit Raffstoren an großen Fensterfronten"),
+    heroImage: img("raffstore", "hero.jpg", "Fassade mit außenliegenden Aluminiumlamellen als Sonnenschutz"),
+    cardImage: img("raffstore", "card.jpg", "Außenliegende Metalllamellen an einer modernen Fassade"),
     benefitsTitle: "Warum Raffstore?",
     benefits: [
       { title: "Flexible Lichtsteuerung", text: "Die Lamellen lassen sich stufenlos einstellen – für perfektes Licht den ganzen Tag." },
@@ -38,17 +38,17 @@ export const products: Product[] = [
           {
             title: "Lamellenformen",
             text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik oder robusten Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln. Auch geschwungene S-Lamellen sind als weicher Akzent verfügbar.",
-            image: img("raffstore", "lamellen.jpg", "Nahaufnahme von Raffstore-Lamellen an einer Fassade"),
+            image: img("raffstore", "lamellen.jpg", "Nahaufnahme horizontaler Aluminiumlamellen"),
           },
           {
             title: "Montagearten",
             text: "Ob unauffällig im Schacht des Neubaus, als klassischer Vorbau-Raffstore vor der Fassade oder als direkte Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
-            image: img("raffstore", "montagearten.jpg", "Vorbau-Raffstore mit Kasten und seitlichen Führungsschienen"),
+            image: img("raffstore", "montagearten.jpg", "Außenliegende Lamellen mit seitlichen Führungsschienen an einer Fassade"),
           },
           {
             title: "Farben & Optik",
             text: "Wir bieten Ihnen alle gängigen Lamellen- und Gestellfarben an. So können Sie den Raffstore entweder als farblichen Kontrast setzen oder harmonisch Ton-in-Ton an Ihre Fassade anpassen.",
-            image: img("raffstore", "farben.jpg", "Farbfächer mit Lamellen- und Gestellfarben für Raffstore"),
+            image: img("raffstore", "farben.jpg", "Gelbe Raffstores als farblicher Akzent an einer modernen Fassade"),
           },
         ],
       },
@@ -74,7 +74,10 @@ export const products: Product[] = [
           "Neubau & Modernisierung",
           "Energiesparsame Lösungen",
         ],
-        image: img("raffstore", "anwendung.jpg", "Büro mit Raffstoren als Blend- und Hitzeschutz"),
+        image: {
+          src: "/images/leistungen/objektbau-projekte/fassade.jpg",
+          alt: "Raffstores an der Glasfassade eines Gewerbebaus, montiert von Westerwalbesloh",
+        },
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
@@ -133,8 +136,8 @@ export const products: Product[] = [
       "Rollläden sind der vielseitige Klassiker für umfassenden Schutz rund ums Haus. Sie bieten weit mehr als nur Verdunkelung: Sie sorgen für effektiven Wärme- und Schallschutz, wahren Ihre Privatsphäre und erhöhen die Sicherheit an Fenstern und Türen.",
       "Ob im Neubau oder bei der Modernisierung – Rollläden sind die robuste Lösung für alle, die Wert auf Energieeffizienz und ungestörten Wohnkomfort legen.",
     ],
-    heroImage: img("rollladen", "hero.jpg", "Modernes Haus mit geschlossenem Rollladen am Fenster"),
-    cardImage: img("rollladen", "card.jpg", "Rollladen am Schlafzimmerfenster, per Smartphone gesteuert"),
+    heroImage: img("rollladen", "hero.jpg", "Drei geschlossene Rollläden an einer Hausfassade"),
+    cardImage: img("rollladen", "card.jpg", "Zwei Rollläden an einer Klinkerfassade"),
     benefitsTitle: "Warum Rollladen?",
     benefits: [
       { title: "Effektiver Wärmeschutz", text: "Hält Wohnräume im Sommer angenehm kühl und verbessert im Winter spürbar die Wärmedämmung." },
@@ -154,7 +157,7 @@ export const products: Product[] = [
           {
             title: "Hochwertige Materialien",
             text: "Wählen Sie zwischen robustem Aluminium für höchste Stabilität und Langlebigkeit oder pflegeleichtem Kunststoff als wirtschaftliche Lösung mit sehr guten Dämmwerten.",
-            image: img("rollladen", "materialien.jpg", "Rollladenprofile aus Aluminium im Querschnitt"),
+            image: img("rollladen", "materialien.jpg", "Nahaufnahme eines Rollladenpanzers mit Lichtreflexen"),
           },
           {
             title: "Flexible Bauarten",
@@ -164,7 +167,7 @@ export const products: Product[] = [
           {
             title: "Panzerprofile & Farben",
             text: "Gestalten Sie die Optik individuell. Unsere Profile sind in verschiedenen Deckbreiten und zahlreichen Farben erhältlich, damit sich der Rollladen harmonisch in Ihre Architektur einfügt.",
-            image: img("rollladen", "farben.jpg", "Rollladenprofile in verschiedenen Farben"),
+            image: img("rollladen", "farben.jpg", "Rollladenpanzer in kräftigem Orange"),
           },
         ],
       },
@@ -178,7 +181,7 @@ export const products: Product[] = [
           { title: "Motorisierter Antrieb", text: "Unsere leisen und langlebigen Motoren bewegen den Behang besonders schonend. Das ist bequem und erhöht die Lebensdauer Ihrer Rollläden spürbar." },
           { title: "Smart Home (Somfy)", text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – für maximale Sicherheit und Effizienz." },
         ],
-        image: img("rollladen", "modern.jpg", "Moderner Rollladen an einer Terrassentür"),
+        image: img("rollladen", "modern.jpg", "Wohngebäude mit teilweise heruntergelassenen Rollläden"),
       },
     ],
     manufacturersTitle: "Unsere Partner & Hersteller",
@@ -231,8 +234,8 @@ export const products: Product[] = [
       "Markisen verbinden Komfort, Design und wirksamen Sonnenschutz. Ob große Terrasse, kleiner Balkon oder Fensterfront – wir bieten hochwertige Markisenlösungen, die genau zu Ihrem Zuhause passen.",
       "Mit vielen Ausstattungs- und Designoptionen, langlebigen Materialien und moderner Steuerung schaffen wir für Sie einen Platz zum Wohlfühlen.",
     ],
-    heroImage: img("markisen", "hero.jpg", "Ausgefahrene Markise über einer Terrasse mit Pool"),
-    cardImage: img("markisen", "card.jpg", "Markise über einer Lounge auf der Terrasse"),
+    heroImage: img("markisen", "hero.jpg", "Klinkerfassade mit grünen Fenstermarkisen"),
+    cardImage: img("markisen", "card.jpg", "Rote Fenstermarkise über einem Fenster"),
     benefitsTitle: "Warum Markisen?",
     benefits: [
       { title: "Angenehmer Schatten & Raumklima", text: "Schützt zuverlässig vor Sonne und Hitze – nicht nur auf der Terrasse, sondern verhindert auch das Aufheizen der dahinterliegenden Wohnräume." },
@@ -275,7 +278,7 @@ export const products: Product[] = [
           {
             title: "Fenster- & Fassadenmarkisen",
             text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren.",
-            image: img("markisen", "fenster-fassade.jpg", "Senkrechte Fassadenmarkisen vor großen Fenstern"),
+            image: img("markisen", "fenster-fassade.jpg", "Senkrechte Fenstermarkisen an einer Klinkerfassade"),
           },
         ],
       },
@@ -290,7 +293,7 @@ export const products: Product[] = [
           "Große Auswahl an Farben & Mustern",
           "Perfekt abgestimmt auf Ihren Hausstil",
         ],
-        image: img("markisen", "stoffe.jpg", "Markisentuch einer ausgefahrenen Markise von unten"),
+        image: img("markisen", "stoffe.jpg", "Wasserabweisendes, gestreiftes Markisentuch mit Regentropfen"),
       },
       {
         type: "cards",
@@ -359,8 +362,8 @@ export const products: Product[] = [
       "Ein guter Insektenschutz sorgt für ungestörtes Lüften und schützt zuverlässig vor Fliegen, Mücken, Wespen und anderen unerwünschten Gästen.",
       "Unsere hochwertigen Systeme von WAREMA bieten passgenauen Schutz für nahezu jede Einbausituation – dezent, langlebig und komfortabel bedienbar. Perfekt für Privathaushalte, Büros, Praxen und öffentliche Einrichtungen.",
     ],
-    heroImage: img("insektentschutz", "hero.jpg", "Schlafzimmer mit geöffnetem Fenster und Insektenschutz"),
-    cardImage: img("insektentschutz", "card.jpg", "Küche mit Schiebetür und Insektenschutz-Schiebeanlage"),
+    heroImage: { ...img("insektentschutz", "hero.jpg", "Geöffnetes Fenster mit Blick in den Garten und Geranien auf der Fensterbank"), position: "object-[center_42%]" },
+    cardImage: img("insektentschutz", "card.jpg", "Maikäfer auf einem Fliegengitter vor dem Fenster"),
     benefitsTitle: "Warum Insektenschutz?",
     benefits: [
       { title: "Perfekter Schutz ohne Chemie", text: "Halten Sie Plagegeister effektiv fern – ganz natürlich und umweltfreundlich, ohne chemische Sprays oder Stromfallen." },
@@ -416,7 +419,7 @@ export const products: Product[] = [
           { title: "Standard-Fiberglas", text: "Der bewährte Klassiker: Dieses robuste Gewebe ist besonders langlebig, witterungsbeständig und bietet eine solide Durchsicht zum fairen Preis." },
           { title: "Haustiergewebe", text: "Extrem widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
         ],
-        image: img("insektentschutz", "gewebe.jpg", "Terrassentür mit fast unsichtbarem Insektenschutzgewebe"),
+        image: img("insektentschutz", "gewebe.jpg", "Nahaufnahme eines Insektenschutzgewebes mit Regentropfen"),
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
@@ -467,8 +470,8 @@ export const products: Product[] = [
       "Innenliegender Sonnenschutz verbindet Funktionalität mit Wohnlichkeit. Er schützt vor Blendung, sorgt für Privatsphäre und hilft, das Raumklima zu regulieren.",
       "Mit vielfältigen Stoffen, Farben und Systemen finden wir für jeden Raum die passende Lösung – vom Wohnzimmer bis zum Büro.",
     ],
-    heroImage: img("sonnenschutz", "hero.jpg", "Wohnzimmer mit Plissees an großen Fenstern"),
-    cardImage: img("sonnenschutz", "card.jpg", "Wohnraum mit Plissee und Lamellenvorhang"),
+    heroImage: img("sonnenschutz", "hero.jpg", "Plissee im warmen Abendlicht"),
+    cardImage: img("sonnenschutz", "card.jpg", "Dachfenster mit innenliegendem Plissee"),
     benefitsTitle: "Warum innenliegender Sonnenschutz?",
     benefits: [
       { title: "Effektiver Blend- & Sichtschutz", text: "Schützt zuverlässig vor neugierigen Blicken und störender Sonneneinstrahlung – ideal für Bildschirmarbeit im Homeoffice und entspannte Wohnräume." },
@@ -488,27 +491,27 @@ export const products: Product[] = [
           {
             title: "Plissee",
             text: "Der flexible Alleskönner für nahezu jede Fensterform. Stufenlos verstellbar, riesige Stoffauswahl und auch ideal für Feuchträume geeignet.",
-            image: img("sonnenschutz", "plissee.jpg", "Plissee als innenliegender Sonnenschutz im Badezimmer"),
+            image: img("sonnenschutz", "plissee.jpg", "Plissee am Fenster mit einfallendem Sonnenlicht"),
           },
           {
             title: "Wabenplissee",
             text: "Energieeffizienz pur dank Wabenstruktur. Isoliert gegen Hitze und Kälte, verdunkelt zuverlässig und kommt ohne sichtbare Schnüre aus.",
-            image: img("sonnenschutz", "wabenplissee.jpg", "Wabenplissee mit isolierender Wabenstruktur am Fenster"),
+            image: img("sonnenschutz", "wabenplissee.jpg", "Nahaufnahme eines hellen, gefalteten Plissee-Stoffs"),
           },
           {
             title: "Rollo",
             text: "Der bewährte Klassiker. Ideal als Blendschutz am Arbeitsplatz oder zur kompletten Verdunkelung – pflegeleicht und in vielen Varianten.",
-            image: img("sonnenschutz", "rollo.jpg", "Innenliegende Rollos an zwei Wohnzimmerfenstern"),
+            image: img("sonnenschutz", "rollo.jpg", "Wohnzimmer mit Rollo am Fenster"),
           },
           {
             title: "Jalousie",
             text: "Präzise Lichtsteuerung in moderner Optik. Regulieren Sie Lichteinfall und Privatsphäre ganz flexibel durch das Wenden der Lamellen.",
-            image: img("sonnenschutz", "jalousie.jpg", "Innenjalousien mit Holzlamellen in einer Küche"),
+            image: img("sonnenschutz", "jalousie.jpg", "Nahaufnahme weißer Jalousielamellen"),
           },
           {
             title: "Lamellenvorhang",
             text: "Die perfekte Lösung für große Fensterflächen. Besticht durch klare Linien, moderne Optik und eignet sich hervorragend als Raumtrenner.",
-            image: img("sonnenschutz", "lamellenvorhang.jpg", "Lamellenvorhang mit senkrechten Lamellen vor einer Fensterfront"),
+            image: img("sonnenschutz", "lamellenvorhang.jpg", "Lamellenvorhang an einem großen Fenster im Wohnraum"),
           },
           {
             title: "Flächenvorhang",
@@ -566,8 +569,8 @@ export const products: Product[] = [
       "Sonnenschirme bieten eine elegante, mobile und vielseitige Möglichkeit, Außenbereiche angenehm zu beschatten – unabhängig von Wänden oder Montagemöglichkeiten.",
       "Ob Terrasse, Balkon, Garten oder Gastronomie: Ein hochwertiger Sonnenschirm schafft sofort eine einladende Wohlfühlzone. Wir setzen dabei auf langlebige Systeme unseres Fachpartners CARAVITA.",
     ],
-    heroImage: img("sonnenschirme", "hero.jpg", "Großer Sonnenschirm mit Heizstrahler über einer Dachterrasse"),
-    cardImage: img("sonnenschirme", "card.jpg", "Ampelschirm über einem Gartentisch"),
+    heroImage: img("sonnenschirme", "hero.jpg", "Sonnenschirm über einer begrünten Terrasse im Gegenlicht"),
+    cardImage: img("sonnenschirme", "card.jpg", "Große Sonnenschirme vor einem Natursteinhaus mit Garten"),
     benefitsTitle: "Warum Sonnenschirme?",
     benefits: [
       { title: "Flexibel einsetzbar", text: "Egal ob kleine Stadtbalkone, weitläufige Gärten oder gewerbliche Außenflächen – Sonnenschirme passen sich jeder Umgebung an." },
@@ -587,17 +590,17 @@ export const products: Product[] = [
           {
             title: "Ampelschirme",
             text: "Maximale Freiheit ohne störenden Mast in der Mitte. Der Schirm schwebt frei über Ihrer Sitzgruppe, lässt sich flexibel drehen und neigen und sorgt für großflächigen Schatten genau dort, wo Sie ihn brauchen.",
-            image: img("sonnenschirme", "ampelschirm.jpg", "Ampelschirm mit seitlichem Mast über einer Terrassen-Sitzgruppe"),
+            image: img("sonnenschirme", "ampelschirm.jpg", "Ampelschirm von unten mit freitragendem Gestänge"),
           },
           {
             title: "Mittelstockschirme",
             text: "Die bewährte Lösung für jeden Einsatzbereich. Extrem robust, kinderleicht zu bedienen und in zahlreichen Formen und Größen verfügbar – ideal für Balkone oder Gartentische mit Schirmloch.",
-            image: img("sonnenschirme", "mittelstockschirm.jpg", "Roter Mittelstockschirm auf einer Terrasse am Abend"),
+            image: img("sonnenschirme", "mittelstockschirm.jpg", "Mittelstockschirm über einer Sitzgruppe auf einer Dachterrasse"),
           },
           {
             title: "Großschirme",
             text: "Die Profi-Lösung für Hotellerie, Gastronomie oder weitläufige Privatterrassen. Besonders windstabil konstruiert, decken sie riesige Flächen sicher ab, ohne an Eleganz zu verlieren.",
-            image: img("sonnenschirme", "grossschirm.jpg", "Großschirm über einer Essgruppe auf einer Terrasse"),
+            image: img("sonnenschirme", "grossschirm.jpg", "Zwei große Sonnenschirme vor blauem Himmel"),
           },
         ],
       },
@@ -610,7 +613,7 @@ export const products: Product[] = [
           { title: "Flexible Dimensionen", text: "Spannweiten von 2 m bis über 6 m." },
           { title: "Individuelle Maßarbeit", text: "Sondergrößen exakt nach Anforderung." },
         ],
-        image: img("sonnenschirme", "gastronomie.jpg", "Rote Großschirme über dem Außenbereich eines Cafés"),
+        image: img("sonnenschirme", "gastronomie.jpg", "Rote Sonnenschirme über einer Restaurantterrasse"),
       },
       {
         type: "checklist",
@@ -621,7 +624,7 @@ export const products: Product[] = [
           "Lichtechte Stoffe mit langer Farbbrillanz",
           "Wasserabweisend, schmutzresistent und wetterfest",
         ],
-        image: img("sonnenschirme", "bespannung.jpg", "Sonnenschirm mit LED-Beleuchtung auf einer Terrasse in der Dämmerung"),
+        image: img("sonnenschirme", "bespannung.jpg", "Sonnenschirm-Bespannung mit Licht- und Schattenspiel"),
       },
       {
         type: "cards",
@@ -633,7 +636,7 @@ export const products: Product[] = [
           { title: "Praktische Teleskopmechanik", text: "Der Schirm schließt oberhalb von Tischen – kein Möbelrücken notwendig." },
           { title: "Flexible Befestigung", text: "Wahlweise mit mobilem Schirmständer oder fester Bodenhülse installierbar." },
         ],
-        image: img("sonnenschirme", "hotel.jpg", "Mehrere Großschirme im Garten eines Hotels"),
+        image: img("sonnenschirme", "technik.jpg", "Gestänge eines Sonnenschirms von unten"),
       },
     ],
     manufacturersTitle: "Unser Fachpartner",
@@ -678,8 +681,8 @@ export const products: Product[] = [
       "Moderne Sonnenschutzanlagen machen den Alltag komfortabler, sicherer und energieeffizienter. Mit elektrischen Antrieben und intelligenten Steuerungen bedienen Sie Rollläden, Raffstore und Markisen bequem per Knopfdruck, Funk oder App.",
       "Wir setzen dabei hauptsächlich auf Somfy – den europäischen Marktführer für Smart-Home- und Antriebstechnik. Zusätzlich unterstützen wir WAREMA RTS, ideal für Bestandsanlagen oder kabellose Nachrüstungen.",
     ],
-    heroImage: img("steuerung-antriebe", "hero.jpg", "Raffstore im Wohnzimmer, gesteuert per Tablet"),
-    cardImage: img("steuerung-antriebe", "card.jpg", "Somfy-Handsender und Smartphone-App zur Steuerung"),
+    heroImage: img("steuerung-antriebe", "hero.jpg", "Hände bedienen eine Smart-Home-App auf dem Smartphone"),
+    cardImage: img("steuerung-antriebe", "card.jpg", "Smartphone mit geöffneter Smart-Home-App"),
     benefitsTitle: "Warum motorisieren?",
     benefits: [
       { title: "Komfort auf Knopfdruck", text: "Verabschieden Sie sich vom Kurbeln: Bewegen Sie Rollläden, Raffstore oder Markisen ganz bequem per Wandschalter, Handsender oder App." },
@@ -709,7 +712,7 @@ export const products: Product[] = [
           {
             title: "Smart Home & App",
             text: "Steuern Sie Ihre Anlagen per Smartphone oder Sprachbefehl – egal, wo Sie gerade sind. Erstellen Sie eigene Szenarien, die Ihren Alltag spürbar komfortabler und sicherer machen.",
-            image: img("steuerung-antriebe", "app.jpg", "Smartphone mit Somfy-App auf einem Terrassentisch"),
+            image: img("steuerung-antriebe", "app.jpg", "Smart-Display an der Küchenwand zur Haussteuerung"),
           },
           {
             title: "Sensoren & Automatik",

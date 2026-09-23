@@ -31,7 +31,7 @@ export default function LeistungenOverviewPage() {
         title="Leistungen & Ablauf"
         description="Ehrliches Handwerk, transparente Beratung und langlebige Technik aus einer Hand – von der ersten Beratung bis zur Wartung gewerblicher Anlagen."
         image="/images/leistungen/overview-cta.jpg"
-        imageAlt="Terrasse mit ausgefahrener Markise vor einem Wohnhaus"
+        imageAlt="Holzterrasse mit Korbstühlen an einem modernen Haus"
       >
         <Button href="/kontakt" size="lg">
           Termin anfragen

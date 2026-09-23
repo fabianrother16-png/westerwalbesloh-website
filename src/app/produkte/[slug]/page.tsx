@@ -73,6 +73,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         description={product.tagline}
         image={product.heroImage.src}
         imageAlt={product.heroImage.alt}
+        imagePosition={product.heroImage.position}
       >
         <div className="flex flex-wrap items-center gap-5">
           <Button href={contactHref} size="lg">

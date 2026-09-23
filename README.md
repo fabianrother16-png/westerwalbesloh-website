@@ -20,9 +20,11 @@ Cookie-Einwilligung, GEO-Optimierung).
   (z. B. Insektenschutz: Spannrahmen, Drehrahmen, Schiebeanlagen, Pendeltüren,
   Lichtschachtabdeckungen und alle Gewebearten), Bedienarten, Hersteller, FAQs sowie die Texte
   der Leistungsseiten, von „Über uns“ und die Kundenstimmen im Originalwortlaut.
-- **Fotos**: Alle Bilder der Live-Seite in voller Auflösung (statt verkleinerter Screenshots),
-  ergänzt um echte Team- und Projektfotos. Sie liegen unter `public/images/` und sind in den
-  Datendateien zugeordnet (siehe unten).
+- **Fotos**: Echte Team- und Projektfotos von Westerwalbesloh, neue lizenzfreie Fotos (Unsplash,
+  Pexels, Pixabay) anstelle der Katalogbilder der alten Seite sowie Herstellerbilder für einzelne
+  Produktsysteme. Sie liegen unter `public/images/` und sind in den Datendateien zugeordnet
+  (siehe unten). Quelle und Lizenz jedes Fotos stehen in `docs/bildnachweise.md` – bei neuen
+  Fotos bitte dort ergänzen.
 - **Logo**: `public/images/brand/logo.png` ist das Original-Logo der Live-Seite (freigestellt),
   `logo-emblem.png` die „W“-Bildmarke für Favicon/OG-Bild. Gerendert über
   `src/components/brand/Logo.tsx`.
@@ -173,6 +175,8 @@ src/
 public/
   images/              Alle Fotos, Logos und Zertifikate
   llms.txt             Struktur-Zusammenfassung für KI-Suchsysteme (GEO)
+docs/
+  bildnachweise.md     Quellen und Lizenzen der verwendeten Fotos
 ```
 
 Produkt- und Leistungsseiten sind dynamische Routen (`produkte/[slug]`, `leistungen/[slug]`),

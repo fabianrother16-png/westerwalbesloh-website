@@ -6,6 +6,8 @@ export type FaqItem = {
 export type ImageRef = {
   src: string;
   alt: string;
+  /** Crop focus as an object-position class, for photos whose subject isn't centred. */
+  position?: string;
 };
 
 export type TitledText = {
