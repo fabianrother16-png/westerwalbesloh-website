@@ -4,26 +4,25 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { PlaceholderPhoto } from "@/components/media/PlaceholderPhoto";
+import { Button } from "@/components/ui/Button";
+import { Partners } from "@/components/home/Partners";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
-import { company, history } from "@/data/company";
+import { company, history, story } from "@/data/company";
 import { team } from "@/data/team";
-import { localImage } from "@/lib/media";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Über uns – Familienbetrieb seit 1959",
+  title: "Sonnenschutz-Experten in Gütersloh | Über uns | Westerwalbesloh",
+  absoluteTitle: true,
   description:
-    "Von der Garage an der Elsässer Straße zum Fachbetrieb in dritter Generation: die Geschichte von Westerwalbesloh GmbH Rollladenbau in Gütersloh.",
+    "Auf der Suche nach Qualität? Westerwalbesloh ist Ihr regionaler Meisterbetrieb für Sonnenschutz in Gütersloh & OWL. Jetzt mehr über unser Team erfahren!",
   path: "/ueber-uns",
+  image: "/images/home/team-treppe.jpg",
 });
 
 export default function UeberUnsPage() {
-  const teamPhoto = localImage("team/team-gruppe.jpg");
-  const vanPhoto = localImage("projekte/firmenwagen.jpg");
-
   return (
     <>
       <JsonLd
@@ -34,76 +33,91 @@ export default function UeberUnsPage() {
       />
       <PageHero
         eyebrow="Über uns"
-        title="Familiengeführt seit 1959"
-        description="Drei Generationen, ein Handwerk: Wir stehen für ehrliche Beratung, saubere Montage und Sonnenschutzlösungen, die zu Gütersloh passen."
-        image={teamPhoto}
-        imageAlt="Das Westerwalbesloh-Team bei der Montage vor Ort"
+        title="Drei Generationen Handwerk aus Leidenschaft"
+        description="Vom mutigen Start in einer kleinen Garage 1959 bis zum modernen Fachbetrieb von heute: Tradition bewahren und mit innovativen Lösungen in die Zukunft gehen."
+        image="/images/home/team-treppe.jpg"
+        imageAlt="Drei Mitarbeiter von Westerwalbesloh im Treppenhaus eines Kundenhauses"
+        imagePosition="object-[center_22%]"
       />
 
       <Section background="surface">
-        <SectionHeading eyebrow="Unsere Geschichte" title="Von der Garage zum Fachbetrieb" />
-        <div className="mt-12 space-y-10 border-l-2 border-brand-border pl-8">
-          {history.map((milestone, index) => (
-            <Reveal key={milestone.year} delay={index * 90} className="relative">
-              <span className="absolute -left-[2.55rem] flex h-5 w-5 items-center justify-center rounded-full border-4 border-brand-sand bg-brand-accent" />
-              <p className="text-sm font-semibold uppercase tracking-wide text-brand-accent">
-                {milestone.year}
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="lg:sticky lg:top-32 lg:self-start">
+            <SectionHeading eyebrow="Unsere Geschichte" title="Von der Garage zum Fachbetrieb" />
+            <ol className="mt-10 space-y-8 border-l-2 border-brand-border pl-8">
+              {history.map((milestone, index) => (
+                <Reveal as="li" key={milestone.year} delay={index * 90} className="relative">
+                  <span className="absolute -left-[2.55rem] top-0.5 h-5 w-5 rounded-full border-4 border-white bg-brand-accent" />
+                  <p className="text-sm font-semibold uppercase tracking-wide text-brand-accent">
+                    {milestone.year}
+                  </p>
+                  <h3 className="mt-1 text-lg font-bold text-brand-ink">{milestone.title}</h3>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+          <Reveal className="space-y-5 text-lg leading-relaxed text-brand-ink-soft">
+            {story.map((paragraph, index) => (
+              <p key={paragraph} className={index === 0 ? "text-xl font-medium text-brand-ink" : undefined}>
+                {paragraph}
               </p>
-              <h3 className="mt-1 text-xl font-bold text-brand-ink">{milestone.title}</h3>
-              <p className="mt-2 max-w-2xl text-brand-ink-soft leading-relaxed">{milestone.text}</p>
+            ))}
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section background="sand">
+        <SectionHeading
+          eyebrow="Unser Team"
+          title="Die Menschen hinter Westerwalbesloh"
+          description="Ein festangestelltes Team statt wechselnder Subunternehmer – Sie wissen immer, wer bei Ihnen arbeitet."
+        />
+        <div className="mt-12 grid grid-cols-2 gap-5 lg:grid-cols-5">
+          {team.map((member, index) => (
+            <Reveal key={member.name} delay={index * 70}>
+              <figure className="group">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl bg-brand-border">
+                  {member.photo && (
+                    <Image
+                      src={member.photo}
+                      alt={`${member.name}, ${member.role} bei Westerwalbesloh`}
+                      fill
+                      sizes="(min-width: 1024px) 20vw, 50vw"
+                      className="object-cover object-[center_25%] transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                  )}
+                </div>
+                <figcaption className="mt-4">
+                  <p className="text-base font-bold text-brand-ink">{member.name}</p>
+                  <p className="text-sm text-brand-ink-soft">{member.role}</p>
+                </figcaption>
+              </figure>
             </Reveal>
           ))}
         </div>
       </Section>
 
-      <Section background="sand">
+      <Section background="surface">
         <SectionHeading eyebrow="Unsere Arbeitsweise" title="Worauf Sie sich bei uns verlassen können" />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {company.values.map((value, index) => (
             <Reveal key={value.title} delay={index * 70}>
-              <div className="h-full rounded-3xl border border-brand-border bg-white p-6">
-                <h3 className="text-base font-bold text-brand-ink">{value.title}</h3>
+              <div className="h-full rounded-3xl border border-brand-border bg-brand-sand p-6">
+                <span className="text-sm font-bold tabular-nums text-brand-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 text-base font-bold text-brand-ink">{value.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{value.text}</p>
               </div>
             </Reveal>
           ))}
         </div>
-      </Section>
-
-      {vanPhoto && (
-        <Section background="surface">
-          <Reveal className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl sm:aspect-[3/1]">
-            <Image
-              src={vanPhoto}
-              alt="Firmenwagen von Westerwalbesloh GmbH Rollladenbau unterwegs in Gütersloh"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6 sm:p-8">
-              <p className="text-sm font-semibold text-white sm:text-base">
-                Unterwegs für Sie in Gütersloh und ganz OWL – mit eigenem Team, eigenem Fuhrpark.
-              </p>
-            </div>
-          </Reveal>
-        </Section>
-      )}
-
-      <Section background="surface">
-        <SectionHeading eyebrow="Unser Team" title="Die Menschen hinter Westerwalbesloh" />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {team.map((member, index) => (
-            <Reveal key={member.name} delay={index * 70}>
-              <div className="text-center">
-                <PlaceholderPhoto label={member.name} className="aspect-square w-full" />
-                <p className="mt-4 text-sm font-bold text-brand-ink">{member.name}</p>
-                <p className="text-xs text-brand-ink-soft">{member.role}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-10">
+          <Button href="/kontakt">Lernen Sie uns kennen</Button>
         </div>
       </Section>
 
+      <Partners />
       <CtaBanner />
     </>
   );

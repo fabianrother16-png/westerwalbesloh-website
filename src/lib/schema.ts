@@ -45,6 +45,7 @@ export function productSchema(product: Product) {
     name: product.name,
     description: product.metaDescription,
     url: `${siteUrl}/produkte/${product.slug}`,
+    image: `${siteUrl}${product.heroImage.src}`,
     category: "Sonnenschutz",
     brand: {
       "@type": "Brand",
@@ -62,6 +63,7 @@ export function serviceSchema(service: Service) {
     name: service.name,
     description: service.metaDescription,
     url: `${siteUrl}/leistungen/${service.slug}`,
+    image: `${siteUrl}${service.heroImage.src}`,
     provider: {
       "@type": "HomeAndConstructionBusiness",
       name: company.legalName,

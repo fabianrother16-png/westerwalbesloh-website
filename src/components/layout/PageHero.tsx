@@ -10,17 +10,22 @@ export function PageHero({
   children,
   image,
   imageAlt,
+  imagePosition = "object-center",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   children?: ReactNode;
-  /** Öffentlicher Bildpfad (z. B. aus localImage()) - wenn vorhanden, ersetzt das Foto das Lamellen-Muster. */
   image?: string | null;
   imageAlt?: string;
+  imagePosition?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-brand-primary text-white">
+    <section
+      className={`relative flex items-end overflow-hidden bg-brand-primary text-white ${
+        image ? "min-h-[26rem] sm:min-h-[34rem]" : ""
+      }`}
+    >
       {image ? (
         <>
           <Image
@@ -29,14 +34,15 @@ export function PageHero({
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className={`hero-zoom object-cover ${imagePosition}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/70 to-brand-primary-dark/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-dark/60 to-brand-primary-dark/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/60 via-transparent to-transparent" />
         </>
       ) : (
         <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
       )}
-      <div className="relative mx-auto max-w-(--container-content) px-5 py-20 sm:px-8 sm:py-28">
+      <div className="relative mx-auto w-full max-w-(--container-content) px-5 py-16 sm:px-8 sm:py-24">
         <Reveal>
           {eyebrow && (
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">

@@ -1,15 +1,4 @@
-/**
- * WICHTIGER HINWEIS FÜR DEN BETREIBER:
- * Der Live-Abruf der alten Seite (für eine wortgetreue Übernahme der bestehenden
- * Datenschutzerklärung) war in dieser Umgebung technisch nicht möglich (siehe
- * README.md). Zudem verarbeitet die neue Seite technisch andere Daten als die
- * alte Framer-Seite (KI-Chat über die Anthropic-API, Kontaktformular-Versand
- * über Resend, Hosting bei Vercel) - eine reine Kopie des alten Textes wäre
- * für diese neue Technik ohnehin nicht ausreichend gewesen. Dieser Text wurde
- * daher neu erstellt und bildet die tatsächliche Datenverarbeitung dieser
- * Website ab. Bitte vor Go-Live von einem/einer Rechtsanwalt/Rechtsanwältin
- * prüfen lassen.
- */
+// Describes the data processing of this website (Vercel, Resend, Anthropic chat, consent-gated Instagram/Maps); have changes reviewed by a lawyer.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -18,8 +7,10 @@ import { buildMetadata } from "@/lib/metadata";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Datenschutzerklärung",
-  description: "Datenschutzerklärung von Westerwalbesloh GmbH Rollladenbau gemäß DSGVO.",
+  title: "Datenschutz | Westerwalbesloh Sonnenschutz Gütersloh & OWL",
+  absoluteTitle: true,
+  description:
+    "Hier finden Sie alle Informationen zum Schutz Ihrer Daten bei Westerwalbesloh in Gütersloh. Wir behandeln Ihre Daten sicher & vertraulich.",
   path: "/datenschutz",
 });
 

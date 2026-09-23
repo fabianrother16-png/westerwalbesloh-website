@@ -18,7 +18,7 @@ export default function Icon() {
           justifyContent: "center",
         }}
       >
-        <img src={getLogoDataUri()} width={26} height={15} alt="" />
+        <img src={getLogoDataUri()} width={26} height={17} alt="" />
       </div>
     ),
     { ...size }

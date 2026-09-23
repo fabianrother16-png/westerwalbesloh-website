@@ -15,7 +15,7 @@ export function Footer() {
       <div className="mx-auto max-w-(--container-content) px-5 pt-16 pb-28 sm:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Logo className="h-11 w-auto" withWordmark wordmarkLight />
+            <Logo className="h-24 w-auto" onDark />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
               {company.slogan}
             </p>

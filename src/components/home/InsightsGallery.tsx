@@ -13,7 +13,7 @@ const candidates: CarouselItem[] = [
     caption: "Unser Team",
   },
   {
-    src: "produkte/markisen/gallery-navy.jpg",
+    src: "produkte/markisen/projekt-1.jpg",
     alt: "Elektrische Markise von Westerwalbesloh auf einem Balkon in Gütersloh",
     caption: "Elektrische Markise, Gütersloh",
   },
@@ -23,12 +23,12 @@ const candidates: CarouselItem[] = [
     caption: "Montage in luftiger Höhe",
   },
   {
-    src: "produkte/markisen/gallery-terrasse.jpg",
+    src: "produkte/markisen/projekt-2.jpg",
     alt: "Sonnenschutz-Markise über einer Terrasse in OWL",
     caption: "Terrassenbeschattung, OWL",
   },
   {
-    src: "produkte/markisen/gallery-orange.jpg",
+    src: "produkte/markisen/projekt-3.jpg",
     alt: "Markise in Orange von Westerwalbesloh – große Farbauswahl möglich",
     caption: "Markisen in vielen Farben",
   },
@@ -43,7 +43,7 @@ const candidates: CarouselItem[] = [
     caption: "Handwerk mit Präzision",
   },
   {
-    src: "produkte/raffstore/gallery-mehrfamilienhaus.jpg",
+    src: "produkte/raffstore/projekt-2.jpg",
     alt: "Raffstoreanlagen an einem Mehrfamilienhaus, montiert von Westerwalbesloh",
     caption: "Raffstore am Mehrfamilienhaus",
   },

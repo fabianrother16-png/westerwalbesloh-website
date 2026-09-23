@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { NumberedCards } from "@/components/content/ContentSections";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { MapEmbed } from "@/components/contact/MapEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -11,11 +13,19 @@ import { IconClock, IconMail, IconMapPin, IconPhone } from "@/components/icons/U
 import { company } from "@/data/company";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Kontakt",
+  title: "Sonnenschutz Beratung Gütersloh | Kontakt | Westerwalbesloh",
+  absoluteTitle: true,
   description:
-    "Kontaktieren Sie Westerwalbesloh GmbH Rollladenbau in Gütersloh: Telefon, E-Mail oder Kontaktformular für ein kostenloses, unverbindliches Angebot.",
+    "Fragen zum Sonnenschutz? Kontaktieren Sie uns für eine individuelle Beratung in Gütersloh & OWL. Wir planen Ihr Projekt maßgeschneidert. Jetzt anfragen!",
   path: "/kontakt",
 });
+
+const contactSteps = [
+  { title: "Kontaktaufnahme", text: "Melden Sie sich unkompliziert per Telefon, E-Mail oder Formular. Wir nehmen Ihr Anliegen direkt auf." },
+  { title: "Details klären", text: "Wir erfragen kurz die wichtigsten Eckdaten zu Ihrer Anlage und Ihren Wünschen, um den Bedarf einzuschätzen." },
+  { title: "Termin vor Ort", text: "Falls für die Planung notwendig, kommen wir zu Ihnen und führen eine Beratung oder Prüfung durch." },
+  { title: "Angebot & Lösung", text: "Sie erhalten anschließend ein transparentes Angebot oder einen verbindlichen Plan für die Umsetzung." },
+];
 
 export default function KontaktPage() {
   return (
@@ -28,8 +38,10 @@ export default function KontaktPage() {
       />
       <PageHero
         eyebrow="Kontakt"
-        title="Sprechen wir über Ihr Vorhaben"
-        description="Ob Neuanlage, Reparatur oder gewerbliche Anfrage – schreiben Sie uns oder rufen Sie direkt an. Wir melden uns zeitnah zurück."
+        title="Wir sind gerne für Sie da"
+        description="Ob Beratung, Reparatur, Modernisierung oder eine Frage zu einem bestehenden Projekt – rufen Sie uns an oder schreiben Sie uns. Wir melden uns zuverlässig bei Ihnen zurück."
+        image="/images/kontakt/terrasse.jpg"
+        imageAlt="Terrasse eines Wohnhauses mit Raffstoren"
       />
       <Section background="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr]">
@@ -71,6 +83,13 @@ export default function KontaktPage() {
             </div>
             <MapEmbed />
           </div>
+        </div>
+      </Section>
+
+      <Section background="sand">
+        <SectionHeading eyebrow="Ablauf" title="So läuft eine Kontaktanfrage bei uns ab" />
+        <div className="mt-12">
+          <NumberedCards items={contactSteps} background="sand" />
         </div>
       </Section>
     </>

@@ -13,11 +13,11 @@ import { company } from "@/data/company";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sonnenschutz Gütersloh – Rollläden, Raffstores & Markisen | Westerwalbesloh",
-    template: "%s | Westerwalbesloh GmbH Rollladenbau",
+    default: "Sonnenschutz Gütersloh: Maßarbeit & Montage | Westerwalbesloh",
+    template: "%s | Westerwalbesloh",
   },
   description:
-    "Westerwalbesloh GmbH Rollladenbau: Ihr Fachbetrieb für Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschutz in Gütersloh und OWL. Seit 1959 familiengeführt, Somfy-Experte, 4,9★ bei Google.",
+    "Zu viel Hitze im Haus? Entdecken Sie maßgeschneiderten Sonnenschutz für Fenster & Terrassen in Gütersloh & OWL. Jetzt kostenlose Beratung anfragen!",
   keywords: [
     "Sonnenschutz Gütersloh",
     "Rollladenbau Gütersloh",

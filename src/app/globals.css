@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/host-grotesk/wght.css";
 
 /*
  * Markenfarben, extrahiert per Pixel-Analyse aus dem echten Westerwalbesloh-Logo
@@ -7,10 +7,10 @@
  * Blau ≈ #376fb2, Grau ≈ #9d9d9c. --color-brand-accent ist bewusst der exakte
  * Logo-Blauton (für CTAs), --color-brand-primary eine vertiefte Variante davon
  * für große Flächen (Header/Footer/Hero-Panels), damit Buttons darauf sichtbar
- * bleiben. Schriftart ist weiterhin ein Platzhalter (Inter) - siehe README.md.
+ * bleiben. Schrift: Host Grotesk, wie auf der bisherigen Website.
  */
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "Host Grotesk Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --color-brand-ink: #17242c;
   --color-brand-ink-soft: #4a5a63;
@@ -43,7 +43,6 @@
   body {
     background-color: var(--color-brand-sand);
     color: var(--color-brand-ink);
-    font-feature-settings: "ss01" on, "cv11" on;
   }
 
   ::selection {
@@ -86,5 +85,51 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .hero-zoom {
+    animation: hero-zoom 18s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-zoom {
+      animation: none;
+    }
+  }
+
+  .marquee-track {
+    animation: marquee 45s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }

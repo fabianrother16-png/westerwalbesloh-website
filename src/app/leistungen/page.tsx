@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { ProcessSteps } from "@/components/home/ProcessSteps";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Leistungen",
+  title: "Sonnenschutz Leistungen in Gütersloh | Westerwalbesloh",
+  absoluteTitle: true,
   description:
-    "Beratung, Aufmaß & Montage, Reparatur & Modernisierung, Wartung sowie Projekte für Unternehmen und öffentliche Einrichtungen – die Leistungen von Westerwalbesloh.",
+    "Probleme mit dem Sonnenschutz? Wir bieten Beratung, Montage & Reparatur in Gütersloh & OWL. Ihr Partner für Markisen & mehr. Jetzt Termin anfragen!",
   path: "/leistungen",
+  image: "/images/leistungen/overview-cta.jpg",
 });
 
 export default function LeistungenOverviewPage() {
@@ -24,10 +28,17 @@ export default function LeistungenOverviewPage() {
       />
       <PageHero
         eyebrow="Leistungen"
-        title="Mehr als Montage: ein Partner für den gesamten Prozess"
-        description="Von der ersten Beratung über Reparatur und Modernisierung bis zur laufenden Wartung gewerblicher Anlagen – alles aus einer Hand."
-      />
+        title="Leistungen & Ablauf"
+        description="Ehrliches Handwerk, transparente Beratung und langlebige Technik aus einer Hand – von der ersten Beratung bis zur Wartung gewerblicher Anlagen."
+        image="/images/leistungen/overview-cta.jpg"
+        imageAlt="Terrasse mit ausgefahrener Markise vor einem Wohnhaus"
+      >
+        <Button href="/kontakt" size="lg">
+          Termin anfragen
+        </Button>
+      </PageHero>
       <ServicesOverview />
+      <ProcessSteps />
       <CtaBanner />
     </>
   );

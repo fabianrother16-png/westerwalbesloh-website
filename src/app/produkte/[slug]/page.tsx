@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { FeatureList } from "@/components/shared/FeatureList";
-import { FaqList } from "@/components/shared/FaqList";
+import { Carousel } from "@/components/ui/Carousel";
+import { ContentSections, NumberedCards } from "@/components/content/ContentSections";
+import { Manufacturers } from "@/components/content/Manufacturers";
+import { ProjectGrid } from "@/components/content/ProjectGrid";
+import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ProductIcon } from "@/components/icons/ProductIcons";
@@ -18,7 +19,6 @@ import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 import { getProductBySlug, products } from "@/data/products";
 import { company } from "@/data/company";
-import { localImage } from "@/lib/media";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -34,9 +34,11 @@ export async function generateMetadata({
   if (!product) return {};
 
   return buildMetadata({
-    title: product.metaTitle.replace(" | Westerwalbesloh", ""),
+    title: product.metaTitle,
+    absoluteTitle: true,
     description: product.metaDescription,
     path: `/produkte/${product.slug}`,
+    image: product.heroImage.src,
   });
 }
 
@@ -47,8 +49,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   const contactHref = `/kontakt?produkt=${encodeURIComponent(product.formLabel)}`;
   const otherProducts = products.filter((item) => item.slug !== product.slug).slice(0, 3);
-  const heroImage = localImage(`produkte/${product.slug}/hero.jpg`);
-  const detailImage = localImage(`produkte/${product.slug}/detail.jpg`);
+  const flip = (bg: "sand" | "surface") => (bg === "sand" ? "surface" : "sand");
+  const manufacturersBg = product.sections.length % 2 === 0 ? "sand" : "surface";
+  const photosBg = flip(manufacturersBg);
+  const faqBg = product.projectPhotos.length > 0 ? flip(photosBg) : photosBg;
+  const relatedBg = flip(faqBg);
 
   return (
     <>
@@ -65,11 +70,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <PageHero
         eyebrow="Produkte"
         title={product.name}
-        description={product.heroText}
-        image={heroImage}
-        imageAlt={`${product.name} von Westerwalbesloh in Gütersloh`}
+        description={product.tagline}
+        image={product.heroImage.src}
+        imageAlt={product.heroImage.alt}
       >
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap items-center gap-5">
           <Button href={contactHref} size="lg">
             Kostenloses Angebot anfordern
           </Button>
@@ -84,49 +89,56 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </PageHero>
 
       <Section background="surface">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <Reveal>
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-sand text-brand-accent">
-              <ProductIcon icon={product.icon} className="h-7 w-7" />
-            </span>
-            <p className="mt-6 text-lg leading-relaxed text-brand-ink-soft">{product.intro}</p>
-
-            <div className="mt-8 flex flex-wrap gap-2">
-              {product.applications.map((application) => (
-                <Badge key={application}>{application}</Badge>
+            <SectionHeading eyebrow="Ihre Vorteile auf einen Blick" title={product.benefitsTitle} />
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-brand-ink-soft">
+              {product.intro.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-
-            {detailImage && (
-              <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-3xl">
-                <Image
-                  src={detailImage}
-                  alt={`${product.name}-Montage durch das Westerwalbesloh-Team`}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            )}
-          </Reveal>
-
-          <Reveal delay={100} className="rounded-3xl border border-brand-border bg-brand-sand p-8">
-            <h2 className="text-lg font-bold text-brand-ink">Das zeichnet {product.name} aus</h2>
-            <div className="mt-5">
-              <FeatureList items={product.features} />
+            <div className="mt-8">
+              <Button href={contactHref} variant="secondary">
+                Beratung vor Ort vereinbaren
+              </Button>
             </div>
           </Reveal>
+          <NumberedCards items={product.benefits} background="surface" columns="sm:grid-cols-2" />
         </div>
       </Section>
 
-      <Section background="sand">
-        <SectionHeading eyebrow="Häufige Fragen" title={`Fragen zu ${product.name}`} />
-        <div className="mt-10 max-w-3xl">
-          <FaqList items={product.faq} />
-        </div>
+      <ContentSections sections={product.sections} startWith="sand" />
+
+      <Section background={manufacturersBg}>
+        <Manufacturers
+          title={product.manufacturersTitle}
+          intro={product.manufacturersIntro}
+          manufacturers={product.manufacturers}
+        />
       </Section>
 
-      <Section background="surface">
+      {product.projectPhotos.length > 0 && (
+        <Section background={photosBg}>
+          <SectionHeading
+            eyebrow="Echte Projekte"
+            title={`${product.name} von uns montiert`}
+            description="Keine Katalogbilder: Diese Anlagen hat unser eigenes Team in Gütersloh und OWL geplant und montiert."
+          />
+          <Reveal className="mt-10">
+            {product.projectPhotos.length > 3 ? (
+              <Carousel items={product.projectPhotos} />
+            ) : (
+              <ProjectGrid items={product.projectPhotos} ctaHref={contactHref} />
+            )}
+          </Reveal>
+        </Section>
+      )}
+
+      <Section background={faqBg}>
+        <FaqSection title={product.faqTitle} items={product.faq} contactHref={contactHref} />
+      </Section>
+
+      <Section background={relatedBg}>
         <SectionHeading eyebrow="Weitere Produkte" title="Das könnte Sie ebenfalls interessieren" />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {otherProducts.map((item) => (
@@ -135,7 +147,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               href={`/produkte/${item.slug}`}
               name={item.name}
               description={item.shortDescription}
-              image={localImage(`produkte/${item.slug}/hero.jpg`)}
+              image={item.cardImage.src}
               icon={(props) => <ProductIcon icon={item.icon} {...props} />}
             />
           ))}

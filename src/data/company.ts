@@ -20,6 +20,18 @@ export const company = {
   registerCourt: "Amtsgericht Gütersloh",
   registerNumber: "HRB 1653",
   managingDirector: "Elke Westerwalbesloh",
+  vatId: "DE126797446",
+  chamber: {
+    name: "Handwerkskammer Ostwestfalen-Lippe zu Bielefeld",
+    address: "Oberntorwall 8, 33602 Bielefeld",
+    url: "https://www.hwk-owl.de/",
+  },
+  profession: "Rollladen- und Sonnenschutzmechatroniker",
+  liabilityInsurer: {
+    name: "Württembergische Versicherung AG",
+    address: "W&W-Platz 1, 70806 Kornwestheim",
+    scope: "Deutschland",
+  },
   social: {
     instagram: "https://www.instagram.com/westerwalbesloh_gmbh/",
     facebookSearch:
@@ -31,19 +43,27 @@ export const company = {
     rating: 4.9,
     label: "4,9 ★ bei Google-Bewertungen",
   },
-  partners: [{ name: "WAREMA", note: "WAREMA-Fachhandelspartner" }],
+  partners: [
+    { name: "WAREMA", logo: "/images/partner/warema.png", width: 1025, height: 650 },
+    { name: "Somfy", logo: "/images/zertifikate/somfy-expert.png", width: 386, height: 242 },
+    { name: "KADECO", logo: "/images/partner/kadeco.png", width: 309, height: 202 },
+    { name: "CARAVITA", logo: "/images/partner/caravita.png", width: 1025, height: 167 },
+    { name: "Selve", logo: "/images/partner/selve.png", width: 1240, height: 391 },
+    { name: "heroal", logo: "/images/partner/heroal.png", width: 381, height: 280 },
+    { name: "Neerken & Büter", logo: "/images/partner/neerken-bueter.png", width: 406, height: 161 },
+  ],
   certificates: [
     {
       name: "RS-Fachbetrieb Rollladen + Sonnenschutz",
       image: "/images/zertifikate/rs-fachbetrieb.png",
-      width: 190,
-      height: 190,
+      width: 591,
+      height: 591,
     },
     {
       name: "Somfy Expert",
       image: "/images/zertifikate/somfy-expert.png",
-      width: 224,
-      height: 144,
+      width: 386,
+      height: 242,
     },
   ],
   values: [
@@ -138,6 +158,15 @@ export const company = {
     ] as const,
   },
 };
+
+export const story: string[] = [
+  "Seit über 60 Jahren steht der Name Westerwalbesloh in Gütersloh für hochwertiges Handwerk im Bereich Rollläden, Sonnenschutz und Markisen. Was 1959 in einer kleinen Garage an der Elsässer Straße begann, hat sich über drei Generationen zu einem angesehenen Familienbetrieb entwickelt – verwurzelt in Tradition, geprägt von Erfahrung und getragen von Leidenschaft für das Handwerk.",
+  "Gegründet wurde unser Unternehmen von Engelbert Westerwalbesloh senior, einem visionären, streng handwerklich geprägten Mann, der mit Tatkraft und Weitblick den ersten Rollladen- und Markisenbetrieb in Gütersloh aufbaute. Schon früh wurde aus der kleinen Garage eine richtige Werkstatt – ein Ort, an dem bis heute gearbeitet, geplant und gefertigt wird.",
+  "Sein Sohn, Engelbert Westerwalbesloh junior, führte den Betrieb mit Herz, Ruhe und großer Nähe zu den Kunden weiter. Mit seinem Meisterbrief und später dem Goldenen Meisterbrief im Rollladen- und Jalousienbau prägte er das Unternehmen nachhaltig. In den 1980er-Jahren firmierte er den Betrieb zur „Westerwalbesloh GmbH Rollladenbau“ um und legte damit den Grundstein für die weitere professionelle Entwicklung. Er war bis ins hohe Alter von 80 Jahren aktiv im Betrieb und lebte für seine Arbeit – loslassen fiel ihm nie leicht. Unter seiner Führung wuchs das Unternehmen stetig, erweiterte sein Angebot um Kunststoffrollläden und Raffstore und gewann namhafte Kunden wie Miele, Claas und Bertelsmann.",
+  "Heute wird der Betrieb in dritter Generation von seiner Tochter Elke Westerwalbesloh als alleinige Geschäftsführerin geführt. Mit ihrer herzlichen, nahbaren und zugleich durchsetzungsfähigen Art prägt sie das Unternehmen auf ihre eigene Weise. Sie führt den Betrieb partnerschaftlich und offen – auf Augenhöhe mit ihrem Team. Jeder einzelne Mitarbeiter wird geschätzt, gehört und ernst genommen, sodass ein Arbeitsklima entsteht, das eher einer kleinen Familie als einem klassischen Handwerksbetrieb gleicht.",
+  "Besonders wichtig sind ihr die Zufriedenheit der Kunden ebenso wie die ihrer Mitarbeiter. Gleichzeitig hat sie den Betrieb strukturierter und digitaler aufgestellt – mit moderner Software, klareren Abläufen und mehr Ordnung –, ohne dabei den familiären Charakter zu verlieren. Sie verbindet das Erbe ihres Vaters mit ihrem eigenen Stil: Tradition bewahren, aber mit der Zeit gehen.",
+  "Wir sind kein anonymer Großbetrieb, sondern ein bodenständiges Familienunternehmen, das seine Kunden kennt und ernst nimmt. Unser Anspruch ist es nicht, einfach nur zu verkaufen – wir hören zu, beraten ehrlich und finden Lösungen, die wirklich passen. Denn Tradition bedeutet für uns nicht Stillstand, sondern Verantwortung gegenüber unserer Vergangenheit, unseren Mitarbeitern und unseren Kunden in Gütersloh und Umgebung.",
+];
 
 export const history: HistoryMilestone[] = [
   {

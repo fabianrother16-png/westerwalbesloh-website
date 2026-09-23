@@ -7,7 +7,7 @@ import { company } from "@/data/company";
 
 export function Testimonials() {
   return (
-    <Section background="sand">
+    <Section background="surface">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
           eyebrow="Kundenstimmen"
@@ -27,7 +27,7 @@ export function Testimonials() {
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.author} delay={index * 60}>
-            <figure className="flex h-full flex-col rounded-3xl border border-brand-border bg-white p-6">
+            <figure className="flex h-full flex-col rounded-3xl border border-brand-border bg-brand-sand p-6">
               <div className="flex gap-1 text-brand-accent">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <IconStar key={i} className="h-4 w-4 fill-current" />

@@ -17,7 +17,7 @@ export default function AppleIcon() {
           justifyContent: "center",
         }}
       >
-        <img src={getLogoDataUri()} width={140} height={80} alt="" />
+        <img src={getLogoDataUri()} width={140} height={92} alt="" />
       </div>
     ),
     { ...size }

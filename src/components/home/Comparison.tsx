@@ -28,7 +28,7 @@ const rows: { us: string; others: string }[] = [
 
 export function Comparison() {
   return (
-    <Section background="surface">
+    <Section background="sand">
       <SectionHeading
         eyebrow="Der Unterschied"
         title="Darum lohnt sich der Fachbetrieb"
@@ -49,7 +49,7 @@ export function Comparison() {
               ))}
             </ul>
           </div>
-          <div className="bg-brand-sand p-6 sm:p-8">
+          <div className="bg-white p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-ink-soft/70">
               Baumarkt &amp; Online-Bestellung
             </p>

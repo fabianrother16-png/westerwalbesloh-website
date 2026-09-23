@@ -1,44 +1,28 @@
 import Image from "next/image";
 
 export function Logo({
-  className = "h-10 w-auto",
-  withWordmark = false,
-  wordmarkLight = false,
+  className = "h-14 w-auto",
+  onDark = false,
   priority = false,
 }: {
   className?: string;
-  withWordmark?: boolean;
-  wordmarkLight?: boolean;
+  onDark?: boolean;
   priority?: boolean;
 }) {
-  return (
-    <span className="inline-flex items-center gap-2.5">
-      <Image
-        src="/images/brand/logo-emblem.png"
-        alt="Westerwalbesloh Logo"
-        width={169}
-        height={96}
-        priority={priority}
-        className={`${className} shrink-0 object-contain`}
-      />
-      {withWordmark && (
-        <span className="flex flex-col leading-tight">
-          <span
-            className={`text-base font-bold tracking-tight ${
-              wordmarkLight ? "text-white" : "text-brand-ink"
-            }`}
-          >
-            Westerwalbesloh
-          </span>
-          <span
-            className={`text-[0.65rem] font-medium uppercase tracking-wider ${
-              wordmarkLight ? "text-white/70" : "text-brand-ink-soft"
-            }`}
-          >
-            Rollladenbau
-          </span>
-        </span>
-      )}
-    </span>
+  const image = (
+    <Image
+      src="/images/brand/logo.png"
+      alt="Westerwalbesloh – Das Schöne am Bau!"
+      width={583}
+      height={596}
+      priority={priority}
+      className={`${className} shrink-0 object-contain`}
+    />
   );
+
+  // The original logo has black lettering, so on dark backgrounds it sits on a white tile.
+  if (onDark) {
+    return <span className="inline-flex rounded-2xl bg-white p-3">{image}</span>;
+  }
+  return image;
 }

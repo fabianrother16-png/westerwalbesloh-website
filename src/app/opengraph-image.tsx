@@ -33,7 +33,7 @@ export default function OpengraphImage() {
               justifyContent: "center",
             }}
           >
-            <img src={getLogoDataUri()} width={70} height={40} alt="" />
+            <img src={getLogoDataUri()} width={70} height={46} alt="" />
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 30, fontWeight: 700 }}>Westerwalbesloh</div>

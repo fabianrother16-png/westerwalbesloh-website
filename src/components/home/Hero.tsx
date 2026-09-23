@@ -2,34 +2,27 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { SlatPattern } from "@/components/ui/SlatPattern";
 import { IconStar } from "@/components/icons/UiIcons";
 import { CountUp } from "@/components/ui/CountUp";
 import { company } from "@/data/company";
-import { localImage } from "@/lib/media";
 
 export function Hero() {
   const yearsExperience = new Date().getFullYear() - company.founded;
-  const heroImage = localImage("produkte/markisen/hero.jpg");
 
   return (
-    <section className="relative overflow-hidden bg-brand-primary text-white">
-      {heroImage ? (
-        <>
-          <Image
-            src={heroImage}
-            alt="Von Westerwalbesloh montierte Markise auf einer Terrasse in Gütersloh"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/80 to-brand-primary-dark/50" />
-        </>
-      ) : (
-        <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
-      )}
-      <div className="relative mx-auto max-w-(--container-content) px-5 py-24 sm:px-8 sm:py-32">
+    <section className="relative flex min-h-[calc(100svh-4.5rem)] items-end overflow-hidden bg-brand-primary text-white sm:min-h-[calc(100svh-5.5rem)]">
+      <Image
+        src="/images/home/hero.jpg"
+        alt="Modernes Wohnhaus mit Raffstoren und offener Terrasse im Abendlicht"
+        fill
+        priority
+        sizes="100vw"
+        className="hero-zoom object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-dark/55 to-brand-primary-dark/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/80 via-transparent to-transparent" />
+
+      <div className="relative mx-auto w-full max-w-(--container-content) px-5 pt-28 pb-12 sm:px-8 sm:pb-16">
         <Reveal>
           <Badge tone="dark">
             <IconStar className="h-3.5 w-3.5 text-brand-accent-soft" />
@@ -37,14 +30,15 @@ export function Hero() {
           </Badge>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-6 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-            Sonnenschutz &amp; Rollladenbau für Gütersloh und ganz OWL
+          <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
+            Sonnenschutz für Ihr Zuhause im Raum Gütersloh und OWL
           </h1>
         </Reveal>
         <Reveal delay={160}>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
-            {company.slogan} Seit {company.founded} in Familienhand – heute in dritter
-            Generation geführt.
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+            Als Familienbetrieb mit über 60 Jahren Erfahrung bieten wir Ihnen individuelle
+            Sonnenschutzlösungen, persönliche Beratung und fachgerechte Montage – zuverlässig,
+            ehrlich und genau auf Ihre Wünsche abgestimmt.
           </p>
         </Reveal>
         <Reveal delay={240}>
@@ -58,26 +52,26 @@ export function Hero() {
           </div>
         </Reveal>
         <Reveal delay={320}>
-          <dl className="mt-16 grid grid-cols-2 gap-8 border-t border-white/15 pt-10 sm:grid-cols-4">
+          <dl className="mt-14 grid grid-cols-2 gap-8 border-t border-white/20 pt-8 sm:grid-cols-4">
             <div>
               <dt className="text-3xl font-bold">
                 <CountUp end={yearsExperience} suffix="+" />
               </dt>
-              <dd className="mt-1 text-sm text-white/60">Jahre Erfahrung</dd>
+              <dd className="mt-1 text-sm text-white/70">Jahre Erfahrung</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">
                 <CountUp end={company.reviews.rating} decimals={1} suffix="★" />
               </dt>
-              <dd className="mt-1 text-sm text-white/60">Google-Bewertung</dd>
+              <dd className="mt-1 text-sm text-white/70">Google-Bewertung</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">3.</dt>
-              <dd className="mt-1 text-sm text-white/60">Generation</dd>
+              <dd className="mt-1 text-sm text-white/70">Generation</dd>
             </div>
             <div>
               <dt className="text-3xl font-bold">Somfy</dt>
-              <dd className="mt-1 text-sm text-white/60">Experte</dd>
+              <dd className="mt-1 text-sm text-white/70">Expert-Fachbetrieb</dd>
             </div>
           </dl>
         </Reveal>

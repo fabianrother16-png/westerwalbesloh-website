@@ -58,9 +58,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-brand-border/70 bg-white/90 backdrop-blur supports-backdrop-filter:bg-white/70">
-      <div className="mx-auto flex h-18 max-w-(--container-content) items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="shrink-0">
-          <Logo className="h-10 w-auto" withWordmark priority />
+      <div className="mx-auto flex h-18 max-w-(--container-content) items-center justify-between px-5 sm:h-22 sm:px-8">
+        <Link href="/" className="shrink-0" aria-label="Westerwalbesloh – zur Startseite">
+          <Logo className="h-14 w-auto sm:h-[4.5rem]" priority />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
