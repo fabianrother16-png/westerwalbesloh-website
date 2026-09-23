@@ -78,6 +78,21 @@ einfach in das `candidates`-Array in `src/components/home/InsightsGallery.tsx` e
 gerne hier im Chat hochladen oder als Datei ins Repo legen (z. B. `public/videos/...`) – dann
 wird an passender Stelle (Hero-Hintergrund, eigene Galerie) ein `<video>`-Element ergänzt.
 
+## Cookie-Banner & externe Inhalte
+
+Instagram-Reels (Startseite) und die Google-Maps-Karte (Kontakt) werden erst nach Einwilligung
+geladen (`src/components/consent/CookieBanner.tsx`, Logik in `src/lib/consent.ts`). Die Auswahl
+liegt nur im Local Storage des Besuchers; über „Cookie-Einstellungen“ im Footer lässt sie sich
+jederzeit ändern. Wer neue externe Dienste (z. B. Analytics, YouTube) einbaut, muss sie ebenfalls
+hinter `useConsent()` legen und die Datenschutzerklärung ergänzen.
+
+## Weiterleitungen alter URLs
+
+Google hat noch URLs der Website vor Framer indexiert (z. B. `/produkt/insektenschutz-plissee/`,
+`/produkte/markisen/fenster-markisen`, `/produkte/jalousien/...`) sowie eine Framer-Vorlagenseite
+(`/service/roof-repair`). Diese werden in `next.config.ts` (`redirects()`) dauerhaft auf die
+passende neue Seite umgeleitet, damit Besucher und Ranking nicht auf einer 404-Seite landen.
+
 ## Lokale Entwicklung
 
 ```bash

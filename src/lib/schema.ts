@@ -30,6 +30,10 @@ export function localBusinessSchema() {
       name: company.areaServed,
     },
     sameAs: [company.social.instagram],
+    hasCredential: company.certificates.map((certificate) => ({
+      "@type": "EducationalOccupationalCredential",
+      name: certificate.name,
+    })),
   };
 }
 

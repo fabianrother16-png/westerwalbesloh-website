@@ -31,9 +31,20 @@ export const company = {
     rating: 4.9,
     label: "4,9 ★ bei Google-Bewertungen",
   },
-  partners: [
-    { name: "Somfy", note: "Somfy-Expert-zertifizierter Fachbetrieb" },
-    { name: "WAREMA", note: "WAREMA-Fachhandelspartner" },
+  partners: [{ name: "WAREMA", note: "WAREMA-Fachhandelspartner" }],
+  certificates: [
+    {
+      name: "RS-Fachbetrieb Rollladen + Sonnenschutz",
+      image: "/images/zertifikate/rs-fachbetrieb.png",
+      width: 190,
+      height: 190,
+    },
+    {
+      name: "Somfy Expert",
+      image: "/images/zertifikate/somfy-expert.png",
+      width: 224,
+      height: 144,
+    },
   ],
   values: [
     {

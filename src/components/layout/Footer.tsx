@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import { ConsentSettingsButton } from "@/components/consent/ConsentSettingsButton";
 import { IconMail, IconMapPin, IconPhone, IconStar } from "@/components/icons/UiIcons";
 import { company } from "@/data/company";
 import { products } from "@/data/products";
@@ -10,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-brand-primary-dark text-white/80">
-      <div className="mx-auto max-w-(--container-content) px-5 py-16 sm:px-8">
+      <div className="mx-auto max-w-(--container-content) px-5 pt-16 pb-28 sm:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Logo className="h-11 w-auto" withWordmark wordmarkLight />
@@ -37,6 +39,18 @@ export function Footer() {
             <div className="mt-6 flex items-center gap-1.5 text-sm text-white/70">
               <IconStar className="h-4 w-4 text-brand-accent-soft" />
               {company.reviews.label}
+            </div>
+            <div className="mt-6 flex items-center gap-3">
+              {company.certificates.map((certificate) => (
+                <Image
+                  key={certificate.name}
+                  src={certificate.image}
+                  alt={certificate.name}
+                  width={certificate.width}
+                  height={certificate.height}
+                  className="h-14 w-auto rounded-md"
+                />
+              ))}
             </div>
           </div>
 
@@ -125,6 +139,7 @@ export function Footer() {
             <Link href="/datenschutz" className="hover:text-white">
               Datenschutz
             </Link>
+            <ConsentSettingsButton className="hover:text-white" />
           </div>
         </div>
       </div>

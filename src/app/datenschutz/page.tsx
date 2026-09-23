@@ -107,28 +107,56 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="7. Google Maps (Anfahrtskarte)">
+          <LegalSection title="7. Cookie- und Einwilligungs-Banner">
+            <p>
+              Beim ersten Besuch fragen wir Sie in einem Banner, ob wir externe Medien (Instagram,
+              Google Maps) laden dürfen. Ihre Auswahl speichern wir ausschließlich lokal in Ihrem
+              Browser (Local Storage), damit das Banner nicht bei jedem Seitenaufruf erneut
+              erscheint. Diese Speicherung ist technisch erforderlich (§ 25 Abs. 2 TDDDG) und
+              wird nicht an uns oder Dritte übertragen. Weitere Cookies oder Tracking- und
+              Analyse-Tools setzen wir nicht ein. Ihre Einwilligung können Sie jederzeit über den
+              Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="8. Google Maps (Anfahrtskarte)">
             <p>
               Auf unserer Kontaktseite bieten wir die Möglichkeit, eine Anfahrtskarte von Google
-              Maps zu laden. Aus Datenschutzgründen wird die Karte nicht automatisch geladen,
-              sondern erst nach Ihrem aktiven Klick auf „Karte laden“ eingebunden. Erst dann wird
+              Maps zu laden. Die Karte wird nur geladen, wenn Sie externe Medien im
+              Cookie-Banner erlaubt oder aktiv auf „Karte laden“ geklickt haben. Erst dann wird
               eine Verbindung zu Servern der Google Ireland Limited bzw. Google LLC hergestellt und
-              es können Daten wie Ihre IP-Adresse übertragen werden. Weitere Informationen
-              entnehmen Sie der Datenschutzerklärung von Google.
+              es können Daten wie Ihre IP-Adresse übertragen werden (Art. 6 Abs. 1 lit. a DSGVO,
+              § 25 Abs. 1 TDDDG). Weitere Informationen entnehmen Sie der Datenschutzerklärung
+              von Google.
             </p>
           </LegalSection>
 
-          <LegalSection title="8. Social-Media-Verlinkungen">
+          <LegalSection title="9. Eingebettete Instagram-Beiträge">
             <p>
-              Wir verlinken auf unserer Website auf unsere Profile bei Instagram und Facebook
-              sowie unser Google-Unternehmensprofil. Es handelt sich dabei um reine Verlinkungen,
-              keine eingebetteten Plugins – beim bloßen Besuch unserer Website werden keine Daten
-              an diese Anbieter übertragen. Erst wenn Sie aktiv auf einen der Links klicken und die
-              jeweilige Plattform besuchen, gelten deren eigene Datenschutzbestimmungen.
+              Auf unserer Startseite zeigen wir ausgewählte Beiträge (Reels) von unserem
+              Instagram-Profil. Anbieter ist die Meta Platforms Ireland Limited, Merrion Road,
+              Dublin 4, Irland. Die Beiträge werden erst geladen, wenn Sie externe Medien im
+              Cookie-Banner erlaubt oder aktiv auf „Reels laden“ geklickt haben. Dann wird eine
+              Verbindung zu Servern von Meta hergestellt, wobei insbesondere Ihre IP-Adresse und
+              Informationen über Ihren Browser übertragen werden; Meta kann dabei Cookies setzen
+              und Daten in die USA übermitteln. Rechtsgrundlage ist Ihre Einwilligung (Art. 6
+              Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG), die Sie jederzeit über die
+              „Cookie-Einstellungen“ widerrufen können. Weitere Informationen finden Sie in der
+              Datenschutzrichtlinie von Instagram.
             </p>
           </LegalSection>
 
-          <LegalSection title="9. SSL-/TLS-Verschlüsselung">
+          <LegalSection title="10. Social-Media-Verlinkungen">
+            <p>
+              Darüber hinaus verlinken wir auf unsere Profile bei Instagram und Facebook sowie
+              unser Google-Unternehmensprofil. Bei diesen reinen Verlinkungen werden beim bloßen
+              Besuch unserer Website keine Daten an die Anbieter übertragen. Erst wenn Sie aktiv
+              auf einen der Links klicken und die jeweilige Plattform besuchen, gelten deren
+              eigene Datenschutzbestimmungen.
+            </p>
+          </LegalSection>
+
+          <LegalSection title="11. SSL-/TLS-Verschlüsselung">
             <p>
               Diese Seite nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung zur
               Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an uns als
@@ -137,7 +165,7 @@ export default function DatenschutzPage() {
             </p>
           </LegalSection>
 
-          <LegalSection title="10. Änderung dieser Datenschutzerklärung">
+          <LegalSection title="12. Änderung dieser Datenschutzerklärung">
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den
               aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen

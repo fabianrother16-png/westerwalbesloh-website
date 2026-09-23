@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
 import { ChatWidget } from "@/components/chat/ChatWidget";
+import { CookieBanner } from "@/components/consent/CookieBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
 import { siteUrl } from "@/lib/site";
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Footer />
         <ChatWidget />
         <MobileStickyBar />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { company } from "@/data/company";
+import { useConsent } from "@/lib/consent";
 
 export function MapEmbed() {
-  const [loaded, setLoaded] = useState(false);
+  const consent = useConsent();
+  const [clicked, setClicked] = useState(false);
   const query = encodeURIComponent(`${company.legalName}, ${company.street}, ${company.zip} ${company.city}`);
 
-  if (!loaded) {
+  if (!clicked && !consent?.externalMedia) {
     return (
       <div className="flex h-72 flex-col items-center justify-center gap-3 rounded-3xl border border-brand-border bg-brand-sand p-6 text-center">
         <p className="text-sm text-brand-ink-soft">
@@ -15,7 +17,7 @@ export function MapEmbed() {
           an Google übertragen werden.
         </p>
         <button
-          onClick={() => setLoaded(true)}
+          onClick={() => setClicked(true)}
           className="rounded-full bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-primary-dark"
         >
           Karte laden
