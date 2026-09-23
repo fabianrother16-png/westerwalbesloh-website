@@ -8,9 +8,19 @@ import { company } from "@/data/company";
 
 const candidates: CarouselItem[] = [
   {
+    src: "team/team-bei-der-arbeit.jpg",
+    alt: "Mitarbeiter von Westerwalbesloh bei einer Baustellenpause",
+    caption: "Unser Team",
+  },
+  {
     src: "produkte/markisen/gallery-navy.jpg",
     alt: "Elektrische Markise von Westerwalbesloh auf einem Balkon in Gütersloh",
     caption: "Elektrische Markise, Gütersloh",
+  },
+  {
+    src: "projekte/montage-hochhaus.jpg",
+    alt: "Westerwalbesloh-Team bei der Montage an einem mehrgeschossigen Gewerbeobjekt",
+    caption: "Montage in luftiger Höhe",
   },
   {
     src: "produkte/markisen/gallery-terrasse.jpg",
@@ -18,14 +28,29 @@ const candidates: CarouselItem[] = [
     caption: "Terrassenbeschattung, OWL",
   },
   {
+    src: "produkte/markisen/gallery-orange.jpg",
+    alt: "Markise in Orange von Westerwalbesloh – große Farbauswahl möglich",
+    caption: "Markisen in vielen Farben",
+  },
+  {
     src: "projekte/screens-haus.jpg",
     alt: "Außenliegender Sonnenschutz an einem Wohnhaus, montiert von Westerwalbesloh",
     caption: "Außenliegender Sonnenschutz",
   },
   {
-    src: "projekte/screen-fassade-detail.jpg",
-    alt: "Präzise Montage eines Sonnenschutz-Screens an einer Fassade",
-    caption: "Präzision im Detail",
+    src: "projekte/montage-leiter.jpg",
+    alt: "Westerwalbesloh-Mitarbeiter bei der Montage eines Rollladens",
+    caption: "Handwerk mit Präzision",
+  },
+  {
+    src: "produkte/raffstore/gallery-mehrfamilienhaus.jpg",
+    alt: "Raffstoreanlagen an einem Mehrfamilienhaus, montiert von Westerwalbesloh",
+    caption: "Raffstore am Mehrfamilienhaus",
+  },
+  {
+    src: "leistungen/objektbau-projekte/gallery-schenke.jpg",
+    alt: "Markisen an einem Ladengeschäft, montiert von Westerwalbesloh",
+    caption: "Gewerbliche Beschattung",
   },
   {
     src: "projekte/firmenwagen-objekt.jpg",

@@ -54,14 +54,14 @@ angepasst werden.
 
 | Zweck | Erwarteter Pfad | Status |
 |---|---|---|
-| Produktseite Hero | `public/images/produkte/<slug>/hero.jpg` | ✅ Raffstore, Rollladen, Markisen · offen: Insektenschutz, Innenliegender Sonnenschutz, Sonnenschirme, Steuerungen |
+| Produktseite Hero | `public/images/produkte/<slug>/hero.jpg` | ✅ Raffstore, Rollladen, Markisen, Sonnenschirme · offen: Insektenschutz, Innenliegender Sonnenschutz, Steuerungen |
 | Produktseite Zusatzbild | `public/images/produkte/<slug>/detail.jpg` | ✅ Raffstore, Markisen |
 | Leistungsseite Hero | `public/images/leistungen/<slug>/hero.jpg` | ✅ alle 4 |
 | Leistungsseite Zusatzbild | `public/images/leistungen/<slug>/detail.jpg` | ✅ Objektbau |
 | Team-Gruppenfoto (Über-uns-Hero) | `public/images/team/team-gruppe.jpg` | ✅ |
 | Firmenwagen-Banner (Über uns) | `public/images/projekte/firmenwagen.jpg` | ✅ |
 | Home-Hero-Hintergrund | aktuell `public/images/produkte/markisen/hero.jpg` (siehe `src/components/home/Hero.tsx`) | ✅ |
-| Einblicke-Galerie (Karussell, Startseite) | Liste in `src/components/home/InsightsGallery.tsx` | ✅ 5 Fotos |
+| Einblicke-Galerie (Karussell, Startseite) | Liste in `src/components/home/InsightsGallery.tsx` | ✅ 10 Fotos (Team, Montage, Projekte) |
 
 `<slug>` ist der jeweilige URL-Slug, z. B. `raffstore`, `rollladen`, `markisen`,
 `insektentschutz`, `sonnenschutz` (innenliegender Sonnenschutz), `sonnenschirme`,
