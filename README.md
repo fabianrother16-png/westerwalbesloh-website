@@ -26,10 +26,8 @@ Cookie-Einwilligung, GEO-Optimierung).
   (siehe unten). Quelle und Lizenz jedes Fotos stehen in `docs/bildnachweise.md` – bei neuen
   Fotos bitte dort ergänzen.
 - **Logo**: `public/images/brand/logo.png` ist das Original-Logo der Live-Seite (freigestellt),
-  `logo-emblem.png` die „W“-Bildmarke für Favicon/OG-Bild. Für Kopf- und Fußzeile gibt es daraus
-  eine Querversion (`logo-quer.png`: Bildmarke links, Schriftzug und Slogan rechts) und eine helle
-  Querversion für dunkle Flächen (`logo-quer-hell.png`) – beide aus den Originalteilen des Logos
-  zusammengesetzt. Gerendert über `src/components/brand/Logo.tsx`.
+  `logo-emblem.png` die „W“-Bildmarke für Favicon/OG-Bild. Gerendert über
+  `src/components/brand/Logo.tsx`.
 - **Farben**: Aus dem Logo extrahiert – Blau `#376fb2`, Grau `#9d9d9c`. Alle Werte liegen zentral
   in `src/app/globals.css` im `@theme`-Block (`--color-brand-*`).
 - **Partner & Zertifikate**: `src/data/company.ts` (`partners`, `certificates`), Logos unter
@@ -75,6 +73,16 @@ Bis zu drei Projektfotos erscheinen als Raster mit Kontakt-Kachel, ab vier als K
 
 **Videos** (z. B. von Instagram/TikTok) sind noch nicht als Dateien eingebunden; Instagram-Reels
 werden über die offizielle Einbettung geladen (siehe unten).
+
+## Interaktive Elemente
+
+- **Raffstore-Vorschau** (`src/components/interactive/LamellenDemo.tsx`): Lamellen per Regler drehen,
+  „Sonnenautomatik“ spielt einen Sonnentag ab. Auf der Startseite (Abschnitt „Sonnenschutz, der
+  mitdenkt“) und auf der Raffstore-Seite (`interactiveDemo: "lamellen"` in `src/data/products.ts`).
+- **Diagramm „So viel Sonnenwärme bleibt draußen“** (`src/components/interactive/HeatChart.tsx`):
+  animierte Balken mit Tabellenansicht. Die Werte sind Richtwerte nach den Anhaltswerten der
+  DIN 4108-2 (Abminderungsfaktor Fc, Dreifachverglasung) und stehen oben in der Datei.
+- Alle Animationen respektieren die Systemeinstellung „Bewegung reduzieren“.
 
 ## Cookie-Banner, Statistik & externe Inhalte
 

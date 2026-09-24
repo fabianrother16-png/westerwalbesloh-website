@@ -12,6 +12,7 @@ import { InstagramReels } from "@/components/home/InstagramReels";
 import { Testimonials } from "@/components/home/Testimonials";
 import { ServiceArea } from "@/components/home/ServiceArea";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { TechShowcase } from "@/components/home/TechShowcase";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { websiteSchema } from "@/lib/schema";
 
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Partners />
       <AboutIntro />
       <ProductGrid background="surface" />
+      <TechShowcase />
       <ServicesOverview background="sand" />
       <FinderSection />
       <ProcessSteps />

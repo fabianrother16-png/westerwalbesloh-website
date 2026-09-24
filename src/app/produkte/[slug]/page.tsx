@@ -12,6 +12,7 @@ import { ProjectGrid } from "@/components/content/ProjectGrid";
 import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { LamellenSection } from "@/components/content/LamellenSection";
 import { ProductIcon } from "@/components/icons/ProductIcons";
 import { IconPhone } from "@/components/icons/UiIcons";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -107,6 +108,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <NumberedCards items={product.benefits} background="surface" columns="sm:grid-cols-2" />
         </div>
       </Section>
+
+      {product.interactiveDemo === "lamellen" && <LamellenSection />}
 
       <ContentSections sections={product.sections} startWith="sand" />
 

@@ -10,6 +10,7 @@ export const products: Product[] = [
     slug: "raffstore",
     name: "Raffstore",
     formLabel: "Raffstore",
+    interactiveDemo: "lamellen",
     shortDescription:
       "Moderner Sonnen- und Hitzeschutz mit flexibler Lichtsteuerung – ideal für große Fensterfronten.",
     tagline: "Moderner Sonnenschutz mit perfekter Lichtlenkung",

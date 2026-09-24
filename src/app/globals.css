@@ -2,6 +2,31 @@
 @import "@fontsource-variable/host-grotesk/wght.css";
 
 /*
+ * Metric-matched fallback: while Host Grotesk is still loading, text is set in Arial (or the metric-
+ * compatible Liberation Sans) scaled to the same width, so nothing jumps when the web font arrives.
+ * Values measured against Host Grotesk (uniform width across weights; ascent 1.02, descent 0.32 em).
+ */
+@font-face {
+  font-family: "Host Grotesk Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans");
+  font-weight: 100 500;
+  size-adjust: 101.74%;
+  ascent-override: 100.26%;
+  descent-override: 31.45%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Host Grotesk Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold");
+  font-weight: 600 900;
+  size-adjust: 95.08%;
+  ascent-override: 107.28%;
+  descent-override: 33.66%;
+  line-gap-override: 0%;
+}
+
+/*
  * Markenfarben, extrahiert per Pixel-Analyse aus dem echten Westerwalbesloh-Logo
  * (blau/grau, siehe public/images/brand/logo.png). Gesampelte Rohwerte:
  * Blau ≈ #376fb2, Grau ≈ #9d9d9c. --color-brand-accent ist bewusst der exakte
@@ -10,7 +35,7 @@
  * bleiben. Schrift: Host Grotesk, wie auf der bisherigen Website.
  */
 @theme {
-  --font-sans: "Host Grotesk Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "Host Grotesk Variable", "Host Grotesk Fallback", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --color-brand-ink: #17242c;
   --color-brand-ink-soft: #4a5a63;
@@ -101,6 +126,32 @@
     animation: marquee 45s linear infinite;
   }
 
+  .word-rise {
+    display: inline-block;
+    animation: word-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .word-rise {
+      animation: none;
+    }
+  }
+
+  /* Gentle hovering for badges and highlights. */
+  .float-soft {
+    animation: float-soft 6s ease-in-out infinite;
+  }
+
+  .float-delay {
+    animation-delay: -3s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .float-soft {
+      animation: none;
+    }
+  }
+
   .marquee:hover .marquee-track {
     animation-play-state: paused;
   }
@@ -122,6 +173,27 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes word-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 

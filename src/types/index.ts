@@ -66,6 +66,8 @@ export type Product = {
   projectPhotos: (ImageRef & { caption: string; wide?: boolean })[];
   faqTitle: string;
   faq: FaqItem[];
+  /** Optional interactive section shown after the benefits, e.g. the slat demo for raffstores. */
+  interactiveDemo?: "lamellen";
   icon: ProductIconKey;
   metaTitle: string;
   metaDescription: string;

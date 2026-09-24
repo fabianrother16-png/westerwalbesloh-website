@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -5,6 +6,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { IconStar } from "@/components/icons/UiIcons";
 import { CountUp } from "@/components/ui/CountUp";
 import { company } from "@/data/company";
+
+const headline = "Sonnenschutz für Ihr Zuhause im Raum Gütersloh und OWL";
 
 export function Hero() {
   const yearsExperience = new Date().getFullYear() - company.founded;
@@ -30,11 +33,17 @@ export function Hero() {
             {company.reviews.label}
           </Badge>
         </Reveal>
-        <Reveal delay={80}>
-          <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            Sonnenschutz für Ihr Zuhause im Raum Gütersloh und OWL
-          </h1>
-        </Reveal>
+        {/* Word-by-word entrance in pure CSS, so the headline doesn't wait for JavaScript. */}
+        <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl lg:text-7xl">
+          {headline.split(" ").map((word, index) => (
+            <Fragment key={index}>
+              {index > 0 && " "}
+              <span className="word-rise" style={{ animationDelay: `${150 + index * 70}ms` }}>
+                {word}
+              </span>
+            </Fragment>
+          ))}
+        </h1>
         <Reveal delay={160}>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
             Als Familienbetrieb mit über 60 Jahren Erfahrung bieten wir Ihnen individuelle

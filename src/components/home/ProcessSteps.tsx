@@ -1,6 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { DrawLine } from "@/components/ui/DrawLine";
 import { company } from "@/data/company";
 
 export function ProcessSteps() {
@@ -12,10 +13,7 @@ export function ProcessSteps() {
         align="center"
       />
       <div className="relative mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
-        <div
-          aria-hidden="true"
-          className="absolute top-11 right-[10%] left-[10%] hidden h-px bg-brand-border lg:block"
-        />
+        <DrawLine className="absolute top-11 right-[10%] left-[10%] hidden h-0.5 lg:block" />
         {company.process.map((item, index) => (
           <Reveal key={item.step} delay={index * 80}>
             <div className="relative h-full rounded-3xl border border-brand-border bg-white p-6">
