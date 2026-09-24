@@ -13,6 +13,7 @@ export function PageHero({
   image,
   imageAlt,
   imagePosition = "object-center",
+  highlights,
 }: {
   eyebrow?: string;
   title: string;
@@ -21,6 +22,8 @@ export function PageHero({
   image?: string | null;
   imageAlt?: string;
   imagePosition?: string;
+  /** Key facts shown as glass tiles below the text. */
+  highlights?: { value: string; label: string }[];
 }) {
   return (
     <section
@@ -59,6 +62,18 @@ export function PageHero({
           {description && <p className="mt-5 max-w-xl text-lg text-white/75">{description}</p>}
           {children && <div className="mt-8">{children}</div>}
         </Reveal>
+        {highlights && highlights.length > 0 && (
+          <Reveal delay={150}>
+            <dl className="mt-10 grid max-w-4xl grid-cols-2 gap-3 lg:grid-cols-4">
+              {highlights.map((item) => (
+                <div key={item.value} className="rounded-2xl border border-white/15 bg-white/10 px-4 py-3.5 backdrop-blur-md">
+                  <dt className="text-lg font-bold leading-tight text-white sm:text-xl">{item.value}</dt>
+                  <dd className="mt-1 text-xs leading-snug text-white/75 sm:text-sm">{item.label}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        )}
       </div>
     </section>
   );

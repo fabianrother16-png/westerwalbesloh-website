@@ -66,11 +66,18 @@ export function NumberedCards({
     <div className={`grid gap-5 ${columns ?? layout.grid}`}>
       {items.map((item, index) => (
         <Reveal key={item.title} delay={index * 70} className={span(index)}>
-          <div className={`group h-full rounded-3xl border border-brand-border p-6 transition-colors duration-300 hover:border-brand-accent ${cardBackground}`}>
-            <span className="text-sm font-bold tabular-nums text-brand-accent">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <h3 className="mt-3 text-lg font-bold text-brand-ink">{item.title}</h3>
+          <div
+            className={`group h-full rounded-3xl border border-brand-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-accent hover:shadow-xl hover:shadow-brand-ink/5 ${cardBackground}`}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-accent text-white shadow-md shadow-brand-accent/25 transition-transform duration-300 group-hover:scale-110">
+                <IconCheck className="h-5 w-5" strokeWidth={2.5} />
+              </span>
+              <span className="text-3xl font-bold leading-none tabular-nums text-brand-border transition-colors duration-300 group-hover:text-brand-accent-soft" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
+            <h3 className="mt-5 text-lg font-bold text-brand-ink">{item.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{item.text}</p>
           </div>
         </Reveal>
@@ -176,6 +183,22 @@ function ChecklistBlock({ section }: { section: Extract<ContentSection, { type: 
   );
 }
 
+/** Anchor id for a content section, derived from its short navigation label. */
+export function sectionId(section: ContentSection) {
+  const label = section.navLabel ?? section.eyebrow ?? section.title;
+  return label
+    .toLowerCase()
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+/** Scroll offset so anchored sections are not hidden behind the sticky header (and section nav from md on). */
+export const anchorOffset = "scroll-mt-20 md:scroll-mt-40";
+
 export function ContentSections({
   sections,
   startWith = "sand",
@@ -189,7 +212,7 @@ export function ContentSections({
         const background: Background =
           index % 2 === 0 ? startWith : startWith === "sand" ? "surface" : "sand";
         return (
-          <Section key={section.title} background={background}>
+          <Section key={section.title} id={sectionId(section)} background={background} className={anchorOffset}>
             {section.type === "variants" && <VariantsBlock section={section} background={background} />}
             {section.type === "cards" && <CardsBlock section={section} background={background} />}
             {section.type === "checklist" && <ChecklistBlock section={section} />}

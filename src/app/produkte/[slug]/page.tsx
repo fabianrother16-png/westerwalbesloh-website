@@ -6,12 +6,13 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Carousel } from "@/components/ui/Carousel";
-import { ContentSections, NumberedCards } from "@/components/content/ContentSections";
+import { anchorOffset, ContentSections, NumberedCards, sectionId } from "@/components/content/ContentSections";
 import { Manufacturers } from "@/components/content/Manufacturers";
 import { ProjectGrid } from "@/components/content/ProjectGrid";
 import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { SectionNav, type SectionNavItem } from "@/components/layout/SectionNav";
 import { ProductDemoSection } from "@/components/content/ProductDemoSection";
 import { ProductIcon } from "@/components/icons/ProductIcons";
 import { IconPhone } from "@/components/icons/UiIcons";
@@ -55,6 +56,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const photosBg = flip(manufacturersBg);
   const faqBg = product.projectPhotos.length > 0 ? flip(photosBg) : photosBg;
   const relatedBg = flip(faqBg);
+  const navItems: SectionNavItem[] = [
+    { id: "vorteile", label: "Vorteile" },
+    ...(product.demo ? [{ id: "ausprobieren", label: "Ausprobieren", live: true }] : []),
+    ...product.sections.map((section) => ({ id: sectionId(section), label: section.navLabel ?? section.eyebrow ?? section.title })),
+    { id: "hersteller", label: "Hersteller" },
+    ...(product.projectPhotos.length > 0 ? [{ id: "projekte", label: "Projekte" }] : []),
+    { id: "faq", label: "FAQ" },
+  ];
 
   return (
     <>
@@ -75,6 +84,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         image={product.heroImage.src}
         imageAlt={product.heroImage.alt}
         imagePosition={product.heroImage.position}
+        highlights={product.highlights}
       >
         <div className="flex flex-wrap items-center gap-5">
           <Button href={contactHref} size="lg">
@@ -90,7 +100,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </PageHero>
 
-      <Section background="surface">
+      <SectionNav items={navItems} ctaHref={contactHref} />
+
+      <Section id="vorteile" background="surface" className={anchorOffset}>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <Reveal>
             <SectionHeading eyebrow="Ihre Vorteile auf einen Blick" title={product.benefitsTitle} />
@@ -113,7 +125,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <ContentSections sections={product.sections} startWith="sand" />
 
-      <Section background={manufacturersBg}>
+      <Section id="hersteller" background={manufacturersBg} className={anchorOffset}>
         <Manufacturers
           title={product.manufacturersTitle}
           intro={product.manufacturersIntro}
@@ -122,7 +134,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       {product.projectPhotos.length > 0 && (
-        <Section background={photosBg}>
+        <Section id="projekte" background={photosBg} className={anchorOffset}>
           <SectionHeading
             eyebrow="Echte Projekte"
             title={`${product.name} von uns montiert`}
@@ -138,7 +150,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </Section>
       )}
 
-      <Section background={faqBg}>
+      <Section id="faq" background={faqBg} className={anchorOffset}>
         <FaqSection title={product.faqTitle} items={product.faq} contactHref={contactHref} />
       </Section>
 

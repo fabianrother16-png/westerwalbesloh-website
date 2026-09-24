@@ -10,7 +10,7 @@ export function ProductDemoSection({ demo }: { demo: DemoKey }) {
   const copy = demoCopy[demo];
 
   return (
-    <section id="ausprobieren" className="relative scroll-mt-24 overflow-hidden bg-brand-primary-dark py-16 text-white sm:py-24">
+    <section id="ausprobieren" className="relative scroll-mt-20 overflow-hidden md:scroll-mt-40 bg-brand-primary-dark py-16 text-white sm:py-24">
       <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-32 h-96 w-96 rounded-full bg-brand-accent/30 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-accent-soft/10 blur-3xl" />
       <Container className="relative grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">

@@ -19,6 +19,8 @@ export type ContentSection =
   | {
       type: "variants";
       eyebrow?: string;
+      /** Short label for the in-page navigation of product pages. */
+      navLabel?: string;
       title: string;
       intro?: string;
       items: (TitledText & { image: ImageRef })[];
@@ -26,6 +28,8 @@ export type ContentSection =
   | {
       type: "cards";
       eyebrow?: string;
+      /** Short label for the in-page navigation of product pages. */
+      navLabel?: string;
       title: string;
       intro?: string;
       items: TitledText[];
@@ -34,6 +38,8 @@ export type ContentSection =
   | {
       type: "checklist";
       eyebrow?: string;
+      /** Short label for the in-page navigation of product pages. */
+      navLabel?: string;
       title: string;
       intro?: string;
       items: string[];
@@ -68,6 +74,8 @@ export type Product = {
   faq: FaqItem[];
   /** Interactive demo shown after the benefits, e.g. the slat demo for raffstores. */
   demo?: DemoKey;
+  /** Four key facts shown as tiles in the page hero. */
+  highlights?: { value: string; label: string }[];
   icon: ProductIconKey;
   metaTitle: string;
   metaDescription: string;

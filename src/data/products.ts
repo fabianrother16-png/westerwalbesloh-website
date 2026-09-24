@@ -8,6 +8,12 @@ const img = (slug: string, file: string, alt: string) => ({
 export const products: Product[] = [
   {
     slug: "raffstore",
+    highlights: [
+      { value: "bis 85 %", label: "weniger Sonnenwärme im Raum" },
+      { value: "stufenlos", label: "Licht lenken mit drehbaren Lamellen" },
+      { value: "App & Sensor", label: "Somfy Smart Home auf Wunsch" },
+      { value: "WAREMA", label: "Markenqualität, von uns montiert" },
+    ],
     demo: "raffstore",
     name: "Raffstore",
     formLabel: "Raffstore",
@@ -32,6 +38,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Ausführungen & Varianten",
+        navLabel: "Varianten",
         title: "Maßgeschneidert für jede Einbausituation",
         intro:
           "Entdecken Sie unsere technischen Varianten und Design-Optionen im Überblick.",
@@ -56,6 +63,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Bedienung & Steuerung",
+        navLabel: "Bedienung",
         title: "Die moderne Art, Licht und Schatten zu lenken",
         intro:
           "Verbinden Sie architektonischen Anspruch mit höchstem Wohnkomfort und Energieeffizienz.",
@@ -67,6 +75,7 @@ export const products: Product[] = [
       },
       {
         type: "checklist",
+        navLabel: "Einsatzbereiche",
         title: "Ideal für diese Anwendungsfälle",
         items: [
           "Große Fensterflächen",
@@ -128,6 +137,12 @@ export const products: Product[] = [
   },
   {
     slug: "rollladen",
+    highlights: [
+      { value: "bis 90 %", label: "weniger Sonnenwärme im Raum" },
+      { value: "ganz dunkel", label: "ideal für Schlaf- und Kinderzimmer" },
+      { value: "nachrüstbar", label: "als Vorbaurollladen ohne Stemmen" },
+      { value: "Motor & Timer", label: "fährt abends von selbst herunter" },
+    ],
     demo: "rollladen",
     name: "Rollladen",
     formLabel: "Rollladen",
@@ -152,6 +167,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Ausführungen & Varianten",
+        navLabel: "Varianten",
         title: "Passend zu Ihrer Fassade",
         intro:
           "Ob Neubau oder Sanierung: Wir bieten Ihnen langlebige Materialien, flexible Bauarten und eine große Farbvielfalt.",
@@ -176,6 +192,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Bedienung & Steuerung",
+        navLabel: "Bedienung",
         title: "Vom Gurtzug bis zur Hausautomation",
         intro: "Wählen Sie den Bedienkomfort, der zu Ihnen passt.",
         items: [
@@ -227,6 +244,12 @@ export const products: Product[] = [
   },
   {
     slug: "markisen",
+    highlights: [
+      { value: "Schatten", label: "auf Knopfdruck für Terrasse & Balkon" },
+      { value: "Wind & Sonne", label: "Sensoren steuern automatisch" },
+      { value: "6 Bauarten", label: "von offen bis Vollkassette" },
+      { value: "WAREMA & KADECO", label: "Markisen namhafter Hersteller" },
+    ],
     demo: "markise",
     name: "Markisen",
     formLabel: "Markise",
@@ -251,6 +274,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Markisenarten",
+        navLabel: "Markisenarten",
         title: "Für jeden Anspruch die passende Lösung",
         items: [
           {
@@ -288,6 +312,7 @@ export const products: Product[] = [
       {
         type: "checklist",
         eyebrow: "Stoffe & Designs",
+        navLabel: "Stoffe",
         title: "Markisentücher, die lange schön bleiben",
         items: [
           "Hohe UV-Beständigkeit",
@@ -301,6 +326,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Bedienung & Steuerung",
+        navLabel: "Bedienung",
         title: "Von der Kurbel bis zur Wetterautomatik",
         intro:
           "Entscheiden Sie selbst, wie viel Komfort Sie wünschen: Von der manuellen Kurbel bis zur vollautomatischen Wettersteuerung.",
@@ -357,6 +383,12 @@ export const products: Product[] = [
   },
   {
     slug: "insektentschutz",
+    highlights: [
+      { value: "nach Maß", label: "millimetergenau gefertigt" },
+      { value: "5 Systeme", label: "vom Spannrahmen bis zur Pendeltür" },
+      { value: "Pollenschutz", label: "Spezialgewebe für Allergiker" },
+      { value: "Aluminium", label: "stabile, langlebige Rahmen" },
+    ],
     demo: "insektenschutz",
     name: "Insektenschutz",
     formLabel: "Insektenschutz",
@@ -380,6 +412,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Unsere Insektenschutz-Lösungen",
+        navLabel: "Lösungen",
         title: "Vom Kellerfenster bis zur großen Schiebetür",
         intro: "Entdecken Sie unsere maßgefertigten Systeme für ein insektenfreies Zuhause.",
         items: [
@@ -413,6 +446,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Gewebearten",
+        navLabel: "Gewebe",
         title: "Hochleistungsgewebe für jeden Bedarf",
         intro:
           "Ob fast unsichtbar, pollenabweisend oder extrem kratzfest: Wählen Sie das Funktionsgewebe, das perfekt zu Ihren Anforderungen passt.",
@@ -465,6 +499,12 @@ export const products: Product[] = [
   },
   {
     slug: "sonnenschutz",
+    highlights: [
+      { value: "6 Systeme", label: "Plissee, Rollo, Jalousie & mehr" },
+      { value: "blendfrei", label: "ideal fürs Homeoffice" },
+      { value: "Dachfenster", label: "auch für Sonderformen" },
+      { value: "KADECO", label: "Premium-Innenbeschattung" },
+    ],
     demo: "plissee",
     name: "Innenliegender Sonnenschutz",
     formLabel: "Innen-Sonnenschutz",
@@ -489,6 +529,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Unsere Systeme im Überblick",
+        navLabel: "Systeme",
         title: "Funktionalität trifft Design",
         intro:
           "Entdecken Sie unsere vielseitigen Lösungen für Licht-, Sicht- und Sonnenschutz – maßgefertigt für Ihr Zuhause.",
@@ -565,6 +606,12 @@ export const products: Product[] = [
   },
   {
     slug: "sonnenschirme",
+    highlights: [
+      { value: "bis über 6 m", label: "Spannweite für große Flächen" },
+      { value: "3 Bauarten", label: "Ampel-, Mittelstock- & Großschirm" },
+      { value: "windstabil", label: "Großschirme auch für Gastronomie" },
+      { value: "CARAVITA", label: "Premium-Qualität" },
+    ],
     demo: "sonnenschirm",
     name: "Sonnenschirme",
     formLabel: "Sonnenschirm",
@@ -589,6 +636,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Unsere Sonnenschirm-Modelle",
+        navLabel: "Modelle",
         title: "Für jeden Anspruch der passende Schatten",
         intro:
           "Entdecken Sie unsere Auswahl an flexiblen Ampelschirmen, robusten Klassikern und windstabilen Großschirmen.",
@@ -613,6 +661,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Formen & Größen",
+        navLabel: "Formen & Größen",
         title: "Maßarbeit statt Standardgröße",
         items: [
           { title: "Vielfältige Formen", text: "Klassisch rund, quadratisch oder rechteckig." },
@@ -624,6 +673,7 @@ export const products: Product[] = [
       {
         type: "checklist",
         eyebrow: "Bespannung & Design",
+        navLabel: "Bespannung",
         title: "Stoffe für sonnige Jahre",
         items: [
           "Hoher UV-Schutz für sicheren Aufenthalt",
@@ -635,6 +685,7 @@ export const products: Product[] = [
       {
         type: "cards",
         eyebrow: "Bedienung & Komfort",
+        navLabel: "Bedienung",
         title: "Technik, die mitdenkt",
         items: [
           { title: "Leichtgängige Kurbelmechanik", text: "Müheloses Aufspannen und Schließen dank hochwertiger Getriebe-Technik." },
@@ -678,6 +729,12 @@ export const products: Product[] = [
   },
   {
     slug: "steuerung-antriebe",
+    highlights: [
+      { value: "Somfy Expert", label: "zertifizierter Fachbetrieb" },
+      { value: "App & Sprache", label: "auch mit Alexa und Google" },
+      { value: "Sonne · Wind · Regen", label: "Sensoren steuern automatisch" },
+      { value: "nachrüstbar", label: "auch für bestehende Anlagen" },
+    ],
     demo: "smarthome",
     name: "Steuerungen & Antriebe",
     formLabel: "Steuerungen",
@@ -702,6 +759,7 @@ export const products: Product[] = [
       {
         type: "variants",
         eyebrow: "Unsere Steuerungssysteme",
+        navLabel: "Systeme",
         title: "Vom Wandschalter bis zur Automatik",
         intro:
           "Entdecken Sie die Vielfalt moderner Antriebstechnik – vom klassischen Wandschalter bis zur vollautomatischen Smart-Home-Lösung.",
@@ -731,6 +789,7 @@ export const products: Product[] = [
       {
         type: "checklist",
         eyebrow: "Smart Home mit Somfy TaHoma",
+        navLabel: "Smart Home",
         title: "Die Zentrale für Ihren Sonnenschutz",
         intro:
           "Steuern Sie alle Systeme bequem per App – ganz entspannt vom Sofa oder von unterwegs.",
