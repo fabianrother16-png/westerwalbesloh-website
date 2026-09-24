@@ -163,6 +163,19 @@
     }
   }
 
+  /* The sun travelling over the house in the Ratgeber hero. */
+  .sun-orbit {
+    transform-box: view-box;
+    transform-origin: 200px 250px;
+    animation: sun-orbit 16s ease-in-out infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sun-orbit {
+      animation: none;
+    }
+  }
+
   .marquee:hover .marquee-track {
     animation-play-state: paused;
   }
@@ -214,5 +227,14 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes sun-orbit {
+  from {
+    transform: rotate(-62deg);
+  }
+  to {
+    transform: rotate(62deg);
   }
 }

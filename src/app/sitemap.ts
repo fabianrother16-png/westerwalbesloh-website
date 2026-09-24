@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { url: `${siteUrl}/produkte`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteUrl}/leistungen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteUrl}/ratgeber`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     {
       url: `${siteUrl}/kontakt`,
       lastModified: now,

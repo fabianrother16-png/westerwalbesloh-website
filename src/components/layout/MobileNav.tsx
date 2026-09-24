@@ -128,9 +128,16 @@ export function MobileNav({
               ))}
 
               <Link
-                href="/kontakt"
+                href="/ratgeber"
                 onClick={() => setOpen(false)}
                 className="mt-4 rounded-xl px-3 py-3 font-medium text-brand-ink hover:bg-brand-sand"
+              >
+                Ratgeber & Sonnenstand-Rechner
+              </Link>
+              <Link
+                href="/kontakt"
+                onClick={() => setOpen(false)}
+                className="rounded-xl px-3 py-3 font-medium text-brand-ink hover:bg-brand-sand"
               >
                 Kontakt
               </Link>

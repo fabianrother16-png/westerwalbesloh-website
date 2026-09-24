@@ -161,3 +161,17 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
     })),
   };
 }
+
+export function definedTermSetSchema(name: string, path: string, terms: { term: string; text: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name,
+    url: `${siteUrl}${path}`,
+    hasDefinedTerm: terms.map((item) => ({
+      "@type": "DefinedTerm",
+      name: item.term,
+      description: item.text,
+    })),
+  };
+}

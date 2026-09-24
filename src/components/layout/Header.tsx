@@ -73,6 +73,12 @@ export function Header() {
           <NavDropdown label="Produkte" overviewHref="/produkte" items={productLinks} />
           <NavDropdown label="Leistungen" overviewHref="/leistungen" items={serviceLinks} />
           <Link
+            href="/ratgeber"
+            className="text-sm font-medium text-brand-ink-soft transition-colors hover:text-brand-primary"
+          >
+            Ratgeber
+          </Link>
+          <Link
             href="/kontakt"
             className="text-sm font-medium text-brand-ink-soft transition-colors hover:text-brand-primary"
           >

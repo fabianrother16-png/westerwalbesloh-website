@@ -1,6 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 import { HeatChart } from "@/components/interactive/HeatChart";
 
 const facts = [
@@ -8,9 +9,18 @@ const facts = [
   { value: "bis 3×", text: "mehr Hitzeschutz als ein Rollo hinter der Scheibe – weil die Sonne gar nicht erst ans Glas kommt." },
 ];
 
-export function KnowledgeSection() {
+export function KnowledgeSection({
+  id,
+  background = "sand",
+  showGuideLink = true,
+}: {
+  id?: string;
+  background?: "sand" | "surface";
+  /** Teaser link to the Ratgeber page (hidden on the Ratgeber page itself). */
+  showGuideLink?: boolean;
+}) {
   return (
-    <Section background="sand">
+    <Section id={id} background={background} className="scroll-mt-24">
       <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <Reveal>
           <SectionHeading
@@ -26,6 +36,14 @@ export function KnowledgeSection() {
               </div>
             ))}
           </dl>
+          {showGuideLink && (
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button href="/ratgeber#sonnenstand">Sonnenstand-Rechner öffnen</Button>
+              <Button href="/ratgeber" variant="secondary">
+                Zum Ratgeber
+              </Button>
+            </div>
+          )}
         </Reveal>
         <Reveal delay={120} className="rounded-3xl border border-brand-border bg-white p-6 shadow-xl shadow-brand-ink/5 sm:p-8">
           <HeatChart />

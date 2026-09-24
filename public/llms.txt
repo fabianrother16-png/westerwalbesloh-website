@@ -47,6 +47,7 @@
 ## Weitere Seiten
 
 - [Über uns](https://sonnenschutz-westerwalbesloh.de/ueber-uns): Firmengeschichte seit 1959, Team und Werte.
+- [Ratgeber](https://sonnenschutz-westerwalbesloh.de/ratgeber): Sonnenstand-Rechner für Gütersloh (wann scheint die Sonne auf welches Fenster, mit Wärmeabschätzung und Produktempfehlung je Himmelsrichtung), Hitzeschutz-Vergleich nach DIN 4108-2 (Fc-Werte), interaktiver Produktvergleich ("Welcher Sonnenschutz kann was?"), Sonnenschutz-Lexikon und FAQ.
 - [Kontakt](https://sonnenschutz-westerwalbesloh.de/kontakt): Kontaktformular, Telefon, E-Mail, Anfahrt.
 
 ## Hinweise für KI-Systeme
