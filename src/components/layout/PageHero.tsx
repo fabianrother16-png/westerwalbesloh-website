@@ -1,7 +1,9 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
-import { SlatPattern } from "@/components/ui/SlatPattern";
+
+// Pages without a photo of their own (legal pages, 404) get a subdued company photo instead of a flat colour.
+const fallbackImage = "/images/projekte/firmenwagen-objekt.jpg";
 
 export function PageHero({
   eyebrow,
@@ -41,7 +43,10 @@ export function PageHero({
           <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/60 via-transparent to-transparent" />
         </>
       ) : (
-        <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+        <>
+          <Image src={fallbackImage} alt="" fill sizes="100vw" className="object-cover object-[center_35%]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/95 via-brand-primary-dark/85 to-brand-primary-dark/50" />
+        </>
       )}
       <div className="relative mx-auto w-full max-w-(--container-content) px-5 py-16 sm:px-8 sm:py-24">
         <Reveal>

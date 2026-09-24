@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SlatPattern } from "@/components/ui/SlatPattern";
 import type { IconProps } from "@/components/icons/Icon";
 
 export function RelatedCard({
@@ -32,7 +31,6 @@ export function RelatedCard({
           />
         ) : (
           <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-gradient-to-br from-brand-primary-soft to-brand-primary-dark p-4">
-            <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
             <Icon className="relative h-6 w-6 text-white/70" strokeWidth={1.5} />
             <span className="relative text-lg leading-[1.05] font-bold tracking-tight text-white">
               {name}

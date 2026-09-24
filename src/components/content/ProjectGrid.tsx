@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { SlatPattern } from "@/components/ui/SlatPattern";
 import type { CarouselItem } from "@/components/ui/Carousel";
 
 type ProjectPhoto = CarouselItem & { wide?: boolean };
@@ -33,8 +32,15 @@ export function ProjectGrid({ items, ctaHref }: { items: ProjectPhoto[]; ctaHref
         </figure>
       ))}
       {items.length < 3 && (
-        <div className={`relative flex min-h-[16rem] flex-col justify-end overflow-hidden rounded-3xl bg-brand-primary p-8 text-white ${ctaSpan}`}>
-          <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
+        <div className={`relative flex min-h-[20rem] flex-col justify-end overflow-hidden rounded-3xl bg-brand-primary-dark p-8 text-white ${ctaSpan}`}>
+          <Image
+            src="/images/team/christoph-kulik.jpg"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className="object-cover object-[center_40%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/70 to-brand-primary-dark/0" />
           <div className="relative">
             <p className="text-2xl font-bold tracking-tight">Ihr Projekt als Nächstes?</p>
             <p className="mt-3 leading-relaxed text-white/75">

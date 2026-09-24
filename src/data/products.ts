@@ -17,8 +17,8 @@ export const products: Product[] = [
       "Raffstore verbinden moderne Optik mit effektivem Sonnen- und Hitzeschutz. Durch flexibel verstellbare Lamellen lässt sich das Tageslicht nach Bedarf lenken – hell, blendfrei oder komplett geschützt.",
       "Sie eignen sich besonders für große Fensterflächen, moderne Wohnarchitektur und alle, die Wert auf Komfort, Funktion und Energieeffizienz legen. Wir planen, liefern und montieren Ihre Raffstoreanlage in Gütersloh und ganz OWL – mit eigenem Montageteam.",
     ],
-    heroImage: img("raffstore", "hero.jpg", "Fassade mit außenliegenden Aluminiumlamellen als Sonnenschutz"),
-    cardImage: img("raffstore", "card.jpg", "Außenliegende Metalllamellen an einer modernen Fassade"),
+    heroImage: img("raffstore", "hero.jpg", "Moderne Fassade mit außenliegenden Raffstores vor den Fenstern"),
+    cardImage: img("raffstore", "card.jpg", "Fensterreihe mit Raffstores in Blendenkästen an einer hellen Fassade"),
     benefitsTitle: "Warum Raffstore?",
     benefits: [
       { title: "Flexible Lichtsteuerung", text: "Die Lamellen lassen sich stufenlos einstellen – für perfektes Licht den ganzen Tag." },
@@ -38,7 +38,7 @@ export const products: Product[] = [
           {
             title: "Lamellenformen",
             text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik oder robusten Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln. Auch geschwungene S-Lamellen sind als weicher Akzent verfügbar.",
-            image: img("raffstore", "lamellen.jpg", "Nahaufnahme horizontaler Aluminiumlamellen"),
+            image: img("raffstore", "lamellen.jpg", "Raffstore-Lamellen vor den Glastüren eines modernen Balkons"),
           },
           {
             title: "Montagearten",
@@ -48,7 +48,7 @@ export const products: Product[] = [
           {
             title: "Farben & Optik",
             text: "Wir bieten Ihnen alle gängigen Lamellen- und Gestellfarben an. So können Sie den Raffstore entweder als farblichen Kontrast setzen oder harmonisch Ton-in-Ton an Ihre Fassade anpassen.",
-            image: img("raffstore", "farben.jpg", "Gelbe Raffstores als farblicher Akzent an einer modernen Fassade"),
+            image: img("raffstore", "farben.jpg", "Hellblaue Lamellen neben einer anthrazitfarbenen Klinkerfassade"),
           },
         ],
       },
@@ -136,8 +136,8 @@ export const products: Product[] = [
       "Rollläden sind der vielseitige Klassiker für umfassenden Schutz rund ums Haus. Sie bieten weit mehr als nur Verdunkelung: Sie sorgen für effektiven Wärme- und Schallschutz, wahren Ihre Privatsphäre und erhöhen die Sicherheit an Fenstern und Türen.",
       "Ob im Neubau oder bei der Modernisierung – Rollläden sind die robuste Lösung für alle, die Wert auf Energieeffizienz und ungestörten Wohnkomfort legen.",
     ],
-    heroImage: img("rollladen", "hero.jpg", "Drei geschlossene Rollläden an einer Hausfassade"),
-    cardImage: img("rollladen", "card.jpg", "Zwei Rollläden an einer Klinkerfassade"),
+    heroImage: img("rollladen", "hero.jpg", "Zwei geschlossene Rollläden an einer hellen, modernen Fassade"),
+    cardImage: img("rollladen", "card.jpg", "Rollläden mit dunklen Fensterrahmen an einer modernen Metallfassade"),
     benefitsTitle: "Warum Rollladen?",
     benefits: [
       { title: "Effektiver Wärmeschutz", text: "Hält Wohnräume im Sommer angenehm kühl und verbessert im Winter spürbar die Wärmedämmung." },
@@ -157,7 +157,7 @@ export const products: Product[] = [
           {
             title: "Hochwertige Materialien",
             text: "Wählen Sie zwischen robustem Aluminium für höchste Stabilität und Langlebigkeit oder pflegeleichtem Kunststoff als wirtschaftliche Lösung mit sehr guten Dämmwerten.",
-            image: img("rollladen", "materialien.jpg", "Nahaufnahme eines Rollladenpanzers mit Lichtreflexen"),
+            image: img("rollladen", "materialien.jpg", "Nahaufnahme eines neuen Rollladenpanzers aus Aluminium"),
           },
           {
             title: "Flexible Bauarten",
@@ -167,7 +167,7 @@ export const products: Product[] = [
           {
             title: "Panzerprofile & Farben",
             text: "Gestalten Sie die Optik individuell. Unsere Profile sind in verschiedenen Deckbreiten und zahlreichen Farben erhältlich, damit sich der Rollladen harmonisch in Ihre Architektur einfügt.",
-            image: img("rollladen", "farben.jpg", "Rollladenpanzer in kräftigem Orange"),
+            image: img("rollladen", "farben.jpg", "Graue Rollläden als Kontrast zu einer gelben Fassade"),
           },
         ],
       },
@@ -181,7 +181,7 @@ export const products: Product[] = [
           { title: "Motorisierter Antrieb", text: "Unsere leisen und langlebigen Motoren bewegen den Behang besonders schonend. Das ist bequem und erhöht die Lebensdauer Ihrer Rollläden spürbar." },
           { title: "Smart Home (Somfy)", text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – für maximale Sicherheit und Effizienz." },
         ],
-        image: img("rollladen", "modern.jpg", "Wohngebäude mit teilweise heruntergelassenen Rollläden"),
+        image: img("rollladen", "modern.jpg", "Moderner Wohnbau mit Rollläden an Fenstern und Balkontüren"),
       },
     ],
     manufacturersTitle: "Unsere Partner & Hersteller",
@@ -234,8 +234,8 @@ export const products: Product[] = [
       "Markisen verbinden Komfort, Design und wirksamen Sonnenschutz. Ob große Terrasse, kleiner Balkon oder Fensterfront – wir bieten hochwertige Markisenlösungen, die genau zu Ihrem Zuhause passen.",
       "Mit vielen Ausstattungs- und Designoptionen, langlebigen Materialien und moderner Steuerung schaffen wir für Sie einen Platz zum Wohlfühlen.",
     ],
-    heroImage: img("markisen", "hero.jpg", "Klinkerfassade mit grünen Fenstermarkisen"),
-    cardImage: img("markisen", "card.jpg", "Rote Fenstermarkise über einem Fenster"),
+    heroImage: img("markisen", "hero.jpg", "Helle Fenstermarkisen an einer weißen Hausfassade"),
+    cardImage: img("markisen", "card.jpg", "Modernes Wohngebäude mit gelben Balkonmarkisen vor blauem Himmel"),
     benefitsTitle: "Warum Markisen?",
     benefits: [
       { title: "Angenehmer Schatten & Raumklima", text: "Schützt zuverlässig vor Sonne und Hitze – nicht nur auf der Terrasse, sondern verhindert auch das Aufheizen der dahinterliegenden Wohnräume." },
@@ -278,7 +278,7 @@ export const products: Product[] = [
           {
             title: "Fenster- & Fassadenmarkisen",
             text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren.",
-            image: img("markisen", "fenster-fassade.jpg", "Senkrechte Fenstermarkisen an einer Klinkerfassade"),
+            image: img("markisen", "fenster-fassade.jpg", "Beige Senkrechtmarkisen vor drei hohen Fenstern einer Klinkerfassade"),
           },
         ],
       },
@@ -293,7 +293,7 @@ export const products: Product[] = [
           "Große Auswahl an Farben & Mustern",
           "Perfekt abgestimmt auf Ihren Hausstil",
         ],
-        image: img("markisen", "stoffe.jpg", "Wasserabweisendes, gestreiftes Markisentuch mit Regentropfen"),
+        image: img("markisen", "stoffe.jpg", "Markisentuch von unten mit modernem Aluminiumgestell"),
       },
       {
         type: "cards",
@@ -362,8 +362,8 @@ export const products: Product[] = [
       "Ein guter Insektenschutz sorgt für ungestörtes Lüften und schützt zuverlässig vor Fliegen, Mücken, Wespen und anderen unerwünschten Gästen.",
       "Unsere hochwertigen Systeme von WAREMA bieten passgenauen Schutz für nahezu jede Einbausituation – dezent, langlebig und komfortabel bedienbar. Perfekt für Privathaushalte, Büros, Praxen und öffentliche Einrichtungen.",
     ],
-    heroImage: { ...img("insektentschutz", "hero.jpg", "Geöffnetes Fenster mit Blick in den Garten und Geranien auf der Fensterbank"), position: "object-[center_42%]" },
-    cardImage: img("insektentschutz", "card.jpg", "Maikäfer auf einem Fliegengitter vor dem Fenster"),
+    heroImage: img("insektentschutz", "hero.jpg", "Helle, überdachte Terrasse mit Insektenschutzgittern und Blick ins Grüne"),
+    cardImage: img("insektentschutz", "card.jpg", "Veranda mit Insektenschutzgittern, roten Loungemöbeln und Blick in den Garten"),
     benefitsTitle: "Warum Insektenschutz?",
     benefits: [
       { title: "Perfekter Schutz ohne Chemie", text: "Halten Sie Plagegeister effektiv fern – ganz natürlich und umweltfreundlich, ohne chemische Sprays oder Stromfallen." },
@@ -419,7 +419,7 @@ export const products: Product[] = [
           { title: "Standard-Fiberglas", text: "Der bewährte Klassiker: Dieses robuste Gewebe ist besonders langlebig, witterungsbeständig und bietet eine solide Durchsicht zum fairen Preis." },
           { title: "Haustiergewebe", text: "Extrem widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
         ],
-        image: img("insektentschutz", "gewebe.jpg", "Nahaufnahme eines Insektenschutzgewebes mit Regentropfen"),
+        image: img("insektentschutz", "gewebe.jpg", "Nahaufnahme eines feinmaschigen Insektenschutzgewebes im Rahmen"),
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
@@ -511,7 +511,7 @@ export const products: Product[] = [
           {
             title: "Lamellenvorhang",
             text: "Die perfekte Lösung für große Fensterflächen. Besticht durch klare Linien, moderne Optik und eignet sich hervorragend als Raumtrenner.",
-            image: img("sonnenschutz", "lamellenvorhang.jpg", "Lamellenvorhang an einem großen Fenster im Wohnraum"),
+            image: img("sonnenschutz", "lamellenvorhang.jpg", "Lamellenvorhang im warmen Abendlicht"),
           },
           {
             title: "Flächenvorhang",
@@ -595,7 +595,7 @@ export const products: Product[] = [
           {
             title: "Mittelstockschirme",
             text: "Die bewährte Lösung für jeden Einsatzbereich. Extrem robust, kinderleicht zu bedienen und in zahlreichen Formen und Größen verfügbar – ideal für Balkone oder Gartentische mit Schirmloch.",
-            image: img("sonnenschirme", "mittelstockschirm.jpg", "Mittelstockschirm über einer Sitzgruppe auf einer Dachterrasse"),
+            image: img("sonnenschirme", "mittelstockschirm.jpg", "Sonnenschirm über einem Esstisch auf einer hellen Terrasse am Pool"),
           },
           {
             title: "Großschirme",
@@ -613,7 +613,7 @@ export const products: Product[] = [
           { title: "Flexible Dimensionen", text: "Spannweiten von 2 m bis über 6 m." },
           { title: "Individuelle Maßarbeit", text: "Sondergrößen exakt nach Anforderung." },
         ],
-        image: img("sonnenschirme", "gastronomie.jpg", "Rote Sonnenschirme über einer Restaurantterrasse"),
+        image: img("sonnenschirme", "gastronomie.jpg", "Weiße Sonnenschirme mit Holzgestell im Außenbereich eines Cafés"),
       },
       {
         type: "checklist",

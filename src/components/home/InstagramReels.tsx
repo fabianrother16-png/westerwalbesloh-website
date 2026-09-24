@@ -1,12 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { SlatPattern } from "@/components/ui/SlatPattern";
 import { company } from "@/data/company";
 import { openConsentSettings, useConsent } from "@/lib/consent";
 
@@ -18,13 +18,14 @@ declare global {
   }
 }
 
-const REEL_URLS = [
-  "https://www.instagram.com/reel/DVqh8VRjIs9/",
-  "https://www.instagram.com/reel/DXerfA6DJmk/",
-  "https://www.instagram.com/reel/DSXTbMXDPJ-/",
-  "https://www.instagram.com/reel/DRMfvxfjTgH/",
-  "https://www.instagram.com/reel/DSFIYrQABrD/",
-  "https://www.instagram.com/reel/DKJ7QezsyTn/",
+// Until Instagram may be loaded, each reel is shown with one of our own project photos as its cover.
+const REELS = [
+  { url: "https://www.instagram.com/reel/DVqh8VRjIs9/", cover: "/images/produkte/markisen/projekt-3.jpg" },
+  { url: "https://www.instagram.com/reel/DXerfA6DJmk/", cover: "/images/produkte/rollladen/projekt-1.jpg" },
+  { url: "https://www.instagram.com/reel/DSXTbMXDPJ-/", cover: "/images/produkte/raffstore/projekt-1.jpg" },
+  { url: "https://www.instagram.com/reel/DRMfvxfjTgH/", cover: "/images/produkte/markisen/projekt-1.jpg" },
+  { url: "https://www.instagram.com/reel/DSFIYrQABrD/", cover: "/images/team/thorsten-schoening.jpg" },
+  { url: "https://www.instagram.com/reel/DKJ7QezsyTn/", cover: "/images/leistungen/objektbau-projekte/screen-montage.jpg" },
 ];
 
 const cardClass =
@@ -77,7 +78,7 @@ export function InstagramReels() {
 
       <Reveal className="mt-8">
         <div className="scrollbar-hide flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2">
-          {REEL_URLS.map((url) => (
+          {REELS.map(({ url, cover }) => (
             <div key={url} className="w-[85%] shrink-0 snap-center sm:w-[360px]">
               {enabled ? (
                 <blockquote
@@ -100,10 +101,17 @@ export function InstagramReels() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex aspect-[9/16] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand-primary-soft to-brand-primary-dark p-6 text-center text-white"
+                  className="group relative flex aspect-[9/16] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-brand-primary-dark p-6 text-center text-white"
                 >
-                  <SlatPattern className="pointer-events-none absolute inset-0 h-full w-full" />
-                  <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/40 transition-transform duration-300 group-hover:scale-110">
+                  <Image
+                    src={cover}
+                    alt=""
+                    fill
+                    sizes="(min-width: 640px) 360px, 85vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/90 via-brand-primary-dark/50 to-brand-primary-dark/30" />
+                  <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/20 ring-1 ring-white/50 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                     <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7 fill-current" aria-hidden="true">
                       <path d="M8 5.5v13l11-6.5z" />
                     </svg>
