@@ -1,7 +1,12 @@
 import Image from "next/image";
 
+/**
+ * Horizontal version of the original logo (emblem, wordmark and slogan side by side), so the company
+ * name stays legible at header size. The light version is for dark backgrounds such as the footer.
+ * Both are generated from public/images/brand/logo.png, which remains the stacked master logo.
+ */
 export function Logo({
-  className = "h-14 w-auto",
+  className = "h-12 w-auto",
   onDark = false,
   priority = false,
 }: {
@@ -9,21 +14,15 @@ export function Logo({
   onDark?: boolean;
   priority?: boolean;
 }) {
-  const image = (
+  return (
     <Image
-      src="/images/brand/logo.png"
+      src={onDark ? "/images/brand/logo-quer-hell.png" : "/images/brand/logo-quer.png"}
       alt="Westerwalbesloh – Das Schöne am Bau!"
-      width={583}
-      height={596}
+      width={891}
+      height={177}
       loading={priority ? "eager" : undefined}
-      sizes="96px"
+      sizes="320px"
       className={`${className} shrink-0 object-contain`}
     />
   );
-
-  // The original logo has black lettering, so on dark backgrounds it sits on a white tile.
-  if (onDark) {
-    return <span className="inline-flex rounded-2xl bg-white p-3">{image}</span>;
-  }
-  return image;
 }

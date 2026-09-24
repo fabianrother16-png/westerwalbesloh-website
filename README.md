@@ -26,8 +26,10 @@ Cookie-Einwilligung, GEO-Optimierung).
   (siehe unten). Quelle und Lizenz jedes Fotos stehen in `docs/bildnachweise.md` – bei neuen
   Fotos bitte dort ergänzen.
 - **Logo**: `public/images/brand/logo.png` ist das Original-Logo der Live-Seite (freigestellt),
-  `logo-emblem.png` die „W“-Bildmarke für Favicon/OG-Bild. Gerendert über
-  `src/components/brand/Logo.tsx`.
+  `logo-emblem.png` die „W“-Bildmarke für Favicon/OG-Bild. Für Kopf- und Fußzeile gibt es daraus
+  eine Querversion (`logo-quer.png`: Bildmarke links, Schriftzug und Slogan rechts) und eine helle
+  Querversion für dunkle Flächen (`logo-quer-hell.png`) – beide aus den Originalteilen des Logos
+  zusammengesetzt. Gerendert über `src/components/brand/Logo.tsx`.
 - **Farben**: Aus dem Logo extrahiert – Blau `#376fb2`, Grau `#9d9d9c`. Alle Werte liegen zentral
   in `src/app/globals.css` im `@theme`-Block (`--color-brand-*`).
 - **Partner & Zertifikate**: `src/data/company.ts` (`partners`, `certificates`), Logos unter

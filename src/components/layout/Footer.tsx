@@ -11,11 +11,11 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-brand-primary-dark text-white/80">
+    <footer className="bg-brand-primary-dark text-white/80">
       <div className="mx-auto max-w-(--container-content) px-5 pt-16 pb-28 sm:px-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Logo className="h-24 w-auto" onDark />
+            <Logo className="h-12 w-auto sm:h-14" onDark />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
               {company.slogan}
             </p>

@@ -23,6 +23,8 @@ export function CtaBanner() {
       />
       {/* Solid tint on small screens, where the text covers the whole photo; a left-to-right fade on desktop. */}
       <div className="absolute inset-0 bg-brand-primary-dark/80 lg:bg-transparent lg:bg-gradient-to-r lg:from-brand-primary-dark lg:via-brand-primary-dark/85 lg:to-brand-primary-dark/10" />
+      {/* The photo fades into the footer colour, so the band and the footer read as one closing section. */}
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-brand-primary-dark" />
       <Section background="none" className="relative">
         <Reveal className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">
