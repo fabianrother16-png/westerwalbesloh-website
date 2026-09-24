@@ -152,6 +152,17 @@
     }
   }
 
+  /* Content that is swapped in place (tabs, results) fades up briefly. */
+  .swap-in {
+    animation: word-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .swap-in {
+      animation: none;
+    }
+  }
+
   .marquee:hover .marquee-track {
     animation-play-state: paused;
   }

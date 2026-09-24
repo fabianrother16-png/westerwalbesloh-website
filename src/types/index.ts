@@ -66,8 +66,8 @@ export type Product = {
   projectPhotos: (ImageRef & { caption: string; wide?: boolean })[];
   faqTitle: string;
   faq: FaqItem[];
-  /** Optional interactive section shown after the benefits, e.g. the slat demo for raffstores. */
-  interactiveDemo?: "lamellen";
+  /** Interactive demo shown after the benefits, e.g. the slat demo for raffstores. */
+  demo?: DemoKey;
   icon: ProductIconKey;
   metaTitle: string;
   metaDescription: string;
@@ -100,6 +100,9 @@ export type ProductIconKey =
   | "innensonnenschutz"
   | "sonnenschirm"
   | "steuerung";
+
+/** Interactive product demos, see src/components/interactive/demo. */
+export type DemoKey = "raffstore" | "rollladen" | "markise" | "insektenschutz" | "plissee" | "sonnenschirm" | "smarthome";
 
 export type ServiceIconKey = "beratung" | "reparatur" | "wartung" | "objektbau";
 

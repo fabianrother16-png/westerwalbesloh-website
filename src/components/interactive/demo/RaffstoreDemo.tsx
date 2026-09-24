@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { DemoActions, DemoButton, DemoSlider, DemoStatus, useSvgIds } from "./DemoParts";
 
 const SLATS = 12;
 const PANE = { x: 60, y: 28, width: 280, height: 172 };
@@ -17,10 +18,8 @@ function describe(angle: number) {
  * Interactive raffstore: the slider turns the slats (0° = horizontal/open, 90° = closed). The "Sonnenautomatik"
  * plays a sunny day in which a sun sensor closes the slats around noon and opens them again in the evening.
  */
-export function LamellenDemo() {
-  // Unique SVG ids, so gradients never clash with another instance on the page.
-  const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
-  const id = (name: string) => `${uid}-${name}`;
+export function RaffstoreDemo() {
+  const id = useSvgIds();
   const [angle, setAngle] = useState(35);
   const [playing, setPlaying] = useState(false);
   const [sun, setSun] = useState({ x: 290, y: 62 });
@@ -122,45 +121,23 @@ export function LamellenDemo() {
         <rect x={PANE.x - 14} y={PANE.y + PANE.height + 6} width={PANE.width + 28} height="8" rx="3" fill="#d4dbe3" />
       </svg>
 
-      <div className="mt-5">
-        <div className="flex items-baseline justify-between gap-4">
-          <p className="text-lg font-bold text-brand-ink">{state.title}</p>
-          <p className="text-sm tabular-nums text-brand-ink-soft">Lamellen: {angle}°</p>
-        </div>
-        <p className="mt-1 min-h-10 text-sm text-brand-ink-soft" aria-live="polite">
-          {state.text}
-        </p>
-
-        <label htmlFor="lamellen-winkel" className="sr-only">
-          Lamellenwinkel einstellen
-        </label>
-        <input
-          id="lamellen-winkel"
-          type="range"
-          min={0}
-          max={90}
-          value={angle}
-          onChange={(event) => {
-            setPlaying(false);
-            setAngle(Number(event.target.value));
-          }}
-          className="mt-3 w-full accent-brand-accent"
-        />
-        <div className="mt-1 flex justify-between text-xs text-brand-ink-soft">
-          <span>offen</span>
-          <span>geschlossen</span>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setPlaying((value) => !value)}
-          aria-pressed={playing}
-          className="mt-5 inline-flex items-center gap-2 rounded-full border border-brand-border bg-white px-5 py-2.5 text-sm font-semibold text-brand-primary transition-colors hover:border-brand-primary"
-        >
-          <span className={`h-2.5 w-2.5 rounded-full ${playing ? "animate-pulse bg-amber-400" : "bg-brand-accent"}`} />
+      <DemoStatus title={state.title} value={`Lamellen: ${angle}°`} text={state.text} />
+      <DemoSlider
+        label="Lamellen drehen"
+        value={angle}
+        max={90}
+        onChange={(value) => {
+          setPlaying(false);
+          setAngle(value);
+        }}
+        left="offen"
+        right="geschlossen"
+      />
+      <DemoActions>
+        <DemoButton active={playing} onClick={() => setPlaying((value) => !value)}>
           {playing ? "Sonnenautomatik stoppen" : "Sonnenautomatik abspielen"}
-        </button>
-      </div>
+        </DemoButton>
+      </DemoActions>
     </div>
   );
 }

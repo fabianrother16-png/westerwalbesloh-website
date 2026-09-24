@@ -12,7 +12,7 @@ import { ProjectGrid } from "@/components/content/ProjectGrid";
 import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { LamellenSection } from "@/components/content/LamellenSection";
+import { ProductDemoSection } from "@/components/content/ProductDemoSection";
 import { ProductIcon } from "@/components/icons/ProductIcons";
 import { IconPhone } from "@/components/icons/UiIcons";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -109,7 +109,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </Section>
 
-      {product.interactiveDemo === "lamellen" && <LamellenSection />}
+      {product.demo && <ProductDemoSection demo={product.demo} />}
 
       <ContentSections sections={product.sections} startWith="sand" />
 

@@ -8,9 +8,9 @@ const img = (slug: string, file: string, alt: string) => ({
 export const products: Product[] = [
   {
     slug: "raffstore",
+    demo: "raffstore",
     name: "Raffstore",
     formLabel: "Raffstore",
-    interactiveDemo: "lamellen",
     shortDescription:
       "Moderner Sonnen- und Hitzeschutz mit flexibler Lichtsteuerung – ideal für große Fensterfronten.",
     tagline: "Moderner Sonnenschutz mit perfekter Lichtlenkung",
@@ -128,6 +128,7 @@ export const products: Product[] = [
   },
   {
     slug: "rollladen",
+    demo: "rollladen",
     name: "Rollladen",
     formLabel: "Rollladen",
     shortDescription:
@@ -226,6 +227,7 @@ export const products: Product[] = [
   },
   {
     slug: "markisen",
+    demo: "markise",
     name: "Markisen",
     formLabel: "Markise",
     shortDescription:
@@ -355,6 +357,7 @@ export const products: Product[] = [
   },
   {
     slug: "insektentschutz",
+    demo: "insektenschutz",
     name: "Insektenschutz",
     formLabel: "Insektenschutz",
     shortDescription: "Passgenaue Lösungen für Fenster, Türen, Dachfenster und Sonderformen.",
@@ -462,6 +465,7 @@ export const products: Product[] = [
   },
   {
     slug: "sonnenschutz",
+    demo: "plissee",
     name: "Innenliegender Sonnenschutz",
     formLabel: "Innen-Sonnenschutz",
     shortDescription:
@@ -561,6 +565,7 @@ export const products: Product[] = [
   },
   {
     slug: "sonnenschirme",
+    demo: "sonnenschirm",
     name: "Sonnenschirme",
     formLabel: "Sonnenschirm",
     shortDescription:
@@ -673,6 +678,7 @@ export const products: Product[] = [
   },
   {
     slug: "steuerung-antriebe",
+    demo: "smarthome",
     name: "Steuerungen & Antriebe",
     formLabel: "Steuerungen",
     shortDescription:

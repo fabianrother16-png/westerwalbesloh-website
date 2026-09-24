@@ -76,9 +76,14 @@ werden über die offizielle Einbettung geladen (siehe unten).
 
 ## Interaktive Elemente
 
-- **Raffstore-Vorschau** (`src/components/interactive/LamellenDemo.tsx`): Lamellen per Regler drehen,
-  „Sonnenautomatik“ spielt einen Sonnentag ab. Auf der Startseite (Abschnitt „Sonnenschutz, der
-  mitdenkt“) und auf der Raffstore-Seite (`interactiveDemo: "lamellen"` in `src/data/products.ts`).
+- **Produkt-Demos** (`src/components/interactive/demo/`): Für jedes Produkt eine kleine Simulation
+  zum Ausprobieren – Raffstore (Lamellen drehen, Sonnenautomatik), Rollladen (Szenen für Abend und
+  Morgen), Markise (Schattenlänge, Sonnen- und Windautomatik), Insektenschutz (Mücken prallen ab),
+  Plissee (obere/untere Schiene, Stoffe), Sonnenschirm (öffnen, neigen, Sonnenverlauf) und
+  Smart Home (Szenen und Sensoren). Texte und Zuordnung stehen in `demoConfig.ts`, welche Demo auf
+  einer Produktseite erscheint, steuert das Feld `demo` in `src/data/products.ts`. Auf der
+  Startseite sind alle Demos im „Digitalen Showroom“ als Reiter zusammengefasst (`Showroom.tsx`).
+  Jede Demo wird als eigenes Skript erst dann geladen, wenn sie gebraucht wird.
 - **Diagramm „So viel Sonnenwärme bleibt draußen“** (`src/components/interactive/HeatChart.tsx`):
   animierte Balken mit Tabellenansicht. Die Werte sind Richtwerte nach den Anhaltswerten der
   DIN 4108-2 (Abminderungsfaktor Fc, Dreifachverglasung) und stehen oben in der Datei.

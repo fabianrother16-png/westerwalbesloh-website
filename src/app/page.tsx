@@ -2,6 +2,8 @@ import { Hero } from "@/components/home/Hero";
 import { Partners } from "@/components/home/Partners";
 import { AboutIntro } from "@/components/home/AboutIntro";
 import { ProductGrid } from "@/components/home/ProductGrid";
+import { ShowroomSection } from "@/components/home/ShowroomSection";
+import { KnowledgeSection } from "@/components/home/KnowledgeSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FinderSection } from "@/components/home/FinderSection";
 import { ProcessSteps } from "@/components/home/ProcessSteps";
@@ -12,10 +14,10 @@ import { InstagramReels } from "@/components/home/InstagramReels";
 import { Testimonials } from "@/components/home/Testimonials";
 import { ServiceArea } from "@/components/home/ServiceArea";
 import { CtaBanner } from "@/components/home/CtaBanner";
-import { TechShowcase } from "@/components/home/TechShowcase";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { websiteSchema } from "@/lib/schema";
 
+// Backgrounds alternate sand/surface; the dark showroom breaks the rhythm on purpose.
 export default function HomePage() {
   return (
     <>
@@ -24,16 +26,17 @@ export default function HomePage() {
       <Partners />
       <AboutIntro />
       <ProductGrid background="surface" />
-      <TechShowcase />
-      <ServicesOverview background="sand" />
+      <ShowroomSection />
+      <KnowledgeSection />
       <FinderSection />
       <ProcessSteps />
-      <WhyUs />
+      <ServicesOverview background="surface" />
       <Comparison />
-      <InsightsGallery />
+      <WhyUs />
       <InstagramReels />
-      <Testimonials />
+      <InsightsGallery />
       <ServiceArea />
+      <Testimonials />
       <CtaBanner />
     </>
   );
