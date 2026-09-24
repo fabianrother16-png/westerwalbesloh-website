@@ -14,11 +14,13 @@ export function CountUp({
   suffix?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [value, setValue] = useState(0);
+  // Start with the final value so the server-rendered HTML (read by crawlers without JavaScript)
+  // shows the real figure; the count-up starts from zero once the number scrolls into view.
+  const [value, setValue] = useState(end);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let frame = 0;
     let started = false;
@@ -56,7 +58,7 @@ export function CountUp({
 
   return (
     <span ref={ref}>
-      {value.toFixed(decimals)}
+      {value.toLocaleString("de-DE", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}
       {suffix}
     </span>
   );

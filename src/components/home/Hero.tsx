@@ -23,7 +23,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-dark/55 to-brand-primary-dark/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/80 via-transparent to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-(--container-content) px-5 pt-28 pb-12 sm:px-8 sm:pb-16">
+      <div className="relative mx-auto w-full max-w-(--container-content) px-5 pt-28 pb-12 sm:px-8 sm:pb-24">
         <Reveal>
           <Badge tone="dark">
             <IconStar className="h-3.5 w-3.5 text-brand-accent-soft" />
@@ -53,7 +53,7 @@ export function Hero() {
           </div>
         </Reveal>
         <Reveal delay={320}>
-          <dl className="mt-14 grid grid-cols-2 gap-8 border-t border-white/20 pt-8 sm:grid-cols-4">
+          <dl className="mt-14 grid max-w-3xl grid-cols-2 gap-8 border-t border-white/20 pt-8 sm:grid-cols-4">
             <div>
               <dt className="text-3xl font-bold">
                 <CountUp end={yearsExperience} suffix="+" />
