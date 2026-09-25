@@ -29,6 +29,7 @@ export function sunPosition({
   month,
   day,
   hour,
+  offset = utcOffset(month),
 }: {
   latitude: number;
   longitude: number;
@@ -36,8 +37,9 @@ export function sunPosition({
   day: number;
   /** Local clock time in hours, e.g. 13.5 = 13:30. */
   hour: number;
+  /** Hours ahead of UTC; defaults to the usual German summer/winter time for the month. */
+  offset?: number;
 }): SunPosition {
-  const offset = utcOffset(month);
   const gamma = ((2 * Math.PI) / 365) * (dayOfYear(month, day) - 1 + (hour - offset - 12) / 24);
   const equationOfTime =
     229.18 *

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { IconStar } from "@/components/icons/UiIcons";
 import { CountUp } from "@/components/ui/CountUp";
+import { LiveSun } from "@/components/home/LiveSun";
 import { company } from "@/data/company";
 
 const headline = "Sonnenschutz für Ihr Zuhause im Raum Gütersloh und OWL";
@@ -25,6 +26,11 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-dark/55 to-brand-primary-dark/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/80 via-transparent to-transparent" />
+
+      {/* Live sun card on large screens, on the photo side of the hero. */}
+      <div className="absolute top-1/2 right-[max(2rem,calc((100vw_-_var(--container-content))/2_+_2rem))] z-10 hidden -translate-y-1/2 xl:block">
+        <LiveSun latitude={company.geo.latitude} longitude={company.geo.longitude} />
+      </div>
 
       <div className="relative mx-auto w-full max-w-(--container-content) px-5 pt-28 pb-12 sm:px-8 sm:pb-24">
         <Reveal>
