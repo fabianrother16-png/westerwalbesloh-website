@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { ContentSections } from "@/components/content/ContentSections";
+import { RepairCheck } from "@/components/interactive/RepairCheck";
 import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
@@ -68,9 +70,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         imageAlt={service.heroImage.alt}
       >
         <div className="flex flex-wrap items-center gap-5">
-          <Button href="/kontakt" size="lg">
-            Kostenloses Angebot anfordern
-          </Button>
+          {service.slug === "reparatur-modernisierung" ? (
+            <Button href="#reparatur-check" size="lg">
+              Reparatur-Check starten
+            </Button>
+          ) : (
+            <Button href="/kontakt" size="lg">
+              Kostenloses Angebot anfordern
+            </Button>
+          )}
           <a
             href={company.phoneHref}
             className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white"
@@ -116,6 +124,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </Reveal>
         </div>
       </Section>
+
+      {service.slug === "reparatur-modernisierung" && (
+        <section id="reparatur-check" className="relative scroll-mt-20 overflow-hidden bg-brand-primary-dark py-16 text-white sm:py-24">
+          <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-32 h-96 w-96 rounded-full bg-brand-accent/30 blur-3xl" />
+          <Container className="relative">
+            <SectionHeading
+              light
+              eyebrow="Reparatur-Check"
+              title="Was ist kaputt? In zwei Klicks zur Einschätzung"
+              description="Antippen, was nicht mehr funktioniert: Sie erfahren sofort, was meist dahintersteckt, was Sie selbst prüfen können – und können die Reparatur direkt anfragen."
+            />
+            <Reveal className="mt-10">
+              <RepairCheck phoneHref={company.phoneHref} phoneDisplay={company.phoneDisplay} />
+            </Reveal>
+          </Container>
+        </section>
+      )}
 
       <ContentSections sections={service.sections} startWith="sand" />
 

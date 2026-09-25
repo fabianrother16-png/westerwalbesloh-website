@@ -87,6 +87,16 @@ werden über die offizielle Einbettung geladen (siehe unten).
 - **Diagramm „So viel Sonnenwärme bleibt draußen“** (`src/components/interactive/HeatChart.tsx`):
   animierte Balken mit Tabellenansicht. Die Werte sind Richtwerte nach den Anhaltswerten der
   DIN 4108-2 (Abminderungsfaktor Fc, Dreifachverglasung) und stehen oben in der Datei.
+- **Ratgeber** (`/ratgeber`): Sonnenstand-Rechner (`src/components/interactive/SunCalculator.tsx`,
+  Berechnung in `src/lib/sun.ts` nach den NOAA-Formeln, Standort aus `company.geo`), Produktvergleich
+  mit Wunsch-Auswahl (`ComparisonMatrix.tsx`), Lexikon (`src/data/glossary.ts`) und FAQ.
+- **Reparatur-Check** auf „Reparatur & Modernisierung“ (`RepairCheck.tsx`, Inhalte in
+  `src/data/repairCheck.ts`): Anlage und Problem wählen, Erklärung und Selbst-Check lesen, Anfrage
+  vorausgefüllt senden. Das Kontaktformular übernimmt dazu die URL-Parameter `anfrage`, `produkt`
+  und `nachricht`.
+- **Sonnenschutz-Finder** (Startseite): fünf Fragen mit Symbolen, „Zurück“-Knopf und Ergebnis mit Fotos.
+- **Mega-Menü** in der Kopfzeile (`src/components/layout/MegaMenu.tsx`): Produkte mit Vorschaubild;
+  die Bilder werden erst beim ersten Öffnen geladen.
 - Alle Animationen respektieren die Systemeinstellung „Bewegung reduzieren“.
 
 ## Cookie-Banner, Statistik & externe Inhalte

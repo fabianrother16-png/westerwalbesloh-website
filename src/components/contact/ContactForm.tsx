@@ -13,6 +13,8 @@ const labelClasses = "mb-1.5 block text-sm font-medium text-brand-ink";
 
 export function ContactForm() {
   const searchParams = useSearchParams();
+  const requestedType = searchParams.get("anfrage");
+  const initialInquiryType = company.contactFormOptions.inquiryTypes.find((option) => option === requestedType) ?? "Sonstiges";
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -142,7 +144,7 @@ export function ContactForm() {
           <label htmlFor="inquiryType" className={labelClasses}>
             Art der Anfrage *
           </label>
-          <select id="inquiryType" name="inquiryType" required defaultValue="Sonstiges" className={inputClasses}>
+          <select id="inquiryType" name="inquiryType" required defaultValue={initialInquiryType} className={inputClasses}>
             {company.contactFormOptions.inquiryTypes.map((option) => (
               <option key={option} value={option}>
                 {option}
