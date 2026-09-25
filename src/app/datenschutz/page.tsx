@@ -86,15 +86,21 @@ export default function DatenschutzPage() {
               Chatverlauf wird nicht dauerhaft mit Ihrer Person verknüpft gespeichert; er dient
               ausschließlich der Beantwortung Ihrer Anfrage während der laufenden Sitzung.
             </p>
+            <p>
+              Ist der KI-Dienst nicht aktiviert oder nicht erreichbar, beantwortet der Assistent Ihre
+              Frage ausschließlich anhand der Inhalte dieser Website (häufige Fragen, Produkttexte)
+              auf unserem Server. In diesem Fall findet keine Übermittlung an Anthropic statt; der
+              Hinweis unter dem Chatfenster zeigt an, welche Art von Antwort Sie erhalten.
+            </p>
           </LegalSection>
 
-          <LegalSection title="6. Sonnenschutz-Finder">
+          <LegalSection title="6. Sonnenschutz-Finder und interaktive Werkzeuge">
             <p>
-              Der interaktive Sonnenschutz-Finder auf unserer Startseite wird vollständig lokal in
-              Ihrem Browser ausgeführt. Ihre Antworten werden nicht an unsere Server übermittelt
-              oder gespeichert, es sei denn, Sie entscheiden sich, das Ergebnis über das
-              Kontaktformular an uns zu senden – in diesem Fall gilt Abschnitt 4 dieser
-              Datenschutzerklärung.
+              Der Sonnenschutz-Finder, die Produkt-Demos im Showroom, der Sonnenstand-Rechner, der
+              Produktvergleich und der Reparatur-Check werden vollständig lokal in Ihrem Browser
+              ausgeführt. Ihre Eingaben werden nicht an unsere Server übermittelt oder gespeichert,
+              es sei denn, Sie entscheiden sich, das Ergebnis über das Kontaktformular an uns zu
+              senden – in diesem Fall gilt Abschnitt 4 dieser Datenschutzerklärung.
             </p>
           </LegalSection>
 
