@@ -21,16 +21,24 @@ export function ProductGrid({
         title="Der passende Sonnenschutz für jede Situation"
         description="Von außenliegenden Raffstoren bis zum innenliegenden Plissee – wir beraten Sie zu jedem unserer sieben Produktbereiche und finden die technisch sinnvolle Lösung für Ihr Zuhause in Gütersloh und OWL."
       />
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
+      <p className="mt-6 flex items-center gap-2 text-sm font-medium text-brand-ink-soft sm:hidden" aria-hidden="true">
+        Zum Blättern wischen <IconArrowRight className="h-4 w-4" />
+      </p>
+      {/* Phones: swipeable row; from tablet width on: grid. */}
+      <div className="scrollbar-hide -mx-5 mt-4 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-12 sm:grid sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 sm:grid-cols-2 lg:grid-cols-6">
         {products.map((product, index) => {
           const featured = index < 2;
           return (
-            <Reveal key={product.slug} delay={(index % 3) * 70} className={featured ? "lg:col-span-3" : "lg:col-span-2"}>
+            <Reveal
+              key={product.slug}
+              delay={(index % 3) * 70}
+              className={`w-[82%] shrink-0 snap-start sm:w-auto ${featured ? "lg:col-span-3" : "lg:col-span-2"}`}
+            >
               <Link
                 href={`/produkte/${product.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-primary hover:shadow-xl hover:shadow-brand-ink/10"
               >
-                <div className={`relative w-full overflow-hidden ${featured ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
+                <div className={`relative w-full overflow-hidden ${featured ? "aspect-[4/3] lg:aspect-[16/9]" : "aspect-[4/3]"}`}>
                   <Image
                     src={product.cardImage.src}
                     alt={product.cardImage.alt}
@@ -53,7 +61,7 @@ export function ProductGrid({
             </Reveal>
           );
         })}
-        <Reveal delay={140} className="lg:col-span-2">
+        <Reveal delay={140} className="w-[82%] shrink-0 snap-start sm:w-auto lg:col-span-2">
           <div className="flex h-full flex-col justify-between rounded-3xl bg-brand-primary p-8 text-white">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">

@@ -159,16 +159,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       <Section background={flip(faqBg)}>
         <SectionHeading eyebrow="Weitere Leistungen" title="Alles aus einer Hand" />
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+        <div className="scrollbar-hide -mx-5 mt-10 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0">
           {otherServices.map((item) => (
-            <RelatedCard
-              key={item.slug}
-              href={`/leistungen/${item.slug}`}
-              name={item.name}
-              description={item.shortDescription}
-              image={(item.cardImage ?? item.heroImage).src}
-              icon={(props) => <ServiceIcon icon={item.icon} {...props} />}
-            />
+            <div key={item.slug} className="w-[80%] shrink-0 snap-start sm:w-auto">
+              <RelatedCard
+                href={`/leistungen/${item.slug}`}
+                name={item.name}
+                description={item.shortDescription}
+                image={(item.cardImage ?? item.heroImage).src}
+                icon={(props) => <ServiceIcon icon={item.icon} {...props} />}
+              />
+            </div>
           ))}
         </div>
       </Section>

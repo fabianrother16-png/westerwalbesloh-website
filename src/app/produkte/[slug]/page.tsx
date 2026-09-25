@@ -156,16 +156,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <Section background={relatedBg}>
         <SectionHeading eyebrow="Weitere Produkte" title="Das könnte Sie ebenfalls interessieren" />
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+        <div className="scrollbar-hide -mx-5 mt-10 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0">
           {otherProducts.map((item) => (
-            <RelatedCard
-              key={item.slug}
-              href={`/produkte/${item.slug}`}
-              name={item.name}
-              description={item.shortDescription}
-              image={item.cardImage.src}
-              icon={(props) => <ProductIcon icon={item.icon} {...props} />}
-            />
+            <div key={item.slug} className="w-[80%] shrink-0 snap-start sm:w-auto">
+              <RelatedCard
+                href={`/produkte/${item.slug}`}
+                name={item.name}
+                description={item.shortDescription}
+                image={item.cardImage.src}
+                icon={(props) => <ProductIcon icon={item.icon} {...props} />}
+              />
+            </div>
           ))}
         </div>
       </Section>

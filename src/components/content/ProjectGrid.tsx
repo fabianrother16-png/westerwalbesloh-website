@@ -9,11 +9,11 @@ export function ProjectGrid({ items, ctaHref }: { items: ProjectPhoto[]; ctaHref
   const wide = items.length === 1 && Boolean(items[0]?.wide);
   const ctaSpan = items.length === 1 && !wide ? "lg:col-span-2" : "sm:col-span-2 lg:col-span-1";
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="scrollbar-hide -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
       {items.map((item) => (
         <figure
           key={item.src}
-          className={`group relative overflow-hidden rounded-3xl ${
+          className={`group relative w-[80%] shrink-0 snap-start overflow-hidden rounded-3xl sm:w-auto ${
             wide ? "aspect-[16/10] sm:col-span-2 lg:aspect-[16/9]" : "aspect-[4/5]"
           }`}
         >
@@ -32,7 +32,7 @@ export function ProjectGrid({ items, ctaHref }: { items: ProjectPhoto[]; ctaHref
         </figure>
       ))}
       {items.length < 3 && (
-        <div className={`relative flex min-h-[20rem] flex-col justify-end overflow-hidden rounded-3xl bg-brand-primary-dark p-8 text-white ${ctaSpan}`}>
+        <div className={`relative flex min-h-[20rem] w-[80%] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-3xl bg-brand-primary-dark p-8 text-white sm:w-auto ${ctaSpan}`}>
           <Image
             src="/images/team/christoph-kulik.jpg"
             alt=""

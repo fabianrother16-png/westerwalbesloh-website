@@ -14,9 +14,12 @@ export function ServicesOverview({ background = "surface" }: { background?: "san
         title="Von der Beratung bis zur laufenden Wartung"
         description="Ehrliches Handwerk, transparente Beratung und langlebige Technik aus einer Hand – mit einem festangestellten Team, das jede Anlage selbst montiert."
       />
-      <div className="mt-12 grid gap-6 sm:grid-cols-2">
+      <p className="mt-6 flex items-center gap-2 text-sm font-medium text-brand-ink-soft sm:hidden" aria-hidden="true">
+        Zum Blättern wischen <IconArrowRight className="h-4 w-4" />
+      </p>
+      <div className="scrollbar-hide -mx-5 mt-4 flex snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0">
         {services.map((service, index) => (
-          <Reveal key={service.slug} delay={index * 70}>
+          <Reveal key={service.slug} delay={index * 70} className="w-[82%] shrink-0 snap-start sm:w-auto">
             <Link
               href={`/leistungen/${service.slug}`}
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-brand-primary hover:shadow-xl hover:shadow-brand-ink/10"
