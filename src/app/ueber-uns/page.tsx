@@ -6,11 +6,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Partners } from "@/components/home/Partners";
+import { NumberedCards } from "@/components/content/ContentSections";
+import { DrawLine } from "@/components/ui/DrawLine";
+import { IconAward, IconGarage, IconUsers } from "@/components/icons/UiIcons";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
-import { company, history, story } from "@/data/company";
+import { company, story } from "@/data/company";
 import { team } from "@/data/team";
 
 export const metadata: Metadata = buildMetadata({
@@ -21,6 +24,21 @@ export const metadata: Metadata = buildMetadata({
   path: "/ueber-uns",
   image: "/images/home/team-treppe.jpg",
 });
+
+const years = new Date().getFullYear() - company.founded;
+
+const facts = [
+  { value: String(company.founded), label: "gegründet in Gütersloh" },
+  { value: "3", label: "Generationen Familienbetrieb" },
+  { value: `${years}+`, label: "Jahre Erfahrung" },
+  { value: "100 %", label: "eigenes Montageteam, keine Subunternehmer" },
+];
+
+const chapters = [
+  { year: "1959", title: "Der Anfang in der Garage", icon: IconGarage, paragraphs: [story[1]] },
+  { year: "1980er", title: "Die Westerwalbesloh GmbH entsteht", icon: IconAward, paragraphs: [story[2]] },
+  { year: "Heute", title: "Dritte Generation", icon: IconUsers, paragraphs: [story[3], story[4]] },
+].map((chapter) => ({ ...chapter, paragraphs: chapter.paragraphs.filter((paragraph): paragraph is string => Boolean(paragraph)) }));
 
 export default function UeberUnsPage() {
   return (
@@ -41,29 +59,50 @@ export default function UeberUnsPage() {
       />
 
       <Section background="surface">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+        <div className="grid items-end gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <Reveal>
             <SectionHeading eyebrow="Unsere Geschichte" title="Von der Garage zum Fachbetrieb" />
-            <ol className="mt-10 space-y-8 border-l-2 border-brand-border pl-8">
-              {history.map((milestone, index) => (
-                <Reveal as="li" key={milestone.year} delay={index * 90} className="relative">
-                  <span className="absolute -left-[2.55rem] top-0.5 h-5 w-5 rounded-full border-4 border-white bg-brand-accent" />
-                  <p className="text-sm font-semibold uppercase tracking-wide text-brand-accent">
-                    {milestone.year}
-                  </p>
-                  <h3 className="mt-1 text-lg font-bold text-brand-ink">{milestone.title}</h3>
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-          <Reveal className="space-y-5 text-lg leading-relaxed text-brand-ink-soft">
-            {story.map((paragraph, index) => (
-              <p key={paragraph} className={index === 0 ? "text-xl font-medium text-brand-ink" : undefined}>
-                {paragraph}
-              </p>
-            ))}
+          </Reveal>
+          <Reveal delay={100}>
+            <p className="text-lg leading-relaxed text-brand-ink-soft sm:text-xl">{story[0]}</p>
           </Reveal>
         </div>
+
+        <dl className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {facts.map((fact, index) => (
+            <Reveal key={fact.label} delay={index * 70} className="rounded-2xl border border-brand-border bg-brand-sand px-5 py-4">
+              <dt className="text-2xl font-bold tracking-tight text-brand-primary sm:text-3xl">{fact.value}</dt>
+              <dd className="mt-1 text-sm text-brand-ink-soft">{fact.label}</dd>
+            </Reveal>
+          ))}
+        </dl>
+
+        {/* Three chapters on a timeline that draws itself */}
+        <ol className="relative mt-16 grid gap-6 lg:grid-cols-3 lg:gap-8">
+          <DrawLine className="absolute top-7 right-[16%] left-[16%] hidden h-0.5 lg:block" />
+          {chapters.map((chapter, index) => (
+            <Reveal as="li" key={chapter.year} delay={index * 120} className="relative flex flex-col">
+              <span className="relative z-10 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-lg shadow-brand-primary/25 lg:mx-auto">
+                <chapter.icon className="h-7 w-7" />
+              </span>
+              <div className="mt-5 flex-1 rounded-3xl border border-brand-border bg-white p-6 sm:p-7">
+                <p className="text-4xl font-bold tracking-tight text-brand-accent">{chapter.year}</p>
+                <h3 className="mt-2 text-xl font-bold text-brand-ink">{chapter.title}</h3>
+                <div className="mt-3 space-y-3 text-[0.95rem] leading-relaxed text-brand-ink-soft">
+                  {chapter.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+
+        <Reveal className="relative mt-12 overflow-hidden rounded-3xl bg-brand-primary-dark p-8 text-white sm:p-10">
+          <div aria-hidden="true" className="pointer-events-none absolute -top-20 -right-16 h-64 w-64 rounded-full bg-brand-accent/30 blur-3xl" />
+          <p className="relative text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">Unser Versprechen</p>
+          <p className="relative mt-3 max-w-4xl text-xl leading-relaxed sm:text-2xl">{story[5]}</p>
+        </Reveal>
       </Section>
 
       <Section background="sand">
@@ -99,18 +138,8 @@ export default function UeberUnsPage() {
 
       <Section background="surface">
         <SectionHeading eyebrow="Unsere Arbeitsweise" title="Worauf Sie sich bei uns verlassen können" />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {company.values.map((value, index) => (
-            <Reveal key={value.title} delay={index * 70}>
-              <div className="h-full rounded-3xl border border-brand-border bg-brand-sand p-6">
-                <span className="text-sm font-bold tabular-nums text-brand-accent">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 text-base font-bold text-brand-ink">{value.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{value.text}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-12">
+          <NumberedCards items={company.values} background="surface" />
         </div>
         <div className="mt-10">
           <Button href="/kontakt">Lernen Sie uns kennen</Button>

@@ -263,3 +263,22 @@ export function IconArrowLeft(props: IconProps) {
     </BaseIcon>
   );
 }
+
+export function IconAward(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <circle cx="12" cy="9" r="5.5" />
+      <path d="m8.8 13.5-1.8 7 5-2.5 5 2.5-1.8-7" />
+      <path d="m10 9 1.5 1.5L14.5 7.5" />
+    </BaseIcon>
+  );
+}
+
+export function IconGarage(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M3 10.5 12 4l9 6.5V20H3v-9.5Z" />
+      <path d="M7 20v-7.5h10V20M7 15h10M7 17.5h10" />
+    </BaseIcon>
+  );
+}

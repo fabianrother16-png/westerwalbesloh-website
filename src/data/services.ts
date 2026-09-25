@@ -281,8 +281,8 @@ export const services: Service[] = [
     heroText:
       "Ob Industrie, Verwaltung oder Schule: Wir planen und realisieren skalierbare Großanlagen sowie komplexe Sonnenschutzlösungen für den Objektbereich.",
     heroImage: {
-      src: "/images/leistungen/objektbau-projekte/hero.jpg",
-      alt: "Großschirme über den Außensitzplätzen eines Firmencampus",
+      src: "/images/leistungen/objektbau-projekte/detail.jpg",
+      alt: "Montage von Raffstoren an einer Bürofassade per Hubsteiger",
     },
     introTitle: "Sonnenschutzlösungen im großen Maßstab",
     intro: [

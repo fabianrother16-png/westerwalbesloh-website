@@ -3,6 +3,10 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ProductGrid } from "@/components/home/ProductGrid";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Button } from "@/components/ui/Button";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Reveal } from "@/components/ui/Reveal";
+import { ComparisonMatrix } from "@/components/interactive/ComparisonMatrix";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -37,6 +41,16 @@ export default function ProdukteOverviewPage() {
         </Button>
       </PageHero>
       <ProductGrid finderHref="/#finder" />
+      <Section id="vergleich" background="surface" className="scroll-mt-24">
+        <SectionHeading
+          eyebrow="Produktvergleich"
+          title="Welcher Sonnenschutz kann was?"
+          description="Tippen Sie an, was Ihnen wichtig ist – die Übersicht zeigt sofort, welche Produkte dafür ideal sind."
+        />
+        <Reveal className="mt-10">
+          <ComparisonMatrix />
+        </Reveal>
+      </Section>
       <CtaBanner />
     </>
   );
