@@ -130,6 +130,15 @@ export default function ImpressumPage() {
             </p>
           </LegalSection>
 
+          <LegalSection title="Bildnachweise">
+            <p>
+              Fotos von Projekten, Team und Montage stammen von Westerwalbesloh selbst. Produktbilder
+              stammen von den Herstellern (u. a. WAREMA, Somfy, KADECO, CARAVITA) sowie aus
+              lizenzfreien Bildportalen (Unsplash, Pexels, Pixabay). Einzelne Produktabbildungen sind
+              KI-generierte Illustrationen und zeigen keine realen Projekte.
+            </p>
+          </LegalSection>
+
           <LegalSection title="Urheberrecht">
             <p>
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
