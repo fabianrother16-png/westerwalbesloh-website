@@ -333,7 +333,9 @@ export function SunCalculator({ latitude, longitude }: { latitude: number; longi
           Die Sonne am 21. {monthNames[month - 1]} über Gütersloh
         </p>
         <p className="mt-1 text-sm text-brand-ink-soft">
-          Sonnenhöhe im Tagesverlauf – <span className="font-semibold text-amber-600">gelb</span>: Die Sonne scheint auf Ihr {direction.label}fenster.
+          Sonnenhöhe im Tagesverlauf –{" "}
+          <span className="inline-block h-2.5 w-2.5 rounded-sm bg-[#f5b400] align-middle" aria-hidden="true" />{" "}
+          <span className="font-semibold text-brand-ink">gelb</span>: Die Sonne scheint auf Ihr {direction.label}fenster.
         </p>
 
         <div ref={chartBox} className="mt-4">

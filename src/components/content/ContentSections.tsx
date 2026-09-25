@@ -73,9 +73,12 @@ export function NumberedCards({
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-accent text-white shadow-md shadow-brand-accent/25 transition-transform duration-300 group-hover:scale-110">
                 <IconCheck className="h-5 w-5" strokeWidth={2.5} />
               </span>
-              <span className="text-3xl font-bold leading-none tabular-nums text-brand-border transition-colors duration-300 group-hover:text-brand-accent-soft" aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+              {/* Decorative number, drawn as generated content so it stays out of the text flow. */}
+              <span
+                data-number={String(index + 1).padStart(2, "0")}
+                className="text-3xl font-bold leading-none tabular-nums text-brand-border transition-colors duration-300 after:content-[attr(data-number)] group-hover:text-brand-accent-soft"
+                aria-hidden="true"
+              />
             </div>
             <h3 className="mt-5 text-lg font-bold text-brand-ink">{item.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{item.text}</p>

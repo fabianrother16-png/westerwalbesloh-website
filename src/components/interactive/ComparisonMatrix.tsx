@@ -205,7 +205,7 @@ export function ComparisonMatrix() {
                   >
                     <ProductIcon icon={entry.column.icon} className="h-3.5 w-3.5" />
                     {entry.column.name}
-                    {entry.hint && <span className="font-normal opacity-80">({entry.hint})</span>}
+                    {entry.hint && <span className="font-normal">({entry.hint})</span>}
                   </Link>
                 ))}
               </div>
