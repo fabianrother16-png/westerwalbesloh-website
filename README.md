@@ -95,6 +95,9 @@ werden über die offizielle Einbettung geladen (siehe unten).
   vorausgefüllt senden. Das Kontaktformular übernimmt dazu die URL-Parameter `anfrage`, `produkt`
   und `nachricht`.
 - **Sonnenschutz-Finder** (Startseite): fünf Fragen mit Symbolen, „Zurück“-Knopf und Ergebnis mit Fotos.
+- **Sonnenschutz-Berater (Chat)**: Mit `ANTHROPIC_API_KEY` antwortet die KI. Ohne Schlüssel (oder wenn die
+  KI nicht erreichbar ist) beantwortet der Berater Fragen automatisch aus den FAQ, Produkttexten,
+  dem Lexikon und dem Reparatur-Check der Website (`src/lib/chatFallback.ts`) – mit Link zur passenden Seite.
 - **Mega-Menü** in der Kopfzeile (`src/components/layout/MegaMenu.tsx`): Produkte mit Vorschaubild;
   die Bilder werden erst beim ersten Öffnen geladen.
 - Alle Animationen respektieren die Systemeinstellung „Bewegung reduzieren“.

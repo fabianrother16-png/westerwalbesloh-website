@@ -6,6 +6,45 @@ import { IconClose, IconSend, IconSparkles } from "@/components/icons/UiIcons";
 import { company } from "@/data/company";
 import type { ChatMessage } from "@/types";
 
+// Internal paths mentioned in answers ("Mehr dazu: /produkte/raffstore") become clickable links.
+const LINK_PATTERN = /(\/(?:produkte|leistungen|ratgeber|kontakt|ueber-uns)(?:\/[a-z0-9-]+)?(?:#[a-z0-9-]+)?)/g;
+
+const PAGE_LABELS: Record<string, string> = {
+  "/kontakt": "Kontaktformular",
+  "/ratgeber": "Ratgeber",
+  "/ueber-uns": "Über uns",
+  "/produkte": "Produkte",
+  "/leistungen": "Leistungen",
+  "/produkte/raffstore": "Raffstore",
+  "/produkte/rollladen": "Rollladen",
+  "/produkte/markisen": "Markisen",
+  "/produkte/insektentschutz": "Insektenschutz",
+  "/produkte/sonnenschutz": "Innenliegender Sonnenschutz",
+  "/produkte/sonnenschirme": "Sonnenschirme",
+  "/produkte/steuerung-antriebe": "Steuerungen & Antriebe",
+  "/leistungen/beratung-aufmass-montage": "Beratung, Aufmaß & Montage",
+  "/leistungen/reparatur-modernisierung": "Reparatur & Modernisierung",
+  "/leistungen/wartung": "Wartung",
+  "/leistungen/objektbau-projekte": "Objektbau",
+};
+
+function MessageText({ text, onNavigate }: { text: string; onNavigate: () => void }) {
+  const parts = text.split(LINK_PATTERN);
+  return (
+    <>
+      {parts.map((part, index) =>
+        index % 2 === 1 ? (
+          <Link key={index} href={part} onClick={onNavigate} className="font-semibold text-brand-primary underline underline-offset-2">
+            {PAGE_LABELS[part.split("#")[0] ?? ""] ?? part}
+          </Link>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 const STARTER_PROMPTS = [
   "Welcher Sonnenschutz passt zu großen Fensterfronten?",
   "Wie läuft eine Beratung bei Ihnen ab?",
@@ -18,6 +57,7 @@ export function ChatWidget() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [mode, setMode] = useState<"ai" | "faq">("ai");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,6 +84,7 @@ export function ChatWidget() {
       if (!res.ok || !res.body) {
         throw new Error("request-failed");
       }
+      setMode(res.headers.get("X-Chat-Mode") === "faq" ? "faq" : "ai");
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -127,7 +168,17 @@ export function ChatWidget() {
                     : "bg-brand-sand text-brand-ink"
                 }`}
               >
-                {message.content || (loading && index === messages.length - 1 ? "…" : "")}
+                {message.content ? (
+                  message.role === "assistant" ? (
+                    <MessageText text={message.content} onNavigate={() => setOpen(false)} />
+                  ) : (
+                    message.content
+                  )
+                ) : loading && index === messages.length - 1 ? (
+                  "…"
+                ) : (
+                  ""
+                )}
               </div>
             ))}
 
@@ -169,7 +220,7 @@ export function ChatWidget() {
             </button>
           </form>
           <p className="px-4 pb-3 text-[0.7rem] text-brand-ink-soft">
-            KI-gestützte Auskunft ohne Gewähr – für verbindliche Angebote nutzen Sie bitte das{" "}
+            {mode === "faq" ? "Antworten aus unseren häufigen Fragen" : "KI-gestützte Auskunft"} ohne Gewähr – für verbindliche Angebote nutzen Sie bitte das{" "}
             <Link href="/kontakt" className="underline">
               Kontaktformular
             </Link>
