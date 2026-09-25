@@ -43,9 +43,9 @@ const candidates: CarouselItem[] = [
     caption: "Handwerk mit Präzision",
   },
   {
-    src: "produkte/raffstore/projekt-2.jpg",
-    alt: "Raffstoreanlagen an einem Mehrfamilienhaus, montiert von Westerwalbesloh",
-    caption: "Raffstore am Mehrfamilienhaus",
+    src: "produkte/markisen/projekt-screens-mehrfamilienhaus.jpg",
+    alt: "Senkrechtmarkisen als Textilscreens an einem Mehrfamilienhaus, montiert von Westerwalbesloh",
+    caption: "Senkrechtmarkisen am Mehrfamilienhaus",
   },
   {
     src: "leistungen/objektbau-projekte/gallery-schenke.jpg",

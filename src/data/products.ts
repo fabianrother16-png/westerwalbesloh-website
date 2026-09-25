@@ -99,7 +99,6 @@ export const products: Product[] = [
       },
     ],
     projectPhotos: [
-      { ...img("raffstore", "projekt-2.jpg", "Textile Raffstore- und Screenanlagen an einem Mehrfamilienhaus"), caption: "Mehrfamilienhaus, OWL" },
       { ...img("raffstore", "projekt-1.jpg", "Montage von Raffstoren an einem Gewerbeobjekt mit Hubsteiger"), caption: "Gewerbeobjekt mit Hubsteiger" },
       { src: "/images/leistungen/objektbau-projekte/detail.jpg", alt: "Wartung von Raffstoren an einer Bürofassade per Hubsteiger", caption: "Raffstore an einer Bürofassade" },
     ],
@@ -355,6 +354,7 @@ export const products: Product[] = [
       { ...img("markisen", "projekt-3.jpg", "Orangefarbene Gelenkarmmarkise über einer Gartenterrasse"), caption: "Terrassenmarkise in Orange" },
       { ...img("markisen", "projekt-2.jpg", "Kassettenmarkise über einer Terrasse mit Hecke, montiert von Westerwalbesloh"), caption: "Terrassenbeschattung, OWL" },
       { ...img("markisen", "projekt-4.jpg", "Zwei Gelenkarmmarkisen übereinander an Balkon und Terrasse eines Klinkerhauses"), caption: "Balkon und Terrasse doppelt beschattet" },
+      { ...img("markisen", "projekt-screens-mehrfamilienhaus.jpg", "Senkrechtmarkisen als Textilscreens vor den Fenstern eines Mehrfamilienhauses"), caption: "Senkrechtmarkisen am Mehrfamilienhaus, OWL" },
       { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Markisen über den Schaufenstern eines Ladengeschäfts", caption: "Ladengeschäft am Bahnhof" },
     ],
     faqTitle: "Häufige Fragen zu Markisen",
