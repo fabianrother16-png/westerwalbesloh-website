@@ -10,12 +10,13 @@ export function AboutIntro() {
     <Section background="sand">
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal className="relative">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl">
+          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-3xl">
+            {/* unoptimized: Originaldatei ohne Neukomprimierung ausliefern (Wunsch Fabian) */}
             <Image
-              src="/images/home/team-treppe.jpg"
-              alt="Drei Mitarbeiter von Westerwalbesloh im Treppenhaus eines Kundenhauses"
+              src="/images/home/team.jpg"
+              alt="Das Team von Westerwalbesloh vor der Firmenhalle"
               fill
-              sizes="(min-width: 1024px) 45vw, 100vw"
+              unoptimized
               className="object-cover"
             />
           </div>
