@@ -41,6 +41,12 @@ export function Header() {
 
         <nav className="hidden h-full items-center gap-7 lg:flex">
           <Link
+            href="/"
+            className="text-sm font-medium text-brand-ink-soft transition-colors hover:text-brand-primary"
+          >
+            Startseite
+          </Link>
+          <Link
             href="/ueber-uns"
             className="text-sm font-medium text-brand-ink-soft transition-colors hover:text-brand-primary"
           >
