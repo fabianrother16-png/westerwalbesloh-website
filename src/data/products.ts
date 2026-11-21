@@ -480,13 +480,15 @@ export const products: Product[] = [
             visual: "volant-formen",
           },
           {
-            title: "Ausfahrbares Volant-Rollo mit Funk",
-            text: "Das Volant-Rollo fährt bei Bedarf aus der Vorderkante nach unten und schützt vor tiefstehender Sonne und neugierigen Blicken. Je nach Markise wird es per Kurbel oder elektrisch per Funk bedient – auf Wunsch steuert ein Handsender Markise und Volant gemeinsam.",
+            title: "Volant-Rollo mit Kurbel",
+            text: "Das Volant-Rollo lassen Sie mit einer Kurbel von Hand aus der Vorderkante der Markise herunter und wickeln es genauso wieder auf. Das ist einfach, robust und braucht keinen Strom. Ideal, wenn Sie den zusätzlichen Schutz vor tiefstehender Sonne nur ab und zu brauchen.",
             // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+            image: img("markisen", "volant-kurbel.webp", "Kassettenmarkise von unten mit Kurbelgetriebe und eingehängter Kurbel für das Volant-Rollo"),
+          },
+          {
+            title: "Volant-Rollo mit Funk",
+            text: "Mit Motor fährt das Volant-Rollo per Funk-Handsender auf Knopfdruck aus und ein. Auf Wunsch bedienen Sie Markise und Volant-Rollo mit demselben Handsender. Bequem, wenn Sie den Blend- und Sichtschutz am Nachmittag oft nutzen.",
             image: img("markisen", "volant-rollo.webp", "Grüne Gelenkarmmarkise mit heruntergelassenem Volant-Rollo über einer Terrasse"),
-            options: [
-              { label: "Volant-Rollo im Detail", image: img("markisen", "volant-rollo-detail.webp", "Volant-Rollo, das aus der Vorderkante einer Markise ausfährt") },
-            ],
           },
         ],
       },
