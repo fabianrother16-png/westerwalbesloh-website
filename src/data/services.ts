@@ -97,9 +97,9 @@ export const services: Service[] = [
       alt: "Firmenwagen von Westerwalbesloh mit Hubsteiger bei einem Reparatureinsatz",
     },
     cardImage: {
-      // Foto: Marija Zaric, Unsplash – Fabian wollte in der Kachel etwas Kaputtes sehen.
-      src: "/images/leistungen/reparatur-modernisierung/rollladen-klemmt.jpg",
-      alt: "Klemmender Rollladen, dessen Panzer schief aus der Führungsschiene gerutscht ist",
+      // Foto: Tobias Kaiser, Unsplash – Fabian wollte in der Kachel einen defekten, aber nicht zerstörten Rollladen.
+      src: "/images/leistungen/reparatur-modernisierung/rollladen-halb.jpg",
+      alt: "Älterer Rollladen, der auf halber Höhe hängen geblieben ist",
     },
     introTitle: "Wir holen das Maximum aus Ihrer Anlage",
     intro: [
@@ -138,7 +138,7 @@ export const services: Service[] = [
           { title: "Gurt & Wickler", text: "Wir tauschen Gurte und Wickler fachgerecht aus und erneuern Lager für einen leichten Lauf.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-gurt.jpg", alt: "Hände ziehen am Rollladengurt neben einem halb geschlossenen Rollladen" } },
           { title: "Wellen & Technik", text: "Wir reparieren Wellen und Aufhängungen, damit Ihr Panzer wieder absolut sicher und stabil hängt.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stoerung.jpg", alt: "Rollläden während eines Reparatureinsatzes, darüber der geöffnete Kasten mit Welle" } },
           { title: "Stab-Service", text: "Wir beheben Schäden an Stäben oder tauschen den Panzer aus – für optimale Optik und Schutz.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stab.jpg", alt: "Aluminium-Rollladenstab mit Schaumfüllung im Querschnitt" } },
-          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-klemmt.jpg", alt: "Klemmender Rollladen, dessen Panzer schief aus der Führungsschiene gerutscht ist" /* Foto: Marija Zaric, Unsplash */ } },
+          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-halb.jpg", alt: "Älterer Rollladen, der auf halber Höhe hängen geblieben ist" /* Foto: Tobias Kaiser, Unsplash */ } },
           { title: "Modernisierung", text: "Oft lohnt sich ein Upgrade statt einer reinen Reparatur: Wir rüsten auf Motorantrieb um, bauen elektrische Gurtwickler ein oder integrieren moderne Funksteuerungen wie Somfy io.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-modernisierung.webp", alt: "Funk-Wandschalter neben einem Fenster mit Rollladen" } },
         ],
       },
@@ -214,7 +214,7 @@ export const services: Service[] = [
   },
   {
     slug: "wartung",
-    name: "Wartung (gewerblich & öffentlich)",
+    name: "Wartung für gewerbliche und öffentliche Gebäude",
     shortDescription:
       "Wartung, Sicherheitsprüfung und Dokumentation der Betreiberpflichten – exklusiv für Gewerbe und öffentliche Träger.",
     heroText:
