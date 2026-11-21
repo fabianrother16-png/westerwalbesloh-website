@@ -411,19 +411,46 @@ export const products: Product[] = [
           "Große Auswahl an Farben & Mustern",
           "Perfekt abgestimmt auf Ihren Hausstil",
         ],
-        image: img("markisen", "stoffe.jpg", "Markisentuch von unten mit modernem Aluminiumgestell"),
+        // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären. Reihenfolge wie die Punkte oben.
+        tiles: [
+          img("markisen", "stoffe/uv.webp", "Mintgrünes Markisentuch von unten, Sonnenlicht scheint durch, Blätterschatten auf dem Stoff"),
+          img("markisen", "stoffe/farbkraft.webp", "Kräftig farbige Markisenstoffe in Rot, Gelb, Grün, Orange und Blau, aufgefächert"),
+          img("markisen", "stoffe/hitzeschutz.webp", "Ausgefahrene Gelenkarmmarkise, darunter ein schattiger Terrassentisch, dahinter Garten in der Sonne"),
+          img("markisen", "stoffe/auswahl.webp", "Hände halten Stoffmuster über einen aufgeschlagenen Markisen-Musterordner"),
+          img("markisen", "stoffe/hausstil.webp", "Kassettenmarkise mit anthrazitfarbenem Gestell und hellem Tuch an einer Fassade aus Holz und Klinker"),
+        ],
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Bedienung & Steuerung",
         navLabel: "Bedienung",
         title: "Von der Kurbel bis zur Wetterautomatik",
         intro:
           "Entscheiden Sie selbst, wie viel Komfort Sie wünschen: Von der manuellen Kurbel bis zur vollautomatischen Wettersteuerung.",
+        // Bilder: WAREMA und Somfy – Nutzungsrecht vor Go-live klären.
         items: [
-          { title: "Manuelle Bedienung", text: "Bedienen Sie Ihre Markise klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung." },
-          { title: "Motorisierter Antrieb", text: "Sparen Sie sich das Kurbeln. Ein leistungsstarker Motor fährt die Markise bequem aus – bedienbar per Wandschalter oder ganz entspannt per Funk-Handsender." },
-          { title: "Smart Home (Somfy & WAREMA)", text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung." },
+          {
+            title: "Manuelle Bedienung",
+            text: "Bedienen Sie Ihre Markise klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
+            image: img("markisen", "bedienung/kurbel.webp", "Kassettenmarkise von unten mit Kurbelgetriebe und eingehängter Kurbel"),
+          },
+          {
+            title: "Motorisierter Antrieb",
+            text: "Sparen Sie sich das Kurbeln. Ein leistungsstarker Motor fährt die Markise bequem aus – bedienbar per Wandschalter oder ganz entspannt per Funk-Handsender.",
+            image: img("markisen", "bedienung/funkhandsender.webp", "Hand mit Funkhandsender, dahinter eine ausgefahrene Markise über einer Terrasse"),
+            options: [
+              { label: "Somfy-Funkhandsender", image: { ...img("markisen", "bedienung/somfy-situo.jpg", "Somfy Funkhandsender Situo 5 io"), position: "object-contain! bg-white p-2" } },
+            ],
+          },
+          {
+            title: "Smart Home (Somfy & WAREMA)",
+            text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung.",
+            image: img("markisen", "bedienung/wms-app.webp", "Smartphone mit WAREMA-WMS-App vor einer ausgefahrenen Gelenkarmmarkise"),
+            options: [
+              { label: "WMS Wetterstation", image: img("markisen", "bedienung/wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
+              { label: "Somfy TaHoma", image: img("markisen", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
+            ],
+          },
         ],
       },
     ],
@@ -447,6 +474,15 @@ export const products: Product[] = [
       { ...img("markisen", "projekt-4.jpg", "Zwei Gelenkarmmarkisen übereinander an Balkon und Terrasse eines Klinkerhauses"), caption: "Balkon und Terrasse doppelt beschattet" },
       { ...img("markisen", "projekt-screens-mehrfamilienhaus.jpg", "Senkrechtmarkisen als Textilscreens vor den Fenstern eines Mehrfamilienhauses"), caption: "Senkrechtmarkisen am Mehrfamilienhaus, OWL" },
       { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Markisen über den Schaufenstern eines Ladengeschäfts", caption: "Ladengeschäft am Bahnhof" },
+      // Eigene Fotos aus dem Drive-Ordner „Webseite“ (21.11.2026), nur noch nicht verwendete Motive. Orte ergänzt Fabian später.
+      { ...img("markisen", "projekt-giebelhaus.jpg", "Gestreifte Gelenkarmmarkise über der Terrasse eines Hauses mit dunklem Giebel und Gartenteich"), caption: "Terrassenmarkise am Giebelhaus" },
+      { ...img("markisen", "projekt-kassette-neubau.jpg", "Helle Kassettenmarkise über der Terrasse eines modernen weißen Hauses"), caption: "Kassettenmarkise am Neubau" },
+      { ...img("markisen", "projekt-terrasse-grau.jpg", "Graue Gelenkarmmarkise über einer Terrasse mit Sitzgruppe"), caption: "Terrassenmarkise in Grau" },
+      { ...img("markisen", "projekt-terrasse-beige.jpg", "Beige Markise über einer Terrasse mit Holzzaun und Blumen"), caption: "Schatten für die Gartenterrasse" },
+      { ...img("markisen", "projekt-erdgeschoss.jpg", "Markise über der Terrasse im Erdgeschoss unter einem Balkon"), caption: "Markise unter dem Balkon" },
+      { ...img("markisen", "projekt-balkon-mfh.jpg", "Markise über einem Balkon eines modernen Mehrfamilienhauses"), caption: "Balkonmarkise am Mehrfamilienhaus" },
+      { ...img("markisen", "projekt-senkrechtmarkisen.jpg", "Helle Senkrechtmarkisen vor den Fenstern eines Klinkerhauses"), caption: "Senkrechtmarkisen am Klinkerhaus" },
+      { ...img("markisen", "projekt-tuchwechsel.jpg", "Monteur von Westerwalbesloh beim Wechsel eines orangefarbenen Markisentuchs"), caption: "Neues Tuch für eine bestehende Markise" },
     ],
     faqTitle: "Häufige Fragen zu Markisen",
     faq: [
@@ -628,27 +664,27 @@ export const products: Product[] = [
           {
             title: "Plissee",
             text: "Der flexible Alleskönner für nahezu jede Fensterform. Stufenlos verstellbar, riesige Stoffauswahl und auch ideal für Feuchträume geeignet.",
-            image: img("sonnenschutz", "plissee.jpg", "Plissee am Fenster mit einfallendem Sonnenlicht"),
+            image: img("sonnenschutz", "plissee-raum.jpg", "Wohnzimmer mit drei hohen Fenstern, an jedem ein verspanntes einlagiges Plissee"),
           },
           {
             title: "Wabenplissee",
             text: "Energieeffizienz pur dank Wabenstruktur. Isoliert gegen Hitze und Kälte, verdunkelt zuverlässig und kommt ohne sichtbare Schnüre aus.",
-            image: img("sonnenschutz", "wabenplissee.jpg", "Nahaufnahme eines hellen, gefalteten Plissee-Stoffs"),
+            image: img("sonnenschutz", "wabenplissee-raum.jpg", "Zwei hohe Fenster mit grauen Wabenplissees in einem hellen Essbereich"),
           },
           {
             title: "Rollo",
             text: "Der bewährte Klassiker. Ideal als Blendschutz am Arbeitsplatz oder zur kompletten Verdunkelung – pflegeleicht und in vielen Varianten.",
-            image: img("sonnenschutz", "rollo.jpg", "Wohnzimmer mit Rollo am Fenster"),
+            image: img("sonnenschutz", "rollo-raum.jpg", "Schlafzimmer mit gemustertem Kassettenrollo am Fenster"),
           },
           {
             title: "Jalousie",
             text: "Präzise Lichtsteuerung in moderner Optik. Regulieren Sie Lichteinfall und Privatsphäre ganz flexibel durch das Wenden der Lamellen.",
-            image: img("sonnenschutz", "jalousie.jpg", "Nahaufnahme weißer Jalousielamellen"),
+            image: img("sonnenschutz", "jalousie-raum.jpg", "Raum mit zwei großen Fenstern und hellbraunen Holzjalousien"),
           },
           {
             title: "Lamellenvorhang",
             text: "Die perfekte Lösung für große Fensterflächen. Besticht durch klare Linien, moderne Optik und eignet sich hervorragend als Raumtrenner.",
-            image: img("sonnenschutz", "lamellenvorhang.jpg", "Lamellenvorhang im warmen Abendlicht"),
+            image: img("sonnenschutz", "lamellenvorhang-raum.jpg", "Wohnzimmer mit cremefarbenem Lamellenvorhang vor einer bodentiefen Fensterfront"),
           },
           {
             title: "Flächenvorhang",
@@ -740,7 +776,7 @@ export const products: Product[] = [
           {
             title: "Mittelstockschirme",
             text: "Die bewährte Lösung für jeden Einsatzbereich. Extrem robust, kinderleicht zu bedienen und in zahlreichen Formen und Größen verfügbar – ideal für Balkone oder Gartentische mit Schirmloch.",
-            image: img("sonnenschirme", "mittelstockschirm.jpg", "Sonnenschirm über einem Esstisch auf einer hellen Terrasse am Pool"),
+            image: img("sonnenschirme", "mittelstockschirm-caravita.jpg", "Zwei bordeauxrote Mittelstockschirme mit sichtbarem Mast auf einer Dachterrasse"),
           },
           {
             title: "Großschirme",
@@ -750,41 +786,99 @@ export const products: Product[] = [
         ],
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Formen & Größen",
         navLabel: "Formen & Größen",
         title: "Maßarbeit statt Standardgröße",
+        // Bilder: CARAVITA (caravita.de) – Nutzungsrecht vor Go-live klären.
         items: [
-          { title: "Vielfältige Formen", text: "Klassisch rund, quadratisch oder rechteckig." },
-          { title: "Flexible Dimensionen", text: "Spannweiten von 2 m bis über 6 m." },
-          { title: "Individuelle Maßarbeit", text: "Sondergrößen exakt nach Anforderung." },
+          {
+            title: "Vielfältige Formen",
+            text: "Klassisch rund, quadratisch oder rechteckig.",
+            image: img("sonnenschirme", "formen/quadratisch.jpg", "Gelber quadratischer Sonnenschirm vor einer weißen Villa mit Wasserbecken"),
+            options: [
+              { label: "Rund", image: img("sonnenschirme", "formen/rund.jpg", "Großer roter runder Schirm über Cafétischen auf einem Altstadtplatz") },
+              { label: "Quadratisch", image: img("sonnenschirme", "formen/quadratisch.jpg", "Gelber quadratischer Sonnenschirm") },
+            ],
+          },
+          {
+            title: "Flexible Dimensionen",
+            text: "Spannweiten von 2 m bis über 6 m.",
+            image: img("sonnenschirme", "gastronomie-cafe.jpg", "Rote Sonnenschirme über dem Außenbereich eines Straßencafés"),
+          },
+          {
+            title: "Individuelle Maßarbeit",
+            text: "Sondergrößen exakt nach Anforderung.",
+            image: img("sonnenschirme", "formen/massarbeit.jpg", "Luftbild: sechs große Schirme bilden zusammen eine große Schattenfläche"),
+          },
         ],
-        image: img("sonnenschirme", "gastronomie-cafe.jpg", "Rote Sonnenschirme über dem Außenbereich eines Straßencafés"),
       },
       {
-        type: "checklist",
-        eyebrow: "Bespannung & Design",
+        type: "variants",
+        eyebrow: "Stoffe für sonnige Jahre",
         navLabel: "Bespannung",
-        title: "Stoffe für sonnige Jahre",
+        title: "Bespannung & Design",
+        intro:
+          "Die Bespannung entscheidet, wie gut Ihr Schirm schützt und wie lange er schön aussieht. CARAVITA verwendet für seine Schirme Markisenstoffe aus Acryl: Die Fasern werden schon beim Spinnen durchgefärbt, das Gewebe ist reißfest und imprägniert.",
+        // Fakten laut caravita.de/farben-stoffe und caravita.de/so-entsteht-ihr-sonnenschirm (Stand 21.11.2026).
         items: [
-          "Hoher UV-Schutz für sicheren Aufenthalt",
-          "Lichtechte Stoffe mit langer Farbbrillanz",
-          "Wasserabweisend, schmutzresistent und wetterfest",
+          {
+            title: "Hoher UV-Schutz für sicheren Aufenthalt",
+            text: "Das Schirmtuch schützt vor UV-Strahlung und Wärme – je nach Stoffdessin bis UPF 50+. Den Wert Ihres Wunschstoffs zeigen wir Ihnen bei der Stoffauswahl.",
+            image: img("sonnenschirme", "stoffe/uv-schutz.jpg", "Helles Schirmtuch mit Strebe von unten im Gegenlicht"),
+          },
+          {
+            title: "Lichtechte Stoffe mit langer Farbbrillanz",
+            text: "Weil die Acrylfasern durchgefärbt sind, bleiben die Farben lange kräftig. CARAVITA gibt für seine Acrylstoffe eine hohe Farb- und Wetterechtheit an. Das Tuch lässt sich später auch gegen eine andere Farbe tauschen.",
+            image: img("sonnenschirme", "stoffe/farbbrillanz.jpg", "Mehrere große helle Sonnenschirme über einer Hotelterrasse"),
+          },
+          {
+            title: "Wasserabweisend, schmutzresistent und wetterfest",
+            text: "Eine Schutzimprägnierung lässt Wasser und Schmutz abperlen. Für Regen gibt es Stoffe mit zusätzlicher Beschichtung (Acryl All Weather).",
+            image: img("sonnenschirme", "stoffe/wasserabweisend.png", "Wassertropfen perlen auf einem grau-beigen Schirmtuch ab"),
+          },
         ],
-        image: img("sonnenschirme", "bespannung.jpg", "Sonnenschirm-Bespannung mit Licht- und Schattenspiel"),
+        swatches: {
+          title: "Eine kleine Auswahl aus der Stoffkollektion",
+          text: "Unifarben, Melangen und Strukturen – die Zeichen auf den Mustern zeigen den UV-Schutz und ob der Stoff zusätzlich gegen Regen beschichtet ist. Alle Muster bringen wir zur Beratung mit.",
+          items: [
+            "M_5800_a.jpg", "M_5301_a-2.jpg", "M_7610_a.jpg", "M_7600_a.jpg", "M_6670_a.jpg", "M_6550_a.jpg", "M_5315_a.jpg", "M_7952_a.jpg",
+            "M_5330_a.jpg", "M_5334_a.jpg", "M_5322_a.jpg", "M_2808_a.jpg", "M_4040_a-1.jpg", "M_4042_a-1.jpg", "M_4045_a.jpg", "M_4050_a.jpg",
+          ].map((file) => img("sonnenschirme", `stoffe/muster/${file}`, "Stoffmuster für Sonnenschirm-Bespannung von CARAVITA")),
+        },
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Bedienung & Komfort",
         navLabel: "Bedienung",
         title: "Technik, die mitdenkt",
         items: [
-          { title: "Leichtgängige Kurbelmechanik", text: "Müheloses Aufspannen und Schließen dank hochwertiger Getriebe-Technik." },
-          { title: "Optionaler Elektro-Antrieb", text: "Maximaler Komfort per Knopfdruck – besonders bei Großschirmen empfohlen." },
-          { title: "Praktische Teleskopmechanik", text: "Der Schirm schließt oberhalb von Tischen – kein Möbelrücken notwendig." },
-          { title: "Flexible Befestigung", text: "Wahlweise mit mobilem Schirmständer oder fester Bodenhülse installierbar." },
+          {
+            title: "Leichtgängige Kurbelmechanik",
+            text: "Müheloses Aufspannen und Schließen dank hochwertiger Getriebe-Technik.",
+            image: { ...img("sonnenschirme", "technik/kurbel.png", "Kurbel am Mast eines Sonnenschirms"), position: "object-contain! bg-white p-2" },
+          },
+          {
+            title: "Optionaler Elektro-Antrieb",
+            text: "Maximaler Komfort per Knopfdruck – besonders bei Großschirmen empfohlen.",
+            image: img("sonnenschirme", "technik/elektro.jpg", "Funkfernbedienung für einen Großschirm mit Elektroantrieb auf einem gedeckten Tisch"),
+          },
+          {
+            title: "Praktische Teleskopmechanik",
+            text: "Der Schirm schließt oberhalb von Tischen – kein Möbelrücken notwendig.",
+            image: img("sonnenschirme", "technik/schirm-ueber-tisch.jpg", "Bordeauxroter Sonnenschirm über einem langen Holztisch auf einer Terrasse"),
+          },
+          {
+            title: "Flexible Befestigung",
+            text: "Wahlweise mit mobilem Schirmständer, fester Bodenhülse oder – beim Ampelschirm – mit Wandhalterung.",
+            image: img("sonnenschirme", "technik/sockelplatten.jpg", "Sonnenschirme auf Sockelplatten auf einer Dachterrasse"),
+            options: [
+              { label: "Bodenhülse", image: { ...img("sonnenschirme", "technik/bodenhuelse.jpg", "Schnittgrafik einer einbetonierten Bodenhülse für einen Sonnenschirm"), position: "object-contain! bg-white" } },
+              { label: "Schirmständer", image: { ...img("sonnenschirme", "technik/schirmstaender.jpg", "Schirmständer mit Stahlplatte"), position: "object-contain! bg-white p-2" } },
+              { label: "Wandmontage (Ampelschirm)", image: img("sonnenschirme", "technik/wandhalterung.jpg", "Verschraubte Wandhalterung mit eingesetztem Mast eines Ampelschirms") },
+            ],
+          },
         ],
-        image: img("sonnenschirme", "technik.jpg", "Gestänge eines Sonnenschirms von unten"),
       },
     ],
     manufacturersTitle: "Unser Fachpartner",
@@ -796,7 +890,7 @@ export const products: Product[] = [
       },
     ],
     projectPhotos: [
-      { ...img("sonnenschirme", "projekt-1.jpg", "Großschirme über den Sitzbereichen eines Firmengeländes"), wide: true, caption: "Außenbereich eines Firmencampus" },
+      { ...img("sonnenschirme", "projekt-1.jpg", "Großschirme über den Sitzbereichen im Außenbereich des Campus der Universität Bielefeld"), wide: true, caption: "Universität Bielefeld, Campus" },
     ],
     faqTitle: "Häufige Fragen zu Sonnenschirmen",
     faq: [
@@ -863,12 +957,17 @@ export const products: Product[] = [
           {
             title: "Funk-Steuerung",
             text: "Bedienen Sie Ihren Sonnenschutz bequem per Handsender, ganz ohne zum Schalter zu laufen. Die Installation ist sauber und erfordert deutlich weniger Verkabelungsaufwand.",
-            image: img("steuerung-antriebe", "funk.jpg", "Markise, per Funk-Handsender gesteuert"),
+            // Bilder: Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
+            image: { ...img("steuerung-antriebe", "somfy-situo-5.jpg", "Somfy Funkhandsender Situo 5 io mit Holzoptik"), position: "object-contain! bg-white p-4" },
           },
           {
             title: "Smart Home & App",
             text: "Steuern Sie Ihre Anlagen per Smartphone oder Sprachbefehl – egal, wo Sie gerade sind. Erstellen Sie eigene Szenarien, die Ihren Alltag spürbar komfortabler und sicherer machen.",
-            image: img("steuerung-antriebe", "app.jpg", "Smart-Display an der Küchenwand zur Haussteuerung"),
+            image: img("steuerung-antriebe", "tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
+            options: [
+              { label: "TaHoma-App", image: { ...img("steuerung-antriebe", "tahoma-app.jpg", "Somfy TaHoma switch neben einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
+              { label: "Sprachsteuerung", image: { ...img("steuerung-antriebe", "sprachsteuerung.jpg", "Somfy TaHoma switch mit den Hinweisen „works with Alexa“, „Hey Google“ und „Apple HomeKit“"), position: "object-contain! bg-white" } },
+            ],
           },
           {
             title: "Sensoren & Automatik",

@@ -26,8 +26,8 @@ export function ServicesOverview({ background = "surface" }: { background?: "san
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
-                  src={service.heroImage.src}
-                  alt={service.heroImage.alt}
+                  src={(service.cardImage ?? service.heroImage).src}
+                  alt={(service.cardImage ?? service.heroImage).alt}
                   fill
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
