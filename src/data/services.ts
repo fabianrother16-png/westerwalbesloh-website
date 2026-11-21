@@ -167,7 +167,7 @@ export const services: Service[] = [
         items: [
           { title: "Tuchtausch", text: "Wir bespannen Ihr vorhandenes Gestell mit neuen, modernen Stoffen für eine frische Optik und besten UV-Schutz.", image: { src: "/images/produkte/markisen/projekt-3.jpg", alt: "Neu bespannte Gelenkarmmarkise in Orange über einer Gartenterrasse" } },
           { title: "Gelenkarm-Service", text: "Wir ersetzen verschlissene Gelenkarme fachgerecht, damit Ihre Anlage wieder stabil und sicher ausfährt.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-gelenkarm-service.jpg", alt: "Gelenkarme einer Markise während eines Service-Einsatzes, darunter die Leiter des Monteurs" } },
-          { title: "Antrieb & Mechanik", text: "Wir tauschen defekte Motoren aus oder reparieren die Kurbelmechanik für eine mühelose und präzise Bedienung.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-antrieb.webp", alt: "Kassettenmarkise von unten mit Kurbelgetriebe und eingehängter Kurbel" } },
+          { title: "Antrieb & Mechanik", text: "Wir tauschen defekte Motoren aus oder reparieren die Kurbelmechanik für eine mühelose und präzise Bedienung.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-antriebe-lager.jpg", alt: "Regal mit Rohrmotoren für Markisen und Rollläden, mit Anschlusskabeln" /* Bild: WAREMA (warema.com) */ } },
           { title: "Smart-Home-Upgrade", text: "Wir rüsten Funktechnik sowie Windsensoren nach, damit Ihre Markise bei Sturm vollautomatisch einfährt.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-windsensor.webp", alt: "Windsensor am Ausfallprofil einer Markise" } },
         ],
       },
