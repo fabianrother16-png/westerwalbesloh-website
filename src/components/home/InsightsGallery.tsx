@@ -49,7 +49,7 @@ const candidates: CarouselItem[] = [
   },
   {
     src: "leistungen/objektbau-projekte/gallery-schenke.jpg",
-    alt: "Markisen an einem Ladengeschäft, montiert von Westerwalbesloh",
+    alt: "Neu bezogene Markisen an der Schenke im Bahnhof in Gütersloh",
     caption: "Gewerbliche Beschattung",
   },
   {

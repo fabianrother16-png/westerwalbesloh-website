@@ -509,7 +509,7 @@ export const products: Product[] = [
       { ...img("markisen", "projekt-2.jpg", "Kassettenmarkise über einer Terrasse mit Hecke, montiert von Westerwalbesloh"), caption: "Terrassenbeschattung, OWL" },
       { ...img("markisen", "projekt-4.jpg", "Zwei Gelenkarmmarkisen übereinander an Balkon und Terrasse eines Klinkerhauses"), caption: "Balkon und Terrasse doppelt beschattet" },
       { ...img("markisen", "projekt-screens-mehrfamilienhaus.jpg", "Senkrechtmarkisen als Textilscreens vor den Fenstern eines Mehrfamilienhauses"), caption: "Senkrechtmarkisen am Mehrfamilienhaus, OWL" },
-      { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Markisen über den Schaufenstern eines Ladengeschäfts", caption: "Ladengeschäft am Bahnhof" },
+      { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Neu bezogene Markisen an der Schenke im Bahnhof am Hauptbahnhof Gütersloh", caption: "Schenke im Bahnhof, Gütersloh" },
       // Eigene Fotos aus dem Drive-Ordner „Webseite“ (21.11.2026), nur noch nicht verwendete Motive. Orte ergänzt Fabian später.
       { ...img("markisen", "projekt-giebelhaus.jpg", "Gestreifte Gelenkarmmarkise über der Terrasse eines Hauses mit dunklem Giebel und Gartenteich"), caption: "Terrassenmarkise am Giebelhaus" },
       { ...img("markisen", "projekt-kassette-neubau.jpg", "Helle Kassettenmarkise über der Terrasse eines modernen weißen Hauses"), caption: "Kassettenmarkise am Neubau" },
