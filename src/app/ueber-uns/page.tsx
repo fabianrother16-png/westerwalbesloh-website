@@ -100,8 +100,8 @@ export default function UeberUnsPage() {
         </ol>
 
         <Reveal className="mt-12">
-          <figure className="overflow-hidden rounded-3xl">
-            <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+          <figure>
+            <div className="relative aspect-[16/9] overflow-hidden rounded-3xl sm:aspect-[21/9]">
               <Image
                 src="/images/home/firmensitz.jpg"
                 alt="Firmengebäude von Westerwalbesloh mit großem Schriftzug und zwei Toren im Innenhof"
