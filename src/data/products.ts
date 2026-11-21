@@ -57,7 +57,7 @@ export const products: Product[] = [
           {
             title: "Montagearten",
             text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
-            image: img("raffstore", "montagearten-eigenes-foto.jpg", "Raffstore an einer Dachgaube, montiert von Westerwalbesloh"),
+            image: img("raffstore", "montagearten-eigenes-foto.jpg", "Raffstores rundum an einem Erker eines Klinkerhauses, montiert von Westerwalbesloh"),
             options: [
               { label: "Nischenmontage", image: img("raffstore", "varianten/nischenmontage.webp", "Raffstore sitzt in der Fensternische einer hellen Putzfassade") },
               { label: "Aufsatzmontage", image: img("raffstore", "varianten/aufsatzmontage-projekt.webp", "Wohnhaus mit Raffstores, deren Kasten über dem Fenster im Mauerwerk verschwindet") },
