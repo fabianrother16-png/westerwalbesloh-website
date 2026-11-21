@@ -102,72 +102,78 @@ export const services: Service[] = [
     },
     introTitle: "Wir holen das Maximum aus Ihrer Anlage",
     intro: [
-      "Bevor wir Ihnen eine komplett neue Anlage verkaufen, prüfen wir immer erst, ob eine wirtschaftlich sinnvolle Reparatur möglich ist. Grundsätzlich reparieren wir Anlagen aller Hersteller, solange die Ersatzteilbeschaffung möglich und vernünftig ist.",
-      "Sollte eine Reparatur zu teuer oder technisch nicht mehr sinnvoll sein, verbauen wir ausschließlich hochwertige neue Produkte unserer Fachpartner.",
+      "Bevor wir Ihnen eine neue Anlage empfehlen, prüfen wir immer zuerst, ob sich eine Reparatur lohnt.",
     ],
+    introHighlights: [
+      { icon: "scale", title: "Erst prüfen, dann entscheiden", text: "Eine Reparatur geht vor, wenn sie wirtschaftlich sinnvoll ist." },
+      { icon: "award", title: "Alle Hersteller", text: "Wir reparieren auch Anlagen, die nicht von uns stammen." },
+      { icon: "shield", title: "Mit passenden Ersatzteilen", text: "Solange Teile erhältlich sind und sich der Einbau lohnt." },
+      { icon: "diamond", title: "Neu nur in Qualität", text: "Muss erneuert werden, verbauen wir Produkte unserer Fachpartner." },
+    ],
+    // Bilder: eigene Fotos (Drive-Ordner „Webseite“) sowie Herstellerbilder (WAREMA, SELVE, heroal, Somfy, GEIGER) – Nutzungsrecht vor Go-live klären.
     sections: [
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Schnelle Hilfe vom Profi",
         title: "Fachgerechte Raffstore-Reparaturen",
         intro:
           "Wir beheben alle typischen Defekte Ihrer Raffstore und beraten Sie dabei jederzeit ehrlich über die Wirtschaftlichkeit jeder einzelnen Instandsetzung.",
         items: [
-          { title: "Motoren-Austausch", text: "Wir ersetzen defekte Antriebe schnell durch hochwertige neue Motoren." },
-          { title: "Textband-Wechsel", text: "Wir tauschen verschlissene Textbänder sowie Leiterkordeln präzise aus." },
-          { title: "Mechanik-Service", text: "Wir setzen alle Aufhängungen sowie Führungsteile professionell instand." },
-          { title: "Lauf-Optimierung", text: "Wir beheben schiefe Behang-Pakete oder hängende Lamellen unmittelbar." },
-          { title: "Endlagen-Check", text: "Wir justieren die Motoren-Endlagen für einen sicheren und langlebigen Betrieb." },
+          { title: "Motoren-Austausch", text: "Wir ersetzen defekte Antriebe schnell durch hochwertige neue Motoren.", image: { src: "/images/leistungen/reparatur-modernisierung/raffstore-motor.png", alt: "Raffstore-Antrieb von GEIGER mit Montageclips und Stecker", position: "object-contain! bg-white p-4" } },
+          { title: "Textband-Wechsel", text: "Wir tauschen verschlissene Textbänder sowie Leiterkordeln präzise aus.", image: { src: "/images/leistungen/reparatur-modernisierung/raffstore-textband.webp", alt: "Unteres Ende eines Raffstores mit Aufzugsband, Leiterkordel und Unterschiene" } },
+          { title: "Mechanik-Service", text: "Wir setzen alle Aufhängungen sowie Führungsteile professionell instand.", image: { src: "/images/leistungen/reparatur-modernisierung/raffstore-mechanik.webp", alt: "Führungsschiene zwischen zwei geschlossenen Raffstore-Behängen an einer weißen Fassade" } },
+          { title: "Lauf-Optimierung", text: "Wir beheben schiefe Behang-Pakete oder hängende Lamellen unmittelbar.", image: { src: "/images/leistungen/reparatur-modernisierung/raffstore-lamellen-leiterkordel.jpg", alt: "Raffstore-Lamellen mit Leiterkordel an einer Holzfassade, von Westerwalbesloh betreut" } },
+          { title: "Endlagen-Check", text: "Wir justieren die Motoren-Endlagen für einen sicheren und langlebigen Betrieb.", image: { src: "/images/leistungen/reparatur-modernisierung/raffstore-endlagen.png", alt: "Raffstore-Antrieb von GEIGER mit elektronischer Endabschaltung und Steckeranschluss", position: "object-contain! bg-white p-4" } },
         ],
-        image: {
-          src: "/images/leistungen/objektbau-projekte/detail.jpg",
-          alt: "Reparatur von Raffstoren an einer Bürofassade per Hubsteiger",
-        },
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Werterhalt & Funktion",
         title: "Rollladen: Reparatur & Modernisierung",
         intro:
           "Wir bringen Ihre Rollläden wieder in Topform. Ob klassischer Reparaturservice oder modernes Upgrade – wir sorgen für eine einwandfreie Funktion und langlebige Ergebnisse an Ihrem Haus.",
         items: [
-          { title: "Gurt & Wickler", text: "Wir tauschen Gurte und Wickler fachgerecht aus und erneuern Lager für einen leichten Lauf." },
-          { title: "Wellen & Technik", text: "Wir reparieren Wellen und Aufhängungen, damit Ihr Panzer wieder absolut sicher und stabil hängt." },
-          { title: "Stab-Service", text: "Wir beheben Schäden an Stäben oder tauschen den Panzer aus – für optimale Optik und Schutz." },
-          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik." },
-          { title: "Modernisierung", text: "Oft lohnt sich ein Upgrade statt einer reinen Reparatur: Wir rüsten auf Motorantrieb um, bauen elektrische Gurtwickler ein oder integrieren moderne Funksteuerungen wie Somfy io." },
+          { title: "Gurt & Wickler", text: "Wir tauschen Gurte und Wickler fachgerecht aus und erneuern Lager für einen leichten Lauf.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-gurt.jpg", alt: "Hände ziehen am Rollladengurt neben einem halb geschlossenen Rollladen" } },
+          { title: "Wellen & Technik", text: "Wir reparieren Wellen und Aufhängungen, damit Ihr Panzer wieder absolut sicher und stabil hängt.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-welle.jpg", alt: "Geöffneter Rollladenkasten mit Welle über einer Terrassentür während einer Reparatur" } },
+          { title: "Stab-Service", text: "Wir beheben Schäden an Stäben oder tauschen den Panzer aus – für optimale Optik und Schutz.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stab.jpg", alt: "Aluminium-Rollladenstab mit Schaumfüllung im Querschnitt" } },
+          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stoerung.jpg", alt: "Rollläden während eines Reparatureinsatzes, darüber der geöffnete Kasten" } },
+          { title: "Modernisierung", text: "Oft lohnt sich ein Upgrade statt einer reinen Reparatur: Wir rüsten auf Motorantrieb um, bauen elektrische Gurtwickler ein oder integrieren moderne Funksteuerungen wie Somfy io.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-modernisierung.webp", alt: "Funk-Wandschalter neben einem Fenster mit Rollladen" } },
         ],
-        image: {
-          src: "/images/produkte/rollladen/projekt-1.jpg",
-          alt: "Monteur von Westerwalbesloh bei der Rollladenreparatur an einem Wohnhaus",
-        },
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Nachhaltig & Modern",
         title: "Markisen: Tuchtausch & Technik",
         intro:
           "Eine hochwertige Markise muss nicht ersetzt werden, nur weil der Stoff alt oder die Technik defekt ist. Wir machen Ihre Anlage mit neuem Glanz und smarter Steuerung wieder fit für die Zukunft.",
         items: [
-          { title: "Tuchtausch", text: "Wir bespannen Ihr vorhandenes Gestell mit neuen, modernen Stoffen für eine frische Optik und besten UV-Schutz." },
-          { title: "Gelenkarm-Service", text: "Wir ersetzen verschlissene Gelenkarme fachgerecht, damit Ihre Anlage wieder stabil und sicher ausfährt." },
-          { title: "Antrieb & Mechanik", text: "Wir tauschen defekte Motoren aus oder reparieren die Kurbelmechanik für eine mühelose und präzise Bedienung." },
-          { title: "Smart-Home-Upgrade", text: "Wir rüsten Funktechnik sowie Windsensoren nach, damit Ihre Markise bei Sturm vollautomatisch einfährt." },
+          { title: "Tuchtausch", text: "Wir bespannen Ihr vorhandenes Gestell mit neuen, modernen Stoffen für eine frische Optik und besten UV-Schutz.", image: { src: "/images/produkte/markisen/projekt-3.jpg", alt: "Neu bespannte Gelenkarmmarkise in Orange über einer Gartenterrasse" } },
+          { title: "Gelenkarm-Service", text: "Wir ersetzen verschlissene Gelenkarme fachgerecht, damit Ihre Anlage wieder stabil und sicher ausfährt.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-gelenkarm-service.jpg", alt: "Gelenkarme einer Markise während eines Service-Einsatzes, darunter die Leiter des Monteurs" } },
+          { title: "Antrieb & Mechanik", text: "Wir tauschen defekte Motoren aus oder reparieren die Kurbelmechanik für eine mühelose und präzise Bedienung.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-antrieb.webp", alt: "Kassettenmarkise von unten mit Kurbelgetriebe und eingehängter Kurbel" } },
+          { title: "Smart-Home-Upgrade", text: "Wir rüsten Funktechnik sowie Windsensoren nach, damit Ihre Markise bei Sturm vollautomatisch einfährt.", image: { src: "/images/leistungen/reparatur-modernisierung/markise-windsensor.webp", alt: "Windsensor am Ausfallprofil einer Markise" } },
         ],
-        image: {
-          src: "/images/produkte/markisen/projekt-3.jpg",
-          alt: "Neu bespannte Gelenkarmmarkise in Orange über einer Gartenterrasse",
-        },
       },
       {
-        type: "cards",
+        type: "variants",
+        eyebrow: "Unsere Stärke",
+        title: "Steuerungstechnik: nachrüsten, tauschen, vernetzen",
+        intro:
+          "Funk und Steuerung sind unser Spezialgebiet. Ob ein defekter Handsender, ein neuer Wandtaster oder das komplette Smart Home: Wir bringen auch ältere Anlagen auf den aktuellen Stand – ohne dass der ganze Sonnenschutz erneuert werden muss.",
+        items: [
+          { title: "Handsender & Taster tauschen", text: "Ihr Handsender ist kaputt oder verloren? Wir ersetzen Handsender und Wandtaster und programmieren alles neu auf Ihre Anlage ein.", image: { src: "/images/leistungen/reparatur-modernisierung/steuerung-handsender.jpg", alt: "Somfy Funkhandsender Situo 5 io", position: "object-contain! bg-white p-4" } },
+          { title: "Funk nachrüsten", text: "Aus Schalter oder Gurt wird Funk: Wir rüsten Antriebe und Funkempfänger nach und erweitern bestehende Funksysteme um weitere Anlagen.", image: { src: "/images/leistungen/reparatur-modernisierung/steuerung-funk-nachruesten.webp", alt: "Funk-Wandsender an einer Natursteinwand neben einem Fenster mit Außenjalousie" } },
+          { title: "Smart Home mit TaHoma", text: "Sie haben bereits Somfy-Funk? Dann verbinden wir Ihre Anlagen mit einer TaHoma – auch ältere RTS-Systeme. Danach steuern Sie per App, Zeitplan oder Sprache.", image: { src: "/images/leistungen/reparatur-modernisierung/steuerung-tahoma.jpg", alt: "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone" } },
+          { title: "Umrüstung auf io", text: "Auf Wunsch rüsten wir RTS-Anlagen auf das Funksystem io um. Der Vorteil: Die Anlage meldet zurück, ob ein Befehl angekommen ist.", image: { src: "/images/leistungen/reparatur-modernisierung/steuerung-io.jpg", alt: "Somfy TaHoma switch neben einem Smartphone mit der TaHoma-App", position: "object-contain! bg-white" } },
+        ],
+      },
+      {
+        type: "variants",
         title: "Weitere Reparatur-Services",
         intro:
-          "Von Insektengittern bis zur smarten Steuerung: Wir kümmern uns um die Instandsetzung all Ihrer Systeme für ein perfekt funktionierendes Zuhause.",
+          "Auch Insektenschutz und Innenbeschattung setzen wir wieder instand – für ein perfekt funktionierendes Zuhause.",
         items: [
-          { title: "Insektenschutz", text: "Wir erneuern Gewebe und reparieren Scharniere sowie Rahmen für festen Schutz." },
-          { title: "Innenbeschattung", text: "Wir reparieren Schnurzüge sowie Ketten und bringen Ihre Rollos wieder in Form." },
-          { title: "Steuerungstechnik", text: "Wir tauschen Handsender oder Taster und programmieren Ihre gesamte Funktechnik." },
+          { title: "Insektenschutz", text: "Wir erneuern Gewebe und reparieren Scharniere sowie Rahmen für festen Schutz.", image: { src: "/images/produkte/insektentschutz/gewebe.jpg", alt: "Nahaufnahme eines Insektenschutzgewebes" } },
+          { title: "Innenbeschattung", text: "Wir reparieren Ketten an Rollos und anderen kettengeführten Systemen und bringen Ihre Innenbeschattung wieder in Form.", image: { src: "/images/produkte/sonnenschutz/rollo-raum.jpg", alt: "Schlafzimmer mit gemustertem Rollo am Fenster" } },
         ],
       },
       {
@@ -264,7 +270,7 @@ export const services: Service[] = [
         intro:
           "Sicherheit mit Planbarkeit: Auf Wunsch erstellen wir individuelle Wartungsverträge, die exakt auf die Intervalle und Anforderungen Ihrer Gebäude zugeschnitten sind.",
         items: [
-          { title: "Betriebssicherheit", text: "Minimieren Sie Risiken für Mitarbeitende und schützen Sie Ihr Gebäude." },
+          { icon: "shield", title: "Betriebssicherheit", text: "Minimieren Sie Risiken für Mitarbeitende und schützen Sie Ihr Gebäude." },
           { title: "Weniger Ausfälle", text: "Beheben Sie Defekte, bevor Ihre Anlagen ungeplant stillstehen." },
           { title: "Planbare Kosten", text: "Nutzen Sie ein festes Budget und vermeiden Sie so teure Notfalleinsätze." },
           { title: "Rechtssichere Nachweise", text: "Erhalten Sie alle Dokumente für Berufsgenossenschaft und Versicherung." },
@@ -300,8 +306,8 @@ export const services: Service[] = [
     heroText:
       "Ob Industrie, Verwaltung oder Schule: Wir planen und realisieren skalierbare Großanlagen sowie komplexe Sonnenschutzlösungen für den Objektbereich.",
     heroImage: {
-      src: "/images/leistungen/objektbau-projekte/detail.jpg",
-      alt: "Montage von Raffstoren an einer Bürofassade per Hubsteiger",
+      src: "/images/leistungen/objektbau-projekte/hero-buerogebaeude.jpg",
+      alt: "Bürogebäude mit Raffstores an allen Fensterbändern, davor der Firmenwagen von Westerwalbesloh",
     },
     cardImage: {
       src: "/images/leistungen/objektbau-projekte/karte.jpg",
@@ -331,14 +337,14 @@ export const services: Service[] = [
         title: "Full-Service für Ihr Projekt",
         intro: "Wir entlasten Planer und Architekten durch ein durchdachtes Gesamtpaket für gewerbliche Projekte.",
         items: [
-          { title: "Planung & Beratung", text: "Wir unterstützen Sie bei der Auswahl optimaler Systeme für Licht und Hitze." },
-          { title: "Montage", text: "Unser Team montiert Ihre Anlagen sicher, auch in großen Höhen oder Nischen." },
-          { title: "Bestandspflege", text: "Wir übernehmen die Reparatur sowie die Modernisierung Ihrer bestehenden Anlagen." },
+          { icon: "compass", title: "Planung & Beratung", text: "Wir unterstützen Sie bei der Auswahl optimaler Systeme für Licht und Hitze." },
+          { icon: "crank", title: "Montage", text: "Unser Team montiert Ihre Anlagen sicher, auch in großen Höhen oder Nischen." },
+          { icon: "home", title: "Bestandspflege", text: "Wir übernehmen die Reparatur sowie die Modernisierung Ihrer bestehenden Anlagen." },
           { title: "Betriebssicherheit", text: "Wir bieten Sicherheit durch Wartung, Prüfung und Dokumentation im laufenden Betrieb." },
         ],
         image: {
-          src: "/images/leistungen/objektbau-projekte/fassade.jpg",
-          alt: "Raffstore an der Glasfassade eines Verwaltungsgebäudes",
+          src: "/images/leistungen/objektbau-projekte/fullservice-montage.jpg",
+          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einem Bürogebäude",
         },
       },
       {
@@ -360,6 +366,37 @@ export const services: Service[] = [
             title: "Beschattung für den Handel",
             text: "Gelenkarmmarkisen über den Schaufenstern eines Ladengeschäfts – funktional und einladend.",
             image: { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Markisen über den Schaufenstern eines Ladengeschäfts" },
+          },
+          // Eigene Fotos aus dem Drive-Ordner „Webseite“ (21.11.2026). Orte/Kunden ergänzt Fabian später.
+          {
+            title: "Universität Bielefeld",
+            text: "Großschirme für den Außenbereich des Campus – Schattenplätze für viele Menschen gleichzeitig.",
+            image: { src: "/images/produkte/sonnenschirme/projekt-1.jpg", alt: "Großschirme über den Sitzbereichen im Außenbereich des Campus der Universität Bielefeld" },
+          },
+          {
+            title: "Raffstores am Bürogebäude",
+            text: "Außenliegender Sonnenschutz an den langen Fensterbändern eines dreigeschossigen Bürogebäudes.",
+            image: { src: "/images/leistungen/objektbau-projekte/projekt-buerogebaeude.jpg", alt: "Dreigeschossiges Bürogebäude mit Raffstores an allen Fensterbändern" },
+          },
+          {
+            title: "Gewerbe-Neubau",
+            text: "Sonnenschutz-Montage an einem eingerüsteten Gewerbe-Neubau.",
+            image: { src: "/images/leistungen/objektbau-projekte/projekt-gewerbeneubau.jpg", alt: "Eingerüsteter Gewerbe-Neubau, davor ein Monteur von Westerwalbesloh" },
+          },
+          {
+            title: "Mehrfamilienhaus",
+            text: "Sonnenschutz für einen Neubau mit mehreren Wohneinheiten, montiert während der Bauphase.",
+            image: { src: "/images/leistungen/objektbau-projekte/projekt-mehrfamilienhaus.jpg", alt: "Mehrfamilienhaus im Bau mit Gerüst, davor der Firmenwagen von Westerwalbesloh" },
+          },
+          {
+            title: "Montage in der Höhe",
+            text: "Montage eines Raffstore-Behangs auf dem Laubengang eines mehrgeschossigen Gebäudes.",
+            image: { src: "/images/leistungen/objektbau-projekte/projekt-montage-hoehe.jpg", alt: "Monteur von Westerwalbesloh mit einem Raffstore-Behang auf einem Laubengang in der Höhe" },
+          },
+          {
+            title: "Raffstores im Erdgeschoss",
+            text: "Heruntergefahrene Raffstores vor den bodentiefen Fenstern im Erdgeschoss eines Bürogebäudes.",
+            image: { src: "/images/produkte/raffstore/projekt-buero-eg.jpg", alt: "Heruntergefahrener Raffstore im Erdgeschoss eines Bürogebäudes" },
           },
         ],
       },

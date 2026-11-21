@@ -128,9 +128,9 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Extra bottom padding on phones keeps the legal links clear of the sticky call/offer bar. */}
+      {/* Extra bottom padding keeps the legal links clear of the floating chat button (and on phones of the sticky call/offer bar). */}
       <div className="bg-brand-primary-dark text-white/70">
-        <div className="mx-auto flex max-w-(--container-content) flex-col gap-3 px-5 pt-6 pb-28 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-6">
+        <div className="mx-auto flex max-w-(--container-content) flex-col gap-3 px-5 pt-6 pb-44 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-28">
           <p>
             © {year} {company.legalName}. Alle Rechte vorbehalten.
           </p>

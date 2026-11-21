@@ -24,7 +24,7 @@ export type VariantOption = {
 export type VariantItem = TitledText & {
   image: ImageRef;
   /** Draws the RAL colour fan instead of the photo. */
-  visual?: "ral-faecher";
+  visual?: "ral-faecher" | "volant-formen" | "dachfenster-solar";
   options?: VariantOption[];
 };
 
@@ -47,7 +47,7 @@ export type ContentSection =
       navLabel?: string;
       title: string;
       intro?: string;
-      items: (TitledText & { illustration?: IllustrationKey })[];
+      items: (TitledText & { illustration?: IllustrationKey; icon?: HighlightIcon })[];
       image?: ImageRef;
     }
   | {
@@ -101,6 +101,8 @@ export type Product = {
 /** Small drawn pictograms for cards, e.g. the steps of a site measurement. */
 export type IllustrationKey = "einbautiefe" | "leitungswege" | "platzbedarf" | "bausubstanz";
 
+export type HighlightIcon = "scale" | "award" | "shield" | "diamond" | "clock" | "bolt" | "compass" | "crank" | "users" | "home";
+
 export type Service = {
   slug: string;
   name: string;
@@ -113,6 +115,8 @@ export type Service = {
   intro: string[];
   /** Short bullet points below the intro text. */
   introPoints?: string[];
+  /** Short icon tiles below the intro text, easier to scan than paragraphs. */
+  introHighlights?: { icon: HighlightIcon; title: string; text: string }[];
   /** Photo shown above the contact box next to the intro. */
   introImage?: ImageRef;
   sections: ContentSection[];

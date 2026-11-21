@@ -253,6 +253,12 @@ export const products: Product[] = [
               { label: "Farbauswahl", image: img("rollladen", "varianten/farbfaecher.webp", "Aufgefächerte Farbmuster in Creme, Grau, Rot und Anthrazit") },
             ],
           },
+          {
+            title: "Rollläden für Dachfenster",
+            text: "Auch Dachfenster bekommen bei uns einen Außenrollladen. Er hält die Hitze unter dem Dach draußen und dunkelt zuverlässig ab. Gesteuert wird per Funk – auf Wunsch mit Solarmodul am Kasten, dann arbeitet der Rollladen autark und ganz ohne Stromkabel.",
+            image: { src: "/images/produkte/rollladen/varianten/bauarten-haus.jpg", alt: "Skizze eines Dachfensters mit Außenrollladen und Solarmodul" },
+            visual: "dachfenster-solar",
+          },
         ],
       },
       {
@@ -422,6 +428,30 @@ export const products: Product[] = [
       },
       {
         type: "variants",
+        eyebrow: "Volant",
+        navLabel: "Volant",
+        title: "Der Volant: Blickfang und Extra-Schatten",
+        intro: "Der Volant ist der Stoffstreifen an der Vorderkante der Markise. Er rundet die Optik ab – und als ausfahrbares Volant-Rollo schützt er zusätzlich vor tiefstehender Sonne.",
+        items: [
+          {
+            title: "Volant in Ihrer Wunschform",
+            text: "Ob gerade, gewellt oder im Bogen: Den Volant gibt es in verschiedenen Formen und passend zum Markisentuch. So bekommt Ihre Markise genau die Optik, die zu Ihrem Haus passt.",
+            image: { src: "/images/produkte/markisen/volant-rollo-detail.webp", alt: "Beispiele für Volant-Formen" },
+            visual: "volant-formen",
+          },
+          {
+            title: "Ausfahrbares Volant-Rollo mit Funk",
+            text: "Das Volant-Rollo fährt bei Bedarf aus der Vorderkante nach unten und schützt vor tiefstehender Sonne und neugierigen Blicken. Je nach Markise wird es per Kurbel oder elektrisch per Funk bedient – auf Wunsch steuert ein Handsender Markise und Volant gemeinsam.",
+            // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+            image: img("markisen", "volant-rollo.webp", "Grüne Gelenkarmmarkise mit heruntergelassenem Volant-Rollo über einer Terrasse"),
+            options: [
+              { label: "Volant-Rollo im Detail", image: img("markisen", "volant-rollo-detail.webp", "Volant-Rollo, das aus der Vorderkante einer Markise ausfährt") },
+            ],
+          },
+        ],
+      },
+      {
+        type: "variants",
         eyebrow: "Bedienung & Steuerung",
         navLabel: "Bedienung",
         title: "Von der Kurbel bis zur Wetterautomatik",
@@ -512,7 +542,7 @@ export const products: Product[] = [
     slug: "insektentschutz",
     highlights: [
       { value: "nach Maß", label: "millimetergenau gefertigt" },
-      { value: "5 Systeme", label: "vom Spannrahmen bis zur Pendeltür" },
+      { value: "6 Systeme", label: "vom Spannrahmen bis zum Plissee" },
       { value: "Pollenschutz", label: "Spezialgewebe für Allergiker" },
       { value: "Aluminium", label: "stabile, langlebige Rahmen" },
     ],
@@ -567,6 +597,16 @@ export const products: Product[] = [
             title: "Lichtschachtabdeckungen",
             text: "Schluss mit Laub, Spinnen und Kleintieren im Kellerschacht. Unsere Abdeckungen mit feinmaschigem Edelstahlgewebe werden einfach auf den bestehenden Rost montiert – trittfest, witterungsbeständig und optisch sehr dezent.",
             image: img("insektentschutz", "lichtschacht.jpg", "Lichtschachtabdeckung als Insektenschutz über einem Kellerschacht"),
+          },
+          {
+            title: "Plissee für Fenster & Türen",
+            text: "Die platzsparende Lösung, wenn für einen Dreh- oder Schieberahmen kein Platz ist: Das Gewebe faltet sich quer zusammen und verschwindet seitlich im Rahmen – ganz ohne Schwenkbereich. Bedient wird es über eine Griffleiste von innen oder außen, auf jeder Höhe. Ideal für Fenster, Balkon- und Terrassentüren, auch auf kleinen Balkonen.",
+            // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+            image: img("insektentschutz", "plissee.webp", "Insektenschutz-Plissee vor einer geöffneten Balkontür in einem hellen Wohnzimmer"),
+            options: [
+              { label: "Für Fenster", image: img("insektentschutz", "plissee-fenster.webp", "Heller Wohnraum mit Fensterfront und Insektenschutz-Plissee") },
+              { label: "Für Türen", image: img("insektentschutz", "plissee-tuer.webp", "Offene Wohnküche mit Balkontür und Insektenschutz-Plissee") },
+            ],
           },
         ],
       },
@@ -690,6 +730,15 @@ export const products: Product[] = [
             title: "Flächenvorhang",
             text: "Elegante Optik für große Glasfronten und Schiebetüren. Die verschiebbaren Stoffbahnen setzen moderne, ruhige Akzente in jedem Raum.",
             image: img("sonnenschutz", "flaechenvorhang.jpg", "Flächenvorhang vor einer Fensterfront im Wohnzimmer"),
+          },
+          {
+            title: "Dachfenster-Rollos & -Plissees",
+            text: "Auch unter der Dachschräge sorgen wir für Blend- und Sichtschutz: Passgenaue Rollos und Plissees werden direkt am Dachfensterrahmen geführt und bleiben in jeder Neigung sicher in Position.",
+            // Bilder: KADECO (kadeco.de) – Nutzungsrecht vor Go-live klären.
+            image: { ...img("sonnenschutz", "dachfenster-rollo.jpg", "Schlafzimmer unter der Dachschräge mit zwei Dachfenster-Rollos"), position: "object-[35%_50%]" },
+            options: [
+              { label: "Dachfenster-Plissee", image: { ...img("sonnenschutz", "dachfenster-plissee.jpg", "Dachfenster mit Wabenplissees in einem hellen Schlafzimmer"), position: "object-[75%_50%]" } },
+            ],
           },
         ],
       },
