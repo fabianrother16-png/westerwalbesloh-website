@@ -101,7 +101,7 @@ export const products: Product[] = [
               { label: "WAREMA Wandsender", image: img("raffstore", "bedienung/wandschalter.webp", "Funk-Wandsender von WAREMA an einer Natursteinwand neben einem Fenster mit Außenjalousie") },
               { label: "WAREMA Handsender", image: img("raffstore", "bedienung/funkhandsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
               { label: "Somfy Wandsender", image: { ...img("raffstore", "bedienung/somfy-smoove.png", "Somfy Funk-Wandsender Smoove io"), position: "object-contain! bg-white p-2" } },
-              { label: "Somfy Handsender", image: { ...img("raffstore", "bedienung/somfy-situo.jpg", "Somfy Funkhandsender Situo 5 io"), position: "object-contain! bg-white p-2" } },
+              { label: "Somfy Handsender", image: { ...img("raffstore", "bedienung/somfy-situo-pure.jpg", "Weißer Somfy Funkhandsender Situo 5 Variation io Pure"), position: "object-contain! bg-white p-2" } },
             ],
           },
           {
@@ -252,15 +252,16 @@ export const products: Product[] = [
             title: "Panzerprofile & Farben",
             text: "Gestalten Sie die Optik individuell. Unsere Profile sind in verschiedenen Deckbreiten und zahlreichen Farben erhältlich, damit sich der Rollladen harmonisch in Ihre Architektur einfügt.",
             image: img("rollladen", "varianten/profilfarben.webp", "Farbmusterkarte für Rollladenprofile mit Weiß-, Braun- und Holztönen, daneben Profilmuster"),
-            options: [
-              { label: "Farbauswahl", image: img("rollladen", "varianten/farbfaecher.webp", "Aufgefächerte Farbmuster in Creme, Grau, Rot und Anthrazit") },
-            ],
           },
           {
             title: "Rollläden für Dachfenster",
-            text: "Auch Dachfenster bekommen bei uns einen Außenrollladen. Er hält die Hitze unter dem Dach draußen und dunkelt zuverlässig ab. Gesteuert wird per Funk – auf Wunsch mit Solarmodul am Kasten, dann arbeitet der Rollladen autark und ganz ohne Stromkabel.",
-            image: { src: "/images/produkte/rollladen/varianten/bauarten-haus.jpg", alt: "Skizze eines Dachfensters mit Außenrollladen und Solarmodul" },
-            visual: "dachfenster-solar",
+            text: "Für VELUX Dachfenster liefern und montieren wir den VELUX Solar-Rollladen. Er hält die Hitze unter dem Dach draußen und dunkelt zuverlässig ab. Die Solarzelle sitzt im Kasten, deshalb braucht er kein Stromkabel. Bedient wird er per Funk – mit Wandschalter oder Handsender.",
+            // Bilder: VELUX (Produktbilder über toom.de bzw. VELUX-Datenblatt) – Nutzungsrecht vor Go-live klären.
+            image: img("rollladen", "varianten/velux-solar-dach.jpg", "VELUX Solar-Rollladen, halb geschlossen, auf einem Dachfenster in einem roten Ziegeldach"),
+            options: [
+              { label: "Solarzelle im Kasten", image: img("rollladen", "varianten/velux-solarmodul.jpg", "Nahaufnahme der Solarzelle im Kasten eines VELUX Rollladens") },
+              { label: "VELUX Funk-Wandschalter", image: { ...img("rollladen", "varianten/velux-wandschalter.jpg", "Weißer VELUX Funk-Wandschalter KLI 313"), position: "object-contain! bg-white p-2" } },
+            ],
           },
         ],
       },
@@ -404,7 +405,8 @@ export const products: Product[] = [
           {
             title: "Fenster- & Fassadenmarkisen",
             text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren.",
-            image: img("markisen", "fenster-fassade.jpg", "Beige Senkrechtmarkisen vor drei hohen Fenstern einer Klinkerfassade"),
+            // Bild: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+            image: img("markisen", "fenster-fassade-warema.jpg", "Dunkle Senkrechtmarkise vor einer großen Fensterfront an einem Klinkerhaus mit Terrasse"),
           },
         ],
       },
@@ -472,7 +474,8 @@ export const products: Product[] = [
             text: "Sparen Sie sich das Kurbeln. Ein leistungsstarker Motor fährt die Markise bequem aus – bedienbar per Wandschalter oder ganz entspannt per Funk-Handsender.",
             image: img("markisen", "bedienung/funkhandsender.webp", "Hand mit Funkhandsender, dahinter eine ausgefahrene Markise über einer Terrasse"),
             options: [
-              { label: "Somfy-Funkhandsender", image: { ...img("markisen", "bedienung/somfy-situo.jpg", "Somfy Funkhandsender Situo 5 io"), position: "object-contain! bg-white p-2" } },
+              { label: "Somfy-Funkhandsender", image: { ...img("markisen", "bedienung/somfy-situo-pure.jpg", "Weißer Somfy Funkhandsender Situo 5 Variation io Pure"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA-Funkhandsender", image: img("markisen", "bedienung/warema-handsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
             ],
           },
           {
@@ -491,7 +494,7 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "WAREMA",
-        text: "Als Europas führende Marke für technischen Sonnenschutz steht WAREMA für kompromisslose Qualität und Innovation „Made in Germany“. Wir setzen auf ihre langlebigen Markisen, weil sie technische Perfektion mit vielfach ausgezeichnetem Design verbinden.",
+        text: "WAREMA ist ein großer deutscher Hersteller für technischen Sonnenschutz und steht für Qualität „Made in Germany“. Wir setzen auf ihre langlebigen Markisen, weil sie technische Perfektion mit vielfach ausgezeichnetem Design verbinden.",
         logo: { src: "/images/partner/warema.png", width: 1025, height: 650 },
       },
       {
@@ -607,10 +610,6 @@ export const products: Product[] = [
             text: "Die platzsparende Lösung, wenn für einen Dreh- oder Schieberahmen kein Platz ist: Das Gewebe faltet sich quer zusammen und verschwindet seitlich im Rahmen – ganz ohne Schwenkbereich. Bedient wird es über eine Griffleiste von innen oder außen, auf jeder Höhe. Ideal für Fenster, Balkon- und Terrassentüren, auch auf kleinen Balkonen.",
             // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
             image: img("insektentschutz", "plissee.webp", "Insektenschutz-Plissee vor einer geöffneten Balkontür in einem hellen Wohnzimmer"),
-            options: [
-              { label: "Für Fenster", image: img("insektentschutz", "plissee-fenster.webp", "Heller Wohnraum mit Fensterfront und Insektenschutz-Plissee") },
-              { label: "Für Türen", image: img("insektentschutz", "plissee-tuer.webp", "Offene Wohnküche mit Balkontür und Insektenschutz-Plissee") },
-            ],
           },
         ],
       },
@@ -628,7 +627,8 @@ export const products: Product[] = [
           { title: "Standard-Fiberglas", text: "Der bewährte Klassiker: Dieses robuste Gewebe ist besonders langlebig, witterungsbeständig und bietet eine solide Durchsicht zum fairen Preis." },
           { title: "Haustiergewebe", text: "Extrem widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
         ],
-        image: img("insektentschutz", "gewebe.jpg", "Nahaufnahme eines feinmaschigen Insektenschutzgewebes im Rahmen"),
+        // Bild: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+        image: img("insektentschutz", "gewebe-rahmen.jpg", "Insektenschutzrahmen am Fenster, die feine Gaze ist deutlich zu erkennen"),
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
@@ -741,13 +741,15 @@ export const products: Product[] = [
             image: img("sonnenschutz", "flaechenvorhang.jpg", "Flächenvorhang vor einer Fensterfront im Wohnzimmer"),
           },
           {
-            title: "Dachfenster-Rollos & -Plissees",
-            text: "Auch unter der Dachschräge sorgen wir für Blend- und Sichtschutz: Passgenaue Rollos und Plissees werden direkt am Dachfensterrahmen geführt und bleiben in jeder Neigung sicher in Position.",
+            title: "Dachfenster-Rollo",
+            text: "Das Rollo läuft in seitlichen Führungsschienen direkt am Dachfensterrahmen und bleibt so in jeder Dachneigung sicher in Position. Je nach Stoff dämpft es nur das Licht oder dunkelt Schlaf- und Kinderzimmer unter dem Dach zuverlässig ab.",
             // Bilder: KADECO (kadeco.de) – Nutzungsrecht vor Go-live klären.
             image: { ...img("sonnenschutz", "dachfenster-rollo.jpg", "Schlafzimmer unter der Dachschräge mit zwei Dachfenster-Rollos"), position: "object-[35%_50%]" },
-            options: [
-              { label: "Dachfenster-Plissee", image: { ...img("sonnenschutz", "dachfenster-plissee.jpg", "Dachfenster mit Wabenplissees in einem hellen Schlafzimmer"), position: "object-[75%_50%]" } },
-            ],
+          },
+          {
+            title: "Dachfenster-Plissee",
+            text: "Das Plissee wird am Dachfensterrahmen verspannt und lässt sich frei im Fenster positionieren: oben Licht, unten Sichtschutz. Als Wabenplissee hält es zusätzlich Hitze und Kälte ab – angenehm in Räumen direkt unter dem Dach.",
+            image: { ...img("sonnenschutz", "dachfenster-plissee.jpg", "Dachfenster mit Wabenplissees in einem hellen Schlafzimmer"), position: "object-[75%_50%]" },
           },
         ],
       },
@@ -756,7 +758,7 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "KADECO – Premium-Innenbeschattung",
-        text: "Wir setzen auf KADECO, den führenden Hersteller für hochwertigen innenliegenden Sonnenschutz. Die Marke überzeugt durch moderne Designs und eine große Farbauswahl. Dank robuster Materialien und langlebiger Mechanik erhalten Sie ein Produkt, das nicht nur gut aussieht, sondern auch dauerhaft zuverlässig funktioniert.",
+        text: "Wir setzen auf KADECO, einen namhaften Hersteller für hochwertigen innenliegenden Sonnenschutz. Die Marke überzeugt durch moderne Designs und eine große Farbauswahl. Dank robuster Materialien und langlebiger Mechanik erhalten Sie ein Produkt, das nicht nur gut aussieht, sondern auch dauerhaft zuverlässig funktioniert.",
         logo: { src: "/images/partner/kadeco.png", width: 309, height: 202 },
       },
     ],
@@ -986,7 +988,7 @@ export const products: Product[] = [
     tagline: "Komfort, Sicherheit und Smart Home für Ihren Sonnenschutz",
     intro: [
       "Moderne Sonnenschutzanlagen machen den Alltag komfortabler, sicherer und energieeffizienter. Mit elektrischen Antrieben und intelligenten Steuerungen bedienen Sie Rollläden, Raffstore und Markisen bequem per Knopfdruck, Funk oder App.",
-      "Wir setzen dabei hauptsächlich auf Somfy – den europäischen Marktführer für Smart-Home- und Antriebstechnik. Zusätzlich unterstützen wir WAREMA RTS, ideal für Bestandsanlagen oder kabellose Nachrüstungen.",
+      "Wir setzen dabei hauptsächlich auf Somfy, einen der großen Hersteller für Smart-Home- und Antriebstechnik. Zusätzlich arbeiten wir mit WAREMA WMS, ideal für Bestandsanlagen oder kabellose Nachrüstungen.",
     ],
     heroImage: img("steuerung-antriebe", "hero-tablet.jpg", "Frau steuert die Raffstores im Wohnzimmer bequem per Tablet"),
     cardImage: img("steuerung-antriebe", "card-somfy-set.jpg", "Somfy-Handsender, Rohrmotor und Smartphone mit Steuerungs-App"),
@@ -1055,11 +1057,11 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "Somfy",
-        text: "Als Marktführer für intelligente Antriebs- und Funktechnik steht Somfy für höchste Zuverlässigkeit. Wir setzen auf diese zukunftssichere Technologie, weil sie eine intuitive Bedienung mit modernstem Smart-Home-Komfort verbindet.",
+        text: "Somfy steht für bewährte Antriebs- und Funktechnik. Wir setzen auf diese Technik, weil sie eine einfache Bedienung mit modernem Smart-Home-Komfort verbindet.",
         logo: { src: "/images/zertifikate/somfy-expert.png", width: 386, height: 242 },
       },
       {
-        name: "WAREMA RTS",
+        name: "WAREMA WMS",
         text: "Die bewährte Funklösung speziell für WAREMA-Sonnenschutzanlagen. Diese Technik eignet sich hervorragend für die kabellose Modernisierung von Bestandsbauten, da sie sich unkompliziert und ohne große Umbaumaßnahmen integrieren lässt.",
         logo: { src: "/images/partner/warema.png", width: 1025, height: 650 },
       },
@@ -1073,7 +1075,7 @@ export const products: Product[] = [
       },
       {
         question: "Kann mein bestehendes WAREMA-System weiter genutzt werden?",
-        answer: "Ja, besonders wenn Sie bereits Anlagen mit WAREMA RTS-Funktechnik nutzen. Diese lassen sich hervorragend in neue Steuerungskonzepte integrieren oder erweitern, sodass Sie oft nicht die komplette Technik austauschen müssen.",
+        answer: "Ja, besonders wenn Sie bereits Anlagen mit WAREMA WMS-Funktechnik nutzen. Diese lassen sich hervorragend in neue Steuerungskonzepte integrieren oder erweitern, sodass Sie oft nicht die komplette Technik austauschen müssen.",
       },
       {
         question: "Wie sicher ist die Funksteuerung?",

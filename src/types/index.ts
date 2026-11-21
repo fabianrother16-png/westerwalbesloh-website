@@ -24,7 +24,7 @@ export type VariantOption = {
 export type VariantItem = TitledText & {
   image: ImageRef;
   /** Draws the RAL colour fan instead of the photo. */
-  visual?: "ral-faecher" | "volant-formen" | "dachfenster-solar";
+  visual?: "ral-faecher" | "volant-formen";
   options?: VariantOption[];
 };
 
