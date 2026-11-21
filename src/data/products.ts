@@ -46,7 +46,7 @@ export const products: Product[] = [
           {
             title: "Lamellenformen",
             text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik, stabilen randgebördelten Lamellen oder Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln.",
-            image: img("raffstore", "lamellen.jpg", "Raffstore-Lamellen vor den Glastüren eines modernen Balkons"),
+            image: img("raffstore", "lamellen-eigenes-foto.jpg", "Nahaufnahme von Raffstore-Lamellen mit Leiterkordel an einer Holzfassade"),
             // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live vom Kunden über WAREMA klären lassen.
             options: [
               { label: "Flachlamelle", image: img("raffstore", "varianten/flachlamelle.webp", "Nahaufnahme flacher WAREMA-Raffstorelamellen") },
@@ -57,11 +57,11 @@ export const products: Product[] = [
           {
             title: "Montagearten",
             text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
-            image: img("raffstore", "montagearten.jpg", "Außenliegende Lamellen mit seitlichen Führungsschienen an einer Fassade"),
+            image: img("raffstore", "montagearten-eigenes-foto.jpg", "Raffstore an einer Dachgaube, montiert von Westerwalbesloh"),
             options: [
               { label: "Nischenmontage", image: img("raffstore", "varianten/nischenmontage.webp", "Raffstore sitzt in der Fensternische einer hellen Putzfassade") },
-              { label: "Aufsatzmontage", image: { ...img("raffstore", "varianten/aufsatzmontage.png", "Schnittbild eines WAREMA-Aufsatz-Raffstores mit überputztem Kasten über dem Fenster"), position: "object-contain! p-2" } },
-              { label: "Fassadenvorbau", image: { ...img("raffstore", "varianten/vorbaumontage.png", "WAREMA-Vorbau-Raffstore mit Blende vor der Fassade"), position: "object-contain! p-2" } },
+              { label: "Aufsatzmontage", image: img("raffstore", "varianten/aufsatzmontage-projekt.webp", "Wohnhaus mit Raffstores, deren Kasten über dem Fenster im Mauerwerk verschwindet") },
+              { label: "Fassadenvorbau", image: img("raffstore", "varianten/vorbaumontage-projekt.webp", "Bestandshaus mit Raffstores, deren Blendkästen sichtbar vor der Putzfassade sitzen") },
               { label: "Schachtmontage", image: img("raffstore", "varianten/schachtmontage.webp", "Raffstore im Schacht einer Holzfassade, Kasten nicht sichtbar") },
             ],
           },
@@ -97,8 +97,11 @@ export const products: Product[] = [
             text: "Leistungsstarke Motoren bewegen Ihre Anlage leise und gleichmäßig – bequem per Wandschalter oder Funkhandsender. Das schont die Mechanik und ist ideal für große, schwere Behänge.",
             image: img("raffstore", "bedienung/funkhandsender-kueche.webp", "Funkhandsender von WAREMA auf einer Küchenarbeitsplatte, Lamellenschatten fallen in den Raum"),
             options: [
-              { label: "Wandschalter", image: img("raffstore", "bedienung/wandschalter.webp", "Funk-Wandsender von WAREMA an einer Natursteinwand neben einem Fenster mit Außenjalousie") },
-              { label: "Funkhandsender", image: img("raffstore", "bedienung/funkhandsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+              { label: "Raffstore-Motor", image: { ...img("raffstore", "bedienung/raffstore-motor.png", "Raffstore-Antrieb von GEIGER, der in der Kopfschiene sitzt"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA Wandsender", image: img("raffstore", "bedienung/wandschalter.webp", "Funk-Wandsender von WAREMA an einer Natursteinwand neben einem Fenster mit Außenjalousie") },
+              { label: "WAREMA Handsender", image: img("raffstore", "bedienung/funkhandsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+              { label: "Somfy Wandsender", image: { ...img("raffstore", "bedienung/somfy-smoove.png", "Somfy Funk-Wandsender Smoove io"), position: "object-contain! bg-white p-2" } },
+              { label: "Somfy Handsender", image: { ...img("raffstore", "bedienung/somfy-situo.jpg", "Somfy Funkhandsender Situo 5 io"), position: "object-contain! bg-white p-2" } },
             ],
           },
           {
@@ -107,8 +110,9 @@ export const products: Product[] = [
             image: img("raffstore", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
             options: [
               { label: "TaHoma switch", image: img("raffstore", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
-              { label: "TaHoma-App", image: { ...img("raffstore", "bedienung/tahoma-app.jpg", "Somfy TaHoma switch vor einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
-              { label: "Sprachsteuerung", image: { ...img("raffstore", "bedienung/sprachsteuerung.jpg", "Somfy TaHoma switch mit den Hinweisen „works with Alexa“, „Hey Google“ und „Apple HomeKit“"), position: "object-contain! bg-white" } },
+              { label: "TaHoma-App", image: { ...img("raffstore", "bedienung/tahoma-app-screen.jpg", "Smartphone mit der Somfy-TaHoma-App, Ansicht „Mein Haus“"), position: "object-contain! bg-white" } },
+              // Foto: Lazar Gugleta / Unsplash (Unsplash-Lizenz).
+              { label: "Sprachsteuerung (z. B. Alexa)", image: img("raffstore", "bedienung/sprachsteuerung-alexa.jpg", "Smart Speaker mit Sprachassistent Alexa auf einem Holztisch") },
             ],
           },
         ],
@@ -149,10 +153,9 @@ export const products: Product[] = [
       { ...img("raffstore", "projekt-erker.jpg", "Raffstores rundum an einem Erker eines Klinkerhauses"), caption: "Raffstores am Erker" },
       { ...img("raffstore", "projekt-holzfassade.jpg", "Raffstores an Fenstern einer Holzfassade mit grünen Rahmen"), caption: "Raffstores an einer Holzfassade" },
       { ...img("raffstore", "projekt-wohnhaus.jpg", "Große Raffstoreanlage vor der Fensterfront eines Wohnhauses mit Garten"), caption: "Große Fensterfront am Wohnhaus" },
-      { ...img("raffstore", "projekt-buero-eg.jpg", "Heruntergefahrener Raffstore im Erdgeschoss eines Bürogebäudes"), caption: "Raffstores an einem Bürogebäude" },
-      { ...img("raffstore", "projekt-montage-buero.jpg", "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einem Bürogebäude"), caption: "Montage an einem Bürogebäude" },
-      { ...img("raffstore", "projekt-montage-geruest.jpg", "Raffstore-Montage am Gerüst an einem Wohnhaus, davor die Werkbank"), caption: "Montage am Gerüst" },
-      { ...img("raffstore", "projekt-wohnhaus-detail.jpg", "Nahaufnahme einer heruntergefahrenen Raffstoreanlage an einem Wohnhaus"), caption: "Raffstoreanlage im Detail" },
+      { ...img("raffstore", "projekt-buero-eg.jpg", "Heruntergefahrener Raffstore im Erdgeschoss einer Schule"), caption: "Schulprojekt in Schloß Holte-Stukenbrock" },
+      { ...img("raffstore", "projekt-montage-buero.jpg", "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einer Schule"), caption: "Montage an einer Schule in Schloß Holte-Stukenbrock" },
+      { ...img("raffstore", "projekt-wohnhaus-detail.jpg", "Nahaufnahme einer heruntergefahrenen Raffstoreanlage an einem Wohnhaus"), caption: "Raffstore-Anlage bei Privatkunden" },
       { ...img("raffstore", "projekt-holzfassade-detail.jpg", "Detail von Raffstore-Lamellen an einer Holzfassade"), caption: "Lamellen an der Holzfassade" },
     ],
     faqTitle: "Häufige Fragen zu Raffstores",
@@ -512,6 +515,7 @@ export const products: Product[] = [
       { ...img("markisen", "projekt-erdgeschoss.jpg", "Markise über der Terrasse im Erdgeschoss unter einem Balkon"), caption: "Markise unter dem Balkon" },
       { ...img("markisen", "projekt-balkon-mfh.jpg", "Markise über einem Balkon eines modernen Mehrfamilienhauses"), caption: "Balkonmarkise am Mehrfamilienhaus" },
       { ...img("markisen", "projekt-senkrechtmarkisen.jpg", "Helle Senkrechtmarkisen vor den Fenstern eines Klinkerhauses"), caption: "Senkrechtmarkisen am Klinkerhaus" },
+      { ...img("markisen", "projekt-zip-rollgeruest.jpg", "Montage einer ZIP-Markise vom Rollgerüst aus an einem Wohnhaus im Garten"), caption: "ZIP-Markise: Montage mit Rollgerüst" },
       { ...img("markisen", "projekt-tuchwechsel.jpg", "Monteur von Westerwalbesloh beim Wechsel eines orangefarbenen Markisentuchs"), caption: "Neues Tuch für eine bestehende Markise" },
     ],
     faqTitle: "Häufige Fragen zu Markisen",
