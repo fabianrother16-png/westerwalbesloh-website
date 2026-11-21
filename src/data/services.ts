@@ -190,7 +190,7 @@ export const services: Service[] = [
           "Auch Insektenschutz und Innenbeschattung setzen wir wieder instand – für ein perfekt funktionierendes Zuhause.",
         items: [
           { title: "Insektenschutz", text: "Wir erneuern Gewebe und reparieren Scharniere sowie Rahmen für festen Schutz.", image: { src: "/images/produkte/insektentschutz/gewebe-rahmen.jpg", alt: "Insektenschutzrahmen am Fenster, die feine Gaze ist deutlich zu erkennen" }, options: [{ label: "Riss im Gewebe", image: { src: "/images/leistungen/reparatur-modernisierung/insektenschutz-loch.jpg", alt: "Insektenschutzgewebe mit einem Riss, der repariert werden muss" /* Foto: maks_d, Unsplash */ } }] },
-          { title: "Innenbeschattung", text: "Wir reparieren Ketten an Rollos und anderen kettengeführten Systemen und bringen Ihre Innenbeschattung wieder in Form.", image: { src: "/images/produkte/sonnenschutz/rollo-raum.jpg", alt: "Schlafzimmer mit gemustertem Rollo am Fenster" } },
+          { title: "Innenbeschattung", text: "Wir reparieren Ketten an Rollos und anderen kettengeführten Systemen und bringen Ihre Innenbeschattung wieder in Form.", image: { src: "/images/produkte/sonnenschutz/rollo-raum.jpg", alt: "Schlafzimmer mit gemustertem Rollo am Fenster" }, options: [{ label: "Kugelkette erneuern", image: { src: "/images/leistungen/reparatur-modernisierung/kugelkette.jpg", alt: "Metall-Kugelkette, wie sie zur Bedienung von Rollos verwendet wird" /* Foto: Praveen kumar Mathivanan, Unsplash */ } }] },
         ],
       },
       {
