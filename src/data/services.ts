@@ -97,8 +97,9 @@ export const services: Service[] = [
       alt: "Firmenwagen von Westerwalbesloh mit Hubsteiger bei einem Reparatureinsatz",
     },
     cardImage: {
-      src: "/images/leistungen/reparatur-modernisierung/karte-rollladen-innen.jpg",
-      alt: "Geöffneter Rollladenkasten mit Welle über einem Fenster während einer Reparatur",
+      // Foto: Marija Zaric, Unsplash – Fabian wollte in der Kachel etwas Kaputtes sehen.
+      src: "/images/leistungen/reparatur-modernisierung/rollladen-klemmt.jpg",
+      alt: "Klemmender Rollladen, dessen Panzer schief aus der Führungsschiene gerutscht ist",
     },
     introTitle: "Wir holen das Maximum aus Ihrer Anlage",
     intro: [
@@ -223,8 +224,8 @@ export const services: Service[] = [
       alt: "Monteur von Westerwalbesloh bei der Wartung einer Sonnenschutzanlage",
     },
     cardImage: {
-      src: "/images/leistungen/wartung/karte-schule.jpg",
-      alt: "Monteure von Westerwalbesloh arbeiten an den Raffstores einer Schule in Schloß Holte-Stukenbrock",
+      src: "/images/leistungen/wartung/karte-fassade.jpg",
+      alt: "Lange Schulfassade mit Raffstores an allen Fensterbändern in Schloß Holte-Stukenbrock",
     },
     introTitle: "Gewerbliche Wartung & Betreiberpflichten",
     intro: [
