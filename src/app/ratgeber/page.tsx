@@ -59,6 +59,22 @@ const faq: FaqItem[] = [
     answer:
       "Die Sonnenposition berechnen wir nach anerkannten astronomischen Formeln für Gütersloh – auf wenige Minuten genau. Die Wärmeangabe ist ein Richtwert für ein 2 m² großes Fenster bei wolkenlosem Himmel. Bäume, Nachbarhäuser oder Dachüberstände berücksichtigt der Rechner nicht – das prüfen wir bei der Beratung vor Ort.",
   },
+  {
+    question: "Wann sollte ich an heißen Tagen den Sonnenschutz schließen?",
+    answer: "Am besten, bevor die Sonne auf das Fenster scheint. Ist die Wärme erst im Raum, bekommen Sie sie nur schwer wieder hinaus. An Ostfenstern heißt das schon am frühen Morgen, an Südfenstern am Vormittag und an Westfenstern spätestens zur Mittagszeit. Wann die Sonne Ihr Fenster genau erreicht, zeigt unser Sonnenstand-Rechner.",
+  },
+  {
+    question: "Raffstore oder Rollladen: Was passt besser zu mir?",
+    answer: "Beide halten die Hitze außen vor der Scheibe ab. Beim Raffstore stellen Sie die Lamellen schräg und lenken so das Tageslicht: Der Raum bleibt hell, die Sonne blendet nicht. Ein Rollladen dunkelt fast vollständig ab und passt deshalb gut in Schlaf- und Kinderzimmer. Sie können beides kombinieren, zum Beispiel Raffstores im Wohnbereich und Rollläden in den Schlafräumen.",
+  },
+  {
+    question: "Muss ich zu Hause sein, damit der Sonnenschutz rechtzeitig zugeht?",
+    answer: "Nein. Mit Motor und Sonnenwächter fährt der Sonnenschutz automatisch, sobald die Sonne kräftig scheint. Ein Windwächter holt Markisen und Raffstores bei starkem Wind wieder ein. Mit der Somfy TaHoma oder der WAREMA WMS WebControl pro steuern Sie Ihre Anlagen zusätzlich per App und Zeitplan, bestehende Anlagen lassen sich oft mit Funk nachrüsten.",
+  },
+  {
+    question: "Was hilft gegen Blendung am Bildschirm im Homeoffice?",
+    answer: "Gut eignen sich Raffstores: Mit schräg gestellten Lamellen kommt Tageslicht in den Raum, die Sonne fällt aber nicht direkt auf den Bildschirm. Innen helfen Plissees, Rollos oder Jalousien als Blendschutz. Sie halten allerdings weniger Wärme ab als Sonnenschutz außen. Was zu Ihrem Arbeitszimmer passt, besprechen wir gern bei der Beratung vor Ort.",
+  },
 ];
 
 function RatgeberHero() {
