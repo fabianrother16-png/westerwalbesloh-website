@@ -176,10 +176,6 @@
     }
   }
 
-  .marquee:hover .marquee-track {
-    animation-play-state: paused;
-  }
-
   .marquee {
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
