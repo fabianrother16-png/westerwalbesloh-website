@@ -13,6 +13,7 @@ export function PageHero({
   image,
   imageAlt,
   imagePosition = "object-center",
+  imageUnoptimized = false,
   highlights,
 }: {
   eyebrow?: string;
@@ -22,6 +23,8 @@ export function PageHero({
   image?: string | null;
   imageAlt?: string;
   imagePosition?: string;
+  /** Originaldatei ohne Neukomprimierung ausliefern. */
+  imageUnoptimized?: boolean;
   /** Key facts shown as glass tiles below the text. */
   highlights?: { value: string; label: string }[];
 }) {
@@ -40,6 +43,7 @@ export function PageHero({
             loading="eager"
             fetchPriority="high"
             sizes="100vw"
+            unoptimized={imageUnoptimized}
             className={`hero-zoom object-cover ${imagePosition}`}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-primary-dark/90 via-brand-primary-dark/60 to-brand-primary-dark/5" />
