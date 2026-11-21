@@ -45,18 +45,36 @@ export const products: Product[] = [
         items: [
           {
             title: "Lamellenformen",
-            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik oder robusten Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln. Auch geschwungene S-Lamellen sind als weicher Akzent verfügbar.",
+            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik, stabilen randgebördelten Lamellen oder Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln.",
             image: img("raffstore", "lamellen.jpg", "Raffstore-Lamellen vor den Glastüren eines modernen Balkons"),
+            // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live vom Kunden über WAREMA klären lassen.
+            options: [
+              { label: "Flachlamelle", image: img("raffstore", "varianten/flachlamelle.webp", "Nahaufnahme flacher WAREMA-Raffstorelamellen") },
+              { label: "Gebördelte Lamelle", image: img("raffstore", "varianten/geboerdelte-lamelle.webp", "Zwei randgebördelte WAREMA-Lamellen mit Clips und Führungsbolzen") },
+              { label: "Z-Lamelle", image: img("raffstore", "varianten/z-lamelle.webp", "Ineinandergreifende Z-Lamellen eines WAREMA-Raffstores") },
+            ],
           },
           {
             title: "Montagearten",
-            text: "Ob unauffällig im Schacht des Neubaus, als klassischer Vorbau-Raffstore vor der Fassade oder als direkte Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
+            text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
             image: img("raffstore", "montagearten.jpg", "Außenliegende Lamellen mit seitlichen Führungsschienen an einer Fassade"),
+            options: [
+              { label: "Nischenmontage", image: img("raffstore", "varianten/nischenmontage.webp", "Raffstore sitzt in der Fensternische einer hellen Putzfassade") },
+              { label: "Aufsatzmontage", image: { ...img("raffstore", "varianten/aufsatzmontage.png", "Schnittbild eines WAREMA-Aufsatz-Raffstores mit überputztem Kasten über dem Fenster"), position: "object-contain! p-2" } },
+              { label: "Fassadenvorbau", image: { ...img("raffstore", "varianten/vorbaumontage.png", "WAREMA-Vorbau-Raffstore mit Blende vor der Fassade"), position: "object-contain! p-2" } },
+              { label: "Schachtmontage", image: img("raffstore", "varianten/schachtmontage.webp", "Raffstore im Schacht einer Holzfassade, Kasten nicht sichtbar") },
+            ],
           },
           {
             title: "Farben & Optik",
-            text: "Wir bieten Ihnen alle gängigen Lamellen- und Gestellfarben an. So können Sie den Raffstore entweder als farblichen Kontrast setzen oder harmonisch Ton-in-Ton an Ihre Fassade anpassen.",
+            text: "Lamellen gibt es in vielen RAL- und WAREMA-Farbtönen, Führungsschienen und Blenden zusätzlich aus der großen WAREMA-Farbwelt. Bei den Oberflächen wählen Sie zwischen matt, Feinstruktur und seidenglänzend. So setzen Sie den Raffstore als Kontrast oder passen ihn Ton in Ton an Ihre Fassade an.",
             image: img("raffstore", "farben.jpg", "Hellblaue Lamellen neben einer anthrazitfarbenen Klinkerfassade"),
+            visual: "ral-faecher",
+            options: [
+              { label: "Farbfächer", image: img("raffstore", "varianten/farbfaecher.webp", "Hände fächern einen WAREMA-Farbfächer mit vielen Farbtönen auf") },
+              { label: "Lamellenfarben", image: { ...img("raffstore", "varianten/lamellenfarben.webp", "Lamellen-Farbmuster von Silber über Anthrazit bis Bronze"), position: "object-contain!" } },
+              { label: "Feinstruktur, matt, seidenglänzend", image: { ...img("raffstore", "varianten/oberflaechen.png", "Drei anthrazitfarbene Musterplatten in den Oberflächen Feinstruktur, matt und seidenglänzend"), position: "object-contain! p-2" } },
+            ],
           },
         ],
       },

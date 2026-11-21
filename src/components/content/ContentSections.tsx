@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { IconCheck } from "@/components/icons/UiIcons";
+import { RalFaecher } from "@/components/content/RalFaecher";
 import type { ContentSection, ImageRef, TitledText } from "@/types";
 
 type Background = "surface" | "sand";
@@ -114,17 +115,41 @@ function VariantsBlock({ section, background }: { section: Extract<ContentSectio
           <Reveal key={item.title} delay={(index % 3) * 90} className={layout.span(index)}>
             <article className={`group flex h-full flex-col overflow-hidden rounded-3xl border border-brand-border ${cardBackground}`}>
               <div className={`relative w-full overflow-hidden ${layout.aspect(index)}`}>
-                <Image
-                  src={item.image.src}
-                  alt={item.image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+                {item.visual === "ral-faecher" ? (
+                  <RalFaecher />
+                ) : (
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className={`object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${item.image.position ?? ""}`}
+                  />
+                )}
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-lg font-bold text-brand-ink">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{item.text}</p>
+                {item.options && (
+                  <ul className="mt-5 grid grid-cols-2 gap-3">
+                    {item.options.map((option) => (
+                      <li key={option.label}>
+                        <figure>
+                          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-brand-border bg-white">
+                            <Image
+                              src={option.image.src}
+                              alt={option.image.alt}
+                              fill
+                              sizes="(min-width: 1024px) 14vw, (min-width: 640px) 22vw, 45vw"
+                              className={`object-cover ${option.image.position ?? ""}`}
+                            />
+                          </div>
+                          <figcaption className="mt-1.5 text-xs font-semibold text-brand-ink">{option.label}</figcaption>
+                        </figure>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </article>
           </Reveal>
