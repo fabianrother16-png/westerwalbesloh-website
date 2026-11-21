@@ -4,7 +4,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { IconCheck } from "@/components/icons/UiIcons";
 import { RalFaecher } from "@/components/content/RalFaecher";
-import type { ContentSection, ImageRef, TitledText } from "@/types";
+import type { ContentSection, IllustrationKey, ImageRef, TitledText } from "@/types";
+import { AufmassIllustration } from "@/components/content/AufmassIllustration";
 
 type Background = "surface" | "sand";
 
@@ -51,7 +52,7 @@ export function NumberedCards({
   background,
   columns,
 }: {
-  items: TitledText[];
+  items: (TitledText & { illustration?: IllustrationKey })[];
   background: Background;
   columns?: string;
 }) {
@@ -70,6 +71,11 @@ export function NumberedCards({
           <div
             className={`group h-full rounded-3xl border border-brand-border p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-accent hover:shadow-xl hover:shadow-brand-ink/5 ${cardBackground}`}
           >
+            {item.illustration && (
+              <div className="-mx-2 -mt-2 mb-5 rounded-2xl bg-white/70 px-2 py-3">
+                <AufmassIllustration kind={item.illustration} />
+              </div>
+            )}
             <div className="flex items-start justify-between gap-4">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-accent text-white shadow-md shadow-brand-accent/25 transition-transform duration-300 group-hover:scale-110">
                 <IconCheck className="h-5 w-5" strokeWidth={2.5} />

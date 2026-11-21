@@ -47,7 +47,7 @@ export type ContentSection =
       navLabel?: string;
       title: string;
       intro?: string;
-      items: TitledText[];
+      items: (TitledText & { illustration?: IllustrationKey })[];
       image?: ImageRef;
     }
   | {
@@ -98,6 +98,9 @@ export type Product = {
   metaDescription: string;
 };
 
+/** Small drawn pictograms for cards, e.g. the steps of a site measurement. */
+export type IllustrationKey = "einbautiefe" | "leitungswege" | "platzbedarf" | "bausubstanz";
+
 export type Service = {
   slug: string;
   name: string;
@@ -108,6 +111,10 @@ export type Service = {
   cardImage?: ImageRef;
   introTitle: string;
   intro: string[];
+  /** Short bullet points below the intro text. */
+  introPoints?: string[];
+  /** Photo shown above the contact box next to the intro. */
+  introImage?: ImageRef;
   sections: ContentSection[];
   closing?: TitledText;
   faqTitle: string;

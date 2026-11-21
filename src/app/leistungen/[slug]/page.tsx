@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/layout/PageHero";
@@ -12,7 +13,7 @@ import { FaqSection } from "@/components/shared/FaqSection";
 import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ServiceIcon } from "@/components/icons/ProductIcons";
-import { IconMail, IconPhone } from "@/components/icons/UiIcons";
+import { IconCheck, IconMail, IconPhone } from "@/components/icons/UiIcons";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -98,8 +99,31 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+            {service.introPoints && (
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                {service.introPoints.map((point) => (
+                  <li key={point} className="flex items-start gap-3 rounded-2xl border border-brand-border bg-brand-sand p-4 text-brand-ink">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-accent text-white">
+                      <IconCheck className="h-3.5 w-3.5" strokeWidth={3} />
+                    </span>
+                    <span className="text-sm font-medium leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </Reveal>
-          <Reveal delay={120}>
+          <Reveal delay={120} className="space-y-6">
+            {service.introImage && (
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+                <Image
+                  src={service.introImage.src}
+                  alt={service.introImage.alt}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, 100vw"
+                  className={`object-cover ${service.introImage.position ?? ""}`}
+                />
+              </div>
+            )}
             <aside className="rounded-3xl bg-brand-primary p-7 text-white">
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">
                 Direkter Draht
