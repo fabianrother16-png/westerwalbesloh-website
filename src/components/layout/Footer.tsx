@@ -45,8 +45,9 @@ export function Footer() {
                   alt={certificate.name}
                   width={certificate.width}
                   height={certificate.height}
-                  sizes="96px"
-                  className="h-12 w-auto rounded-md border border-brand-border"
+                  sizes="192px"
+                  // Square seals (RS-Fachbetrieb) carry small text and need more height to stay readable.
+                  className={`${certificate.width === certificate.height ? "h-24" : "h-16"} w-auto rounded-md border border-brand-border`}
                 />
               ))}
               <a

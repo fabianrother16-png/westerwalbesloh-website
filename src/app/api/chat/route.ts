@@ -45,7 +45,8 @@ export async function POST(req: NextRequest) {
         const anthropicStream = client.messages.stream({
           model: CHAT_MODEL,
           max_tokens: 700,
-          system: buildSystemPrompt(),
+          // The long knowledge prompt is identical for every visitor, so it is cached on the API side (cheaper, faster).
+          system: [{ type: "text", text: buildSystemPrompt(), cache_control: { type: "ephemeral" } }],
           messages: parsedBody.messages.map((message) => ({
             role: message.role,
             content: message.content,

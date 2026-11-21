@@ -1,3 +1,4 @@
+import { chatWissen } from "@/data/chatWissen";
 import { company } from "@/data/company";
 import { glossary } from "@/data/glossary";
 import { products } from "@/data/products";
@@ -63,8 +64,9 @@ function similarity(a: string, b: string) {
 
 const contactLine = `Für ein unverbindliches Angebot oder eine Beratung vor Ort: /kontakt oder Tel. ${company.phoneDisplay}.`;
 
-function buildEntries(): Entry[] {
-  const entries: Entry[] = [];
+/** All knowledge of the website as question/answer pairs - used by the FAQ mode and as context for the AI model. */
+export function buildEntries(): Entry[] {
+  const entries: Entry[] = [...chatWissen];
 
   for (const product of products) {
     const link = { href: `/produkte/${product.slug}`, label: product.name };

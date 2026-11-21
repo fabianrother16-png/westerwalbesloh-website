@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { company } from "@/data/company";
+import { buildEntries } from "@/lib/chatFallback";
 import { products } from "@/data/products";
 import { services } from "@/data/services";
 
@@ -57,5 +58,19 @@ ${serviceLines}
 4. Führe Interessenten mit einem konkreten Anliegen (Angebot, Reparatur, Beratungstermin) konsequent zum Kontaktformular (/kontakt) oder zum Telefonanruf (${company.phoneDisplay}).
 5. Wenn eine Frage nichts mit Sonnenschutz, Rollläden, den Leistungen von ${company.shortName} oder dem Unternehmen zu tun hat, lenke höflich zurück zum Thema der Seite.
 6. Erfinde keine Fakten (z. B. Liefertermine, exakte technische Spezifikationen einzelner Hersteller-Modelle, Verfügbarkeiten). Wenn du etwas nicht sicher weißt, sag das ehrlich und verweise auf den direkten Kontakt.
-7. Du sprichst im Namen von ${company.shortName}, bist aber klar als KI-Assistent erkennbar, falls danach gefragt wird.`;
+7. Du sprichst im Namen von ${company.shortName}, bist aber klar als KI-Assistent erkennbar, falls danach gefragt wird.
+8. Stütze deine Antworten vor allem auf das Wissen unten. Steht dort etwas, gilt es; steht dort nichts zu einer Frage, sag das ehrlich und verweise auf den direkten Kontakt.
+
+## Wissen von der Website und vom Betrieb
+${knowledgeText()}`;
+}
+
+let knowledgeCache: string | null = null;
+
+// Everything the website says (product texts, FAQ, glossary, repair check) plus the extra facts in data/chatWissen.ts.
+function knowledgeText(): string {
+  knowledgeCache ??= buildEntries()
+    .map((entry) => `F: ${entry.question}\nA: ${entry.answer}${entry.link ? ` (Seite: ${entry.link.href})` : ""}`)
+    .join("\n\n");
+  return knowledgeCache;
 }

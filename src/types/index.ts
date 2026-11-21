@@ -15,6 +15,19 @@ export type TitledText = {
   text: string;
 };
 
+/** A labelled example inside a variant card, e.g. one lamella shape or one surface finish. */
+export type VariantOption = {
+  label: string;
+  image: ImageRef;
+};
+
+export type VariantItem = TitledText & {
+  image: ImageRef;
+  /** Draws the RAL colour fan instead of the photo. */
+  visual?: "ral-faecher";
+  options?: VariantOption[];
+};
+
 export type ContentSection =
   | {
       type: "variants";
@@ -23,7 +36,7 @@ export type ContentSection =
       navLabel?: string;
       title: string;
       intro?: string;
-      items: (TitledText & { image: ImageRef })[];
+      items: VariantItem[];
     }
   | {
       type: "cards";
@@ -44,6 +57,8 @@ export type ContentSection =
       intro?: string;
       items: string[];
       image?: ImageRef;
+      /** One photo per item: shows the list as photo tiles instead of check marks. */
+      tiles?: ImageRef[];
     };
 
 export type Manufacturer = {

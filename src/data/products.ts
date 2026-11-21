@@ -45,32 +45,72 @@ export const products: Product[] = [
         items: [
           {
             title: "Lamellenformen",
-            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik oder robusten Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln. Auch geschwungene S-Lamellen sind als weicher Akzent verfügbar.",
+            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik, stabilen randgebördelten Lamellen oder Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln.",
             image: img("raffstore", "lamellen.jpg", "Raffstore-Lamellen vor den Glastüren eines modernen Balkons"),
+            // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live vom Kunden über WAREMA klären lassen.
+            options: [
+              { label: "Flachlamelle", image: img("raffstore", "varianten/flachlamelle.webp", "Nahaufnahme flacher WAREMA-Raffstorelamellen") },
+              { label: "Gebördelte Lamelle", image: img("raffstore", "varianten/geboerdelte-lamelle.webp", "Zwei randgebördelte WAREMA-Lamellen mit Clips und Führungsbolzen") },
+              { label: "Z-Lamelle", image: img("raffstore", "varianten/z-lamelle.webp", "Ineinandergreifende Z-Lamellen eines WAREMA-Raffstores") },
+            ],
           },
           {
             title: "Montagearten",
-            text: "Ob unauffällig im Schacht des Neubaus, als klassischer Vorbau-Raffstore vor der Fassade oder als direkte Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
+            text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
             image: img("raffstore", "montagearten.jpg", "Außenliegende Lamellen mit seitlichen Führungsschienen an einer Fassade"),
+            options: [
+              { label: "Nischenmontage", image: img("raffstore", "varianten/nischenmontage.webp", "Raffstore sitzt in der Fensternische einer hellen Putzfassade") },
+              { label: "Aufsatzmontage", image: { ...img("raffstore", "varianten/aufsatzmontage.png", "Schnittbild eines WAREMA-Aufsatz-Raffstores mit überputztem Kasten über dem Fenster"), position: "object-contain! p-2" } },
+              { label: "Fassadenvorbau", image: { ...img("raffstore", "varianten/vorbaumontage.png", "WAREMA-Vorbau-Raffstore mit Blende vor der Fassade"), position: "object-contain! p-2" } },
+              { label: "Schachtmontage", image: img("raffstore", "varianten/schachtmontage.webp", "Raffstore im Schacht einer Holzfassade, Kasten nicht sichtbar") },
+            ],
           },
           {
             title: "Farben & Optik",
-            text: "Wir bieten Ihnen alle gängigen Lamellen- und Gestellfarben an. So können Sie den Raffstore entweder als farblichen Kontrast setzen oder harmonisch Ton-in-Ton an Ihre Fassade anpassen.",
+            text: "Lamellen gibt es in vielen RAL- und WAREMA-Farbtönen, Führungsschienen und Blenden zusätzlich aus der großen WAREMA-Farbwelt. Bei den Oberflächen wählen Sie zwischen matt, Feinstruktur und seidenglänzend. So setzen Sie den Raffstore als Kontrast oder passen ihn Ton in Ton an Ihre Fassade an.",
             image: img("raffstore", "farben.jpg", "Hellblaue Lamellen neben einer anthrazitfarbenen Klinkerfassade"),
+            visual: "ral-faecher",
+            options: [
+              { label: "Farbfächer", image: img("raffstore", "varianten/farbfaecher.webp", "Hände fächern einen WAREMA-Farbfächer mit vielen Farbtönen auf") },
+              { label: "Lamellenfarben", image: { ...img("raffstore", "varianten/lamellenfarben.webp", "Lamellen-Farbmuster von Silber über Anthrazit bis Bronze"), position: "object-contain!" } },
+              { label: "Feinstruktur, matt, seidenglänzend", image: { ...img("raffstore", "varianten/oberflaechen.png", "Drei anthrazitfarbene Musterplatten in den Oberflächen Feinstruktur, matt und seidenglänzend"), position: "object-contain! p-2" } },
+            ],
           },
         ],
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Bedienung & Steuerung",
         navLabel: "Bedienung",
         title: "Die moderne Art, Licht und Schatten zu lenken",
         intro:
           "Verbinden Sie architektonischen Anspruch mit höchstem Wohnkomfort und Energieeffizienz.",
+        // Bilder: WAREMA (warema.com) und Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
         items: [
-          { title: "Manuelle Bedienung", text: "Bedienen Sie Ihre Raffstore klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung." },
-          { title: "Motorisiert", text: "Leistungsstarke Motoren bewegen Ihre Anlage leise und gleichmäßig. Das schont die Mechanik und ist ideal für große, schwere Behänge." },
-          { title: "Smart Home (Somfy)", text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung." },
+          {
+            title: "Manuelle Bedienung",
+            text: "Bedienen Sie Ihre Raffstore klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
+            image: { ...img("raffstore", "bedienung/kurbel.webp", "Gelenkkurbel am Fensterrahmen, dahinter die Lamellen einer heruntergelassenen Außenjalousie"), position: "object-[30%_50%]" },
+          },
+          {
+            title: "Motorisiert",
+            text: "Leistungsstarke Motoren bewegen Ihre Anlage leise und gleichmäßig – bequem per Wandschalter oder Funkhandsender. Das schont die Mechanik und ist ideal für große, schwere Behänge.",
+            image: img("raffstore", "bedienung/funkhandsender-kueche.webp", "Funkhandsender von WAREMA auf einer Küchenarbeitsplatte, Lamellenschatten fallen in den Raum"),
+            options: [
+              { label: "Wandschalter", image: img("raffstore", "bedienung/wandschalter.webp", "Funk-Wandsender von WAREMA an einer Natursteinwand neben einem Fenster mit Außenjalousie") },
+              { label: "Funkhandsender", image: img("raffstore", "bedienung/funkhandsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+            ],
+          },
+          {
+            title: "Smart Home (Somfy)",
+            text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung.",
+            image: img("raffstore", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
+            options: [
+              { label: "TaHoma switch", image: img("raffstore", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
+              { label: "TaHoma-App", image: { ...img("raffstore", "bedienung/tahoma-app.jpg", "Somfy TaHoma switch vor einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
+              { label: "Sprachsteuerung", image: { ...img("raffstore", "bedienung/sprachsteuerung.jpg", "Somfy TaHoma switch mit den Hinweisen „works with Alexa“, „Hey Google“ und „Apple HomeKit“"), position: "object-contain! bg-white" } },
+            ],
+          },
         ],
       },
       {
@@ -84,10 +124,14 @@ export const products: Product[] = [
           "Neubau & Modernisierung",
           "Energiesparsame Lösungen",
         ],
-        image: {
-          src: "/images/leistungen/objektbau-projekte/fassade.jpg",
-          alt: "Raffstores an der Glasfassade eines Gewerbebaus, montiert von Westerwalbesloh",
-        },
+        // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären. Reihenfolge wie die Punkte oben.
+        tiles: [
+          img("raffstore", "einsatz/grosse-fensterflaechen.webp", "Wohnraum mit raumhoher Glasfront, außen halb geschlossene Raffstores"),
+          img("raffstore", "einsatz/homeoffice.webp", "Arbeitszimmer mit Schreibtisch und Monitor, Raffstores filtern das Tageslicht"),
+          img("raffstore", "einsatz/sonnenseite.webp", "Bungalow in praller Sonne mit geschlossenen dunklen Raffstores vor den Terrassenfenstern"),
+          img("raffstore", "einsatz/neubau.webp", "Moderner Neubau mit großen Fenstern und dunklen Raffstores"),
+          img("raffstore", "einsatz/hitzeschutz.webp", "Wohn- und Essbereich an einem Sonnentag, heruntergefahrene Raffstores halten die Hitze draußen"),
+        ],
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
@@ -101,6 +145,15 @@ export const products: Product[] = [
     projectPhotos: [
       { ...img("raffstore", "projekt-1.jpg", "Montage von Raffstoren an einem Gewerbeobjekt mit Hubsteiger"), caption: "Gewerbeobjekt mit Hubsteiger" },
       { src: "/images/leistungen/objektbau-projekte/detail.jpg", alt: "Wartung von Raffstoren an einer Bürofassade per Hubsteiger", caption: "Raffstore an einer Bürofassade" },
+      // Eigene Fotos (Google Drive „Webseite“, 21.11.2026). Bildunterschriften nur nach dem, was zu sehen ist – Orte ergänzt Fabian später.
+      { ...img("raffstore", "projekt-erker.jpg", "Raffstores rundum an einem Erker eines Klinkerhauses"), caption: "Raffstores am Erker" },
+      { ...img("raffstore", "projekt-holzfassade.jpg", "Raffstores an Fenstern einer Holzfassade mit grünen Rahmen"), caption: "Raffstores an einer Holzfassade" },
+      { ...img("raffstore", "projekt-wohnhaus.jpg", "Große Raffstoreanlage vor der Fensterfront eines Wohnhauses mit Garten"), caption: "Große Fensterfront am Wohnhaus" },
+      { ...img("raffstore", "projekt-buero-eg.jpg", "Heruntergefahrener Raffstore im Erdgeschoss eines Bürogebäudes"), caption: "Raffstores an einem Bürogebäude" },
+      { ...img("raffstore", "projekt-montage-buero.jpg", "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einem Bürogebäude"), caption: "Montage an einem Bürogebäude" },
+      { ...img("raffstore", "projekt-montage-geruest.jpg", "Raffstore-Montage am Gerüst an einem Wohnhaus, davor die Werkbank"), caption: "Montage am Gerüst" },
+      { ...img("raffstore", "projekt-wohnhaus-detail.jpg", "Nahaufnahme einer heruntergefahrenen Raffstoreanlage an einem Wohnhaus"), caption: "Raffstoreanlage im Detail" },
+      { ...img("raffstore", "projekt-holzfassade-detail.jpg", "Detail von Raffstore-Lamellen an einer Holzfassade"), caption: "Lamellen an der Holzfassade" },
     ],
     faqTitle: "Häufige Fragen zu Raffstores",
     faq: [
@@ -174,32 +227,68 @@ export const products: Product[] = [
           {
             title: "Hochwertige Materialien",
             text: "Wählen Sie zwischen robustem Aluminium für höchste Stabilität und Langlebigkeit oder pflegeleichtem Kunststoff als wirtschaftliche Lösung mit sehr guten Dämmwerten.",
-            image: img("rollladen", "materialien.jpg", "Nahaufnahme eines neuen Rollladenpanzers aus Aluminium"),
+            // Bilder: WAREMA, heroal, SELVE, Somfy – Nutzungsrecht vor Go-live klären.
+            image: img("rollladen", "varianten/aluminium-panzer.webp", "Nahaufnahme eines hellen Aluminium-Rollladenpanzers mit dunkler Endleiste und Führungsschiene"),
+            options: [
+              { label: "Aluminium", image: img("rollladen", "varianten/aluminium-profil.jpg", "Aluminium-Rollladenprofil mit Schaumfüllung im Querschnitt") },
+              { label: "Kunststoff", image: { ...img("rollladen", "varianten/kunststoff-profil.png", "Kunststoff-Rollladenprofil mit hohlen Kammern im Querschnitt"), position: "object-contain! bg-white p-2" } },
+            ],
           },
           {
             title: "Flexible Bauarten",
             text: "Egal ob unauffälliger Aufsatzrollladen für den Neubau, Vorbaurollladen zur einfachen Nachrüstung oder maßgefertigte Sonderformen für schräge Fenster – wir haben die Lösung.",
-            image: img("rollladen", "bauarten.jpg", "Vorbaurollladen mit Kasten und Führungsschienen"),
+            image: img("rollladen", "varianten/bauarten-haus.jpg", "Weißes Wohnhaus mit halb heruntergefahrenen dunklen Rollläden vor großen Fenstern"),
+            options: [
+              { label: "Aufsatzrollladen", image: img("rollladen", "varianten/aufsatzrollladen.webp", "Fenster in heller Putzfassade mit geschlossenem Aufsatzrollladen, Kasten unsichtbar") },
+              { label: "Vorbaurollladen", image: img("rollladen", "varianten/vorbaurollladen.webp", "Vorbaurollladen mit sichtbarem Kasten vor einer dunklen Fassade") },
+              { label: "Schachtrollladen", image: img("rollladen", "varianten/schachtrollladen.png", "Zwei Fenster mit Rollläden, die in einem Schacht in der Wand sitzen") },
+              { label: "Sonderform (schräg)", image: img("rollladen", "varianten/schraegrollladen.webp", "Wohnhaus mit Schrägrollladen am trapezförmigen Giebelfenster") },
+            ],
           },
           {
             title: "Panzerprofile & Farben",
             text: "Gestalten Sie die Optik individuell. Unsere Profile sind in verschiedenen Deckbreiten und zahlreichen Farben erhältlich, damit sich der Rollladen harmonisch in Ihre Architektur einfügt.",
-            image: img("rollladen", "farben.jpg", "Graue Rollläden als Kontrast zu einer gelben Fassade"),
+            image: img("rollladen", "varianten/profilfarben.webp", "Farbmusterkarte für Rollladenprofile mit Weiß-, Braun- und Holztönen, daneben Profilmuster"),
+            options: [
+              { label: "Farbauswahl", image: img("rollladen", "varianten/farbfaecher.webp", "Aufgefächerte Farbmuster in Creme, Grau, Rot und Anthrazit") },
+            ],
           },
         ],
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Bedienung & Steuerung",
         navLabel: "Bedienung",
         title: "Vom Gurtzug bis zur Hausautomation",
         intro: "Wählen Sie den Bedienkomfort, der zu Ihnen passt.",
         items: [
-          { title: "Manuelle Bedienung", text: "Bedienen Sie Ihre Rollläden einfach und unabhängig von Strom per Gurt. Diese Variante ist besonders robust und kostengünstig." },
-          { title: "Motorisierter Antrieb", text: "Unsere leisen und langlebigen Motoren bewegen den Behang besonders schonend. Das ist bequem und erhöht die Lebensdauer Ihrer Rollläden spürbar." },
-          { title: "Smart Home (Somfy)", text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – für maximale Sicherheit und Effizienz." },
+          {
+            title: "Manuelle Bedienung",
+            text: "Bedienen Sie Ihre Rollläden einfach und unabhängig von Strom per Gurt. Diese Variante ist besonders robust und kostengünstig.",
+            image: img("rollladen", "bedienung/gurt.jpg", "Hände ziehen am Rollladengurt neben einem halb geschlossenen Rollladen"),
+            options: [
+              { label: "Gurtwickler", image: { ...img("rollladen", "bedienung/gurtwickler.webp", "Aufputz-Gurtwickler in Weiß und Schwarz und ein Unterputz-Gurtwickler"), position: "object-contain! bg-white p-2" } },
+            ],
+          },
+          {
+            title: "Motorisierter Antrieb",
+            text: "Unsere leisen und langlebigen Motoren sitzen unsichtbar in der Rollladenwelle und bewegen den Behang besonders schonend – per Wandschalter oder Funkhandsender. Das ist bequem und erhöht die Lebensdauer Ihrer Rollläden spürbar.",
+            image: img("rollladen", "bedienung/wandschalter.webp", "Weißer Funk-Wandschalter neben einem Fenster mit Rollladen"),
+            options: [
+              { label: "Rohrmotor für die Welle", image: { ...img("rollladen", "bedienung/rohrmotor.webp", "Rohrmotor für Rollläden"), position: "object-contain! bg-white p-2" } },
+              { label: "Funkhandsender", image: img("rollladen", "bedienung/funkhandsender.webp", "Funkhandsender auf einer Küchenarbeitsplatte") },
+            ],
+          },
+          {
+            title: "Smart Home (Somfy)",
+            text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – für maximale Sicherheit und Effizienz.",
+            image: img("rollladen", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
+            options: [
+              { label: "TaHoma und App", image: { ...img("rollladen", "bedienung/tahoma-app.jpg", "Somfy TaHoma switch neben einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
+              { label: "TaHoma zu Hause", image: img("rollladen", "bedienung/tahoma-tisch.jpg", "Somfy TaHoma switch auf einem Holz-Beistelltisch neben Pflanzen") },
+            ],
+          },
         ],
-        image: img("rollladen", "modern.jpg", "Moderner Wohnbau mit Rollläden an Fenstern und Balkontüren"),
       },
     ],
     manufacturersTitle: "Unsere Partner & Hersteller",
@@ -211,7 +300,9 @@ export const products: Product[] = [
       { name: "heroal", logo: { src: "/images/partner/heroal.png", width: 381, height: 280 } },
     ],
     projectPhotos: [
-      { ...img("rollladen", "projekt-1.jpg", "Westerwalbesloh-Monteur bei der Rollladenmontage am Wohnhaus"), caption: "Montage am Wohnhaus" },
+      // Eigene Fotos (Google Drive „Webseite“, 21.11.2026). Im Ordner gab es nur diese zwei Rollladen-Motive.
+      { ...img("rollladen", "projekt-sanierung-innen.jpg", "Rollladen-Sanierung im Wohnhaus: neue Rollläden, darüber der geöffnete Rollladenkasten"), caption: "Rollladen-Sanierung im Wohnhaus" },
+      { ...img("rollladen", "projekt-kastenoeffnung.jpg", "Geöffneter Rollladenkasten über einer Terrassentür während der Modernisierung"), caption: "Modernisierung am Rollladenkasten" },
     ],
     faqTitle: "Häufige Fragen zu Rollläden",
     faq: [

@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Auf der Suche nach Qualität? Westerwalbesloh ist Ihr regionaler Meisterbetrieb für Sonnenschutz in Gütersloh & OWL. Jetzt mehr über unser Team erfahren!",
   path: "/ueber-uns",
-  image: "/images/home/team-treppe.jpg",
+  image: "/images/home/team.jpg",
 });
 
 const years = new Date().getFullYear() - company.founded;
@@ -53,9 +53,10 @@ export default function UeberUnsPage() {
         eyebrow="Über uns"
         title="Drei Generationen Handwerk aus Leidenschaft"
         description="Vom mutigen Start in einer kleinen Garage 1959 bis zum modernen Fachbetrieb von heute: Tradition bewahren und mit innovativen Lösungen in die Zukunft gehen."
-        image="/images/home/team-treppe.jpg"
-        imageAlt="Drei Mitarbeiter von Westerwalbesloh im Treppenhaus eines Kundenhauses"
-        imagePosition="object-[center_22%]"
+        image="/images/home/team.jpg"
+        imageAlt="Das Team von Westerwalbesloh vor der Firmenhalle"
+        imagePosition="object-[center_8%]"
+        imageUnoptimized
       />
 
       <Section background="surface">
