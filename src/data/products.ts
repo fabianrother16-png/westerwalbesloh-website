@@ -1127,6 +1127,11 @@ export const products: Product[] = [
             title: "Wandschalter",
             text: "Die klassische Lösung wird fest verkabelt und einfach per Wandschalter bedient. Diese Variante ist besonders robust, kostengünstig und ideal für den Neubau geeignet.",
             image: img("steuerung-antriebe", "wandschalter.jpg", "Wandschalter zur Steuerung von Rollläden"),
+            // Bilder: Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
+            options: [
+              { label: "Wipptaster", image: { ...img("steuerung-antriebe", "wipptaster.jpg", "Weißer Wipptaster für Rollladen und Sonnenschutz"), position: "object-contain! bg-white p-2" } },
+              { label: "Zeitschaltuhr (kabelgebunden)", image: { ...img("steuerung-antriebe", "zeitschaltuhr-chronis.jpg", "Somfy Zeitschaltuhr Chronis Smoove Uno S mit Display"), position: "object-contain! bg-white p-2" } },
+            ],
           },
           {
             title: "Funk-Steuerung",
@@ -1136,6 +1141,7 @@ export const products: Product[] = [
             options: [
               { label: "Somfy RTS und io", image: { ...img("steuerung-antriebe", "somfy-situo-pure.jpg", "Weißer Somfy Funkhandsender Situo 5 Variation io Pure"), position: "object-contain! bg-white p-2" } },
               { label: "WAREMA WMS", image: img("steuerung-antriebe", "warema-handsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+              { label: "Funk-Zeitschaltuhr (Somfy Nina Timer io)", image: { ...img("steuerung-antriebe", "nina-timer-io.jpg", "Somfy Funk-Handsender Nina Timer io mit Zeitschaltuhr und Display"), position: "object-contain! bg-white p-2" } },
             ],
           },
           {
@@ -1153,7 +1159,7 @@ export const products: Product[] = [
             text: "Sonnensensor, Windwächter, Regen- und Helligkeitssensor regeln Ihren Schutz vollautomatisch nach Wetterlage. So fahren Markisen bei Sturm sicher ein oder beschatten bei Sonne ganz von selbst. Sensoren und Wetterstationen bieten wir von Somfy und von WAREMA an.",
             image: img("steuerung-antriebe", "sensoren.jpg", "Wind- und Sonnensensor an einer Markise"),
             options: [
-              { label: "Somfy Windsensor", image: { ...img("steuerung-antriebe", "somfy-windsensor.jpg", "Somfy Windsensor Eolis WireFree io"), position: "object-contain! bg-white p-2" } },
+              { label: "Somfy Sensoren für Sonne, Wind und Regen", image: { ...img("steuerung-antriebe", "somfy-wettersensoren.jpg", "Somfy Sensor-Paket mit Regensensor, Windsensor und Sonnensensor"), position: "object-contain! bg-white p-2" } },
               { label: "WAREMA WMS Wetterstation", image: img("steuerung-antriebe", "warema-wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
             ],
           },
