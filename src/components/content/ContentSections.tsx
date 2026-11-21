@@ -5,7 +5,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { IconCheck } from "@/components/icons/UiIcons";
 import { RalFaecher } from "@/components/content/RalFaecher";
 import { VolantFormen } from "@/components/content/VolantFormen";
-import { DachfensterSolar } from "@/components/content/DachfensterSolar";
 import type { ContentSection, HighlightIcon, IllustrationKey, ImageRef, TitledText } from "@/types";
 import { HIGHLIGHT_ICONS } from "@/components/icons/highlightIcons";
 import { AufmassIllustration } from "@/components/content/AufmassIllustration";
@@ -142,8 +141,6 @@ function VariantsBlock({ section, background }: { section: Extract<ContentSectio
                   <RalFaecher />
                 ) : item.visual === "volant-formen" ? (
                   <VolantFormen />
-                ) : item.visual === "dachfenster-solar" ? (
-                  <DachfensterSolar />
                 ) : (
                   <Image
                     src={item.image.src}

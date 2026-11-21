@@ -26,13 +26,17 @@ export function MegaMenu({
   entries,
   promo,
   wide = false,
+  columns,
 }: {
   label: string;
   overviewHref: string;
   entries: MegaMenuEntry[];
   promo?: { href: string; title: string; text: string };
   wide?: boolean;
+  /** Narrow menu laid out as image cards in this many columns (like the wide product menu). */
+  columns?: 2;
 }) {
+  const cards = wide || Boolean(columns);
   const [armed, setArmed] = useState(false);
   const [suppressed, setSuppressed] = useState(false);
 
@@ -61,18 +65,18 @@ export function MegaMenu({
 
       <div
         className={`invisible absolute top-full z-50 translate-y-1 opacity-0 transition-all duration-150 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ${
-          wide ? "inset-x-0" : "left-1/2 w-[30rem] -translate-x-1/2"
+          wide ? "inset-x-0" : columns ? "left-1/2 w-[40rem] -translate-x-1/2" : "left-1/2 w-[30rem] -translate-x-1/2"
         } ${suppressed ? "!invisible !opacity-0" : ""}`}
       >
         <div className={wide ? "mx-auto max-w-(--container-content) px-5 sm:px-8" : ""}>
           <div className="rounded-3xl border border-brand-border bg-white p-3 shadow-2xl shadow-brand-ink/10">
-            <div className={`grid gap-1.5 ${wide ? "grid-cols-4" : "grid-cols-1"}`}>
+            <div className={`grid gap-1.5 ${wide ? "grid-cols-4" : columns ? "grid-cols-2" : "grid-cols-1"}`}>
               {entries.map((entry) => (
                 <Link
                   key={entry.href}
                   href={entry.href}
                   onClick={close}
-                  className={`group/item flex rounded-2xl p-2.5 transition-colors hover:bg-brand-sand ${wide ? "flex-col" : "items-start gap-3.5"}`}
+                  className={`group/item flex rounded-2xl p-2.5 transition-colors hover:bg-brand-sand ${cards ? "flex-col" : "items-start gap-3.5"}`}
                 >
                   {entry.image ? (
                     <span className="relative block aspect-[16/9] w-full overflow-hidden rounded-xl bg-brand-sand">
@@ -81,7 +85,7 @@ export function MegaMenu({
                           src={entry.image.src}
                           alt=""
                           fill
-                          sizes="260px"
+                          sizes={columns ? "320px" : "260px"}
                           className="object-cover transition-transform duration-500 group-hover/item:scale-105"
                         />
                       )}
@@ -92,12 +96,13 @@ export function MegaMenu({
                       {entry.productIcon && <ProductIcon icon={entry.productIcon} className="h-5 w-5" />}
                     </span>
                   )}
-                  <span className={wide ? "mt-2.5 px-1" : ""}>
-                    <span className="flex items-center gap-2 text-sm font-bold text-brand-ink group-hover/item:text-brand-primary">
-                      {wide && entry.productIcon && <ProductIcon icon={entry.productIcon} className="h-4 w-4 text-brand-accent" />}
+                  <span className={cards ? "mt-2.5 px-1" : ""}>
+                    <span className={`flex items-center gap-2 font-bold text-brand-ink group-hover/item:text-brand-primary ${columns ? "text-base" : "text-sm"}`}>
+                      {cards && entry.productIcon && <ProductIcon icon={entry.productIcon} className="h-4 w-4 text-brand-accent" />}
+                      {cards && entry.serviceIcon && <ServiceIcon icon={entry.serviceIcon} className="h-4 w-4 text-brand-accent" />}
                       {entry.label}
                     </span>
-                    <span className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-brand-ink-soft">{entry.description}</span>
+                    <span className={`mt-0.5 line-clamp-2 leading-relaxed text-brand-ink-soft ${columns ? "text-sm" : "text-xs"}`}>{entry.description}</span>
                   </span>
                 </Link>
               ))}

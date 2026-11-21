@@ -28,6 +28,7 @@ export function Header() {
     href: `/leistungen/${service.slug}`,
     label: service.name,
     description: service.shortDescription,
+    image: { src: (service.cardImage ?? service.heroImage).src, alt: (service.cardImage ?? service.heroImage).alt },
     serviceIcon: service.icon,
   }));
 
@@ -56,7 +57,7 @@ export function Header() {
               text: "Wählen Sie, was Ihnen wichtig ist – der Produktvergleich zeigt sofort die passende Lösung.",
             }}
           />
-          <MegaMenu label="Leistungen" overviewHref="/leistungen" entries={serviceEntries} />
+          <MegaMenu label="Leistungen" overviewHref="/leistungen" entries={serviceEntries} columns={2} />
           <Link
             href="/ratgeber"
             className="text-sm font-medium text-brand-ink-soft transition-colors hover:text-brand-primary"
