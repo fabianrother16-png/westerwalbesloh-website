@@ -4,7 +4,10 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { IconCheck } from "@/components/icons/UiIcons";
 import { RalFaecher } from "@/components/content/RalFaecher";
-import type { ContentSection, IllustrationKey, ImageRef, TitledText } from "@/types";
+import { VolantFormen } from "@/components/content/VolantFormen";
+import { DachfensterSolar } from "@/components/content/DachfensterSolar";
+import type { ContentSection, HighlightIcon, IllustrationKey, ImageRef, TitledText } from "@/types";
+import { HIGHLIGHT_ICONS } from "@/components/icons/highlightIcons";
 import { AufmassIllustration } from "@/components/content/AufmassIllustration";
 
 type Background = "surface" | "sand";
@@ -42,6 +45,13 @@ export function layoutFor(count: number): GridLayout {
         aspect: (index) =>
           index === 3 ? "aspect-[4/3] lg:aspect-[16/8]" : index === 4 ? "aspect-[4/3] sm:aspect-[16/8]" : "aspect-[4/3]",
       };
+    case 7:
+      // Two full rows of three, the seventh card spans the whole width.
+      return {
+        grid: "sm:grid-cols-2 lg:grid-cols-3",
+        span: (index) => (index === 6 ? "sm:col-span-2 lg:col-span-3" : ""),
+        aspect: (index) => (index === 6 ? "aspect-[4/3] sm:aspect-[21/8]" : "aspect-[4/3]"),
+      };
     default:
       return { grid: "sm:grid-cols-2 lg:grid-cols-3", span: () => "", aspect: standardAspect };
   }
@@ -52,7 +62,7 @@ export function NumberedCards({
   background,
   columns,
 }: {
-  items: (TitledText & { illustration?: IllustrationKey })[];
+  items: (TitledText & { illustration?: IllustrationKey; icon?: HighlightIcon })[];
   background: Background;
   columns?: string;
 }) {
@@ -78,7 +88,14 @@ export function NumberedCards({
             )}
             <div className="flex items-start justify-between gap-4">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-accent text-white shadow-md shadow-brand-accent/25 transition-transform duration-300 group-hover:scale-110">
-                <IconCheck className="h-5 w-5" strokeWidth={2.5} />
+                {item.icon ? (
+                  (() => {
+                    const Icon = HIGHLIGHT_ICONS[item.icon];
+                    return <Icon className="h-5 w-5" />;
+                  })()
+                ) : (
+                  <IconCheck className="h-5 w-5" strokeWidth={2.5} />
+                )}
               </span>
               {/* Decorative number, drawn as generated content so it stays out of the text flow. */}
               <span
@@ -123,6 +140,10 @@ function VariantsBlock({ section, background }: { section: Extract<ContentSectio
               <div className={`relative w-full overflow-hidden ${layout.aspect(index)}`}>
                 {item.visual === "ral-faecher" ? (
                   <RalFaecher />
+                ) : item.visual === "volant-formen" ? (
+                  <VolantFormen />
+                ) : item.visual === "dachfenster-solar" ? (
+                  <DachfensterSolar />
                 ) : (
                   <Image
                     src={item.image.src}
@@ -137,7 +158,7 @@ function VariantsBlock({ section, background }: { section: Extract<ContentSectio
                 <h3 className="text-lg font-bold text-brand-ink">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-brand-ink-soft">{item.text}</p>
                 {item.options && (
-                  <ul className="mt-5 grid grid-cols-2 gap-3">
+                  <ul className="mt-5 grid max-w-sm grid-cols-2 gap-3">
                     {item.options.map((option) => (
                       <li key={option.label}>
                         <figure>

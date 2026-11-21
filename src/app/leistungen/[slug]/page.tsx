@@ -14,6 +14,7 @@ import { RelatedCard } from "@/components/shared/RelatedCard";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { ServiceIcon } from "@/components/icons/ProductIcons";
 import { IconCheck, IconMail, IconPhone } from "@/components/icons/UiIcons";
+import { HIGHLIGHT_ICONS } from "@/components/icons/highlightIcons";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
@@ -99,6 +100,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+            {service.introHighlights && (
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {service.introHighlights.map((item) => {
+                  const Icon = HIGHLIGHT_ICONS[item.icon];
+                  return (
+                    <li key={item.title} className="flex items-start gap-4 rounded-2xl border border-brand-border bg-brand-sand p-5">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-accent text-white shadow-md shadow-brand-accent/25">
+                        <Icon className="h-6 w-6" />
+                      </span>
+                      <span>
+                        <span className="block font-bold text-brand-ink">{item.title}</span>
+                        <span className="mt-1 block text-sm leading-relaxed text-brand-ink-soft">{item.text}</span>
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
             {service.introPoints && (
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {service.introPoints.map((point) => (
