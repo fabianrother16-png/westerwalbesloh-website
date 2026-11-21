@@ -132,13 +132,13 @@ export function Footer() {
               target="_blank"
               rel="noopener"
               aria-label="Website von Rother Marketing GbR"
-              className="inline-flex h-16 items-center gap-3 rounded-md bg-[#0b0b0b] px-4 text-white transition-opacity hover:opacity-90"
+              className="inline-flex h-24 items-center gap-4 rounded-md bg-[#0b0b0b] px-6 text-white transition-opacity hover:opacity-90"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/partner/rother-marketing.png" alt="" width={44} height={25} className="h-6 w-auto" />
+              <img src="/images/partner/rother-marketing.png" alt="" width={70} height={40} className="h-10 w-auto" />
               <span className="flex flex-col leading-tight">
-                <span className="text-[0.65rem] uppercase tracking-wider text-white/60">Website von</span>
-                <span className="text-sm font-semibold">Rother Marketing GbR</span>
+                <span className="text-xs uppercase tracking-wider text-white/60">Website von</span>
+                <span className="text-lg font-semibold">Rother Marketing GbR</span>
               </span>
             </a>
             </div>
