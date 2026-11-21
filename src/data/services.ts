@@ -22,6 +22,17 @@ export const services: Service[] = [
       "Wir starten jedes Projekt mit einer Beratung direkt bei Ihnen. Dabei prüfen wir die baulichen Gegebenheiten, die Einbausituation und die technischen Möglichkeiten. Ziel ist es, genau die Lösung zu finden, die funktional, langlebig und für Ihr Gebäude geeignet ist.",
       "Wir erklären, was technisch machbar ist, welche Varianten sinnvoll sind und worauf es bei Ihrer Anlage ankommt – verständlich, ohne Fachbegriffe zu überladen und ohne Verkaufsdruck.",
     ],
+    introPoints: [
+      "Beratung direkt bei Ihnen vor Ort",
+      "Prüfung von Bausituation und Einbaumöglichkeiten",
+      "Ehrliche Empfehlung: funktional, langlebig, passend zum Gebäude",
+      "Verständlich erklärt – ohne Fachchinesisch und ohne Verkaufsdruck",
+    ],
+    // Platzhalter (Unsplash-Lizenz, Foto: bds) – später durch ein eigenes Beratungsfoto ersetzen.
+    introImage: {
+      src: "/images/leistungen/beratung-aufmass-montage/beratung-stoffauswahl.jpg",
+      alt: "Zwei Personen wählen gemeinsam Stoffmuster aus",
+    },
     sections: [
       {
         type: "cards",
@@ -30,10 +41,10 @@ export const services: Service[] = [
         intro:
           "Wir erfassen millimetergenau alle baulichen Gegebenheiten direkt bei Ihnen vor Ort, damit Ihre neue Anlage später reibungslos montiert werden kann und optisch perfekt passt.",
         items: [
-          { title: "Einbautiefen prüfen", text: "Wir ermitteln die exakten Tiefen und stabilsten Punkte für eine sichere Montage." },
-          { title: "Leitungswege planen", text: "Wir definieren die optimale Kabelführung für eine sichere Steuerung." },
-          { title: "Platzbedarf klären", text: "Wir messen den Raum für Kästen und Schienen aus, um eine ideale Optik zu garantieren." },
-          { title: "Bausubstanz prüfen", text: "Wir prüfen die Beschaffenheit der Wände, um die passenden Befestigungsmittel zu wählen." },
+          { illustration: "einbautiefe", title: "Einbautiefen prüfen", text: "Wir ermitteln die exakten Tiefen und stabilsten Punkte für eine sichere Montage." },
+          { illustration: "leitungswege", title: "Leitungswege planen", text: "Wir definieren die optimale Kabelführung für eine sichere Steuerung." },
+          { illustration: "platzbedarf", title: "Platzbedarf klären", text: "Wir messen den Raum für Kästen und Schienen aus, um eine ideale Optik zu garantieren." },
+          { illustration: "bausubstanz", title: "Bausubstanz prüfen", text: "Wir prüfen die Beschaffenheit der Wände, um die passenden Befestigungsmittel zu wählen." },
         ],
       },
       {
@@ -49,8 +60,8 @@ export const services: Service[] = [
           { title: "Testlauf & Übergabe", text: "Nach einem gemeinsamen Testlauf erhalten Sie eine persönliche Einweisung, damit Sie Ihre neue Anlage sofort sicher bedienen können." },
         ],
         image: {
-          src: "/images/projekte/montage-hochhaus.jpg",
-          alt: "Westerwalbesloh-Monteur bei der Montage an einem mehrgeschossigen Gebäude",
+          src: "/images/leistungen/beratung-aufmass-montage/montage-buerogebaeude.jpg",
+          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Montage an der Fensterfront eines Bürogebäudes",
         },
       },
     ],
