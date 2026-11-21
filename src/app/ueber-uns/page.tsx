@@ -99,6 +99,23 @@ export default function UeberUnsPage() {
           ))}
         </ol>
 
+        <Reveal className="mt-12">
+          <figure className="overflow-hidden rounded-3xl">
+            <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+              <Image
+                src="/images/home/firmensitz.jpg"
+                alt="Firmengebäude von Westerwalbesloh mit großem Schriftzug und zwei Toren im Innenhof"
+                fill
+                sizes="(min-width: 1280px) 1200px, 100vw"
+                className="object-cover object-[center_40%]"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm text-brand-ink-soft">
+              Unser Firmensitz in der {company.street} in {company.city}
+            </figcaption>
+          </figure>
+        </Reveal>
+
         <Reveal className="relative mt-12 overflow-hidden rounded-3xl bg-brand-primary-dark p-8 text-white sm:p-10">
           <div aria-hidden="true" className="pointer-events-none absolute -top-20 -right-16 h-64 w-64 rounded-full bg-brand-accent/30 blur-3xl" />
           <p className="relative text-sm font-semibold uppercase tracking-[0.14em] text-brand-accent-soft">Unser Versprechen</p>

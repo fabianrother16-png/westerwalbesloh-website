@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -51,6 +52,20 @@ export default function KontaktPage() {
           </Suspense>
 
           <div className="space-y-6">
+            <figure className="overflow-hidden rounded-3xl border border-brand-border bg-white">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/images/home/firmensitz.jpg"
+                  alt="Firmengebäude von Westerwalbesloh mit Schriftzug und zwei Toren im Innenhof"
+                  fill
+                  sizes="(min-width: 1024px) 35vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="px-5 py-3 text-sm text-brand-ink-soft">
+                Hier finden Sie uns: {company.street}, {company.zip} {company.city}
+              </figcaption>
+            </figure>
             <div className="rounded-3xl border border-brand-border bg-brand-sand p-6">
               <h2 className="text-lg font-bold text-brand-ink">Direkt erreichbar</h2>
               <div className="mt-4 space-y-4 text-sm">
