@@ -553,7 +553,7 @@ export const products: Product[] = [
     tagline: "Maßgenaue Lösungen für Fenster, Türen & Sonderformen",
     intro: [
       "Ein guter Insektenschutz sorgt für ungestörtes Lüften und schützt zuverlässig vor Fliegen, Mücken, Wespen und anderen unerwünschten Gästen.",
-      "Unsere hochwertigen Systeme von WAREMA bieten passgenauen Schutz für nahezu jede Einbausituation – dezent, langlebig und komfortabel bedienbar. Perfekt für Privathaushalte, Büros, Praxen und öffentliche Einrichtungen.",
+      "Unsere hochwertigen Systeme von WAREMA und KADECO bieten passgenauen Schutz für nahezu jede Einbausituation – dezent, langlebig und komfortabel bedienbar. Perfekt für Privathaushalte, Büros, Praxen und öffentliche Einrichtungen.",
     ],
     heroImage: img("insektentschutz", "hero-kueche-schiebeanlage.jpg", "Helle Küche mit Insektenschutz-Schiebeanlage vor der Terrassentür"),
     cardImage: img("insektentschutz", "card-terrassentuer.jpg", "Terrassentür mit Insektenschutz-Schiebeanlage an einem modernen Haus"),
@@ -631,8 +631,13 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "WAREMA – Präzision im Insektenschutz",
-        text: "Wir setzen auf WAREMA, den führenden Experten für maßgefertigte und langlebige Insektenschutz-Lösungen. Dank robuster Aluminiumprofile und spezialisierter Funktionsgewebe genießen Sie perfekten Schutz vor Insekten bei gleichzeitig maximaler Licht- und Luftdurchlässigkeit.",
+        text: "Wir setzen auf WAREMA, einen erfahrenen Spezialisten für maßgefertigte und langlebige Insektenschutz-Lösungen. Dank robuster Aluminiumprofile und spezialisierter Funktionsgewebe genießen Sie perfekten Schutz vor Insekten bei gleichzeitig maximaler Licht- und Luftdurchlässigkeit.",
         logo: { src: "/images/partner/warema.png", width: 1025, height: 650 },
+      },
+      {
+        name: "KADECO – Insektenschutz nach Maß",
+        text: "Mit KADECO ergänzen wir unser Programm um weitere maßgefertigte Insektenschutz-Systeme für Fenster, Türen und Dachfenster – passend zu Ihrer Einbausituation.",
+        logo: { src: "/images/partner/kadeco.png", width: 309, height: 202 },
       },
     ],
     projectPhotos: [],
