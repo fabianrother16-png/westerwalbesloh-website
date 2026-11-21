@@ -441,10 +441,7 @@ export const products: Product[] = [
             title: "Fenster- & Fassadenmarkisen",
             text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren. Für Dachfenster gibt es die VELUX Hitzeschutz-Markise: Sie sitzt außen vor der Scheibe, hält die Sonne ab, bevor sie auf das Glas trifft, und lässt die Durchsicht frei. Es gibt sie mit Handbedienung oder mit Solarantrieb und Funk.",
             // Bilder: WAREMA (warema.com) und VELUX (Produktbild über toom.de) – Nutzungsrecht vor Go-live klären.
-            image: img("markisen", "fenster-fassade-warema.jpg", "Dunkle Senkrechtmarkise vor einer großen Fensterfront an einem Klinkerhaus mit Terrasse"),
-            options: [
-              { label: "Dachfenstermarkise (VELUX)", image: { ...img("markisen", "velux-hitzeschutz-markise.jpg", "VELUX Hitzeschutz-Markise außen an einem Dachfenster"), position: "object-contain! bg-white p-2" } },
-            ],
+            image: img("markisen", "fenster-fassade-dachfenster.jpg", "Links eine dunkle Senkrechtmarkise vor einer Fensterfront an einem Klinkerhaus, rechts eine VELUX Hitzeschutz-Markise an einem Dachfenster"),
           },
         ],
       },
