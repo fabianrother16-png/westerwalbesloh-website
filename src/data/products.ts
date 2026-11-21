@@ -71,7 +71,6 @@ export const products: Product[] = [
             image: img("raffstore", "farben.jpg", "Hellblaue Lamellen neben einer anthrazitfarbenen Klinkerfassade"),
             visual: "ral-faecher",
             options: [
-              { label: "Farbfächer", image: img("raffstore", "varianten/farbfaecher.webp", "Hände fächern einen WAREMA-Farbfächer mit vielen Farbtönen auf") },
               { label: "Lamellenfarben", image: { ...img("raffstore", "varianten/lamellenfarben.webp", "Lamellen-Farbmuster von Silber über Anthrazit bis Bronze"), position: "object-contain!" } },
               { label: "Feinstruktur, matt, seidenglänzend", image: { ...img("raffstore", "varianten/oberflaechen.png", "Drei anthrazitfarbene Musterplatten in den Oberflächen Feinstruktur, matt und seidenglänzend"), position: "object-contain! p-2" } },
             ],
