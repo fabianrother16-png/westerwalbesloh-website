@@ -51,20 +51,6 @@ export function Footer() {
                 />
               ))}
               <a
-                href="https://marketing-rother.de"
-                target="_blank"
-                rel="noopener"
-                aria-label="Website von Rother Marketing GbR"
-                className="inline-flex h-16 items-center gap-3 rounded-md bg-[#0b0b0b] px-4 text-white transition-opacity hover:opacity-90"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/partner/rother-marketing.png" alt="" width={44} height={25} className="h-6 w-auto" />
-                <span className="flex flex-col leading-tight">
-                  <span className="text-[0.65rem] uppercase tracking-wider text-white/60">Website von</span>
-                  <span className="text-sm font-semibold">Rother Marketing GbR</span>
-                </span>
-              </a>
-              <a
                 href={company.social.googleProfile}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,6 +62,7 @@ export function Footer() {
             </div>
           </div>
 
+          <div className="flex flex-col justify-between gap-10">
           <div className="grid gap-10 sm:grid-cols-3">
             <div>
               <p className={headingClass}>Produkte</p>
@@ -137,6 +124,23 @@ export function Footer() {
                   </a>
                 </li>
               </ul>
+            </div>
+          </div>
+            <div className="flex lg:mb-12 lg:justify-end">
+            <a
+              href="https://marketing-rother.de"
+              target="_blank"
+              rel="noopener"
+              aria-label="Website von Rother Marketing GbR"
+              className="inline-flex h-16 items-center gap-3 rounded-md bg-[#0b0b0b] px-4 text-white transition-opacity hover:opacity-90"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/partner/rother-marketing.png" alt="" width={44} height={25} className="h-6 w-auto" />
+              <span className="flex flex-col leading-tight">
+                <span className="text-[0.65rem] uppercase tracking-wider text-white/60">Website von</span>
+                <span className="text-sm font-semibold">Rother Marketing GbR</span>
+              </span>
+            </a>
             </div>
           </div>
         </div>
