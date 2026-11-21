@@ -61,7 +61,7 @@ export const services: Service[] = [
         ],
         image: {
           src: "/images/leistungen/beratung-aufmass-montage/montage-buerogebaeude.jpg",
-          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Montage an der Fensterfront eines Bürogebäudes",
+          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Montage an der Fensterfront einer Schule",
         },
       },
     ],
@@ -307,11 +307,11 @@ export const services: Service[] = [
       "Ob Industrie, Verwaltung oder Schule: Wir planen und realisieren skalierbare Großanlagen sowie komplexe Sonnenschutzlösungen für den Objektbereich.",
     heroImage: {
       src: "/images/leistungen/objektbau-projekte/hero-buerogebaeude.jpg",
-      alt: "Bürogebäude mit Raffstores an allen Fensterbändern, davor der Firmenwagen von Westerwalbesloh",
+      alt: "Schulgebäude in Schloß Holte-Stukenbrock mit Raffstores an allen Fensterbändern, davor der Firmenwagen von Westerwalbesloh",
     },
     cardImage: {
       src: "/images/leistungen/objektbau-projekte/karte.jpg",
-      alt: "Bürogebäude mit Raffstores, davor der Firmenwagen von Westerwalbesloh",
+      alt: "Schulgebäude mit Raffstores, davor der Firmenwagen von Westerwalbesloh",
     },
     introTitle: "Sonnenschutzlösungen im großen Maßstab",
     intro: [
@@ -344,7 +344,7 @@ export const services: Service[] = [
         ],
         image: {
           src: "/images/leistungen/objektbau-projekte/fullservice-montage.jpg",
-          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einem Bürogebäude",
+          alt: "Westerwalbesloh-Monteur auf der Leiter bei der Raffstore-Montage an einer Schule",
         },
       },
       {
@@ -374,9 +374,9 @@ export const services: Service[] = [
             image: { src: "/images/produkte/sonnenschirme/projekt-1.jpg", alt: "Großschirme über den Sitzbereichen im Außenbereich des Campus der Universität Bielefeld" },
           },
           {
-            title: "Raffstores am Bürogebäude",
-            text: "Außenliegender Sonnenschutz an den langen Fensterbändern eines dreigeschossigen Bürogebäudes.",
-            image: { src: "/images/leistungen/objektbau-projekte/projekt-buerogebaeude.jpg", alt: "Dreigeschossiges Bürogebäude mit Raffstores an allen Fensterbändern" },
+            title: "Schule in Schloß Holte-Stukenbrock",
+            text: "Außenliegender Sonnenschutz an den langen Fensterbändern eines dreigeschossigen Schulgebäudes.",
+            image: { src: "/images/leistungen/objektbau-projekte/projekt-buerogebaeude.jpg", alt: "Dreigeschossiges Schulgebäude mit Raffstores an allen Fensterbändern" },
           },
           {
             title: "Gewerbe-Neubau",
@@ -395,8 +395,8 @@ export const services: Service[] = [
           },
           {
             title: "Raffstores im Erdgeschoss",
-            text: "Heruntergefahrene Raffstores vor den bodentiefen Fenstern im Erdgeschoss eines Bürogebäudes.",
-            image: { src: "/images/produkte/raffstore/projekt-buero-eg.jpg", alt: "Heruntergefahrener Raffstore im Erdgeschoss eines Bürogebäudes" },
+            text: "Heruntergefahrene Raffstores vor den bodentiefen Fenstern im Erdgeschoss der Schule in Schloß Holte-Stukenbrock.",
+            image: { src: "/images/produkte/raffstore/projekt-buero-eg.jpg", alt: "Heruntergefahrener Raffstore im Erdgeschoss einer Schule" },
           },
         ],
       },
