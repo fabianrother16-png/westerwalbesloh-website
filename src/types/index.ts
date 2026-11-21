@@ -37,6 +37,8 @@ export type ContentSection =
       title: string;
       intro?: string;
       items: VariantItem[];
+      /** Small fabric/colour samples shown below the cards. */
+      swatches?: { title: string; text?: string; items: ImageRef[] };
     }
   | {
       type: "cards";

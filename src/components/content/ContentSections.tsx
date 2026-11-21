@@ -155,6 +155,19 @@ function VariantsBlock({ section, background }: { section: Extract<ContentSectio
           </Reveal>
         ))}
       </div>
+      {section.swatches && (
+        <Reveal className={`mt-6 rounded-3xl border border-brand-border p-6 sm:p-8 ${cardBackground}`}>
+          <h3 className="text-lg font-bold text-brand-ink">{section.swatches.title}</h3>
+          {section.swatches.text && <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-ink-soft">{section.swatches.text}</p>}
+          <ul className="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-8">
+            {section.swatches.items.map((swatch) => (
+              <li key={swatch.src} className="relative aspect-square overflow-hidden rounded-xl border border-brand-border shadow-sm">
+                <Image src={swatch.src} alt={swatch.alt} fill sizes="(min-width: 640px) 10vw, 22vw" className="object-cover" />
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      )}
     </>
   );
 }

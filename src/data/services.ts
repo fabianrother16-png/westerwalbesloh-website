@@ -14,8 +14,8 @@ export const services: Service[] = [
     },
     // The hero photo also appears in the Objektbau project gallery, so the teaser card uses a montage photo.
     cardImage: {
-      src: "/images/home/montage-garten.jpg",
-      alt: "Zwei Westerwalbesloh-Monteure bei der Montage einer Markise im Garten",
+      src: "/images/leistungen/beratung-aufmass-montage/karte.jpg",
+      alt: "Westerwalbesloh-Monteur mit Akkuschrauber bei der Montage auf einem Balkon",
     },
     introTitle: "Beratung vor Ort – durchdacht und praxisorientiert",
     intro: [
@@ -84,6 +84,10 @@ export const services: Service[] = [
     heroImage: {
       src: "/images/leistungen/reparatur-modernisierung/hero.jpg",
       alt: "Firmenwagen von Westerwalbesloh mit Hubsteiger bei einem Reparatureinsatz",
+    },
+    cardImage: {
+      src: "/images/leistungen/reparatur-modernisierung/karte.jpg",
+      alt: "Westerwalbesloh-Monteur auf der Leiter bei der Reparatur einer Gelenkarmmarkise",
     },
     introTitle: "Wir holen das Maximum aus Ihrer Anlage",
     intro: [
@@ -200,6 +204,10 @@ export const services: Service[] = [
       src: "/images/leistungen/wartung/hero.jpg",
       alt: "Monteur von Westerwalbesloh bei der Wartung einer Sonnenschutzanlage",
     },
+    cardImage: {
+      src: "/images/leistungen/wartung/karte.jpg",
+      alt: "Westerwalbesloh-Monteur bei Wartungsarbeiten an einer Anlage auf einem Balkon",
+    },
     introTitle: "Gewerbliche Wartung & Betreiberpflichten",
     intro: [
       "Als Betreiber technischer Anlagen unterliegen Sie bestimmten Prüfpflichten. Wir unterstützen Sie dabei, diese rechtssicher und effizient zu erfüllen.",
@@ -283,6 +291,10 @@ export const services: Service[] = [
     heroImage: {
       src: "/images/leistungen/objektbau-projekte/detail.jpg",
       alt: "Montage von Raffstoren an einer Bürofassade per Hubsteiger",
+    },
+    cardImage: {
+      src: "/images/leistungen/objektbau-projekte/karte.jpg",
+      alt: "Bürogebäude mit Raffstores, davor der Firmenwagen von Westerwalbesloh",
     },
     introTitle: "Sonnenschutzlösungen im großen Maßstab",
     intro: [
