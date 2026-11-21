@@ -29,13 +29,13 @@ export function WhyUs() {
         </Reveal>
 
         <Reveal delay={120} className="order-1 lg:order-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl sm:aspect-[4/3] lg:aspect-[3/4]">
+          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-3xl">
             <Image
               src="/images/home/firmensitz.jpg"
               alt="Firmengebäude von Westerwalbesloh mit großem Schriftzug und zwei Toren im Innenhof"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover transition-transform duration-700 ease-out hover:scale-105"
+              className="object-cover object-[center_45%] transition-transform duration-700 ease-out hover:scale-105"
             />
           </div>
         </Reveal>
