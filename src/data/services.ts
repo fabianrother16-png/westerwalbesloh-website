@@ -255,8 +255,8 @@ export const services: Service[] = [
       alt: "Monteur von Westerwalbesloh bei der Wartung einer Sonnenschutzanlage",
     },
     cardImage: {
-      src: "/images/leistungen/wartung/karte-fassade.jpg",
-      alt: "Lange Schulfassade mit Raffstores an allen Fensterbändern in Schloß Holte-Stukenbrock",
+      src: "/images/leistungen/wartung/karte-vertrag.jpg", // Foto: Amina Atar, Unsplash
+      alt: "Handschlag über einem unterschriebenen Wartungsvertrag am Schreibtisch",
     },
     introTitle: "Gewerbliche Wartung & Betreiberpflichten",
     intro: [
