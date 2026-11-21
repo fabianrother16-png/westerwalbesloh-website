@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Fragen zum Sonnenschutz? Kontaktieren Sie uns für eine individuelle Beratung in Gütersloh & OWL. Wir planen Ihr Projekt maßgeschneidert. Jetzt anfragen!",
   path: "/kontakt",
-  image: "/images/projekte/screens-haus.jpg",
+  image: "/images/home/team.jpg",
 });
 
 const contactSteps = [
@@ -42,8 +42,10 @@ export default function KontaktPage() {
         eyebrow="Kontakt"
         title="Wir sind gerne für Sie da"
         description="Ob Beratung, Reparatur, Modernisierung oder eine Frage zu einem bestehenden Projekt – rufen Sie uns an oder schreiben Sie uns. Wir melden uns zuverlässig bei Ihnen zurück."
-        image="/images/projekte/screens-haus.jpg"
-        imageAlt="Wohnhaus mit außenliegenden Senkrechtmarkisen vor den Fenstern, montiert von Westerwalbesloh"
+        image="/images/home/team.jpg"
+        imageAlt="Das Team von Westerwalbesloh vor der Firmenhalle"
+        imagePosition="object-[center_8%]"
+        imageUnoptimized
       />
       <Section background="surface">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr]">
