@@ -107,7 +107,7 @@ export const products: Product[] = [
             ],
           },
           {
-            title: "Smart Home (Somfy)",
+            title: "Smart Home (Somfy & WAREMA WMS)",
             text: "Steuerung per App, Zeitplan oder vollautomatisch über Wind- und Sonnensensoren von Somfy oder die WMS-Wetterstation von WAREMA. Die Zentrale ist bei Somfy die TaHoma, bei WAREMA die WMS WebControl pro. Auf Wunsch auch mit Sprachsteuerung.",
             image: img("raffstore", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
             options: [
@@ -115,6 +115,7 @@ export const products: Product[] = [
               { label: "TaHoma-App", image: { ...img("raffstore", "bedienung/tahoma-app-screen.jpg", "Smartphone mit der Somfy-TaHoma-App, Ansicht „Mein Haus“"), position: "object-contain! bg-white" } },
               // Foto: Lazar Gugleta / Unsplash (Unsplash-Lizenz).
               { label: "Sprachsteuerung (z. B. Alexa)", image: img("raffstore", "bedienung/sprachsteuerung-alexa.jpg", "Smart Speaker mit Sprachassistent Alexa auf einem Holztisch") },
+              { label: "WAREMA WMS WebControl pro", image: { ...img("raffstore", "bedienung/warema-webcontrol-pro.jpg", "Smartphone mit der App WMS WebControl pro von WAREMA"), position: "object-contain! bg-white" } },
             ],
           },
         ],
@@ -515,7 +516,7 @@ export const products: Product[] = [
           },
           {
             title: "Smart Home (Somfy & WAREMA)",
-            text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung.",
+            text: "Steuerung per App, Zeitplan oder vollautomatisch über Wind- und Sonnensensoren von Somfy oder die WMS-Wetterstation von WAREMA. Die Zentrale ist bei Somfy die TaHoma, bei WAREMA die WMS WebControl pro. Auf Wunsch auch mit Sprachsteuerung.",
             image: img("markisen", "bedienung/wms-app.webp", "Smartphone mit WAREMA-WMS-App vor einer ausgefahrenen Gelenkarmmarkise"),
             options: [
               { label: "WMS Wetterstation", image: img("markisen", "bedienung/wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
