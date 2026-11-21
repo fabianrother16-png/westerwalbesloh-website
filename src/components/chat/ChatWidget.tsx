@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { IconClose, IconSend, IconSparkles } from "@/components/icons/UiIcons";
+import { IconClose, IconMic, IconSend, IconSparkles } from "@/components/icons/UiIcons";
+import { useDictation } from "@/components/chat/useDictation";
 import { company } from "@/data/company";
 import type { ChatMessage } from "@/types";
 
@@ -59,6 +60,23 @@ export function ChatWidget() {
   const [error, setError] = useState<string | null>(null);
   const [mode, setMode] = useState<"ai" | "faq">("ai");
   const scrollRef = useRef<HTMLDivElement>(null);
+  // Text typed before dictation started stays in front of the spoken words.
+  const dictationBaseRef = useRef("");
+  const dictation = useDictation((spoken) => setInput([dictationBaseRef.current, spoken].filter(Boolean).join(" ")));
+  const [dictationInfo, setDictationInfo] = useState<"hidden" | "shown" | "accepted">("hidden");
+
+  function startDictation() {
+    dictationBaseRef.current = input.trim();
+    setDictationInfo("accepted");
+    dictation.start();
+  }
+
+  function toggleDictation() {
+    if (dictation.listening) return dictation.stop();
+    // Before the first use, say where the voice is processed.
+    if (dictationInfo !== "accepted") return setDictationInfo("shown");
+    startDictation();
+  }
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -67,6 +85,7 @@ export function ChatWidget() {
   async function sendMessage(text: string) {
     const trimmed = text.trim();
     if (!trimmed || loading) return;
+    dictation.stop();
 
     const nextMessages: ChatMessage[] = [...messages, { role: "user", content: trimmed }];
     setMessages([...nextMessages, { role: "assistant", content: "" }]);
@@ -192,6 +211,38 @@ export function ChatWidget() {
             )}
           </div>
 
+          {dictationInfo === "shown" && (
+            <div className="border-t border-brand-border bg-brand-sand px-4 py-3 text-xs leading-relaxed text-brand-ink-soft">
+              <p>
+                Die Spracheingabe nutzt die Spracherkennung Ihres Browsers. Je nach Browser wird Ihre Sprache dafür an
+                den Browser-Anbieter übertragen (bei Chrome an Google, bei Edge an Microsoft). Mehr dazu in der{" "}
+                <Link href="/datenschutz" className="underline">
+                  Datenschutzerklärung
+                </Link>
+                .
+              </p>
+              <div className="mt-2 flex gap-2">
+                <button
+                  type="button"
+                  onClick={startDictation}
+                  className="rounded-full bg-brand-accent px-3.5 py-1.5 font-semibold text-white"
+                >
+                  Spracheingabe starten
+                </button>
+                <button type="button" onClick={() => setDictationInfo("hidden")} className="rounded-full px-3 py-1.5 underline">
+                  Lieber tippen
+                </button>
+              </div>
+            </div>
+          )}
+          {(dictation.listening || dictation.error) && (
+            <p
+              role="status"
+              className={`border-t border-brand-border px-4 py-2 text-xs ${dictation.error ? "text-brand-error" : "text-brand-ink-soft"}`}
+            >
+              {dictation.error ?? "Ich höre zu … sprechen Sie Ihre Frage. Zum Beenden aufs Mikrofon tippen."}
+            </p>
+          )}
           <form
             onSubmit={(event) => {
               event.preventDefault();
@@ -208,8 +259,24 @@ export function ChatWidget() {
               onChange={(event) => setInput(event.target.value)}
               placeholder="Ihre Frage…"
               maxLength={500}
-              className="flex-1 rounded-full border border-brand-border px-4 py-2.5 text-sm focus-visible:outline-brand-accent"
+              className="min-w-0 flex-1 rounded-full border border-brand-border px-4 py-2.5 text-sm focus-visible:outline-brand-accent"
             />
+            {dictation.supported && (
+              <button
+                type="button"
+                onClick={toggleDictation}
+                aria-pressed={dictation.listening}
+                aria-label={dictation.listening ? "Spracheingabe beenden" : "Frage diktieren"}
+                title={dictation.listening ? "Spracheingabe beenden" : "Frage diktieren"}
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                  dictation.listening
+                    ? "animate-pulse border-brand-error bg-brand-error text-white"
+                    : "border-brand-border text-brand-primary hover:border-brand-primary"
+                }`}
+              >
+                <IconMic className="h-4 w-4" />
+              </button>
+            )}
             <button
               type="submit"
               disabled={loading || !input.trim()}
