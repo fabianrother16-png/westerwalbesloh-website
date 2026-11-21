@@ -12,10 +12,10 @@ export const services: Service[] = [
       src: "/images/leistungen/beratung-aufmass-montage/hero.jpg",
       alt: "Glasfassade eines Neubaus mit Raffstoren, montiert von Westerwalbesloh",
     },
-    // The hero photo also appears in the Objektbau project gallery, so the teaser card uses a montage photo.
+    // Kachel zeigt das Beratungsfoto (Unsplash, Platzhalter bis zum eigenen Beratungsfoto) – Fabian: Montagefoto passt nicht zu Beratung & Aufmaß.
     cardImage: {
-      src: "/images/leistungen/beratung-aufmass-montage/karte.jpg",
-      alt: "Westerwalbesloh-Monteur mit Akkuschrauber bei der Montage auf einem Balkon",
+      src: "/images/leistungen/beratung-aufmass-montage/beratung-stoffauswahl.jpg",
+      alt: "Zwei Personen wählen gemeinsam Stoffmuster für Sonnenschutz aus",
     },
     introTitle: "Beratung vor Ort – durchdacht und praxisorientiert",
     intro: [
@@ -354,26 +354,21 @@ export const services: Service[] = [
         title: "Objektbau in Gütersloh und OWL",
         items: [
           {
-            title: "Neubau mit Raffstoren",
-            text: "Außenliegender Sonnenschutz an allen Fensterbändern eines zweigeschossigen Neubaus.",
-            image: { src: "/images/leistungen/objektbau-projekte/neubau.jpg", alt: "Neubau mit Raffstoren an allen Fensterbändern" },
+            title: "Schulneubau mit Raffstoren",
+            text: "Außenliegender Sonnenschutz an allen Fensterbändern eines zweigeschossigen Schulneubaus.",
+            image: { src: "/images/leistungen/objektbau-projekte/neubau.jpg", alt: "Zweigeschossiger Schulneubau mit Raffstoren an allen Fensterbändern" },
           },
           {
-            title: "Textiler Screen an der Fassade",
-            text: "Montage eines großflächigen Screens als Blend- und Hitzeschutz an einem Gewerbeobjekt.",
-            image: { src: "/images/leistungen/objektbau-projekte/screen-montage.jpg", alt: "Frisch montierter textiler Screen an einem Gewerbegebäude" },
+            title: "Textilscreen an einer Sporthalle",
+            text: "Montage eines großflächigen Textilscreens als Blend- und Hitzeschutz an der Fassade einer Sporthalle.",
+            image: { src: "/images/leistungen/objektbau-projekte/screen-montage.jpg", alt: "Frisch montierter Textilscreen an der Fassade einer Sporthalle" },
           },
           {
-            title: "Beschattung für den Handel",
-            text: "Gelenkarmmarkisen über den Schaufenstern eines Ladengeschäfts – funktional und einladend.",
-            image: { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Markisen über den Schaufenstern eines Ladengeschäfts" },
+            title: "Schenke im Bahnhof, Gütersloh",
+            text: "Neue Tücher für die Markisen über den Fenstern der Schenke im Bahnhof am Hauptbahnhof Gütersloh.",
+            image: { src: "/images/leistungen/objektbau-projekte/gallery-schenke.jpg", alt: "Neu bezogene Markisen an der Schenke im Bahnhof am Hauptbahnhof Gütersloh" },
           },
-          // Eigene Fotos aus dem Drive-Ordner „Webseite“ (21.11.2026). Orte/Kunden ergänzt Fabian später.
-          {
-            title: "Universität Bielefeld",
-            text: "Großschirme für den Außenbereich des Campus – Schattenplätze für viele Menschen gleichzeitig.",
-            image: { src: "/images/produkte/sonnenschirme/projekt-1.jpg", alt: "Großschirme über den Sitzbereichen im Außenbereich des Campus der Universität Bielefeld" },
-          },
+          // Eigene Fotos aus dem Drive-Ordner „Webseite“ (21.11.2026), Orte laut Fabian.
           {
             title: "Schule in Schloß Holte-Stukenbrock",
             text: "Außenliegender Sonnenschutz an den langen Fensterbändern eines dreigeschossigen Schulgebäudes.",
@@ -385,19 +380,15 @@ export const services: Service[] = [
             image: { src: "/images/leistungen/objektbau-projekte/projekt-gewerbeneubau.jpg", alt: "Eingerüsteter Gewerbe-Neubau, davor ein Monteur von Westerwalbesloh" },
           },
           {
-            title: "Mehrfamilienhaus",
-            text: "Sonnenschutz für einen Neubau mit mehreren Wohneinheiten, montiert während der Bauphase.",
-            image: { src: "/images/leistungen/objektbau-projekte/projekt-mehrfamilienhaus.jpg", alt: "Mehrfamilienhaus im Bau mit Gerüst, davor der Firmenwagen von Westerwalbesloh" },
-          },
-          {
-            title: "Montage in der Höhe",
-            text: "Montage eines Raffstore-Behangs auf dem Laubengang eines mehrgeschossigen Gebäudes.",
+            title: "Reparatur für eine Hausverwaltung",
+            text: "Einen defekten Raffstore haben wir ausgebaut, repariert und wieder eingebaut. Das Bild zeigt den Einbau auf dem Laubengang des mehrgeschossigen Gebäudes.",
             image: { src: "/images/leistungen/objektbau-projekte/projekt-montage-hoehe.jpg", alt: "Monteur von Westerwalbesloh mit einem Raffstore-Behang auf einem Laubengang in der Höhe" },
           },
+          // Querformat-Foto zuletzt: die siebte Kachel läuft über die ganze Breite.
           {
-            title: "Raffstores im Erdgeschoss",
-            text: "Heruntergefahrene Raffstores vor den bodentiefen Fenstern im Erdgeschoss der Schule in Schloß Holte-Stukenbrock.",
-            image: { src: "/images/produkte/raffstore/projekt-buero-eg.jpg", alt: "Heruntergefahrener Raffstore im Erdgeschoss einer Schule" },
+            title: "Universität Bielefeld",
+            text: "Großschirme für den Außenbereich des Campus – Schattenplätze für viele Menschen gleichzeitig.",
+            image: { src: "/images/produkte/sonnenschirme/projekt-1.jpg", alt: "Großschirme über den Sitzbereichen im Außenbereich des Campus der Universität Bielefeld" },
           },
         ],
       },
