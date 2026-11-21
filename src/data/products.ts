@@ -90,6 +90,9 @@ export const products: Product[] = [
             title: "Manuelle Bedienung",
             text: "Bedienen Sie Ihre Raffstore klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
             image: { ...img("raffstore", "bedienung/kurbel.webp", "Gelenkkurbel am Fensterrahmen, dahinter die Lamellen einer heruntergelassenen Außenjalousie"), position: "object-[30%_50%]" },
+            options: [
+              { label: "Kurbel", image: { ...img("raffstore", "bedienung/kurbel-detail.jpg", "Gelenkkurbel für die Handbedienung eines Raffstores"), position: "object-contain! bg-[#d9dbdd]" } },
+            ],
           },
           {
             title: "Motorisiert",
