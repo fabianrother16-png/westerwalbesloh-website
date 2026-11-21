@@ -106,7 +106,7 @@ export const products: Product[] = [
           },
           {
             title: "Smart Home (Somfy)",
-            text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung.",
+            text: "Steuerung per App, Zeitplan oder vollautomatisch über Wind- und Sonnensensoren von Somfy oder die WMS-Wetterstation von WAREMA. Die Zentrale ist bei Somfy die TaHoma, bei WAREMA die WMS WebControl pro. Auf Wunsch auch mit Sprachsteuerung.",
             image: img("raffstore", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
             options: [
               { label: "TaHoma switch", image: img("raffstore", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
@@ -467,7 +467,8 @@ export const products: Product[] = [
           {
             title: "Manuelle Bedienung",
             text: "Bedienen Sie Ihre Markise klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
-            image: img("markisen", "bedienung/kurbel.webp", "Kassettenmarkise von unten mit Kurbelgetriebe und eingehängter Kurbel"),
+            // shortcut: Platzhalter ohne Kurbel – kein nutzbares Foto einer Markise mit eingehängter Kurbel gefunden; Fabian liefert ein eigenes.
+            image: img("markisen", "bedienung/markise-terrasse.jpg", "Gelenkarmmarkise mit grau gestreiftem Tuch über einer Terrasse, montiert von Westerwalbesloh"),
           },
           {
             title: "Motorisierter Antrieb",
@@ -485,6 +486,8 @@ export const products: Product[] = [
             options: [
               { label: "WMS Wetterstation", image: img("markisen", "bedienung/wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
               { label: "Somfy TaHoma", image: img("markisen", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
+              { label: "Somfy Windsensor", image: { ...img("markisen", "bedienung/somfy-windsensor.jpg", "Somfy Windsensor Eolis WireFree io"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA WMS WebControl pro", image: { ...img("markisen", "bedienung/warema-webcontrol-pro.jpg", "Smartphone mit der App WMS WebControl pro von WAREMA"), position: "object-contain! bg-white" } },
             ],
           },
         ],
@@ -863,8 +866,9 @@ export const products: Product[] = [
           },
           {
             title: "Flexible Dimensionen",
-            text: "Spannweiten von 2 m bis über 6 m.",
-            image: img("sonnenschirme", "gastronomie-cafe.jpg", "Rote Sonnenschirme über dem Außenbereich eines Straßencafés"),
+            text: "Spannweiten von 2 m bis 10 m – vom kompakten CARAVITA Primus bis zum Großschirm Grande.",
+            // Bilder: CARAVITA (caravita.de, Primus und Grande) – laut Fabian als Fachpartner nutzbar, schriftliche Freigabe vor Go-live ablegen.
+            image: img("sonnenschirme", "formen/dimensionen-klein-gross.jpg", "Links kleinere CARAVITA-Schirme Primus auf einer Terrasse, rechts ein großer CARAVITA-Schirm Grande über einem Straßencafé"),
           },
           {
             title: "Individuelle Maßarbeit",
@@ -1016,23 +1020,32 @@ export const products: Product[] = [
           },
           {
             title: "Funk-Steuerung",
-            text: "Bedienen Sie Ihren Sonnenschutz bequem per Handsender, ganz ohne zum Schalter zu laufen. Die Installation ist sauber und erfordert deutlich weniger Verkabelungsaufwand.",
+            text: "Bedienen Sie Ihren Sonnenschutz bequem per Handsender oder Funk-Wandsender, ganz ohne zum Schalter zu laufen. Wir arbeiten mit beiden großen Funksystemen: Somfy RTS und io sowie WAREMA WMS. Die Installation ist sauber und erfordert deutlich weniger Verkabelung.",
             // Bilder: Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
-            image: { ...img("steuerung-antriebe", "somfy-situo-5.jpg", "Somfy Funkhandsender Situo 5 io mit Holzoptik"), position: "object-contain! bg-white p-4" },
+            image: { ...img("steuerung-antriebe", "somfy-situo-pure.jpg", "Weißer Somfy Funkhandsender Situo 5 Variation io Pure"), position: "object-contain! bg-white p-4" },
+            options: [
+              { label: "Somfy RTS und io", image: { ...img("steuerung-antriebe", "somfy-situo-pure.jpg", "Weißer Somfy Funkhandsender Situo 5 Variation io Pure"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA WMS", image: img("steuerung-antriebe", "warema-handsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+            ],
           },
           {
             title: "Smart Home & App",
-            text: "Steuern Sie Ihre Anlagen per Smartphone oder Sprachbefehl – egal, wo Sie gerade sind. Erstellen Sie eigene Szenarien, die Ihren Alltag spürbar komfortabler und sicherer machen.",
+            text: "Steuern Sie Ihre Anlagen per Smartphone oder Sprachbefehl – egal, wo Sie gerade sind. Die Zentrale dafür ist bei Somfy die TaHoma, bei WAREMA die WMS WebControl pro. Erstellen Sie eigene Szenarien, die Ihren Alltag spürbar komfortabler und sicherer machen.",
             image: img("steuerung-antriebe", "tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
             options: [
               { label: "TaHoma-App", image: { ...img("steuerung-antriebe", "tahoma-app.jpg", "Somfy TaHoma switch neben einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
               { label: "Sprachsteuerung", image: { ...img("steuerung-antriebe", "sprachsteuerung.jpg", "Somfy TaHoma switch mit den Hinweisen „works with Alexa“, „Hey Google“ und „Apple HomeKit“"), position: "object-contain! bg-white" } },
+              { label: "WAREMA WMS WebControl pro", image: { ...img("steuerung-antriebe", "warema-webcontrol-pro.jpg", "Smartphone mit der App WMS WebControl pro von WAREMA"), position: "object-contain! bg-white" } },
             ],
           },
           {
             title: "Sensoren & Automatik",
-            text: "Sonnensensor, Windwächter, Regen- und Helligkeitssensor regeln Ihren Schutz vollautomatisch nach Wetterlage. So fahren Markisen bei Sturm sicher ein oder beschatten bei Sonne ganz von selbst.",
+            text: "Sonnensensor, Windwächter, Regen- und Helligkeitssensor regeln Ihren Schutz vollautomatisch nach Wetterlage. So fahren Markisen bei Sturm sicher ein oder beschatten bei Sonne ganz von selbst. Sensoren und Wetterstationen bieten wir von Somfy und von WAREMA an.",
             image: img("steuerung-antriebe", "sensoren.jpg", "Wind- und Sonnensensor an einer Markise"),
+            options: [
+              { label: "Somfy Windsensor", image: { ...img("steuerung-antriebe", "somfy-windsensor.jpg", "Somfy Windsensor Eolis WireFree io"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA WMS Wetterstation", image: img("steuerung-antriebe", "warema-wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
+            ],
           },
         ],
       },
