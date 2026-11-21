@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Suchen Sie den perfekten Sonnenschutz? Entdecken Sie Markisen, Rollläden & Raffstores in Gütersloh & OWL. Qualität vom Meisterbetrieb. Jetzt ansehen!",
   path: "/produkte",
-  image: "/images/produkte/overview-cta.jpg",
+  image: "/images/produkte/overview-raffstore.jpg",
 });
 
 export default function ProdukteOverviewPage() {
@@ -33,8 +33,8 @@ export default function ProdukteOverviewPage() {
         eyebrow="Sonnenschutz aus einer Hand"
         title="Unsere Produkte"
         description="Von Markisen und Sonnenschirmen über maßgefertigten Insektenschutz bis zu intelligenten Steuerungen: Qualitätsprodukte namhafter Hersteller, individuell geplant und fachgerecht montiert."
-        image="/images/produkte/overview-cta.jpg"
-        imageAlt="Modernes Wohnhaus mit Lamellen-Pergola in der Abenddämmerung"
+        image="/images/produkte/overview-raffstore.jpg"
+        imageAlt="Raffstore vor einem großen Fenster in einer dunklen Holzfassade"
       >
         <Button href="/kontakt" size="lg">
           Kostenlose Beratung anfragen

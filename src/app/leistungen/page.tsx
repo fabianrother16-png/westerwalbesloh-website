@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Probleme mit dem Sonnenschutz? Wir bieten Beratung, Montage & Reparatur in Gütersloh & OWL. Ihr Partner für Markisen & mehr. Jetzt Termin anfragen!",
   path: "/leistungen",
-  image: "/images/leistungen/overview-cta.jpg",
+  image: "/images/leistungen/overview-raffstore.jpg",
 });
 
 export default function LeistungenOverviewPage() {
@@ -30,8 +30,8 @@ export default function LeistungenOverviewPage() {
         eyebrow="Leistungen"
         title="Leistungen & Ablauf"
         description="Ehrliches Handwerk, transparente Beratung und langlebige Technik aus einer Hand – von der ersten Beratung bis zur Wartung gewerblicher Anlagen."
-        image="/images/leistungen/overview-cta.jpg"
-        imageAlt="Holzterrasse mit Korbstühlen an einem modernen Haus"
+        image="/images/leistungen/overview-raffstore.jpg"
+        imageAlt="Modernes Wohnhaus mit dunklen Raffstores über Eck an der Terrasse"
       >
         <Button href="/kontakt" size="lg">
           Termin anfragen
