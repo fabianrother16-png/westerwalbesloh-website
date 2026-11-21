@@ -45,7 +45,7 @@ export const products: Product[] = [
         items: [
           {
             title: "Lamellenformen",
-            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik, stabilen randgebördelten Lamellen oder Z-Lamellen, die besonders windstabil sind und Räume zuverlässig abdunkeln.",
+            text: "Wählen Sie zwischen filigranen Flachlamellen für eine leichte Optik, stabilen randgebördelten Lamellen oder Z-Lamellen, die besonders windstabil sind und Räume gut abdunkeln.",
             image: img("raffstore", "lamellen-eigenes-foto.jpg", "Nahaufnahme von Raffstore-Lamellen mit Leiterkordel an einer Holzfassade"),
             // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live vom Kunden über WAREMA klären lassen.
             options: [
@@ -141,7 +141,7 @@ export const products: Product[] = [
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",
     manufacturers: [
       {
-        name: "WAREMA – einer der führenden Raffstore-Hersteller Europas",
+        name: "WAREMA – Raffstore vom deutschen Markenhersteller",
         text: "Die Marke steht für Innovation, höchste Qualitätsstandards und jahrzehntelange Erfahrung im Sonnenschutz. WAREMA-Raffstore überzeugen durch präzise Verarbeitung, langlebige Materialien und ausgereifte Technik – für zuverlässigen Sonnen- und Blendschutz sowie eine dauerhaft wertige Fassadengestaltung.",
         logo: { src: "/images/partner/warema.png", width: 1025, height: 650 },
       },
@@ -183,6 +183,22 @@ export const products: Product[] = [
       {
         question: "Wo kann ich in Gütersloh einen Raffstore kaufen?",
         answer: "Bei uns – allerdings nicht von der Stange: Jede Fassade ist anders. Deshalb beginnt der Kauf eines Raffstores bei uns mit einem kostenlosen Vor-Ort-Termin, exaktem Aufmaß und einer Beratung, die auf Ihr Haus zugeschnitten ist.",
+      },
+      {
+        question: "Was passiert mit dem Raffstore bei Sturm?",
+        answer: "Bei starkem Wind sollte ein Raffstore hochgefahren sein, bevor die zulässige Windgeschwindigkeit überschritten ist oder wenn ein Sturm angekündigt ist. Wie viel Wind eine Anlage verträgt, hängt vom System und von der Einbausituation ab und steht in den Herstellerunterlagen. Mit einem Windsensor von Somfy oder einer WAREMA-Wetterstation fährt der Raffstore automatisch hoch, auch wenn Sie nicht zu Hause sind. Den Grenzwert stellen wir dabei passend zu Ihrer Anlage ein.",
+      },
+      {
+        question: "Wird es mit einem Raffstore im Schlafzimmer richtig dunkel?",
+        answer: "Mit Z-Lamellen, die beim Schließen ineinandergreifen, dunkelt ein Raffstore Räume gut ab. Ganz lichtdicht ist er aber nicht: An den Rändern und zwischen den Lamellen kann etwas Licht durchscheinen. Soll ein Raum nachts wirklich dunkel sein, ist ein Rollladen oft die bessere Wahl. Beim Vor-Ort-Termin besprechen wir, was für welches Zimmer passt.",
+      },
+      {
+        question: "Mein Raffstore hängt schief oder fährt nicht mehr – reparieren Sie das?",
+        answer: "Ja. Fährt der Raffstore nicht mehr ganz hoch oder herunter, stellen wir die Endlagen meist direkt vor Ort neu ein. Hängt der Behang schief, hat sich oft ein Textband ungleich gelängt. Dann tauschen wir die Bänder in unserer Halle, damit sie wieder exakt gleich lang sind. Einen defekten Motor wechseln wir meist ebenfalls in der Halle, manchmal auch direkt vor Ort.",
+      },
+      {
+        question: "Mein Raffstore läuft nur über einen Schalter. Kann ich ihn später per App steuern?",
+        answer: "In vielen Fällen ja. Je nach Antrieb rüsten wir Funk nach und verbinden die Anlage mit einer Somfy TaHoma oder einer WAREMA WMS WebControl pro. Ob das bei Ihrem Motor geht, prüfen wir vor Ort.",
       },
     ],
     icon: "raffstore",
@@ -335,6 +351,22 @@ export const products: Product[] = [
       {
         question: "Was tun, wenn der Gurt reißt oder der Rollladen klemmt?",
         answer: "Das gehört zu den häufigsten Reparaturanfragen. Rufen Sie uns einfach an – Gurte, Wickler, Wellen und Motoren tauschen wir schnell und fachgerecht aus.",
+      },
+      {
+        question: "Mein Rollladen ist im Winter festgefroren – was soll ich tun?",
+        answer: "Bitte nicht mit Gewalt hochfahren oder am Gurt ziehen, sondern warten, bis das Eis getaut ist. Somfy-io-Motoren wie der RS100 io erkennen, wenn die Endleiste an der Fensterbank angefroren ist, und schalten zum Schutz des Rollladens ab. Läuft der Rollladen danach nicht mehr richtig, rufen Sie uns an.",
+      },
+      {
+        question: "Können die Rollläden im Urlaub automatisch fahren?",
+        answer: "Ja, mit einer Zeitschaltuhr oder einer Somfy TaHoma. Die TaHoma hat eine Anwesenheitssimulation: Die Rollläden bewegen sich dann so, als wäre jemand zu Hause. Einstellen und ändern können Sie das in der App, auch von unterwegs.",
+      },
+      {
+        question: "Gibt es Rollläden auch für Dachfenster?",
+        answer: "Ja. Für VELUX Dachfenster liefern und montieren wir den VELUX Solar-Rollladen. Er bekommt seinen Strom über eine Solarzelle im Kasten, deshalb muss kein Kabel verlegt werden. Das macht ihn in vielen Fällen auch für bereits eingebaute Dachfenster interessant. Ob er zu Ihrem Fenster passt, prüfen wir vor Ort.",
+      },
+      {
+        question: "Ich habe schon Somfy-Funk. Kann ich das mit dem Smartphone verbinden?",
+        answer: "Ja. Wir verbinden Ihre vorhandenen Somfy-Funkanlagen mit einer TaHoma, auch ältere RTS-Systeme. Auf Wunsch rüsten wir RTS-Anlagen auch auf io um. Der Vorteil: Die Anlage meldet zurück, ob ein Befehl angekommen ist.",
       },
     ],
     icon: "rollladen",
@@ -542,6 +574,26 @@ export const products: Product[] = [
         question: "Kann das Markisentuch ausgetauscht werden?",
         answer: "Ja. Ist das Tuch verblichen oder beschädigt, bespannen wir Ihr vorhandenes Gestell mit einem neuen Stoff – oft deutlich günstiger als eine neue Markise.",
       },
+      {
+        question: "Darf die Markise bei Regen ausgefahren bleiben?",
+        answer: "Eine Markise ist ein Sonnenschutz und kein Regendach. Die Imprägnierung lässt Wasser abperlen, macht das Tuch aber nicht wasserdicht. WAREMA empfiehlt deshalb, die Markise bei länger anhaltendem oder starkem Regen einzufahren, wenn das Modell nicht ausdrücklich dafür freigegeben ist.",
+      },
+      {
+        question: "Was mache ich, wenn ich die Markise nass eingefahren habe?",
+        answer: "Fahren Sie die Markise aus, sobald es wieder trocken ist, und lassen Sie das Tuch vollständig trocknen. Bleibt ein feuchtes Tuch länger aufgewickelt, können Schimmel- oder Stockflecken entstehen. Außerdem prägen sich Falten und Wellen in nassem Stoff besonders stark ein.",
+      },
+      {
+        question: "Sind Falten und Wellen im Markisentuch normal?",
+        answer: "Leichte Falten und Wellen kommen bei genähten Markisentüchern vor und lassen sich nicht ganz vermeiden. Beim Aufrollen wird der Stoff an Nähten und Säumen stärker gespannt als dazwischen, dadurch können Wellen entstehen. An Knickstellen aus dem Zuschnitt und Nähen sehen Sie im Gegenlicht manchmal Streifen, besonders bei hellen Farben. Feuchtigkeit verstärkt diese Effekte.",
+      },
+      {
+        question: "Wie reinige ich mein Markisentuch richtig?",
+        answer: "Losen Schmutz bürsten Sie am besten mit einer weichen Bürste vom trockenen Tuch ab. Bei waschbaren Stoffen hilft eine milde Reinigungslösung mit höchstens 30 °C, die Sie vorher an einer unauffälligen Stelle testen. Hochdruckreiniger, harte Bürsten, scharfe Reinigungsmittel und die Waschmaschine schaden Stoff, Nähten und Imprägnierung.",
+      },
+      {
+        question: "Kann ich meine Kurbelmarkise auf einen Motor umrüsten lassen?",
+        answer: "Bei vielen Markisen ist das möglich. Statt der Kurbel kommt ein passender Rohrmotor in die Tuchwelle, dafür wird ein Stromanschluss in der Nähe der Markise gebraucht. Mit einem Funkmotor bedienen Sie die Markise per Handsender oder Wandsender. Ob Ihre Markise geeignet ist, prüfen wir bei einem Termin vor Ort.",
+      },
     ],
     icon: "markise",
     metaTitle: "Markisen Gütersloh | Sonnenschutz nach Maß | Westerwalbesloh",
@@ -670,6 +722,22 @@ export const products: Product[] = [
         question: "Gibt es Insektenschutz auch für Dachfenster und Sonderformen?",
         answer: "Ja. Ob Dachflächenfenster, Rundbogen oder Schräge – wir nehmen das genaue Aufmaß vor Ort und fertigen Ihren Insektenschutz passgenau an.",
       },
+      {
+        question: "Welcher Insektenschutz passt an meine Terrassentür?",
+        answer: "Das hängt vom Platz an der Tür ab und davon, wie oft Sie durchgehen. Ein Drehrahmen öffnet wie eine normale Tür, eine Schiebeanlage spart bei breiten Glasfronten Platz, und eine Pendeltür geht in beide Richtungen auf und schließt von selbst. Ist kein Schwenkbereich frei, ist ein Plissee die platzsparende Lösung. Wir sehen uns die Tür vor Ort an und empfehlen Ihnen das passende System.",
+      },
+      {
+        question: "Hält Insektenschutz auch Pollen ab?",
+        answer: "Mit einem speziellen Gewebe ja. Das VisionAir-Gewebe von WAREMA ist auf Pollenschutz ausgelegt und hält neben Insekten auch Feinstaub ab. Es ist sehr durchsichtig und passt in Spannrahmen, Drehrahmen, Pendeltüren und Schiebeanlagen. Auch ein vorhandener WAREMA-Rahmen lässt sich später damit nachrüsten.",
+      },
+      {
+        question: "Wir haben Hund und Katze. Hält das Gewebe das aus?",
+        answer: "Für Haushalte mit Tieren gibt es ein reißfestes Haustiergewebe aus vinylbeschichtetem Polyester, das Krallen besser standhält als normales Gewebe. In einen Drehrahmen bauen wir auf Wunsch eine Katzen- oder Hundeklappe ein. Auch Pendeltüren sind robust und gehen in beide Richtungen auf.",
+      },
+      {
+        question: "Muss ich den Insektenschutz im Winter abnehmen?",
+        answer: "In der Regel nicht. Die Aluminiumrahmen und Gewebe sind für draußen gemacht und können auch im Winter am Fenster bleiben. Wer den Rahmen trotzdem abnehmen möchte, wählt einen Spannrahmen zum Einhängen. Die WAREMA-Ausführung mit Federstiften lässt sich zum Beispiel ohne Werkzeug abnehmen und wieder einsetzen.",
+      },
     ],
     icon: "insektenschutz",
     metaTitle: "Insektenschutz Gütersloh | Maßarbeit | Westerwalbesloh",
@@ -787,6 +855,22 @@ export const products: Product[] = [
       {
         question: "Was ist der Unterschied zwischen Plissee und Wabenplissee?",
         answer: "Ein Plissee besteht aus einer gefalteten Stoffbahn, ein Wabenplissee aus zwei verbundenen Stoffbahnen, die eine isolierende Luftkammer bilden. Das Wabenplissee isoliert dadurch spürbar besser gegen Wärme und Kälte.",
+      },
+      {
+        question: "Hält ein Plissee die Hitze genauso gut ab wie ein Rollladen?",
+        answer: "Nein. Innenliegender Sonnenschutz verringert die Sonneneinstrahlung nach Angaben der Deutschen Energie-Agentur, auf die sich der Bundesverband Rollladen + Sonnenschutz beruft, nur um etwa 25 Prozent, weil die Wärme schon durch die Scheibe im Raum ist. Außenliegende Systeme wie Rollläden oder Raffstore halten rund 75 Prozent ab. Gut wirkt die Kombination: außen gegen Hitze, innen gegen Blendung und für den Sichtschutz.",
+      },
+      {
+        question: "Wie reinige ich mein Plissee richtig?",
+        answer: "Staub entfernen Sie mit einer weichen Kleiderbürste oder saugen ihn vorsichtig ab. Leichte Flecken wischen Sie mit einem weichen Tuch und etwas Feinwaschmittellauge ab. Bügeln dürfen Sie die Stoffe nicht. Was genau für Ihren Stoff gilt, sagen wir Ihnen gern, bei Plissees mit Motor sprechen Sie die Reinigung bitte vorher mit uns ab.",
+      },
+      {
+        question: "Passt ein Rollo oder Plissee an jedes Dachfenster?",
+        answer: "An fast jedes. KADECO fertigt Dachfenster-Rollos mit Trägern für gerade und für schräge Fensterrahmen, und zwar passend zu Hersteller und Typ Ihres Fensters. Deshalb messen wir vor Ort aus und notieren die Angaben vom Typenschild am Fenster. Wenn Sie die Hitze schon außen abhalten möchten, gibt es für VELUX-Dachfenster zusätzlich den VELUX Solar-Rollladen.",
+      },
+      {
+        question: "Welcher Sonnenschutz eignet sich fürs Kinderzimmer?",
+        answer: "Verspannte Plissees kommen ohne frei hängende Schnüre und Ketten aus und werden über einen Griff bedient, motorisierte Ausführungen ebenso. Für frei hängende Plissees bietet KADECO kindersichere Bedienteile nach DIN EN 13120 an. Wir beraten Sie bei der Auswahl, damit keine Schnüre oder Ketten in Reichweite Ihrer Kinder hängen.",
       },
     ],
     icon: "innensonnenschutz",
@@ -970,6 +1054,26 @@ export const products: Product[] = [
         question: "Kann man Schirme nachträglich ausstatten?",
         answer: "Ja, viele unserer Modelle sind modular. Zubehör wie integrierte LED-Beleuchtung, Heizstrahler oder alternative Befestigungssysteme lässt sich oft problemlos nachrüsten.",
       },
+      {
+        question: "Muss ich den Sonnenschirm bei Wind schließen?",
+        answer: "Ja. CARAVITA weist darauf hin, dass Schirme aus Sicherheitsgründen bei Wind grundsätzlich geschlossen werden müssen. Eine Windhaube oder ein Winddach lässt Luft nach oben entweichen, dadurch bewegt sich der Schirm bei Wind weniger. Das hilft, ersetzt das Schließen aber nicht.",
+      },
+      {
+        question: "Wie schwer muss der Schirmständer sein?",
+        answer: "Eine pauschale Angabe gibt es nicht, weil Schirmgröße, Standort und Windverhältnisse sehr unterschiedlich sind. CARAVITA rät im Zweifel zu einem schwereren Ständer oder einer festen Verankerung. Wir schauen uns Ihren Standort an und empfehlen Ihnen die passende Befestigung.",
+      },
+      {
+        question: "Wie pflege und reinige ich die Schirmbespannung?",
+        answer: "Bürsten Sie Schmutz regelmäßig trocken aus und entfernen Sie Laub möglichst sofort. Hartnäckige Flecken waschen Sie von Hand mit etwas Feinwaschmittel aus, spülen mit klarem Wasser nach, lassen den Stoff trocknen und imprägnieren ihn neu. Waschen Sie den Bezug nur kalt und nie in der Waschmaschine, denn Acrylstoff läuft schon bei niedrigen Temperaturen ein. Hochdruckreiniger und harte Bürsten schaden der Imprägnierung.",
+      },
+      {
+        question: "Kann der Sonnenschirm den ganzen Sommer draußen stehen bleiben?",
+        answer: "Ja, der Schirm kann die Saison über draußen stehen. Schließen Sie ihn, wenn Sie ihn nicht nutzen, und sichern Sie ihn mit dem Gurtband, damit das Tuch nicht an den Streben scheuert. Eine Schutzhülle ziehen Sie nur über ein vollständig trockenes Tuch, sonst kann sich darunter Schimmel bilden.",
+      },
+      {
+        question: "Kann ich später nur einen neuen Bezug für meinen Schirm bekommen?",
+        answer: "Ja. Bei CARAVITA-Schirmen lässt sich der Bezug abnehmen und gegen einen neuen tauschen, zum Beispiel wenn Sie eine andere Farbe möchten oder der Stoff beschädigt ist. Auch für viele andere Teile gibt es Ersatzteile. Sprechen Sie uns an, wir klären, welcher Bezug zu Ihrem Modell passt.",
+      },
     ],
     icon: "sonnenschirm",
     metaTitle: "Sonnenschirme Gütersloh | Maßarbeit | Westerwalbesloh",
@@ -1101,6 +1205,26 @@ export const products: Product[] = [
       {
         question: "Was passiert bei Stromausfall?",
         answer: "Motorisierte Anlagen bleiben bei Stromausfall zunächst in ihrer aktuellen Position. Viele Antriebe lassen sich zusätzlich mit einer Notbedienung ausstatten – wir beraten Sie zu den Möglichkeiten für Ihre Anlage.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Somfy RTS und io?",
+        answer: "RTS ist das ältere Funksystem von Somfy: Der Sender schickt den Befehl, bekommt aber keine Rückmeldung. Bei io meldet die Anlage zurück, ob der Befehl angekommen ist, und in der App sehen Sie die aktuelle Position. Wer die Position sehen oder Apple HomeKit nutzen möchte, braucht deshalb io.",
+      },
+      {
+        question: "Woran erkenne ich, welches Funksystem ich habe?",
+        answer: "Bei Somfy steht es auf dem Handsender: »io« steht für io-homecontrol, »RTS« für das ältere System, zum Beispiel Situo io oder Telis RTS. Sie finden die Bezeichnung vorn auf dem Sender oder im Batteriefach. Wenn Sie unsicher sind, schicken Sie uns einfach ein Foto vom Handsender.",
+      },
+      {
+        question: "Kann ich meine älteren RTS-Rollläden trotzdem per App steuern?",
+        answer: "Ja. Die Somfy TaHoma steuert RTS- und io-Antriebe gemeinsam in einer App, und wir binden auch ältere RTS-Anlagen ein. Die Position zeigt die App bei RTS allerdings nicht an. Wenn Sie das möchten, rüsten wir die Anlage auf io um.",
+      },
+      {
+        question: "Funktioniert das mit Alexa, Google oder Apple HomeKit?",
+        answer: "Die Somfy TaHoma switch arbeitet mit Amazon Alexa, Google Assistant und Apple HomeKit zusammen. Über HomeKit lassen sich nur io-Antriebe steuern, RTS-Antriebe nicht. Szenarien aus der TaHoma-App übernimmt HomeKit nicht, sie werden in der Home-App neu angelegt.",
+      },
+      {
+        question: "Mein Motor ist kaputt. Muss die ganze Anlage erneuert werden?",
+        answer: "Meist nicht, einen defekten Antrieb tauschen wir einzeln aus. Bei Raffstore machen wir das oft in unserer eigenen Halle: Dort hängt der Behang an einem Galgen, und wir stellen Motor, Welle und Endlagen in Ruhe ein. Fährt die Anlage nur nicht mehr ganz hoch oder ganz herunter, stellen wir die Endlagen direkt bei Ihnen vor Ort neu ein.",
       },
     ],
     icon: "steuerung",

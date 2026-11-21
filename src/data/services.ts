@@ -79,6 +79,22 @@ export const services: Service[] = [
         question: "Arbeiten Sie mit Subunternehmern?",
         answer: "Nein. Jede Anlage wird von unserem festangestellten Team montiert – so wissen Sie genau, wer bei Ihnen arbeitet, und wir stehen für die Qualität gerade.",
       },
+      {
+        question: "Kann ich Raffstore oder Rollläden auch nachträglich an meinem Haus anbringen lassen?",
+        answer: "In vielen Fällen ja. Ob und in welcher Ausführung das geht, hängt von Sturz, Laibung, Fassade und dem Platz für Kasten und Führungsschienen ab. Das prüfen wir beim Termin vor Ort und zeigen Ihnen danach die Varianten, die zu Ihrem Gebäude passen.",
+      },
+      {
+        question: "Brauche ich am Fenster einen Stromanschluss für einen elektrischen Antrieb?",
+        answer: "Ein Motorantrieb braucht Strom, deshalb planen wir die Leitungswege schon beim Aufmaß mit ein. Eine Ausnahme ist der VELUX Solar-Rollladen für Dachfenster: Die Solarzelle sitzt im Kasten, ein Stromkabel ist nicht nötig. Bedient wird er per Funk mit Wandschalter oder Handsender.",
+      },
+      {
+        question: "Kann ich die Funksteuerung gleich mit planen lassen?",
+        answer: "Ja, das ist sogar sinnvoll. Wir arbeiten mit Somfy io und TaHoma sowie mit dem WAREMA-Funksystem WMS, auf Wunsch mit Wind- und Sonnensensoren. Bei Somfy io bestätigt die Anlage, dass ein Befehl angekommen ist, und meldet ihre Position zurück.",
+      },
+      {
+        question: "Muss ich während der Montage zu Hause sein?",
+        answer: "Den Termin stimmen wir vorher mit Ihnen ab. Spätestens zum Schluss sollten Sie oder eine Vertretung vor Ort sein. Dann machen wir gemeinsam einen Testlauf und zeigen Ihnen, wie Sie die Anlage bedienen.",
+      },
     ],
     icon: "beratung",
     metaTitle: "Beratung, Aufmaß & Montage Gütersloh | Westerwalbesloh",
@@ -206,6 +222,22 @@ export const services: Service[] = [
         question: "Wie schnell kann eine Reparatur erfolgen?",
         answer: "Bei vielen gängigen Defekten – etwa einem gerissenen Gurt oder einem defekten Motor – können wir kurzfristig einen Termin anbieten. Rufen Sie uns einfach an.",
       },
+      {
+        question: "Muss mein Raffstore für die Reparatur abgebaut werden?",
+        answer: "Das hängt vom Defekt ab. Endlagen und Mechanik richten wir meist direkt bei Ihnen. Für einen Motortausch oder neue Textbänder bauen wir den Raffstore in der Regel aus und arbeiten in unserer Halle am Galgen. Dort hängt der Behang gerade, und wir können alles genau einstellen.",
+      },
+      {
+        question: "Mein Rollladen reagiert nicht mehr auf den Handsender. Was kann ich selbst prüfen?",
+        answer: "Wechseln Sie zuerst die Batterie im Handsender. Lässt sich die Anlage über einen Wandtaster oder die App noch bedienen, liegt der Fehler meist am Handsender. Hilft das nicht, kommen wir vorbei, lernen Motor und Sender neu ein oder ersetzen den Handsender.",
+      },
+      {
+        question: "Kann ich meine alte Somfy-RTS-Anlage zusammen mit neuen io-Produkten steuern?",
+        answer: "Ja. Eine TaHoma steuert RTS- und io-Produkte gemeinsam in einer App. Der Unterschied liegt in der Rückmeldung: io-Antriebe bestätigen den Befehl und melden ihre Position, RTS-Antriebe führen ihn nur aus.",
+      },
+      {
+        question: "Kann man einen Rollladen mit Gurt auf Motor umrüsten?",
+        answer: "In vielen Fällen ja, ohne den ganzen Rollladen zu erneuern. Wir bauen entweder einen Motor in die Welle ein oder setzen einen elektrischen Gurtwickler. Auf Wunsch bekommt die Anlage gleich eine Funksteuerung, zum Beispiel Somfy io. Was bei Ihnen passt, sehen wir vor Ort.",
+      },
     ],
     icon: "reparatur",
     metaTitle: "Sonnenschutz & Rollladen Reparatur Gütersloh | Westerwalbesloh",
@@ -293,6 +325,18 @@ export const services: Service[] = [
       {
         question: "Warten Sie auch Anlagen von Privatkunden?",
         answer: "Unser Wartungsservice richtet sich ausschließlich an Gewerbe und öffentliche Träger. Privatkunden helfen wir gerne mit Reparaturen und Modernisierungen weiter.",
+      },
+      {
+        question: "Wie oft sollten Sonnenschutzanlagen gewartet werden?",
+        answer: "Das hängt von den Vorgaben des Herstellers, der Nutzung und der Lage des Gebäudes ab. Eine stark genutzte Anlage an einer Schule braucht andere Abstände als ein ruhiges Verwaltungsgebäude. Die passenden Intervalle legen wir gemeinsam mit Ihnen im Wartungsvertrag fest.",
+      },
+      {
+        question: "Prüfen Sie bei der Wartung auch Wind- und Wettersensoren?",
+        answer: "Ja, Steuerungen gehören zur Technik-Prüfung, und dazu zählen auch die Sensoren. Wind- und Wetterstationen sorgen dafür, dass Markisen und Raffstore bei starkem Wind in eine sichere Position fahren. Fällt ein Sensor unbemerkt aus, fehlt dieser Schutz. Deshalb prüfen wir, ob er richtig auslöst.",
+      },
+      {
+        question: "Was passiert, wenn bei der Wartung ein Mangel gefunden wird?",
+        answer: "Wir halten den Mangel in der Dokumentation fest und besprechen mit Ihnen, was zu tun ist. Kleinere Einstellarbeiten können wir oft gleich erledigen. Für größere Reparaturen bekommen Sie vorab ein Angebot, und nach Ihrer Freigabe setzt unser eigenes Team die Anlage instand.",
       },
     ],
     icon: "wartung",
@@ -407,6 +451,22 @@ export const services: Service[] = [
       {
         question: "Welche Referenzen können Sie vorweisen?",
         answer: "Zu unseren langjährigen Referenzkunden zählen unter anderem Arvato und der Kreis Gütersloh; bereits in den 1980er-Jahren gewannen wir namhafte Kunden wie Miele, Claas und Bertelsmann. Sprechen Sie uns gerne auf konkrete Referenzen für Ihr Vorhaben an.",
+      },
+      {
+        question: "Unterstützen Sie Architekten und Planer schon in der Planungsphase?",
+        answer: "Ja. Wir beraten bei der Auswahl der Systeme für Blend- und Hitzeschutz, klären die Einbausituation und stimmen Leitungswege und Steuerung mit ab. So lassen sich spätere Änderungen auf der Baustelle möglichst vermeiden.",
+      },
+      {
+        question: "Lässt sich der Sonnenschutz eines ganzen Gebäudes zentral steuern?",
+        answer: "Ja, zum Beispiel mit dem WAREMA-Funksystem WMS. Eine einzige Wetterstation auf dem Dach kann ihre Messwerte über WMS Splitter an mehrere Funknetze im Gebäude weitergeben, etwa an verschiedene Wohnungen oder Nutzer. Mit der App WMS WebControl pro lassen sich Anlagen gemeinsam oder nach Räumen bedienen und nach Sonne, Wind und anderen Wetterwerten automatisch steuern.",
+      },
+      {
+        question: "Können Sie auch an hohen Fassaden und schwer zugänglichen Stellen montieren?",
+        answer: "Ja. Unser eigenes Montageteam arbeitet bei Bedarf mit Hubsteiger und montiert auch in großen Höhen, auf Laubengängen oder in Nischen. Wie wir am besten an die Fassade kommen, klären wir vorab beim Termin vor Ort.",
+      },
+      {
+        question: "Welche Sonnenschutzlösungen bieten Sie für Objekte an?",
+        answer: "Im Objektbau setzen wir vor allem Raffstore, Textilscreens, Markisen und Rollläden ein. Für Außenbereiche mit vielen Menschen, etwa auf einem Campus, liefern wir Großschirme von CARAVITA. Welche Lösung passt, hängt von Fassade, Nutzung und Steuerung ab.",
       },
     ],
     icon: "objektbau",

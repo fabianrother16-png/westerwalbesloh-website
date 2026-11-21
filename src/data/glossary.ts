@@ -98,4 +98,52 @@ export const glossary: GlossaryTerm[] = [
     icon: "steuerung",
     slug: "steuerung-antriebe",
   },
+  {
+    term: "Gelenkarmmarkise",
+    text: "Die klassische Markise für Terrasse und Balkon: Zwei Gelenkarme klappen beim Ausfahren auf und spannen das Tuch. Es gibt sie offen, als Halbkassette oder als Vollkassette.",
+    icon: "markise",
+    slug: "markisen",
+  },
+  {
+    term: "Volant",
+    text: "Der Stoffstreifen an der Vorderkante der Markise. Je nach Markise gibt es zusätzlich ein ausfahrbares Volant-Rollo: Es fährt aus der Vorderkante nach unten und schützt vor tief stehender Sonne und Blicken von außen.",
+    icon: "markise",
+    slug: "markisen",
+  },
+  {
+    term: "Gurtwickler",
+    text: "Das Kästchen neben dem Fenster, in dem der Rollladengurt aufgerollt wird. Es sitzt auf oder unter Putz. Wer es bequemer möchte, ersetzt ihn durch einen elektrischen Gurtwickler oder rüstet auf einen Rohrmotor um.",
+    icon: "rollladen",
+    slug: "rollladen",
+  },
+  {
+    term: "Rohrmotor",
+    text: "Ein Elektromotor, der unsichtbar in der Welle von Rollladen oder Markise steckt. Er ersetzt Gurt oder Kurbel und wird per Schalter oder Handsender bedient, als Funkmotor mit passender Zentrale auch per App.",
+    icon: "steuerung",
+    slug: "steuerung-antriebe",
+  },
+  {
+    term: "Somfy io",
+    text: "Das Funksystem von Somfy, das in beide Richtungen funkt: Der Motor meldet zurück, ob ein Befehl angekommen ist, und zeigt seine Position, zum Beispiel in der TaHoma-App. Beim älteren Somfy-Funk RTS geht der Befehl nur in eine Richtung, ohne Rückmeldung.",
+    icon: "steuerung",
+    slug: "steuerung-antriebe",
+  },
+  {
+    term: "WAREMA WMS",
+    text: "Das Funksystem von WAREMA. Alle Geräte bestätigen, dass ein Befehl angekommen und ausgeführt ist. Außerdem geben die Empfänger Befehle untereinander weiter, so erreicht das Signal auch weiter entfernte Anlagen.",
+    icon: "steuerung",
+    slug: "steuerung-antriebe",
+  },
+  {
+    term: "Pollenschutzgewebe",
+    text: "Ein besonders feines Spezialgewebe für Insektenschutz an Fenstern und Türen. Es hält neben Insekten auch viele Pollen draußen und lässt trotzdem Licht und frische Luft herein.",
+    icon: "insektenschutz",
+    slug: "insektentschutz",
+  },
+  {
+    term: "Flächenvorhang",
+    text: "Große, glatte Stoffbahnen, die in einer Laufschiene hängen und sich seitlich verschieben lassen. Sie passen gut zu breiten Fensterfronten und Schiebetüren und werden von Hand oder mit einem Bedienstab bewegt.",
+    icon: "innensonnenschutz",
+    slug: "sonnenschutz",
+  },
 ];
