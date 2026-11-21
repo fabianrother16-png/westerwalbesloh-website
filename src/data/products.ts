@@ -951,11 +951,8 @@ export const products: Product[] = [
           {
             title: "Vielfältige Formen",
             text: "Klassisch rund, quadratisch oder rechteckig.",
-            image: img("sonnenschirme", "formen/quadratisch.jpg", "Gelber quadratischer Sonnenschirm vor einer weißen Villa mit Wasserbecken"),
-            options: [
-              { label: "Rund", image: img("sonnenschirme", "formen/rund.jpg", "Großer roter runder Schirm über Cafétischen auf einem Altstadtplatz") },
-              { label: "Quadratisch", image: img("sonnenschirme", "formen/quadratisch.jpg", "Gelber quadratischer Sonnenschirm") },
-            ],
+            // Bilder: CARAVITA (caravita.de, Samara rund und quadratischer Schirm) – laut Fabian als Fachpartner nutzbar.
+            image: img("sonnenschirme", "formen/formen-rund-quadratisch.jpg", "Links runde CARAVITA-Schirme an einem Kindergarten, rechts ein gelber quadratischer CARAVITA-Schirm vor einem weißen Gebäude"),
           },
           {
             title: "Flexible Dimensionen",
