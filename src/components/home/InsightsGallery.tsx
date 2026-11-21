@@ -10,7 +10,7 @@ const candidates: CarouselItem[] = [
   {
     src: "team/team-bei-der-arbeit.jpg",
     alt: "Mitarbeiter von Westerwalbesloh bei einer Baustellenpause",
-    caption: "Unser Team",
+    caption: "Christoph glücklich mit Kaffee",
   },
   {
     src: "produkte/markisen/projekt-1.jpg",
