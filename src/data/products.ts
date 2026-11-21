@@ -439,9 +439,12 @@ export const products: Product[] = [
           },
           {
             title: "Fenster- & Fassadenmarkisen",
-            text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren.",
-            // Bild: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
+            text: "Der senkrechte Sonnenschutz für moderne Fensterfronten. Sie halten Hitze draußen und verhindern Blendung im Innenraum, ohne die Sicht nach draußen komplett zu versperren. Für Dachfenster gibt es die VELUX Hitzeschutz-Markise: Sie sitzt außen vor der Scheibe, hält die Sonne ab, bevor sie auf das Glas trifft, und lässt die Durchsicht frei. Es gibt sie mit Handbedienung oder mit Solarantrieb und Funk.",
+            // Bilder: WAREMA (warema.com) und VELUX (Produktbild über toom.de) – Nutzungsrecht vor Go-live klären.
             image: img("markisen", "fenster-fassade-warema.jpg", "Dunkle Senkrechtmarkise vor einer großen Fensterfront an einem Klinkerhaus mit Terrasse"),
+            options: [
+              { label: "Dachfenstermarkise (VELUX)", image: { ...img("markisen", "velux-hitzeschutz-markise.jpg", "VELUX Hitzeschutz-Markise außen an einem Dachfenster"), position: "object-contain! bg-white p-2" } },
+            ],
           },
         ],
       },
@@ -521,9 +524,9 @@ export const products: Product[] = [
             text: "Steuerung per App, Zeitplan oder vollautomatisch über Wind- und Sonnensensoren von Somfy oder die WMS-Wetterstation von WAREMA. Die Zentrale ist bei Somfy die TaHoma, bei WAREMA die WMS WebControl pro. Auf Wunsch auch mit Sprachsteuerung.",
             image: img("markisen", "bedienung/wms-app.webp", "Smartphone mit WAREMA-WMS-App vor einer ausgefahrenen Gelenkarmmarkise"),
             options: [
-              { label: "WMS Wetterstation", image: img("markisen", "bedienung/wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
+              { label: "Somfy Sensoren für Sonne, Wind und Regen", image: { ...img("markisen", "bedienung/somfy-wettersensoren.jpg", "Somfy Sensor-Paket mit Regensensor, Windsensor und Sonnensensor"), position: "object-contain! bg-white p-2" } },
               { label: "Somfy TaHoma", image: img("markisen", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
-              { label: "Somfy Windsensor", image: { ...img("markisen", "bedienung/somfy-windsensor.jpg", "Somfy Windsensor Eolis WireFree io"), position: "object-contain! bg-white p-2" } },
+              { label: "WAREMA WMS Wetterstation", image: img("markisen", "bedienung/wetterstation.webp", "WAREMA WMS Wetterstation plus neben einer Kassettenmarkise an einer Holzfassade") },
               { label: "WAREMA WMS WebControl pro", image: { ...img("markisen", "bedienung/warema-webcontrol-pro.jpg", "Smartphone mit der App WMS WebControl pro von WAREMA"), position: "object-contain! bg-white" } },
             ],
           },
@@ -686,6 +689,7 @@ export const products: Product[] = [
           { title: "VisionAir Feinstaub", text: "Der 3-in-1-Schutz für Wohnlagen in der Stadt: Hält Insekten zuverlässig fern und filtert zusätzlich Pollen sowie Feinstaub aus der Atemluft." },
           { title: "Standard-Fiberglas", text: "Der bewährte Klassiker: Dieses robuste Gewebe ist besonders langlebig, witterungsbeständig und bietet eine solide Durchsicht zum fairen Preis." },
           { title: "Haustiergewebe", text: "Extrem widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
+          { title: "Haustierklappe", text: "Eine Klappe im Insektenschutz, durch die Hund oder Katze selbst ein- und ausgehen können, ähnlich wie durch eine kleine Pendeltür. So bleibt die Gaze heil und Insekten bleiben trotzdem draußen." },
         ],
         // Bild: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
         image: img("insektentschutz", "gewebe-rahmen.jpg", "Insektenschutzrahmen am Fenster, die feine Gaze ist deutlich zu erkennen"),
