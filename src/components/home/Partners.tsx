@@ -41,7 +41,7 @@ export function Partners() {
                     width={partner.width}
                     height={partner.height}
                     sizes="144px"
-                    className="h-14 w-36 object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                    className="h-14 w-36 object-contain"
                   />
                 </li>
               ))}
