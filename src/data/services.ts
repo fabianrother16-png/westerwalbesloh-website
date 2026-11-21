@@ -135,9 +135,9 @@ export const services: Service[] = [
           "Wir bringen Ihre Rollläden wieder in Topform. Ob klassischer Reparaturservice oder modernes Upgrade – wir sorgen für eine einwandfreie Funktion und langlebige Ergebnisse an Ihrem Haus.",
         items: [
           { title: "Gurt & Wickler", text: "Wir tauschen Gurte und Wickler fachgerecht aus und erneuern Lager für einen leichten Lauf.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-gurt.jpg", alt: "Hände ziehen am Rollladengurt neben einem halb geschlossenen Rollladen" } },
-          { title: "Wellen & Technik", text: "Wir reparieren Wellen und Aufhängungen, damit Ihr Panzer wieder absolut sicher und stabil hängt.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-welle.jpg", alt: "Geöffneter Rollladenkasten mit Welle über einer Terrassentür während einer Reparatur" } },
+          { title: "Wellen & Technik", text: "Wir reparieren Wellen und Aufhängungen, damit Ihr Panzer wieder absolut sicher und stabil hängt.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stoerung.jpg", alt: "Rollläden während eines Reparatureinsatzes, darüber der geöffnete Kasten mit Welle" } },
           { title: "Stab-Service", text: "Wir beheben Schäden an Stäben oder tauschen den Panzer aus – für optimale Optik und Schutz.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stab.jpg", alt: "Aluminium-Rollladenstab mit Schaumfüllung im Querschnitt" } },
-          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-stoerung.jpg", alt: "Rollläden während eines Reparatureinsatzes, darüber der geöffnete Kasten" } },
+          { title: "Störungs-Hilfe", text: "Wir lösen klemmende Rollläden schnell und sicher, beheben die Störung und prüfen die Technik.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-klemmt.jpg", alt: "Klemmender Rollladen, dessen Panzer schief aus der Führungsschiene gerutscht ist" /* Foto: Marija Zaric, Unsplash */ } },
           { title: "Modernisierung", text: "Oft lohnt sich ein Upgrade statt einer reinen Reparatur: Wir rüsten auf Motorantrieb um, bauen elektrische Gurtwickler ein oder integrieren moderne Funksteuerungen wie Somfy io.", image: { src: "/images/leistungen/reparatur-modernisierung/rollladen-modernisierung.webp", alt: "Funk-Wandschalter neben einem Fenster mit Rollladen" } },
         ],
       },
@@ -173,7 +173,7 @@ export const services: Service[] = [
         intro:
           "Auch Insektenschutz und Innenbeschattung setzen wir wieder instand – für ein perfekt funktionierendes Zuhause.",
         items: [
-          { title: "Insektenschutz", text: "Wir erneuern Gewebe und reparieren Scharniere sowie Rahmen für festen Schutz.", image: { src: "/images/produkte/insektentschutz/gewebe.jpg", alt: "Nahaufnahme eines Insektenschutzgewebes" } },
+          { title: "Insektenschutz", text: "Wir erneuern Gewebe und reparieren Scharniere sowie Rahmen für festen Schutz.", image: { src: "/images/produkte/insektentschutz/gewebe-rahmen.jpg", alt: "Insektenschutzrahmen am Fenster, die feine Gaze ist deutlich zu erkennen" }, options: [{ label: "Riss im Gewebe", image: { src: "/images/leistungen/reparatur-modernisierung/insektenschutz-loch.jpg", alt: "Insektenschutzgewebe mit einem Riss, der repariert werden muss" /* Foto: maks_d, Unsplash */ } }] },
           { title: "Innenbeschattung", text: "Wir reparieren Ketten an Rollos und anderen kettengeführten Systemen und bringen Ihre Innenbeschattung wieder in Form.", image: { src: "/images/produkte/sonnenschutz/rollo-raum.jpg", alt: "Schlafzimmer mit gemustertem Rollo am Fenster" } },
         ],
       },
