@@ -190,7 +190,52 @@ function CardsBlock({ section, background }: { section: Extract<ContentSection, 
   );
 }
 
+/** Checklist shown as photo tiles: one large tile, the others in a grid next to it. */
+function ChecklistTiles({ section, tiles }: { section: Extract<ContentSection, { type: "checklist" }>; tiles: ImageRef[] }) {
+  return (
+    <>
+      <SectionHeading eyebrow={section.eyebrow} title={section.title} description={section.intro} />
+      <ul className="mt-12 grid auto-rows-[13rem] grid-cols-1 gap-4 sm:grid-cols-2 lg:auto-rows-[15rem] lg:grid-cols-3">
+        {section.items.map((item, index) => {
+          const tile = tiles[index];
+          return (
+            <Reveal
+              key={item}
+              as="li"
+              delay={index * 80}
+              className={`group relative overflow-hidden rounded-3xl bg-brand-primary-dark ${index === 0 ? "sm:col-span-2 lg:col-span-1 lg:row-span-2" : ""}`}
+            >
+              {tile && (
+                <Image
+                  src={tile.src}
+                  alt={tile.alt}
+                  fill
+                  sizes={index === 0 ? "(min-width: 1024px) 33vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
+                  className={`object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${tile.position ?? ""}`}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/90 via-brand-primary-dark/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-white sm:p-6">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-accent shadow-md shadow-black/20">
+                    <IconCheck className="h-4 w-4" strokeWidth={3} />
+                  </span>
+                  <span className={`font-bold leading-tight ${index === 0 ? "text-xl sm:text-2xl" : "text-lg"}`}>{item}</span>
+                </div>
+                <span className="text-sm font-semibold tabular-nums text-white/60" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+            </Reveal>
+          );
+        })}
+      </ul>
+    </>
+  );
+}
+
 function ChecklistBlock({ section }: { section: Extract<ContentSection, { type: "checklist" }> }) {
+  if (section.tiles?.length) return <ChecklistTiles section={section} tiles={section.tiles} />;
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <Reveal>

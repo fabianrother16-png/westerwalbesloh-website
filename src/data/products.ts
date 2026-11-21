@@ -79,16 +79,38 @@ export const products: Product[] = [
         ],
       },
       {
-        type: "cards",
+        type: "variants",
         eyebrow: "Bedienung & Steuerung",
         navLabel: "Bedienung",
         title: "Die moderne Art, Licht und Schatten zu lenken",
         intro:
           "Verbinden Sie architektonischen Anspruch mit höchstem Wohnkomfort und Energieeffizienz.",
+        // Bilder: WAREMA (warema.com) und Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
         items: [
-          { title: "Manuelle Bedienung", text: "Bedienen Sie Ihre Raffstore klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung." },
-          { title: "Motorisiert", text: "Leistungsstarke Motoren bewegen Ihre Anlage leise und gleichmäßig. Das schont die Mechanik und ist ideal für große, schwere Behänge." },
-          { title: "Smart Home (Somfy)", text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung." },
+          {
+            title: "Manuelle Bedienung",
+            text: "Bedienen Sie Ihre Raffstore klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
+            image: { ...img("raffstore", "bedienung/kurbel.webp", "Gelenkkurbel am Fensterrahmen, dahinter die Lamellen einer heruntergelassenen Außenjalousie"), position: "object-[30%_50%]" },
+          },
+          {
+            title: "Motorisiert",
+            text: "Leistungsstarke Motoren bewegen Ihre Anlage leise und gleichmäßig – bequem per Wandschalter oder Funkhandsender. Das schont die Mechanik und ist ideal für große, schwere Behänge.",
+            image: img("raffstore", "bedienung/funkhandsender-kueche.webp", "Funkhandsender von WAREMA auf einer Küchenarbeitsplatte, Lamellenschatten fallen in den Raum"),
+            options: [
+              { label: "Wandschalter", image: img("raffstore", "bedienung/wandschalter.webp", "Funk-Wandsender von WAREMA an einer Natursteinwand neben einem Fenster mit Außenjalousie") },
+              { label: "Funkhandsender", image: img("raffstore", "bedienung/funkhandsender.webp", "Weißer Funkhandsender von WAREMA vor einem Fenster mit Außenjalousie") },
+            ],
+          },
+          {
+            title: "Smart Home (Somfy)",
+            text: "Steuerung per App, Zeitplan oder vollautomatisch via Sonnen- und Windwächter. Nutzen Sie eigene Szenarien oder die optionale Sprachsteuerung.",
+            image: img("raffstore", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
+            options: [
+              { label: "TaHoma switch", image: img("raffstore", "bedienung/tahoma-switch.jpg", "Somfy TaHoma switch auf einem Holzmöbel") },
+              { label: "TaHoma-App", image: { ...img("raffstore", "bedienung/tahoma-app.jpg", "Somfy TaHoma switch vor einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
+              { label: "Sprachsteuerung", image: { ...img("raffstore", "bedienung/sprachsteuerung.jpg", "Somfy TaHoma switch mit den Hinweisen „works with Alexa“, „Hey Google“ und „Apple HomeKit“"), position: "object-contain! bg-white" } },
+            ],
+          },
         ],
       },
       {
@@ -102,10 +124,14 @@ export const products: Product[] = [
           "Neubau & Modernisierung",
           "Energiesparsame Lösungen",
         ],
-        image: {
-          src: "/images/leistungen/objektbau-projekte/fassade.jpg",
-          alt: "Raffstores an der Glasfassade eines Gewerbebaus, montiert von Westerwalbesloh",
-        },
+        // Bilder: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären. Reihenfolge wie die Punkte oben.
+        tiles: [
+          img("raffstore", "einsatz/grosse-fensterflaechen.webp", "Wohnraum mit raumhoher Glasfront, außen halb geschlossene Raffstores"),
+          img("raffstore", "einsatz/homeoffice.webp", "Arbeitszimmer mit Schreibtisch und Monitor, Raffstores filtern das Tageslicht"),
+          img("raffstore", "einsatz/sonnenseite.webp", "Bungalow in praller Sonne mit geschlossenen dunklen Raffstores vor den Terrassenfenstern"),
+          img("raffstore", "einsatz/neubau.webp", "Moderner Neubau mit großen Fenstern und dunklen Raffstores"),
+          img("raffstore", "einsatz/hitzeschutz.webp", "Wohn- und Essbereich an einem Sonnentag, heruntergefahrene Raffstores halten die Hitze draußen"),
+        ],
       },
     ],
     manufacturersTitle: "Herstellerqualität, auf die wir bauen",

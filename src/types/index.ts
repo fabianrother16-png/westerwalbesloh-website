@@ -57,6 +57,8 @@ export type ContentSection =
       intro?: string;
       items: string[];
       image?: ImageRef;
+      /** One photo per item: shows the list as photo tiles instead of check marks. */
+      tiles?: ImageRef[];
     };
 
 export type Manufacturer = {
