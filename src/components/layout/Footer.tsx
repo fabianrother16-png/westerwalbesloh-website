@@ -131,9 +131,21 @@ export function Footer() {
       {/* Extra bottom padding keeps the legal links clear of the floating chat button (and on phones of the sticky call/offer bar). */}
       <div className="bg-brand-primary-dark text-white/70">
         <div className="mx-auto flex max-w-(--container-content) flex-col gap-3 px-5 pt-6 pb-44 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-28">
-          <p>
-            © {year} {company.legalName}. Alle Rechte vorbehalten.
-          </p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
+            <p>
+              © {year} {company.legalName}. Alle Rechte vorbehalten.
+            </p>
+            <a
+              href="https://marketing-rother.de"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 hover:text-white"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/partner/rother-marketing.png" alt="" width={22} height={15} className="h-[15px] w-auto opacity-80" />
+              Website von Rother Marketing GbR
+            </a>
+          </div>
           <div className="flex gap-5">
             <Link href="/impressum" className="hover:text-white">
               Impressum
