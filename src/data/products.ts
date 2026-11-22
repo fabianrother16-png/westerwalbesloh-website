@@ -515,7 +515,7 @@ export const products: Product[] = [
             // shortcut: Platzhalter ohne Kurbel – kein nutzbares Foto einer Markise mit eingehängter Kurbel gefunden; Fabian liefert ein eigenes.
             image: img("markisen", "bedienung/markise-terrasse.jpg", "Gelenkarmmarkise mit grau gestreiftem Tuch über einer Terrasse, montiert von Westerwalbesloh"),
             options: [
-              { label: "Kurbel", image: { ...img("raffstore", "bedienung/kurbel-detail.jpg", "Gelenkkurbel für die Handbedienung einer Markise"), position: "object-contain! bg-[#d9dbdd]" } },
+              { label: "Markisenkurbel", image: { ...img("markisen", "bedienung/markisenkurbel.svg", "Zeichnung einer Markisenkurbel: Kurbelstange mit Haken, der in die Öse am Markisengetriebe greift, und Handgriff"), position: "object-contain! bg-[#e6e8ea]" } },
             ],
           },
           {

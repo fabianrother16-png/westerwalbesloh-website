@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Markisenkurbel mit Haken und Handgriff">
+  <defs>
+    <linearGradient id="metall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f5f6"/>
+      <stop offset="0.5" stop-color="#b9bec4"/>
+      <stop offset="1" stop-color="#7d848c"/>
+    </linearGradient>
+    <linearGradient id="griff" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a3f45"/>
+      <stop offset="0.45" stop-color="#5b6168"/>
+      <stop offset="1" stop-color="#25292d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="#e6e8ea"/>
+  <!-- Getriebe-Öse an der Markise (angedeutet) -->
+  <rect x="430" y="18" width="150" height="34" rx="6" fill="#4a5058"/>
+  <rect x="487" y="52" width="22" height="26" rx="4" fill="#5d636b"/>
+  <circle cx="498" cy="92" r="17" fill="none" stroke="#5d636b" stroke-width="9"/>
+  <!-- Haken der Kurbel greift in die Öse -->
+  <path d="M498 116 C 520 116, 520 86, 498 84" fill="none" stroke="url(#metall)" stroke-width="9" stroke-linecap="round"/>
+  <!-- Kurbelstange (gelenkig, schräg nach unten) -->
+  <line x1="498" y1="116" x2="498" y2="140" stroke="#8a9198" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="498" cy="146" r="9" fill="#6d747b"/>
+  <line x1="498" y1="150" x2="210" y2="372" stroke="url(#metall)" stroke-width="13" stroke-linecap="round"/>
+  <line x1="494" y1="152" x2="214" y2="368" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+  <!-- Kurbelarm -->
+  <path d="M210 372 L 150 330 L 112 382" fill="none" stroke="url(#metall)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Handgriff -->
+  <rect x="88" y="378" width="40" height="64" rx="18" fill="url(#griff)" transform="rotate(32 108 410)"/>
+</svg>
