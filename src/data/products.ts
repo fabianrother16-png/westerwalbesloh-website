@@ -442,7 +442,7 @@ export const products: Product[] = [
           },
           {
             title: "Freistehende Markisen",
-            text: "Schatten genau dort, wo Sie ihn brauchen – ganz ohne Wandmontage. Diese Systeme sind extrem windstabil, decken große Flächen ab und eignen sich perfekt für den freien Garten.",
+            text: "Schatten genau dort, wo Sie ihn brauchen – ganz ohne Wandmontage. Diese Systeme sind windstabil, decken große Flächen ab und eignen sich perfekt für den freien Garten.",
             image: img("markisen", "freistehend.jpg", "Freistehende Markise über einer Sitzgruppe im Garten"),
           },
           {
@@ -691,13 +691,13 @@ export const products: Product[] = [
         navLabel: "Gewebe",
         title: "Hochleistungsgewebe für jeden Bedarf",
         intro:
-          "Ob fast unsichtbar, pollenabweisend oder extrem kratzfest: Wählen Sie das Funktionsgewebe, das perfekt zu Ihren Anforderungen passt.",
+          "Ob fast unsichtbar, pollenabweisend oder besonders kratzfest: Wählen Sie das Funktionsgewebe, das perfekt zu Ihren Anforderungen passt.",
         items: [
           { title: "VisionAir-Gaze", text: "Fast unsichtbar für den freien Blick nach draußen. Dieses Gewebe bietet maximale Luftdurchlässigkeit bei gleichzeitig hoher Stabilität." },
           { title: "VisionAir Pollenschutz", text: "Die Erlösung für Allergiker: Dieses Spezialgewebe hält Pollen effektiv draußen, lässt aber dennoch genügend Licht und frische Luft hinein." },
           { title: "VisionAir Feinstaub", text: "Der 3-in-1-Schutz für Wohnlagen in der Stadt: Hält Insekten zuverlässig fern und filtert zusätzlich Pollen sowie Feinstaub aus der Atemluft." },
           { title: "Standard-Fiberglas", text: "Der bewährte Klassiker: Dieses robuste Gewebe ist besonders langlebig, witterungsbeständig und bietet eine solide Durchsicht zum fairen Preis." },
-          { title: "Haustiergewebe", text: "Extrem widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
+          { title: "Haustiergewebe", text: "Widerstandsfähig gegen Krallen: Das vinylbeschichtete Polyestergewebe ist besonders reißfest und ideal für Haushalte mit Hund oder Katze." },
           { title: "Haustierklappe", text: "Eine Klappe im Insektenschutz, durch die Hund oder Katze selbst ein- und ausgehen können, ähnlich wie durch eine kleine Pendeltür. So bleibt die Gaze heil und Insekten bleiben trotzdem draußen." },
         ],
         // Bild: WAREMA (warema.com) – Nutzungsrecht vor Go-live klären.
@@ -730,7 +730,7 @@ export const products: Product[] = [
       },
       {
         question: "Sind die Rahmen stabil genug?",
-        answer: "Absolut. Wir verwenden ausschließlich stranggepresste Aluminiumprofile. Diese sind extrem formstabil, verwindungssteif und langlebig – selbst bei großen Schiebeanlagen oder starker Beanspruchung durch Wind und Wetter.",
+        answer: "Absolut. Wir verwenden ausschließlich stranggepresste Aluminiumprofile. Diese sind formstabil, verwindungssteif und langlebig – selbst bei großen Schiebeanlagen oder starker Beanspruchung durch Wind und Wetter.",
       },
       {
         question: "Kann man das Gewebe austauschen?",
@@ -948,7 +948,7 @@ export const products: Product[] = [
           },
           {
             title: "Mittelstockschirme",
-            text: "Die bewährte Lösung für jeden Einsatzbereich. Extrem robust, kinderleicht zu bedienen und in zahlreichen Formen und Größen verfügbar – ideal für Balkone oder Gartentische mit Schirmloch.",
+            text: "Die bewährte Lösung für jeden Einsatzbereich. Robust, einfach zu bedienen und in zahlreichen Formen und Größen verfügbar – ideal für Balkone oder Gartentische mit Schirmloch.",
             image: img("sonnenschirme", "mittelstockschirm-caravita.jpg", "Zwei bordeauxrote Mittelstockschirme mit sichtbarem Mast auf einer Dachterrasse"),
           },
           {
@@ -1067,7 +1067,7 @@ export const products: Product[] = [
     faq: [
       {
         question: "Sind Sonnenschirme windstabil?",
-        answer: "Ja, unsere Premium-Modelle von CARAVITA sind extrem robust konstruiert. Die tatsächliche Windstabilität hängt jedoch stark von der Befestigung ab: Eine fest einbetonierte Bodenhülse bietet deutlich mehr Sicherheit als ein mobiler Ständer. Wir beraten Sie gerne zur sichersten Lösung für Ihren Standort.",
+        answer: "Ja, unsere Premium-Modelle von CARAVITA sind robust konstruiert. Die tatsächliche Windstabilität hängt jedoch stark von der Befestigung ab: Eine fest einbetonierte Bodenhülse bietet deutlich mehr Sicherheit als ein mobiler Ständer. Wir beraten Sie gerne zur sichersten Lösung für Ihren Standort.",
       },
       {
         question: "Welche Schirmgröße ist die richtige?",

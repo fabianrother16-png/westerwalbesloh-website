@@ -32,7 +32,7 @@ export function Comparison() {
       <SectionHeading
         eyebrow="Der Unterschied"
         title="Darum lohnt sich der Fachbetrieb"
-        description="Was Sie bekommen, wenn Sie bei einem seit 1959 familiengeführten Meisterbetrieb kaufen – statt von der Stange."
+        description="Was Sie bekommen, wenn Sie bei einem seit 1959 familiengeführten Fachbetrieb kaufen – statt von der Stange."
       />
       <Reveal className="mt-12 overflow-hidden rounded-3xl border border-brand-border">
         <div className="grid sm:grid-cols-2">
