@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { z } from "zod";
 import { buildSystemPrompt, CHAT_MODEL, getAnthropicClient } from "@/lib/anthropic";
 import { fallbackAnswer } from "@/lib/chatFallback";
+import { fromOwnSite, rateLimited } from "@/lib/requestGuard";
 
 export const runtime = "nodejs";
 
@@ -18,6 +19,14 @@ const bodySchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  if (!fromOwnSite(req)) {
+    return Response.json({ error: "Ungültige Anfrage." }, { status: 403 });
+  }
+  // Schutz vor Missbrauch und unnötigen KI-Kosten: höchstens 30 Fragen je 10 Minuten und Besucher.
+  if (rateLimited(req, "chat", 30, 10 * 60 * 1000)) {
+    return Response.json({ error: "Sie haben sehr viele Fragen gestellt. Bitte versuchen Sie es in ein paar Minuten noch einmal oder rufen Sie uns an." }, { status: 429 });
+  }
+
   let parsedBody;
   try {
     parsedBody = bodySchema.parse(await req.json());
