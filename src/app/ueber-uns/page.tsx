@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Sonnenschutz-Experten in Gütersloh | Über uns | Westerwalbesloh",
   absoluteTitle: true,
   description:
-    "Auf der Suche nach Qualität? Westerwalbesloh ist Ihr regionaler Meisterbetrieb für Sonnenschutz in Gütersloh & OWL. Jetzt mehr über unser Team erfahren!",
+    "Westerwalbesloh: Familienbetrieb für Sonnenschutz in Gütersloh seit 1959. Eigenes Montageteam für Gütersloh, Bielefeld und OWL. Lernen Sie uns kennen.",
   path: "/ueber-uns",
   image: "/images/home/team.jpg",
 });

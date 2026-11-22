@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Impressum | Westerwalbesloh Sonnenschutz Gütersloh & OWL",
   absoluteTitle: true,
   description:
-    "Gesetzliches Impressum der Firma Westerwalbesloh aus Gütersloh. Ihr Meisterbetrieb für Markisen, Rollläden & mehr in OWL. Jetzt Kontakt aufnehmen.",
+    "Impressum der Westerwalbesloh GmbH Rollladenbau aus Gütersloh: Anschrift, Kontakt und Registerangaben.",
   path: "/impressum",
 });
 

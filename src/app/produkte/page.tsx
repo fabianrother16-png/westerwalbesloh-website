@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Sonnenschutz Produkte in Gütersloh | Westerwalbesloh",
   absoluteTitle: true,
   description:
-    "Suchen Sie den perfekten Sonnenschutz? Entdecken Sie Markisen, Rollläden & Raffstores in Gütersloh & OWL. Qualität vom Meisterbetrieb. Jetzt ansehen!",
+    "Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschirme nach Maß – vom Familienbetrieb aus Gütersloh, mit Montage in Bielefeld und ganz OWL.",
   path: "/produkte",
   image: "/images/produkte/overview-raffstore.jpg",
 });
