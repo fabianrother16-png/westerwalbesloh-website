@@ -514,6 +514,9 @@ export const products: Product[] = [
             text: "Bedienen Sie Ihre Markise klassisch von Hand per Kurbel. Diese Variante ist besonders robust, günstig und funktioniert völlig unabhängig von einer Stromversorgung.",
             // shortcut: Platzhalter ohne Kurbel – kein nutzbares Foto einer Markise mit eingehängter Kurbel gefunden; Fabian liefert ein eigenes.
             image: img("markisen", "bedienung/markise-terrasse.jpg", "Gelenkarmmarkise mit grau gestreiftem Tuch über einer Terrasse, montiert von Westerwalbesloh"),
+            options: [
+              { label: "Kurbel", image: { ...img("raffstore", "bedienung/kurbel-detail.jpg", "Gelenkkurbel für die Handbedienung einer Markise"), position: "object-contain! bg-[#d9dbdd]" } },
+            ],
           },
           {
             title: "Motorisierter Antrieb",
