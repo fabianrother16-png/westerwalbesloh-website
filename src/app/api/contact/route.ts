@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { z } from "zod";
 import { getResendClient } from "@/lib/email";
 import { company } from "@/data/company";
+import { escapeHtml, fromOwnSite, rateLimited } from "@/lib/requestGuard";
 
 export const runtime = "nodejs";
 
@@ -21,6 +22,14 @@ const contactSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  if (!fromOwnSite(req)) {
+    return Response.json({ ok: false, error: "Ungültige Anfrage." }, { status: 403 });
+  }
+  // Höchstens 5 Anfragen pro Stunde und Absender - bremst Spam-Bots, echte Kunden merken davon nichts.
+  if (rateLimited(req, "contact", 5, 60 * 60 * 1000)) {
+    return Response.json({ ok: false, error: unreachableMessage }, { status: 429 });
+  }
+
   let data;
   try {
     data = contactSchema.parse(await req.json());
@@ -64,7 +73,7 @@ export async function POST(req: NextRequest) {
   ].join("\n");
 
   const htmlRow = (label: string, value: string) =>
-    `<tr><td style="padding:4px 12px 4px 0;color:#4a5a63;font-weight:600;white-space:nowrap;">${label}</td><td style="padding:4px 0;color:#17242c;">${value}</td></tr>`;
+    `<tr><td style="padding:4px 12px 4px 0;color:#4a5a63;font-weight:600;white-space:nowrap;">${label}</td><td style="padding:4px 0;color:#17242c;">${escapeHtml(value)}</td></tr>`;
 
   const htmlBody = `<div style="font-family:sans-serif;max-width:560px;">
     <h2 style="color:#1c3a4e;">Neue Anfrage über die Website</h2>
@@ -77,7 +86,7 @@ export async function POST(req: NextRequest) {
       ${htmlRow("Produkt", data.product)}
     </table>
     <p style="color:#4a5a63;font-weight:600;margin-top:16px;">Nachricht:</p>
-    <p style="color:#17242c;white-space:pre-wrap;">${data.message.replace(/</g, "&lt;")}</p>
+    <p style="color:#17242c;white-space:pre-wrap;">${escapeHtml(data.message)}</p>
   </div>`;
 
   try {

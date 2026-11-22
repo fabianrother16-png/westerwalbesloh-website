@@ -48,7 +48,7 @@ export function localBusinessSchema() {
       ...company.serviceArea.map((name) => ({ "@type": "City", name })),
       { "@type": "AdministrativeArea", name: "Ostwestfalen-Lippe" },
     ],
-    sameAs: [company.social.instagram, company.social.facebook],
+    sameAs: [company.social.instagram, company.social.facebook, company.social.googleProfile],
     knowsAbout: products.map((product) => product.name),
     hasCredential: company.certificates.map((certificate) => ({
       "@type": "EducationalOccupationalCredential",

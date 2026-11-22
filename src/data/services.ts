@@ -99,7 +99,7 @@ export const services: Service[] = [
     icon: "beratung",
     metaTitle: "Beratung, Aufmaß & Montage Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Angst vor Fehlkäufen? Wir garantieren exaktes Aufmaß und fachgerechte Montage Ihres Sonnenschutzes in Gütersloh & OWL. Sicher & sauber. Jetzt anfragen!",
+      "Kostenlose Beratung vor Ort, exaktes Aufmaß und saubere Montage durch unser eigenes Team – für Sonnenschutz in Gütersloh, Bielefeld und ganz OWL.",
   },
   {
     slug: "reparatur-modernisierung",
@@ -239,9 +239,9 @@ export const services: Service[] = [
       },
     ],
     icon: "reparatur",
-    metaTitle: "Sonnenschutz & Rollladen Reparatur Gütersloh | Westerwalbesloh",
+    metaTitle: "Rollladen & Markise Reparatur Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Markise defekt oder Rollladen klemmt? Wir reparieren Ihren Sonnenschutz in Gütersloh & OWL – schnell, sauber & fachgerecht. Jetzt Reparatur-Termin anfragen!",
+      "Rollladen klemmt, Markise defekt, Motor ausgefallen? Wir reparieren Rollläden, Raffstores und Markisen und rüsten Funk nach – in Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "wartung",
@@ -341,7 +341,7 @@ export const services: Service[] = [
     icon: "wartung",
     metaTitle: "Sonnenschutz Wartung Gütersloh & OWL | Westerwalbesloh",
     metaDescription:
-      "Wartung für Gewerbe & öffentliche Träger in Gütersloh & OWL: Sicherheitsprüfung, Dokumentation der Betreiberpflichten & Wartungsverträge. Jetzt Termin anfragen!",
+      "Wartung von Sonnenschutz für Gewerbe, Schulen und öffentliche Gebäude: Prüfung, Instandsetzung und Dokumentation in Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "objektbau-projekte",
@@ -471,7 +471,7 @@ export const services: Service[] = [
     icon: "objektbau",
     metaTitle: "Sonnenschutz & Objektbau Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Großprojekt geplant? Wir realisieren professionellen Sonnenschutz für Gewerbe & Objektbau in Gütersloh & OWL. Fachgerechte Planung. Jetzt anfragen!",
+      "Sonnenschutz für Schulen, Büros und Gewerbebauten: Raffstore, Textilscreens und Markisen, geplant und montiert vom eigenen Team in Gütersloh, Bielefeld und OWL.",
   },
 ];
 

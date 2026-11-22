@@ -203,11 +203,15 @@ export const products: Product[] = [
         question: "Mein Raffstore läuft nur über einen Schalter. Kann ich ihn später per App steuern?",
         answer: "In vielen Fällen ja. Je nach Antrieb rüsten wir Funk nach und verbinden die Anlage mit einer Somfy TaHoma oder einer WAREMA WMS WebControl pro. Ob das bei Ihrem Motor geht, prüfen wir vor Ort.",
       },
+      {
+        question: "Montieren Sie Raffstores auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "raffstore",
-    metaTitle: "Raffstoren Gütersloh | Sonnenschutz nach Maß | Westerwalbesloh",
+    metaTitle: "Raffstore Gütersloh & Bielefeld | Westerwalbesloh",
     metaDescription:
-      "Blendet die Sonne? Unsere Raffstoren in Gütersloh bieten perfekten Lichtschutz & modernes Design für Ihr Zuhause. Jetzt Beratung vom Experten anfragen!",
+      "Raffstore nach Maß von WAREMA: Licht lenken, Hitze draußen halten. Beratung, Aufmaß und Montage in Gütersloh, Bielefeld und OWL – die Beratung ist kostenlos.",
   },
   {
     slug: "rollladen",
@@ -371,11 +375,15 @@ export const products: Product[] = [
         question: "Ich habe schon Somfy-Funk. Kann ich das mit dem Smartphone verbinden?",
         answer: "Ja. Wir verbinden Ihre vorhandenen Somfy-Funkanlagen mit einer TaHoma, auch ältere RTS-Systeme. Auf Wunsch rüsten wir RTS-Anlagen auch auf io um. Der Vorteil: Die Anlage meldet zurück, ob ein Befehl angekommen ist.",
       },
+      {
+        question: "Montieren Sie Rollläden auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "rollladen",
-    metaTitle: "Rollläden Gütersloh | Schutz & Wärmedämmung | Westerwalbesloh",
+    metaTitle: "Rollläden Gütersloh & Bielefeld | Westerwalbesloh",
     metaDescription:
-      "Zu laut oder zu heiß? Unsere Rollläden in Gütersloh bieten optimalen Wärme- & Schallschutz für Ihr Zuhause. Jetzt kostenloses Angebot anfordern!",
+      "Rollläden für Wärme-, Schall- und Sichtschutz, auch für Dachfenster und mit Funk. Montage und Reparatur in Gütersloh, Bielefeld und OWL. Kostenlose Beratung.",
   },
   {
     slug: "markisen",
@@ -599,11 +607,15 @@ export const products: Product[] = [
         question: "Kann ich meine Kurbelmarkise auf einen Motor umrüsten lassen?",
         answer: "Bei vielen Markisen ist das möglich. Statt der Kurbel kommt ein passender Rohrmotor in die Tuchwelle, dafür wird ein Stromanschluss in der Nähe der Markise gebraucht. Mit einem Funkmotor bedienen Sie die Markise per Handsender oder Wandsender. Ob Ihre Markise geeignet ist, prüfen wir bei einem Termin vor Ort.",
       },
+      {
+        question: "Montieren Sie Markisen auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "markise",
-    metaTitle: "Markisen Gütersloh | Sonnenschutz nach Maß | Westerwalbesloh",
+    metaTitle: "Markisen Gütersloh & Bielefeld | Westerwalbesloh",
     metaDescription:
-      "Sonne auf der Terrasse zu heiß? Unsere Markisen in Gütersloh & OWL bieten perfekten Schatten und Design nach Maß. Jetzt kostenloses Angebot anfordern!",
+      "Gelenkarm-, Kassetten- und Fenstermarkisen von WAREMA und KADECO, auch mit Motor und Wetterautomatik. Montage in Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "insektentschutz",
@@ -744,11 +756,15 @@ export const products: Product[] = [
         question: "Muss ich den Insektenschutz im Winter abnehmen?",
         answer: "In der Regel nicht. Die Aluminiumrahmen und Gewebe sind für draußen gemacht und können auch im Winter am Fenster bleiben. Wer den Rahmen trotzdem abnehmen möchte, wählt einen Spannrahmen zum Einhängen. Die WAREMA-Ausführung mit Federstiften lässt sich zum Beispiel ohne Werkzeug abnehmen und wieder einsetzen.",
       },
+      {
+        question: "Montieren Sie Insektenschutz auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "insektenschutz",
-    metaTitle: "Insektenschutz Gütersloh | Maßarbeit | Westerwalbesloh",
+    metaTitle: "Insektenschutz nach Maß Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Mücken im Haus? Unser Insektenschutz nach Maß für Fenster & Türen in Gütersloh & OWL sorgt für ruhige Nächte. Qualität vom Experten. Jetzt Angebot anfragen!",
+      "Insektenschutz für Fenster, Türen und Dachfenster: Spannrahmen, Drehrahmen, Schiebeanlage und Plissee – maßgefertigt und montiert in Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "sonnenschutz",
@@ -878,11 +894,15 @@ export const products: Product[] = [
         question: "Welcher Sonnenschutz eignet sich fürs Kinderzimmer?",
         answer: "Verspannte Plissees kommen ohne frei hängende Schnüre und Ketten aus und werden über einen Griff bedient, motorisierte Ausführungen ebenso. Für frei hängende Plissees bietet KADECO kindersichere Bedienteile nach DIN EN 13120 an. Wir beraten Sie bei der Auswahl, damit keine Schnüre oder Ketten in Reichweite Ihrer Kinder hängen.",
       },
+      {
+        question: "Montieren Sie Plissees, Rollos und Jalousien auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "innensonnenschutz",
-    metaTitle: "Innenliegender Sonnenschutz Gütersloh | Westerwalbesloh",
+    metaTitle: "Plissee, Rollo & Jalousie Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Plissees, Wabenplissees, Rollos, Jalousien & Flächenvorhänge nach Maß in Gütersloh & OWL. Blend- und Sichtschutz vom Fachbetrieb. Jetzt Angebot anfragen!",
+      "Innenliegender Sonnenschutz von KADECO: Plissee, Wabenplissee, Rollo, Jalousie und Lamellenvorhang nach Maß, auch fürs Dachfenster. Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "sonnenschirme",
@@ -1077,11 +1097,15 @@ export const products: Product[] = [
         question: "Kann ich später nur einen neuen Bezug für meinen Schirm bekommen?",
         answer: "Ja. Bei CARAVITA-Schirmen lässt sich der Bezug abnehmen und gegen einen neuen tauschen, zum Beispiel wenn Sie eine andere Farbe möchten oder der Stoff beschädigt ist. Auch für viele andere Teile gibt es Ersatzteile. Sprechen Sie uns an, wir klären, welcher Bezug zu Ihrem Modell passt.",
       },
+      {
+        question: "Montieren Sie Sonnenschirme auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "sonnenschirm",
-    metaTitle: "Sonnenschirme Gütersloh | Maßarbeit | Westerwalbesloh",
+    metaTitle: "Sonnenschirme Gütersloh – CARAVITA | Westerwalbesloh",
     metaDescription:
-      "Zu viel Sonne im Garten? Unsere stabilen Sonnenschirme in Gütersloh & OWL bieten perfekten Schutz für Terrasse & Gastro. Jetzt Angebot anfordern!",
+      "CARAVITA-Sonnenschirme für Garten, Terrasse und Gastronomie: rund oder eckig, von 2 bis 10 m Spannweite. Beratung und Montage in Gütersloh, Bielefeld und OWL.",
   },
   {
     slug: "steuerung-antriebe",
@@ -1235,11 +1259,15 @@ export const products: Product[] = [
         question: "Mein Motor ist kaputt. Muss die ganze Anlage erneuert werden?",
         answer: "Meist nicht, einen defekten Antrieb tauschen wir einzeln aus. Bei Raffstore machen wir das oft in unserer eigenen Halle: Dort hängt der Behang an einem Galgen, und wir stellen Motor, Welle und Endlagen in Ruhe ein. Fährt die Anlage nur nicht mehr ganz hoch oder ganz herunter, stellen wir die Endlagen direkt bei Ihnen vor Ort neu ein.",
       },
+      {
+        question: "Rüsten Sie Antriebe und Steuerungen auch in Bielefeld und im Kreis Gütersloh?",
+        answer: "Ja. Unser Betrieb sitzt in Gütersloh, und unser eigenes Team ist in ganz Ostwestfalen-Lippe unterwegs, zum Beispiel in Bielefeld, Rheda-Wiedenbrück, Verl, Harsewinkel, Rietberg, Schloß Holte-Stukenbrock, Steinhagen und Halle (Westf.). Beratung und Aufmaß bei Ihnen vor Ort sind kostenlos.",
+      },
     ],
     icon: "steuerung",
-    metaTitle: "Steuerung & Antriebe Gütersloh | Smart Home | Westerwalbesloh",
+    metaTitle: "Somfy & WAREMA Steuerung Gütersloh | Westerwalbesloh",
     metaDescription:
-      "Lästiges Kurbeln? Wir automatisieren Ihren Sonnenschutz in Gütersloh & OWL mit smarten Antrieben & Steuerungen. Jetzt bequem nachrüsten & anfragen!",
+      "Motoren, Funk-Handsender, Somfy TaHoma und WAREMA WMS: Wir rüsten Rollläden, Raffstores und Markisen nach. Somfy-Expert-Fachbetrieb für Gütersloh, Bielefeld und OWL.",
   },
 ];
 

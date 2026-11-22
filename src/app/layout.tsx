@@ -14,11 +14,11 @@ import { company } from "@/data/company";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sonnenschutz Gütersloh: Maßarbeit & Montage | Westerwalbesloh",
+    default: "Sonnenschutz in Gütersloh, Bielefeld & OWL | Westerwalbesloh",
     template: "%s | Westerwalbesloh",
   },
   description:
-    "Zu viel Hitze im Haus? Entdecken Sie maßgeschneiderten Sonnenschutz für Fenster & Terrassen in Gütersloh & OWL. Jetzt kostenlose Beratung anfragen!",
+    "Rollläden, Raffstores, Markisen und Insektenschutz nach Maß vom Familienbetrieb seit 1959. Kostenlose Beratung vor Ort in Gütersloh, Bielefeld und ganz OWL.",
   keywords: [
     "Sonnenschutz Gütersloh",
     "Rollladenbau Gütersloh",
@@ -26,14 +26,17 @@ export const metadata: Metadata = {
     "Markisen Gütersloh",
     "Insektenschutz Gütersloh",
     "Somfy Experte Gütersloh",
+    "Sonnenschutz Bielefeld",
+    "Rollladen Bielefeld",
+    "Markisen OWL",
   ],
   authors: [{ name: company.legalName }],
   robots: { index: true, follow: true },
   alternates: { canonical: `${siteUrl}/` },
   openGraph: {
-    title: "Sonnenschutz Gütersloh: Maßarbeit & Montage | Westerwalbesloh",
+    title: "Sonnenschutz in Gütersloh, Bielefeld & OWL | Westerwalbesloh",
     description:
-      "Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschirme vom Familienbetrieb seit 1959 – Beratung, Aufmaß und Montage in Gütersloh und ganz OWL.",
+      "Rollläden, Raffstores, Markisen, Insektenschutz und Sonnenschirme vom Familienbetrieb seit 1959 – Beratung, Aufmaß und Montage in Gütersloh, Bielefeld und ganz OWL.",
     url: `${siteUrl}/`,
     siteName: company.legalName,
     locale: "de_DE",
