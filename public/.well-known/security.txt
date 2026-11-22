@@ -1,0 +1,4 @@
+Contact: mailto:westerwalbesloh_gmbh@t-online.de
+Expires: 2027-11-22T00:00:00.000Z
+Preferred-Languages: de, en
+Canonical: https://sonnenschutz-westerwalbesloh.de/.well-known/security.txt
