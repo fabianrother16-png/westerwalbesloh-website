@@ -18,6 +18,8 @@ function images(...groups: (ImageRef | string)[][]): string[] {
   return [...new Set(paths)].map(absolute);
 }
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 

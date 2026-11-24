@@ -1,0 +1,24 @@
+# Chat und Kontaktformular für die statische Website. Deploy: npx wrangler deploy (im Ordner worker/).
+# Secrets einmalig setzen: npx wrangler secret put ANTHROPIC_API_KEY / RESEND_API_KEY
+name = "westerwalbesloh-api"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGINS = "https://sonnenschutz-westerwalbesloh.de,https://www.sonnenschutz-westerwalbesloh.de"
+# Absender muss eine bei Resend bestätigte Domain sein.
+CONTACT_FROM_EMAIL = "Website <anfrage@sonnenschutz-westerwalbesloh.de>"
+CONTACT_TO_EMAIL = "westerwalbesloh_gmbh@t-online.de"
+
+# Kostenloser Rate-Limiter von Cloudflare (Zeitfenster 60 Sekunden je Besucher-IP).
+[[ratelimits]]
+name = "CHAT_LIMITER"
+namespace_id = "1001"
+simple = { limit = 8, period = 60 }
+
+[[ratelimits]]
+name = "CONTACT_LIMITER"
+namespace_id = "1002"
+simple = { limit = 3, period = 60 }

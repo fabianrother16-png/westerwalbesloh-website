@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { company } from "@/data/company";
+import { apiUrl } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 import { IconCheck } from "@/components/icons/UiIcons";
 
@@ -38,7 +39,7 @@ export function ContactForm() {
     };
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`${apiUrl}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

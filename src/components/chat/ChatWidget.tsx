@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IconClose, IconMic, IconSend, IconSparkles } from "@/components/icons/UiIcons";
 import { useDictation } from "@/components/chat/useDictation";
 import { company } from "@/data/company";
+import { apiUrl } from "@/lib/site";
 import type { ChatMessage } from "@/types";
 
 // Internal paths mentioned in answers ("Mehr dazu: /produkte/raffstore") become clickable links.
@@ -94,7 +95,7 @@ export function ChatWidget() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch(`${apiUrl}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: nextMessages }),
