@@ -46,7 +46,7 @@ export const company = {
     address: "Oberntorwall 8, 33602 Bielefeld",
     url: "https://www.hwk-owl.de/",
   },
-  profession: "Rollladen- und Sonnenschutzmechatroniker",
+  profession: "Rollladen- und Sonnenschutztechniker",
   liabilityInsurer: {
     name: "Württembergische Versicherung AG",
     address: "W&W-Platz 1, 70806 Kornwestheim",

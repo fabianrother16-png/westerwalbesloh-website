@@ -1,4 +1,4 @@
-// Describes the data processing of this website (Vercel, Resend, Anthropic chat, consent-gated statistics and Instagram/Maps); have changes reviewed by a lawyer.
+// Describes the data processing of this website (All-Inkl hosting, Cloudflare Worker, Resend, Anthropic chat, consent-gated statistics and Instagram/Maps); have changes reviewed by a lawyer.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
@@ -45,8 +45,8 @@ export default function DatenschutzPage() {
 
           <LegalSection title="3. Hosting und Server-Logfiles">
             <p>
-              Diese Website wird bei einem externen Hosting-Dienstleister (Vercel Inc.)
-              gehostet. Bei jedem Aufruf der Website erfasst der Hosting-Anbieter automatisch
+              Diese Website wird bei dem externen Hosting-Dienstleister ALL-INKL.COM – Neue Medien
+              Münnich (Deutschland) gehostet. Bei jedem Aufruf der Website erfasst der Hosting-Anbieter automatisch
               Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt
               (z. B. IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, verwendeter
               Browser). Diese Daten dienen ausschließlich der technisch fehlerfreien Bereitstellung
@@ -61,13 +61,20 @@ export default function DatenschutzPage() {
               aus dem Formular (Name, Adresse, Telefonnummer, E-Mail-Adresse, Art der Anfrage,
               gewünschtes Produkt sowie Ihre Nachricht) zum Zwecke der Bearbeitung Ihrer Anfrage
               und für den Fall von Anschlussfragen bei uns gespeichert und verarbeitet (Art. 6
-              Abs. 1 lit. b DSGVO). Der Versand erfolgt technisch über den E-Mail-Dienstleister
-              Resend; die Inhalte werden dabei ausschließlich zur Zustellung der E-Mail an uns
+              Abs. 1 lit. b DSGVO). Die Formulardaten werden dabei über einen Weiterleitungsdienst
+              von Cloudflare, Inc. (Cloudflare Workers) an den E-Mail-Dienstleister Resend übergeben, der
+              die E-Mail an uns zustellt; die Inhalte werden dabei ausschließlich zur Zustellung der E-Mail an uns
               verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Daten aus
               dem Kontaktformular verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre
               Einwilligung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach
               abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Aufbewahrungsfristen
               – insbesondere handels- und steuerrechtliche – bleiben unberührt.
+            </p>
+            <p>
+              Cloudflare, Inc. (USA) verarbeitet dabei Ihre IP-Adresse und die übermittelten Inhalte nur
+              zur Weiterleitung und zum Schutz vor Missbrauch und speichert sie nicht dauerhaft. Cloudflare
+              ist nach dem EU-US Data Privacy Framework zertifiziert. Dieselbe Weiterleitung nutzt auch
+              der KI-Chat (siehe Ziffer 5).
             </p>
           </LegalSection>
 
@@ -75,8 +82,8 @@ export default function DatenschutzPage() {
             <p>
               Auf unserer Website bieten wir optional einen KI-gestützten Chat-Assistenten an, der
               Fragen zu unseren Produkten und Leistungen beantwortet. Wenn Sie den Chat nutzen,
-              werden Ihre eingegebenen Nachrichten zur Erzeugung einer Antwort an die Anthropic
-              PBC (USA) als externen KI-Dienstleister übermittelt und dort verarbeitet. Dabei kann
+              werden Ihre eingegebenen Nachrichten über einen Weiterleitungsdienst von Cloudflare,
+              Inc. (Cloudflare Workers) zur Erzeugung einer Antwort an die Anthropic PBC (USA) als externen KI-Dienstleister übermittelt und dort verarbeitet. Dabei kann
               es zu einer Datenübermittlung in ein Drittland (USA) kommen; Anthropic verpflichtet
               sich vertraglich zur Einhaltung eines angemessenen Datenschutzniveaus (u. a. mittels
               EU-Standardvertragsklauseln). Die Nutzung des Chats ist freiwillig und erfolgt auf
@@ -89,7 +96,7 @@ export default function DatenschutzPage() {
             <p>
               Ist der KI-Dienst nicht aktiviert oder nicht erreichbar, beantwortet der Assistent Ihre
               Frage ausschließlich anhand der Inhalte dieser Website (häufige Fragen, Produkttexte)
-              auf unserem Server. In diesem Fall findet keine Übermittlung an Anthropic statt; der
+              über diesen Weiterleitungsdienst. In diesem Fall findet keine Übermittlung an Anthropic statt; der
               Hinweis unter dem Chatfenster zeigt an, welche Art von Antwort Sie erhalten.
             </p>
           </LegalSection>
