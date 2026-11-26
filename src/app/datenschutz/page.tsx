@@ -99,6 +99,14 @@ export default function DatenschutzPage() {
               über diesen Weiterleitungsdienst. In diesem Fall findet keine Übermittlung an Anthropic statt; der
               Hinweis unter dem Chatfenster zeigt an, welche Art von Antwort Sie erhalten.
             </p>
+            <p>
+              Spracheingabe (Diktieren): Wenn Sie im Chat auf das Mikrofon-Symbol tippen, nutzt die Website
+              die eingebaute Spracherkennung Ihres Browsers. Je nach Browser wird die Aufnahme dafür vom
+              Browser-Anbieter verarbeitet (z. B. Google bei Chrome, Microsoft bei Edge). Die Website selbst
+              speichert keine Audiodaten; der erkannte Text landet nur im Eingabefeld des Chats. Die Funktion
+              startet ausschließlich, wenn Sie sie selbst auslösen und der Mikrofon-Nutzung in Ihrem Browser
+              zustimmen.
+            </p>
           </LegalSection>
 
           <LegalSection title="6. Sonnenschutz-Finder und interaktive Werkzeuge">
