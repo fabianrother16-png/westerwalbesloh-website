@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Sonnenschutz Beratung Gütersloh | Kontakt | Westerwalbesloh",
   absoluteTitle: true,
   description:
-    "Fragen zum Sonnenschutz? Kontaktieren Sie uns für eine individuelle Beratung in Gütersloh & OWL. Wir planen Ihr Projekt maßgeschneidert. Jetzt anfragen!",
+    "Kontakt zu Westerwalbesloh in Gütersloh: per Telefon, E-Mail oder Formular. Kostenlose Beratung und Aufmaß vor Ort in Gütersloh, Bielefeld und ganz OWL.",
   path: "/kontakt",
   image: "/images/home/team.jpg",
 });

@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Sonnenschutz Leistungen in Gütersloh | Westerwalbesloh",
   absoluteTitle: true,
   description:
-    "Probleme mit dem Sonnenschutz? Wir bieten Beratung, Montage & Reparatur in Gütersloh & OWL. Ihr Partner für Markisen & mehr. Jetzt Termin anfragen!",
+    "Beratung, Aufmaß, Montage, Reparatur und Wartung von Rollläden, Raffstores und Markisen – vom eigenen Team in Gütersloh, Bielefeld und ganz OWL.",
   path: "/leistungen",
   image: "/images/leistungen/overview-raffstore.jpg",
 });

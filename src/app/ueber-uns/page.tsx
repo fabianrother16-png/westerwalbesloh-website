@@ -17,7 +17,7 @@ import { company, story } from "@/data/company";
 import { team } from "@/data/team";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sonnenschutz-Experten in Gütersloh | Über uns | Westerwalbesloh",
+  title: "Über uns: Familienbetrieb seit 1959 in Gütersloh | Westerwalbesloh",
   absoluteTitle: true,
   description:
     "Westerwalbesloh: Familienbetrieb für Sonnenschutz in Gütersloh seit 1959. Eigenes Montageteam für Gütersloh, Bielefeld und OWL. Lernen Sie uns kennen.",

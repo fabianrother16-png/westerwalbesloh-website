@@ -56,7 +56,7 @@ export const products: Product[] = [
           },
           {
             title: "Montagearten",
-            text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation die technisch sauberste und optisch beste Einbauvariante.",
+            text: "Ob unauffällig in der Fensternische, im Schacht des Neubaus, als Vorbau-Raffstore vor der Fassade oder als Aufsatz-Lösung auf dem Fenster: Wir finden für jede bauliche Situation eine technisch saubere und optisch passende Einbauvariante.",
             image: img("raffstore", "montagearten-eigenes-foto.jpg", "Raffstores rundum an einem Erker eines Klinkerhauses, montiert von Westerwalbesloh"),
             options: [
               { label: "Nischenmontage", image: img("raffstore", "varianten/nischenmontage.webp", "Raffstore sitzt in der Fensternische einer hellen Putzfassade") },
@@ -83,7 +83,7 @@ export const products: Product[] = [
         navLabel: "Bedienung",
         title: "Die moderne Art, Licht und Schatten zu lenken",
         intro:
-          "Verbinden Sie architektonischen Anspruch mit höchstem Wohnkomfort und Energieeffizienz.",
+          "Verbinden Sie architektonischen Anspruch mit hohem Wohnkomfort und wirksamem Hitzeschutz.",
         // Bilder: WAREMA (warema.com) und Somfy (shop.somfy.de) – Nutzungsrecht vor Go-live klären.
         items: [
           {
@@ -145,7 +145,7 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "WAREMA – Raffstore vom deutschen Markenhersteller",
-        text: "Die Marke steht für Innovation, höchste Qualitätsstandards und jahrzehntelange Erfahrung im Sonnenschutz. WAREMA-Raffstore überzeugen durch präzise Verarbeitung, langlebige Materialien und ausgereifte Technik – für zuverlässigen Sonnen- und Blendschutz sowie eine dauerhaft wertige Fassadengestaltung.",
+        text: "Die Marke steht für Innovation, hohe Qualitätsstandards und jahrzehntelange Erfahrung im Sonnenschutz. WAREMA-Raffstore überzeugen durch präzise Verarbeitung, langlebige Materialien und ausgereifte Technik – für zuverlässigen Sonnen- und Blendschutz sowie eine dauerhaft wertige Fassadengestaltung.",
         logo: { src: "/images/partner/warema.png", width: 1025, height: 650 },
       },
     ],
@@ -252,7 +252,7 @@ export const products: Product[] = [
         items: [
           {
             title: "Hochwertige Materialien",
-            text: "Wählen Sie zwischen robustem Aluminium für höchste Stabilität und Langlebigkeit oder pflegeleichtem Kunststoff als wirtschaftliche Lösung mit sehr guten Dämmwerten.",
+            text: "Wählen Sie zwischen robustem Aluminium für hohe Stabilität oder pflegeleichtem Kunststoff als wirtschaftliche Lösung mit sehr guten Dämmwerten.",
             // Bilder: WAREMA, heroal, SELVE, Somfy – Nutzungsrecht vor Go-live klären.
             image: img("rollladen", "varianten/aluminium-panzer.webp", "Nahaufnahme eines hellen Aluminium-Rollladenpanzers mit dunkler Endleiste und Führungsschiene"),
             options: [
@@ -314,7 +314,7 @@ export const products: Product[] = [
           },
           {
             title: "Smart Home (Somfy)",
-            text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – für maximale Sicherheit und Effizienz.",
+            text: "Steuern Sie alles per App, Zeitplan oder Sprache. Sonnen- und Windwächter regeln den Schutz vollautomatisch – auch wenn Sie nicht zu Hause sind.",
             image: img("rollladen", "bedienung/tahoma-wohnzimmer.jpg", "Somfy TaHoma switch im Wohnzimmer, im Hintergrund bedient eine Person die App auf dem Smartphone"),
             options: [
               { label: "TaHoma und App", image: { ...img("rollladen", "bedienung/tahoma-app.jpg", "Somfy TaHoma switch neben einem Smartphone mit der TaHoma-App"), position: "object-contain! bg-white" } },
@@ -326,7 +326,7 @@ export const products: Product[] = [
     ],
     manufacturersTitle: "Unsere Partner & Hersteller",
     manufacturersIntro:
-      "Qualität entsteht durch bestes Material. Deshalb setzen wir bei Profilen und Antrieben ausschließlich auf renommierte Marken, die für Langlebigkeit und technische Präzision stehen.",
+      "Qualität entsteht durch gutes Material. Deshalb setzen wir bei Profilen und Antrieben ausschließlich auf renommierte Marken, die für Langlebigkeit und technische Präzision stehen.",
     manufacturers: [
       { name: "WAREMA", logo: { src: "/images/partner/warema.png", width: 1025, height: 650 } },
       { name: "Neerken & Büter", logo: { src: "/images/partner/neerken-bueter.png", width: 406, height: 161 } },
@@ -345,7 +345,7 @@ export const products: Product[] = [
       },
       {
         question: "Sind moderne Rollläden laut?",
-        answer: "Nein, moderne Anlagen laufen sehr ruhig. Wir setzen auf hochwertige Aluminiumprofile und gedämpfte Führungsschienen, die Klappergeräusche bei Wind minimieren und ein leises Öffnen und Schließen garantieren.",
+        answer: "Nein, moderne Anlagen laufen sehr ruhig. Wir setzen auf hochwertige Aluminiumprofile und gedämpfte Führungsschienen, die Klappergeräusche bei Wind minimieren und für ein leises Öffnen und Schließen sorgen.",
       },
       {
         question: "Helfen Rollläden beim Energiesparen?",
@@ -410,7 +410,7 @@ export const products: Product[] = [
       { title: "Angenehmer Schatten & Raumklima", text: "Schützt zuverlässig vor Sonne und Hitze – nicht nur auf der Terrasse, sondern verhindert auch das Aufheizen der dahinterliegenden Wohnräume." },
       { title: "Große Stoff- & Designauswahl", text: "Wählen Sie aus unzähligen Farben und Mustern. Von dezent bis markant finden wir genau das Design, das zu Ihrem Hausstil passt." },
       { title: "Langlebige & robuste Materialien", text: "Unsere Markisen sind wetterfest, windstabil und pflegeleicht, damit Sie lange Freude an Ihrem neuen Schattenplatz haben." },
-      { title: "Komfortable Bedienung", text: "Ob klassisch manuell, bequem motorisiert oder smart gesteuert: Genießen Sie höchsten Bedienkomfort ganz nach Ihren Wünschen." },
+      { title: "Komfortable Bedienung", text: "Ob klassisch manuell, bequem motorisiert oder smart gesteuert: Sie wählen den Bedienkomfort, der zu Ihnen passt." },
       { title: "Erweiterter Wohnraum", text: "Verwandeln Sie Terrasse oder Balkon in ein zweites Wohnzimmer im Freien und nutzen Sie Ihre Außenfläche flexibler und öfter." },
     ],
     sections: [
@@ -432,7 +432,7 @@ export const products: Product[] = [
           },
           {
             title: "Vollkassetten-Markise",
-            text: "Unser Premium-Modell für maximalen Schutz. Tuch und Gelenkarme verschwinden komplett in der geschlossenen Kassette – das sorgt für höchste Lebensdauer und eine saubere Optik.",
+            text: "Unser Premium-Modell für maximalen Schutz. Tuch und Gelenkarme verschwinden komplett in der geschlossenen Kassette – das schützt sie vor Wind, Regen und Schmutz und sorgt für eine saubere Optik.",
             image: img("markisen", "vollkassette.jpg", "Vollkassetten-Markise an einem Haus mit Holzfassade"),
           },
           {
@@ -641,7 +641,7 @@ export const products: Product[] = [
     cardImage: img("insektentschutz", "card-terrassentuer.jpg", "Terrassentür mit Insektenschutz-Schiebeanlage an einem modernen Haus"),
     benefitsTitle: "Warum Insektenschutz?",
     benefits: [
-      { title: "Perfekter Schutz ohne Chemie", text: "Halten Sie Plagegeister effektiv fern – ganz natürlich und umweltfreundlich, ohne chemische Sprays oder Stromfallen." },
+      { title: "Perfekter Schutz ohne Chemie", text: "Halten Sie Plagegeister effektiv fern – ganz ohne chemische Sprays oder Stromfallen." },
       { title: "Individuell auf Maß gefertigt", text: "Egal ob Fenster, Balkontür, Dachschräge oder Sonderform: Wir fertigen jeden Rahmen millimetergenau passend für Ihre Einbausituation." },
       { title: "Langlebig & stabil", text: "Robuste Aluminiumrahmen und hochwertige, reißfeste Gewebe trotzen Wind und Wetter über viele Jahre." },
       { title: "Dezente Optik", text: "Dank schlanker Profile in modernen Farben und fast unsichtbarer Gewebe fügt sich der Schutz harmonisch und unauffällig in Ihre Fassade ein." },
@@ -1059,7 +1059,7 @@ export const products: Product[] = [
     manufacturers: [
       {
         name: "CARAVITA – Premium-Qualität",
-        text: "Wir setzen auf CARAVITA, den Premiumhersteller für besonders robuste und hochwertige Sonnenschirme. Die Marke steht für maximale Stabilität und langlebige Materialien – die ideale Wahl, wenn Sie einen Schattenplatz suchen, der auch Wind und Wetter standhält.",
+        text: "Wir setzen auf CARAVITA, den Premiumhersteller für besonders robuste und hochwertige Sonnenschirme. Die Marke steht für stabile Konstruktionen und robuste Materialien – die ideale Wahl, wenn Sie einen Schattenplatz suchen, der auch Wind und Wetter standhält.",
         logo: { src: "/images/partner/caravita.png", width: 1025, height: 167 },
       },
     ],
@@ -1232,7 +1232,7 @@ export const products: Product[] = [
       },
       {
         question: "Wie sicher ist die Funksteuerung?",
-        answer: "Sehr sicher. Moderne Funksysteme von Somfy und WAREMA arbeiten mit verschlüsselten Signalen, die nicht einfach kopiert werden können. Zudem sind die Frequenzen sehr störungsresistent, was eine zuverlässige Ausführung Ihrer Befehle garantiert.",
+        answer: "Sehr sicher. Moderne Funksysteme von Somfy und WAREMA arbeiten mit verschlüsselten Signalen, die nicht einfach kopiert werden können. Zudem sind die Frequenzen sehr störungsresistent, sodass Ihre Befehle zuverlässig ankommen.",
       },
       {
         question: "Brauche ich WLAN für die App-Steuerung?",

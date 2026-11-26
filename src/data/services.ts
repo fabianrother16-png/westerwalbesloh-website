@@ -43,7 +43,7 @@ export const services: Service[] = [
         items: [
           { illustration: "einbautiefe", title: "Einbautiefen prüfen", text: "Wir ermitteln die exakten Tiefen und stabilsten Punkte für eine sichere Montage." },
           { illustration: "leitungswege", title: "Leitungswege planen", text: "Wir definieren die optimale Kabelführung für eine sichere Steuerung." },
-          { illustration: "platzbedarf", title: "Platzbedarf klären", text: "Wir messen den Raum für Kästen und Schienen aus, um eine ideale Optik zu garantieren." },
+          { illustration: "platzbedarf", title: "Platzbedarf klären", text: "Wir messen den Raum für Kästen und Schienen aus, damit Kästen und Schienen später sauber sitzen." },
           { illustration: "bausubstanz", title: "Bausubstanz prüfen", text: "Wir prüfen die Beschaffenheit der Wände, um die passenden Befestigungsmittel zu wählen." },
         ],
       },
@@ -52,11 +52,11 @@ export const services: Service[] = [
         eyebrow: "Unser Qualitätsversprechen",
         title: "Montage – sauber, zuverlässig und fachgerecht",
         intro:
-          "Unser eigenes Expertenteam sorgt für eine schlüsselfertige Installation Ihrer Anlage – präzise, ordentlich und direkt einsatzbereit.",
+          "Unser eigenes Montageteam sorgt für eine schlüsselfertige Installation Ihrer Anlage – präzise, ordentlich und direkt einsatzbereit.",
         items: [
           { title: "Montage & Ausrichtung", text: "Wir verankern Ihre Anlage sicher im passenden Untergrund und richten alle Komponenten für eine perfekte Funktion exakt aus." },
           { title: "Anschluss & Programmierung", text: "Unsere Techniker übernehmen den elektrischen Anschluss sowie die Programmierung von Motoren, Endlagen und Ihrer Funksteuerung." },
-          { title: "Sicherheits-Check", text: "Wir führen eine umfassende Funktions- und Sicherheitsprüfung durch, um einen dauerhaft reibungslosen Betrieb zu garantieren." },
+          { title: "Sicherheits-Check", text: "Wir führen eine umfassende Funktions- und Sicherheitsprüfung durch, damit Ihre Anlage von Anfang an zuverlässig läuft." },
           { title: "Testlauf & Übergabe", text: "Nach einem gemeinsamen Testlauf erhalten Sie eine persönliche Einweisung, damit Sie Ihre neue Anlage sofort sicher bedienen können." },
         ],
         image: {
@@ -160,7 +160,7 @@ export const services: Service[] = [
       },
       {
         type: "variants",
-        eyebrow: "Nachhaltig & Modern",
+        eyebrow: "Erhalten & modernisieren",
         title: "Markisen: Tuchtausch & Technik",
         intro:
           "Eine hochwertige Markise muss nicht ersetzt werden, nur weil der Stoff alt oder die Technik defekt ist. Wir machen Ihre Anlage mit neuem Glanz und smarter Steuerung wieder fit für die Zukunft.",
@@ -272,8 +272,8 @@ export const services: Service[] = [
           "Wir sichern die Betriebssicherheit Ihrer professionellen Sonnenschutzanlagen durch gezielte Wartung für Gewerbe und Kommunen – ein Privatkunden-Service wird nicht angeboten.",
         items: [
           { title: "Büro & Verwaltung", text: "Wir sichern Ihre Bürogebäude und sorgen für dauerhafte Betriebsbereitschaft." },
-          { title: "Industrie & Logistik", text: "Wir warten Ihre Industriehallen für maximale Sicherheit und lange Haltbarkeit." },
-          { title: "Bildung & Erziehung", text: "Wir prüfen Kitas und Schulen und garantieren einen sicheren Anlagenbetrieb." },
+          { title: "Industrie & Logistik", text: "Wir warten Ihre Industriehallen damit sie sicher und lange funktionieren." },
+          { title: "Bildung & Erziehung", text: "Wir prüfen Anlagen in Kitas und Schulen und dokumentieren ihren sicheren Zustand." },
           { title: "Öffentliche Objekte", text: "Wir betreuen kommunale Objekte und erfüllen alle gesetzlichen Wartungsnormen." },
         ],
       },
@@ -282,7 +282,7 @@ export const services: Service[] = [
         eyebrow: "Wartungs-Details",
         title: "Umfassender Leistungsumfang",
         intro:
-          "Wir prüfen Ihre Anlagen auf Herz und Nieren, um maximale Sicherheit und eine lange Lebensdauer im professionellen Einsatz zu garantieren.",
+          "Wir prüfen Ihre Anlagen auf Herz und Nieren, damit sie im professionellen Einsatz sicher und lange funktionieren.",
         items: [
           { title: "Funktionsprüfung", text: "Wir prüfen alle mechanischen und elektrischen Bauteile auf volle Funktion." },
           { title: "Sicherheits-Check", text: "Wir testen sicherheitsrelevante Bauteile wie Absturzsicherungen im Detail." },

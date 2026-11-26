@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Datenschutz | Westerwalbesloh Sonnenschutz Gütersloh & OWL",
   absoluteTitle: true,
   description:
-    "Hier finden Sie alle Informationen zum Schutz Ihrer Daten bei Westerwalbesloh in Gütersloh. Wir behandeln Ihre Daten sicher & vertraulich.",
+    "Datenschutzerklärung der Westerwalbesloh GmbH Rollladenbau aus Gütersloh: welche Daten diese Website verarbeitet und welche Rechte Sie haben.",
   path: "/datenschutz",
 });
 

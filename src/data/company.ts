@@ -60,7 +60,7 @@ export const company = {
   },
   reviews: {
     rating: 4.9,
-    label: "4,9 von 5 Sternen bei Google",
+    label: "4,9 von 5 Sternen bei Google (Stand: November 2026)",
   },
   partners: [
     { name: "WAREMA", logo: "/images/partner/warema.png", width: 1025, height: 650 },

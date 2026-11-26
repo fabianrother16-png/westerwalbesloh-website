@@ -131,7 +131,6 @@ export function Footer() {
               href="https://marketing-rother.de"
               target="_blank"
               rel="noopener"
-              aria-label="Website von Rother Marketing GbR"
               className="inline-flex h-24 items-center gap-4 rounded-md bg-[#0b0b0b] px-6 text-white transition-opacity hover:opacity-90"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}

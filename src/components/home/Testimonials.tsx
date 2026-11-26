@@ -13,9 +13,9 @@ export function Testimonials() {
     <Section background="surface">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
-          eyebrow="Kundenstimmen"
+          eyebrow="Google-Bewertungen"
           title={`${rating} von 5 Sternen bei Google`}
-          description="Ein Auszug echter Bewertungen unserer Kundinnen und Kunden."
+          description="Ein Auszug aus unseren Google-Bewertungen (Stand: November 2026). Die Bewertungen stammen von Google; wir prüfen nicht, ob die Verfasser unsere Leistungen tatsächlich in Anspruch genommen haben."
         />
         <a
           href={company.social.googleProfile}

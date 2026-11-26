@@ -19,7 +19,7 @@ import { glossary } from "@/data/glossary";
 import type { FaqItem } from "@/types";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Sonnenschutz-Ratgeber: Sonnenstand-Rechner & Vergleich | Westerwalbesloh",
+  title: "Sonnenschutz-Ratgeber & Sonnenstand-Rechner | Westerwalbesloh",
   absoluteTitle: true,
   description:
     "Wann scheint die Sonne auf Ihr Fenster? Sonnenstand-Rechner für Gütersloh, Hitzeschutz im Vergleich und Sonnenschutz-Lexikon – einfach erklärt vom Fachbetrieb.",
